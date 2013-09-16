@@ -1,0 +1,5 @@
+[user]
+	name = Ken Micklas
+	email = kmicklas@gmail.com
+[mergetool]
+	keepBackup = false
