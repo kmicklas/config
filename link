@@ -1,5 +1,5 @@
 #/bin/sh
 
 for FILE in $@; do
-  ln -sT ~/dotfiles/$FILE .$FILE
+  ln -s ~/dotfiles/$FILE .$FILE 
 done
