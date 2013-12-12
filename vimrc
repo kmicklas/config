@@ -20,8 +20,13 @@ set smartcase
 set autoindent
 set copyindent
 set virtualedit=onemore
+set gdefault
 
 au BufEnter *.arr set syntax=pyret
 au BufEnter *.arr set shiftwidth=2
 au BufEnter *.arr set softtabstop=2
 au BufEnter *.arr set expandtab
+
+au BufEnter *.hs set shiftwidth=2
+au BufEnter *.hs set softtabstop=2
+au BufEnter *.hs set expandtab
