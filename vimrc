@@ -31,6 +31,7 @@ set autoindent
 set copyindent
 set virtualedit=onemore
 set gdefault
+set backspace=indent,eol,start
 
 au BufEnter *.arr set syntax=pyret
 au BufEnter *.arr set shiftwidth=2
