@@ -4,7 +4,6 @@ noremap <CR> i
 noremap j h
 noremap i k
 noremap k j
-noremap p [p         
 noremap <c-p> "+p
 vnoremap <c-p> "+p
 noremap <c-c> "+y
