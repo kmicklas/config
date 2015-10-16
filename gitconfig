@@ -3,3 +3,5 @@
 	email = kmicklas@gmail.com
 [mergetool]
 	keepBackup = false
+[push]
+	default = simple
