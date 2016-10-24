@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 for FILE in $@; do
   ln -s ~/dotfiles/$FILE .$FILE 
