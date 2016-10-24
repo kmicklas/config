@@ -26,7 +26,7 @@ function fish_prompt --description 'Write out the prompt'
 
   printf '%s%s@%s%s ' "$__fish_color_blue" "$USER" "$__fish_prompt_hostname" "$__fish_prompt_normal"
 
-  printf '%s ' (pwd)
+  printf '%s %s ' (prompt_pwd) (__fish_git_prompt)
 
   printf '\f\r> '
 end
