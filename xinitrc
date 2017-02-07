@@ -1,3 +1,0 @@
-xmodmap .Xmodmap
-xset -r 22
-xset r 66
