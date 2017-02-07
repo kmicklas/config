@@ -1,5 +1,5 @@
 #!/bin/sh
 
 for FILE in $@; do
-  ln -s ~/dotfiles/$FILE .$FILE 
+  ln -s ~/config/$FILE ~/.$FILE
 done
