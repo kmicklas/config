@@ -32,25 +32,3 @@ set copyindent
 set virtualedit=onemore
 set gdefault
 set backspace=indent,eol,start
-
-au BufEnter *.arr set syntax=pyret
-au BufEnter *.arr set shiftwidth=2
-au BufEnter *.arr set softtabstop=2
-au BufEnter *.arr set expandtab
-
-au BufEnter *.hs set shiftwidth=2
-au BufEnter *.hs set softtabstop=2
-au BufEnter *.hs set expandtab
-
-au BufEnter *.idr set shiftwidth=2
-au BufEnter *.idr set softtabstop=2
-au BufEnter *.idr set expandtab
-
-au BufEnter *.x set syntax=alex
-au BufEnter *.x set shiftwidth=2
-au BufEnter *.x set softtabstop=2
-au BufEnter *.x set expandtab
-
-au BufEnter *.als set syntax=alloy
-au BufEnter *.als set shiftwidth=4
-au BufEnter *.als set tabstop=4
