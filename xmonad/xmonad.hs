@@ -8,6 +8,6 @@ main = xmonad $ defaultConfig
          , layoutHook = smartBorders $ layoutHook defaultConfig
          , terminal = "gnome-terminal"
          } `additionalKeys`
-         [ ((mod4Mask, xK_End), safeSpawn "xlock" [])
+         [ ((mod4Mask, xK_End), safeSpawn "xscreensaver-command" ["-lock"])
          , ((mod4Mask, xK_Page_Down), safeSpawn "systemctl" ["suspend"])
          ]
