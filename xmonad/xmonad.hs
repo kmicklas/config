@@ -1,10 +1,12 @@
 import XMonad
-import XMonad.Util.Run
-import XMonad.Util.EZConfig
+import XMonad.Hooks.Script
 import XMonad.Layout.NoBorders
+import XMonad.Util.EZConfig
+import XMonad.Util.Run
 
 main = xmonad $ defaultConfig
          { modMask = mod4Mask 
+         , startupHook = execScriptHook "startup"
          , layoutHook = smartBorders $ layoutHook defaultConfig
          , terminal = "gnome-terminal"
          } `additionalKeys`
