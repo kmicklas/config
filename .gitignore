@@ -1,2 +1,7 @@
-vim/.netrwhist
-config/fish/fishd.*
+dotfiles/vim/.netrwhist
+dotfiles/config/fish/fishd.*
+dotfiles/config/mimeapps.list
+dotfiles/xmonad/xmonad-*
+dotfiles/xmonad/xmonad.errors
+dotfiles/xmonad/xmonad.hi
+dotfiles/xmonad/xmonad.o
