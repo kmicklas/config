@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  hardware.bluetooth.enable = true;
   hardware.pulseaudio.enable = true;
 
   environment.systemPackages = (import ./packages.nix) pkgs;
