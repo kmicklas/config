@@ -1,5 +1,7 @@
 dotfiles/vim/.netrwhist
+dotfiles/config/enchant/
 dotfiles/config/fish/fishd.*
+dotfiles/config/gedit/
 dotfiles/config/gnome-control-center/
 dotfiles/config/mimeapps.list
 dotfiles/config/pulse/
@@ -9,3 +11,4 @@ dotfiles/xmonad/xmonad-*
 dotfiles/xmonad/xmonad.errors
 dotfiles/xmonad/xmonad.hi
 dotfiles/xmonad/xmonad.o
+dotfiles/xmonad/xmonad.state
