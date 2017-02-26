@@ -5,7 +5,7 @@
   createHome = true;
   home = "/home/kmicklas";
   description = "Ken Micklas";
-  extraGroups = [ "kmicklas" "wheel" ];
+  extraGroups = [ "kmicklas" "wheel" "networkmanager" ];
   useDefaultShell = true;
   openssh.authorizedKeys.keys = map builtins.readFile [
     ./macbook.pub
