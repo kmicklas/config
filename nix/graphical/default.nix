@@ -9,6 +9,8 @@
 
   nixpkgs.config.firefox.enableAdobeFlash = true;
 
+  networking.networkmanager.enable = true;
+
   services.printing.enable = true;
 
   services.xserver.enable = true;
