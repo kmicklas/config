@@ -1,6 +1,10 @@
 dotfiles/vim/.netrwhist
 dotfiles/config/fish/fishd.*
+dotfiles/config/gnome-control-center/
 dotfiles/config/mimeapps.list
+dotfiles/config/pulse/
+dotfiles/config/spotify/
+dotfiles/config/Trolltech.conf
 dotfiles/xmonad/xmonad-*
 dotfiles/xmonad/xmonad.errors
 dotfiles/xmonad/xmonad.hi
