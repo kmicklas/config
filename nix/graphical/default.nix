@@ -1,8 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  hardware.bluetooth.enable = true;
-  hardware.pulseaudio.enable = true;
+  hardware = {
+    bluetooth.enable = true;
+    pulseaudio.enable = true;
+  };
 
   environment.systemPackages = (import ./packages.nix) pkgs;
   fonts = (import ./fonts.nix) pkgs;
@@ -13,11 +15,21 @@
 
   services.printing.enable = true;
 
-  services.xserver.enable = true;
-  services.xserver.layout = "us";
+  services.xserver = {
+    enable = true;
+    layout = "us";
 
-  services.xserver.windowManager.xmonad.enable = true;
-  services.xserver.windowManager.xmonad.enableContribAndExtras = true;
-  services.xserver.windowManager.default = "xmonad";
-  services.xserver.desktopManager.xterm.enable = false;
+    displayManager.gdm.enable = true;
+
+    desktopManager = {
+      gnome3.enable = true;
+      default = "gnome3";
+    };
+
+    windowManager = {
+      xmonad.enable = true;
+      xmonad.enableContribAndExtras = true;
+      default = "xmonad";
+    };
+  };
 }
