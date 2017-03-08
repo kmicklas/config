@@ -19,6 +19,7 @@ pkgs: with pkgs; [
   dmenu
   xflux
   dropbox
+  acpi
 
   gparted
 ]
