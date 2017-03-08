@@ -8,6 +8,7 @@ pkgs: with pkgs; [
   shotwell
   vlc
   spotify
+  skype
   termite
   anki
   transmission
