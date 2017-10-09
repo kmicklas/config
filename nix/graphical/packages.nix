@@ -1,5 +1,6 @@
 pkgs: with pkgs; [
   firefoxWrapper
+  google-chrome
   torbrowser
   evince
   gnome3.nautilus
