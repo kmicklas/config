@@ -12,6 +12,7 @@ pkgs: with pkgs; [
   spotify
   skype
   termite
+  termite.terminfo
   anki
   transmission
 
