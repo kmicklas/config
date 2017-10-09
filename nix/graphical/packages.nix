@@ -7,6 +7,7 @@ pkgs: with pkgs; [
   libreoffice
   gimp
   shotwell
+  audacity
   vlc
   spotify
   skype
