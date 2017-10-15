@@ -1,0 +1,2 @@
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+highlight Hint -append font-size:16px;
