@@ -1,4 +1,5 @@
 function v
-	set -l TERM screen-256color
+	set TERM screen-256color
 	nvim $argv; 
+	set TERM screen-256color
 end
