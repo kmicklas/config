@@ -9,8 +9,6 @@
   environment.systemPackages = (import ./packages.nix) pkgs;
   fonts = (import ./fonts.nix) pkgs;
 
-  nixpkgs.config.firefox.enableAdobeFlash = true;
-
   networking.networkmanager.enable = true;
 
   services.printing.enable = true;
