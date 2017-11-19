@@ -1,14 +1,12 @@
 import XMonad
 import XMonad.Config.Kde
-import XMonad.Hooks.Script
 import XMonad.Layout.NoBorders
 import XMonad.Util.EZConfig
 import XMonad.Util.Run
 
 main = xmonad $ kdeConfig
          { modMask = mod4Mask 
-         , startupHook = execScriptHook "startup"
-         , layoutHook = smartBorders $ layoutHook defaultConfig
+         , layoutHook = smartBorders $ layoutHook kdeConfig
          , terminal = "termite"
          } `additionalKeys`
          [ ((mod4Mask, xK_End), safeSpawn "xscreensaver-command" ["-lock"])
