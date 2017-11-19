@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./kde.nix
+  ];
+
   hardware = {
     bluetooth.enable = true;
     pulseaudio.enable = true;
@@ -16,13 +20,6 @@
   services.xserver = {
     enable = true;
     layout = "us";
-
-    displayManager.gdm.enable = true;
-
-    desktopManager = {
-      gnome3.enable = true;
-      default = "gnome3";
-    };
 
     windowManager = {
       xmonad.enable = true;
