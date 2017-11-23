@@ -30,5 +30,5 @@
   programs.fish.enable = true;
   users.defaultUserShell = "/run/current-system/sw/bin/fish";
 
-  users.extraUsers.kmicklas = import ../kmicklas;
+  users.extraUsers.kmicklas = import ./kmicklas;
 }

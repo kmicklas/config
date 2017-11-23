@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../common
+    ../modules/common
     <nixpkgs/nixos/modules/profiles/qemu-guest.nix>
   ];
 
