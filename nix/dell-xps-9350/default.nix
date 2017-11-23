@@ -6,10 +6,8 @@
     ../graphical
     ../libinput.nix
     ../media-keys.nix
+    ../efi-boot.nix
   ];
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   environment.systemPackages = with pkgs; [
     fbterm # compensate for UHD
