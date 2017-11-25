@@ -7,4 +7,6 @@
     ../modules/libinput.nix
     ../modules/efi-boot.nix
   ];
+
+  services.xserver.videoDrivers = [ "nvidia" ];
 }
