@@ -14,7 +14,7 @@ pkgs: with pkgs; [
   termite
   termite.terminfo
   anki
-  transmission
+  transmission_gtk
   thunderbird
 
   gnome3.gnome_settings_daemon
