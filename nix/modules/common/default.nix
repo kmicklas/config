@@ -25,6 +25,8 @@
     passwordAuthentication = false;
   };
 
+  services.postgresql.enable = true;
+
   security.sudo.wheelNeedsPassword = false;
 
   programs.fish.enable = true;
