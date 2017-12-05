@@ -16,6 +16,7 @@ pkgs: with pkgs; [
   anki
   transmission_gtk
   thunderbird
+  xournal
 
   gnome3.gnome_settings_daemon
   gnome3.gnome_control_center
