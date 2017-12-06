@@ -27,6 +27,8 @@
 
   services.postgresql.enable = true;
 
+  virtualisation.docker.enable = true;
+
   security.sudo.wheelNeedsPassword = false;
 
   programs.fish.enable = true;
