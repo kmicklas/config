@@ -14,4 +14,8 @@ pkgs: with pkgs; [
   psmisc # killall
   fuse_exfat
   exfat-utils
+
+  stack
+  cabal-install
+  haskellPackages.ghcid
 ]
