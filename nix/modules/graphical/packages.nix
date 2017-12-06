@@ -25,6 +25,7 @@ pkgs: with pkgs; [
   xflux
   dropbox
   acpi
+  xscreensaver
 
   gparted
 ]
