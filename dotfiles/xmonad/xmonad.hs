@@ -2,7 +2,7 @@ import XMonad
 import XMonad.Config.Kde
 import XMonad.Layout.NoBorders
 
-myManageHook = composeAll [ className  =? c --> doFloat | c <- floatClasses ]
+myManageHook = composeAll [ className  =? c --> doIgnore | c <- floatClasses ]
    where floatClasses = ["Plasma", "Plasma-desktop", "plasma", "plasma-desktop", "plasmadesktop", "plasmashell"]
 
 main = xmonad $ kdeConfig
