@@ -26,6 +26,7 @@ pkgs: with pkgs; [
   dropbox
   acpi
   xscreensaver
+  albert
 
   gparted
 ]
