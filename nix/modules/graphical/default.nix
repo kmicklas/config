@@ -21,6 +21,13 @@
     enable = true;
     layout = "us";
 
+    displayManager = {
+      sessionCommands = ''
+        xscreensaver -no-splash &
+        albert &
+      '';
+    };
+
     windowManager = {
       xmonad.enable = true;
       xmonad.enableContribAndExtras = true;
