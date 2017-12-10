@@ -3,7 +3,6 @@ pkgs: with pkgs; [
 
   wget
   neovim
-  emacs
   python
   gitFull
   unzip

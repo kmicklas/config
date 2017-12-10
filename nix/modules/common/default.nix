@@ -34,5 +34,10 @@
   programs.fish.enable = true;
   users.defaultUserShell = "/run/current-system/sw/bin/fish";
 
+  services.emacs = {
+    enable = true;
+    defaultEditor = true;
+  };
+
   users.extraUsers.kmicklas = import ./kmicklas;
 }
