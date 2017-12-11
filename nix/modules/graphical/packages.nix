@@ -27,6 +27,7 @@ pkgs: with pkgs; [
   acpi
   xscreensaver
   albert
+  arandr
 
   gparted
 ]
