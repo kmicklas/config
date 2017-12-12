@@ -17,6 +17,7 @@ pkgs: with pkgs; [
   transmission_gtk
   thunderbird
   xournal
+  slack
 
   gnome3.gnome_settings_daemon
   gnome3.gnome_control_center
