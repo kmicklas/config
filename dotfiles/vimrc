@@ -20,10 +20,6 @@ colorscheme evening
 
 noremap ; :
 noremap <Space> i
-noremap <CR> i
-noremap j h
-noremap i k
-noremap k j
 noremap <c-p> "+p
 vnoremap <c-p> "+p
 noremap <c-c> "+y
@@ -34,7 +30,7 @@ noremap <c-d> d
 vnoremap <c-d> d
 imap <S-Space> <Esc>
 imap <C-Space> <Esc>
-imap jk <Esc>
+imap fd <Esc>
 noremap h "+
 
 if filereadable("~/config-local/vimrc")
