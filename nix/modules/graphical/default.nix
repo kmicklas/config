@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./kde.nix
-  ];
-
   hardware = {
     bluetooth.enable = true;
     pulseaudio.enable = true;
