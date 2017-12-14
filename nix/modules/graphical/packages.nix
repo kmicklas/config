@@ -18,6 +18,7 @@ pkgs: with pkgs; [
   thunderbird
   xournal
   slack
+  zoom-us
 
   gnome3.gnome_settings_daemon
   gnome3.gnome_control_center
