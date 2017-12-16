@@ -1,6 +1,4 @@
-function v
-  nvim $argv; 
-  # The fact that this does anything should be enough to win any argument about
-  # how wrong the Unix philosophy is:
-  set TERM $TERM
+# Defined in - @ line 0
+function v --description 'alias v=emacseditor --create-frame'
+	emacseditor --create-frame $argv;
 end
