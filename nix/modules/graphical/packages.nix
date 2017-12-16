@@ -30,6 +30,7 @@ pkgs: with pkgs; [
   xscreensaver
   albert
   arandr
+  compton
 
   gparted
 ]

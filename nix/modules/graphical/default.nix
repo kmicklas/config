@@ -21,6 +21,7 @@
       sessionCommands = ''
         xscreensaver -no-splash &
         albert &
+        compton -b
       '';
     };
 
