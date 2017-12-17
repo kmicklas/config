@@ -21,7 +21,7 @@
       sessionCommands = ''
         xscreensaver -no-splash &
         albert &
-        compton -b
+        compton -b --inactive-dim 0.05 -f -D 5
       '';
     };
 
