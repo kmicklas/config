@@ -5,3 +5,5 @@
 	keepBackup = false
 [push]
 	default = simple
+[core]
+	excludesfile = ~/.gitignore
