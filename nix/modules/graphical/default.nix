@@ -16,6 +16,7 @@
   services.xserver = {
     enable = true;
     layout = "us";
+    enableCtrlAltBackspace = true;
 
     displayManager = {
       sessionCommands = ''
