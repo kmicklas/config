@@ -332,6 +332,8 @@ you should place your code here."
 
   (define-key evil-visual-state-map "p" 'evil-paste-after-from-0)
   (define-key evil-normal-state-map (kbd "RET") 'newline-and-indent)
+
+  (spacemacs/toggle-smartparens-globally-off)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
