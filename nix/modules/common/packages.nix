@@ -4,7 +4,7 @@ pkgs: with pkgs; [
   wget
   neovim
   python
-  gitFull
+  gitAndTools.gitFull
   unzip
   tmux
 
