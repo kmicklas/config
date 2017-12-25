@@ -7,6 +7,7 @@ pkgs: with pkgs; [
   gitAndTools.gitFull
   unzip
   tmux
+  termite.terminfo
 
   iotop
   htop
