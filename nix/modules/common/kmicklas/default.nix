@@ -9,5 +9,6 @@
   useDefaultShell = true;
   openssh.authorizedKeys.keys = map builtins.readFile [
     ./macbook.pub
+    ./work-laptop.pub
   ];
 }
