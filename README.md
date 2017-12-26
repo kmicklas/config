@@ -6,7 +6,7 @@ It expects to be cloned into `~/config`.
 
 ## Nix(OS)
 
-`/etc/nixos/configuration.nix` should be symlinked to `nix/<platform>/configuration.nix`.
+`/etc/nixos/configuration.nix` should import `nix/machines/<machine>` in addition to `hardware-configuratin.nix` and setting any truly stateful machine local configuration (e.g. hostname).
 
 ## Dotfiles
 
