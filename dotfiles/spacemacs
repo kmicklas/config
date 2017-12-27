@@ -46,7 +46,6 @@ values."
      syntax-checking
      version-control
      nixos
-     haskell
      sql
      yaml
      python
@@ -58,6 +57,7 @@ values."
    dotspacemacs-additional-packages
    '(
      evil-escape
+     haskell-mode
      (dante
        :ensure t
        :after haskell-mode
