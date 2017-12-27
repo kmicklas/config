@@ -42,8 +42,6 @@ values."
             shell-default-shell 'eshell
             shell-default-height 30
             shell-default-position 'bottom)
-     spell-checking
-     syntax-checking
      version-control
      nixos
      sql
@@ -63,8 +61,7 @@ values."
        :after haskell-mode
        :commands 'dante-mode
        :init
-       (add-hook 'haskell-mode-hook 'dante-mode)
-       (add-hook 'haskell-mode-hook 'flycheck-mode))
+       (add-hook 'haskell-mode-hook 'dante-mode))
      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
