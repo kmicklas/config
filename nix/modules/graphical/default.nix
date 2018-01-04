@@ -22,7 +22,6 @@
       sessionCommands = ''
         xscreensaver -no-splash &
         albert &
-        compton -b --inactive-dim 0.05 -f -D 5
       '';
     };
 
@@ -36,5 +35,12 @@
   services.redshift = {
     enable = true;
     provider = "geoclue2";
+  };
+
+  services.compton = {
+    enable = true;
+    fade = true;
+    fadeDelta = 5;
+    extraOptions = "inactive-dim = 0.05;";
   };
 }
