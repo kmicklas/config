@@ -1,1 +1,3 @@
+:set -Wwarn
 :set -fdefer-type-errors
+:set -XPartialTypeSignatures
