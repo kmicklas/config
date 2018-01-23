@@ -18,6 +18,7 @@ pkgs: with pkgs; [
   xournal
   slack
   zoom-us
+  signal-desktop
 
   gnome3.gnome_settings_daemon
   gnome3.gnome_control_center
