@@ -40,5 +40,7 @@
     defaultEditor = true;
   };
 
+  services.statsd.enable = true;
+
   users.extraUsers.kmicklas = import ./kmicklas;
 }
