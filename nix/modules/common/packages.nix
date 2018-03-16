@@ -1,6 +1,4 @@
 pkgs: with pkgs; [
-  nix-repl
-
   wget
   neovim
   python
