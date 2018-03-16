@@ -6,6 +6,7 @@ pkgs: with pkgs; [
   unzip
   tmux
   termite.terminfo
+  ag
 
   iotop
   htop
