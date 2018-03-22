@@ -19,6 +19,7 @@ pkgs: with pkgs; [
   slack
   zoom-us
   signal-desktop
+  hexchat
 
   gnome3.gnome_settings_daemon
   gnome3.gnome_control_center
