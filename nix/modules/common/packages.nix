@@ -7,6 +7,7 @@ pkgs: with pkgs; [
   tmux
   termite.terminfo
   ag
+  jq
 
   iotop
   htop
