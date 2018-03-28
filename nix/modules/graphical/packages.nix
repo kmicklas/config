@@ -33,5 +33,7 @@ pkgs: with pkgs; [
   arandr
   compton
 
+  vanilla-dmz
+
   gparted
 ]
