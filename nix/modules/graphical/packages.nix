@@ -33,6 +33,7 @@ pkgs: with pkgs; [
   albert
   arandr
   compton
+  alsaUtils
 
   vanilla-dmz
 
