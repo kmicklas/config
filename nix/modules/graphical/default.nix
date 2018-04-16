@@ -3,7 +3,11 @@
 {
   hardware = {
     bluetooth.enable = true;
-    pulseaudio.enable = true;
+    pulseaudio = {
+      enable = true;
+      package = pkgs.pulseaudioFull;
+      daemon.config.flat-volumes = "no";
+    };
   };
 
   environment.systemPackages = (import ./packages.nix) pkgs;
