@@ -34,6 +34,7 @@ pkgs: with pkgs; [
   arandr
   compton
   alsaUtils
+  pavucontrol
 
   vanilla-dmz
 
