@@ -35,6 +35,7 @@ pkgs: with pkgs; [
   compton
   alsaUtils
   pavucontrol
+  xclip
 
   vanilla-dmz
 
