@@ -8,6 +8,7 @@
   extraGroups = [ "kmicklas" "wheel" "networkmanager" "docker" ];
   useDefaultShell = true;
   openssh.authorizedKeys.keys = map builtins.readFile [
+    ./laptop.pub
     ./macbook.pub
     ./work-laptop.pub
   ];
