@@ -8,6 +8,7 @@ pkgs: with pkgs; [
   termite.terminfo
   ag
   jq
+  gnupg
 
   iotop
   htop
