@@ -9,4 +9,5 @@
   ];
 
   services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.dpi = 160;
 }
