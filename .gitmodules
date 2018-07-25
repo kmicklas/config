@@ -4,3 +4,6 @@
 [submodule "dotfiles/emacs.d"]
 	path = dotfiles/emacs.d
 	url = https://github.com/syl20bnr/spacemacs
+[submodule "private"]
+	path = private
+	url = git@gitlab.com:kmicklas/config-private.git
