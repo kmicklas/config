@@ -8,9 +8,6 @@
   nix.readOnlyStore = true;
   nix.package = pkgs.nixUnstable;
 
-  networking.firewall.allowedTCPPorts = [ 22 9000 9001 ];
-  networking.firewall.allowedUDPPorts = [ 22      9001 ];
-
   i18n = {
     defaultLocale = "pt_BR.UTF-8";
   };
