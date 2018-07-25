@@ -6,7 +6,6 @@
   time.timeZone = "America/New_York";
 
   nix.readOnlyStore = true;
-  nix.package = pkgs.nixUnstable;
 
   i18n = {
     defaultLocale = "pt_BR.UTF-8";
