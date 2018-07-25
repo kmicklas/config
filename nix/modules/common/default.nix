@@ -1,7 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  imports = [ ./reflex.nix ];
+  imports = [
+    ./reflex.nix
+  ] ++ lib.optionals (builtins.pathExists ../../../private/nix) [
+    ../../../private/nix
+  ];
 
   time.timeZone = "America/New_York";
 
