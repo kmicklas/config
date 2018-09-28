@@ -17,6 +17,8 @@
 
   services.printing.enable = true;
 
+  programs.adb.enable = true;
+
   services.xserver = {
     enable = true;
     layout = "us";
