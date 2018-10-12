@@ -34,8 +34,6 @@ values."
      helm
      auto-completion
      better-defaults
-     (syntax-checking :variables
-                      flycheck-disabled-checkers '(haskell-stack-ghc))
      emacs-lisp
      git
      markdown
@@ -62,12 +60,6 @@ values."
    '(
      evil-escape
      haskell-mode
-     (dante
-       :ensure t
-       :after haskell-mode
-       :commands 'dante-mode
-       :init
-       (add-hook 'haskell-mode-hook 'dante-mode))
      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
