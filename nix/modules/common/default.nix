@@ -42,5 +42,8 @@
 
   services.statsd.enable = true;
 
+  # Theoretically will reduce hangs during nix-builds.
+  services.fstrim.enable = true;
+
   users.extraUsers.kmicklas = import ./kmicklas;
 }
