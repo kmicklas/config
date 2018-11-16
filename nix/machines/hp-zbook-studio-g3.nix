@@ -11,4 +11,6 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
   services.xserver.dpi = 160;
+
+  boot.initrd.luks.devices."hd0".allowDiscards = true;
 }
