@@ -26,7 +26,15 @@
 
   services.postgresql.enable = true;
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    extraOptions = "--bridge=docker-bridge";
+  };
+
+  networking.bridges.docker-bridge.interfaces = [];
+  networking.interfaces.docker-bridge.ipv4.addresses = [
+    { address = "10.51.0.1"; prefixLength = 16; }
+  ];
 
   security.sudo.wheelNeedsPassword = false;
 
