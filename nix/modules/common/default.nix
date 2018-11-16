@@ -11,9 +11,7 @@
 
   nix.readOnlyStore = true;
 
-  i18n = {
-    defaultLocale = "pt_BR.UTF-8";
-  };
+  i18n.defaultLocale = "pt_BR.UTF-8";
 
   environment.systemPackages = (import ./packages.nix) pkgs;
 
