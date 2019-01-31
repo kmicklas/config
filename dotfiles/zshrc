@@ -1,0 +1,6 @@
+plugins=(
+  dotenv
+  git
+)
+
+source $ZSH/oh-my-zsh.sh
