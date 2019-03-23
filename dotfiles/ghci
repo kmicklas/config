@@ -1,4 +1,5 @@
 :set -Wwarn
+:set -Wall
 :set -fdefer-type-errors
 :set -XPartialTypeSignatures
 :set prompt "\ESC[30;42m\STX%s\ESC[m\STX > "
