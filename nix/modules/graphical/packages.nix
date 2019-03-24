@@ -37,6 +37,7 @@ pkgs: with pkgs; [
   alsaUtils
   pavucontrol
   xclip
+  feh
 
   vanilla-dmz
 
