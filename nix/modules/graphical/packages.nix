@@ -20,6 +20,7 @@ pkgs: with pkgs; [
   zoom-us
   signal-desktop
   hexchat
+  calibre
 
   gnome3.gnome_settings_daemon
   gnome3.gnome_control_center
