@@ -6,7 +6,7 @@ pkgs: {
     ubuntu_font_family
     unifont
     google-fonts
-    font-droid
+    noto-fonts
     source-han-sans-japanese
     source-han-sans-korean
     source-han-sans-simplified-chinese
