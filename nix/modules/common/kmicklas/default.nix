@@ -5,7 +5,7 @@
   createHome = true;
   home = "/home/kmicklas";
   description = "Ken Micklas";
-  extraGroups = [ "kmicklas" "wheel" "networkmanager" "docker" ];
+  extraGroups = [ "kmicklas" "wheel" "networkmanager" ];
   useDefaultShell = true;
   openssh.authorizedKeys.keys = map builtins.readFile [
     ./laptop.pub
