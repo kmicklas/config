@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  # TODO: Remove this once upstream.
+  # To fix kernel panic due to i2c bug:
+  boot.kernelPackages = pkgs.linuxPackages_5_0;
+
   hardware = {
     bluetooth.enable = true;
     pulseaudio = {
