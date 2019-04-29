@@ -7,6 +7,3 @@
 [submodule "private"]
 	path = private
 	url = git@gitlab.com:kmicklas/config-private.git
-[submodule "dotfiles/oh-my-zsh"]
-	path = dotfiles/oh-my-zsh
-	url = git@github.com:robbyrussell/oh-my-zsh.git
