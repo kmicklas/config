@@ -8,8 +8,4 @@
     ../modules/media-keys.nix
     ../modules/efi-boot.nix
   ];
-
-  environment.systemPackages = with pkgs; [
-    fbterm # compensate for UHD
-  ];
 }
