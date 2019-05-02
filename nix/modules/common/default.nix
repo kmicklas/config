@@ -9,7 +9,10 @@
 
   time.timeZone = "America/New_York";
 
-  nix.readOnlyStore = true;
+  nix = {
+    readOnlyStore = true;
+    autoOptimiseStore = true;
+  };
 
   i18n.defaultLocale = "pt_BR.UTF-8";
 
