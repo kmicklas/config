@@ -31,14 +31,16 @@
   programs.fish.enable = true;
   users.defaultUserShell = "/run/current-system/sw/bin/fish";
 
-  programs.zsh.enable = true;
-  programs.zsh.ohMyZsh = {
+  programs.zsh = {
     enable = true;
-    plugins = [
-      "dotenv"
-      "git"
-      "man"
-    ];
+    ohMyZsh = {
+      enable = true;
+      plugins = [
+        "dotenv"
+        "git"
+        "man"
+      ];
+    };
   };
 
   services.emacs = {
