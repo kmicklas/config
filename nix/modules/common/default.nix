@@ -12,6 +12,13 @@
   nix = {
     readOnlyStore = true;
     autoOptimiseStore = true;
+    nixPath = let
+      nixpkgs = ../../../dep/nixpkgs;
+    in [
+      ("nixos=" + nixpkgs)
+      ("nixpkgs=" + nixpkgs)
+      "nixos-config=/etc/nixos/configuration.nix"
+    ];
   };
 
   i18n.defaultLocale = "pt_BR.UTF-8";
