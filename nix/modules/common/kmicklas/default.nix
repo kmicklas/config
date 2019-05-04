@@ -10,6 +10,5 @@
   openssh.authorizedKeys.keys = map builtins.readFile [
     ./laptop.pub
     ./macbook.pub
-    ./work-laptop.pub
   ];
 }
