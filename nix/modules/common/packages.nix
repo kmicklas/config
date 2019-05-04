@@ -3,6 +3,7 @@ pkgs: with pkgs; [
   neovim
   python
   gitAndTools.gitFull
+  gitAndTools.hub
   unzip
   tmux
   termite.terminfo
