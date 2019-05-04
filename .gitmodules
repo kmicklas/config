@@ -11,3 +11,6 @@
 	path = dep/nixpkgs
 	url = git@github.com:NixOS/nixpkgs-channels.git
 	branch = nixos-19.03
+[submodule "dep/home-manager"]
+	path = dep/home-manager
+	url = git@github.com:rycee/home-manager.git
