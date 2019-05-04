@@ -13,10 +13,7 @@
     readOnlyStore = true;
     autoOptimiseStore = true;
     nixPath = let
-      nixpkgs-checkout = ../../../dep/nixpkgs;
-      nixpkgs = builtins.filterSource
-        (path: _: path != (builtins.toPath nixpkgs-checkout + "/.git"))
-        ../../../dep/nixpkgs;
+      nixpkgs = builtins.toPath ../../../dep/nixpkgs;
     in [
       ("nixos=" + nixpkgs)
       ("nixpkgs=" + nixpkgs)
