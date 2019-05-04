@@ -17,4 +17,6 @@
     "cabal.project.local"
     "dist-newstyle"
   ];
+
+  home.file.".ghci".source = ../../../../dotfiles/ghci;
 }
