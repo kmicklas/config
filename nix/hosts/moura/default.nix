@@ -38,4 +38,5 @@
   };
 
   networking.hostName = "moura";
+  nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 }

@@ -17,7 +17,6 @@
     in [
       ("nixos=" + nixpkgs)
       ("nixpkgs=" + nixpkgs)
-      "nixos-config=/etc/nixos/configuration.nix"
     ];
   };
 

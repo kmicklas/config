@@ -11,4 +11,5 @@
   ];
 
   networking.hostName = "tieta";
+  nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 }
