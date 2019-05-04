@@ -12,6 +12,6 @@
   programs.termite = {
     enable = true;
     scrollbackLines = 100000;
-    font = "Monospace 9";
+    font = "Monospace 8";
   };
 }
