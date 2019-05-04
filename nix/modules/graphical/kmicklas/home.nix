@@ -14,4 +14,6 @@
     scrollbackLines = 100000;
     font = "Monospace 8";
   };
+
+  home.file.".icons/default/index.theme".source = ../../../../dotfiles/icons/default/index.theme;
 }
