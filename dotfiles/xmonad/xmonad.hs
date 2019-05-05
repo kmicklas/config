@@ -14,10 +14,10 @@ myKeys conf@(XConfig {modMask = modm}) = M.fromList $
   ]
 
 main = xmonad $ def
-         { modMask = mod4Mask
-         , layoutHook = layoutHook def ||| ThreeColMid 1 (3/100) (1/2)
-         , borderWidth = 0
-         , terminal = "termite"
-         , workspaces = myWorkspaces
-         , keys = myKeys <+> keys def
-         }
+  { modMask = mod4Mask
+  , layoutHook = layoutHook def ||| ThreeColMid 1 (3/100) (1/2)
+  , borderWidth = 0
+  , terminal = "termite"
+  , workspaces = myWorkspaces
+  , keys = myKeys <+> keys def
+  }
