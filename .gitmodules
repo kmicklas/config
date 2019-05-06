@@ -11,3 +11,6 @@
 [submodule "dep/home-manager"]
 	path = dep/home-manager
 	url = git@github.com:rycee/home-manager.git
+[submodule "dep/obelisk"]
+	path = dep/obelisk
+	url = https://github.com/obsidiansystems/obelisk.git
