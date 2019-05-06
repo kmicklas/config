@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   services.xscreensaver.enable = true;
@@ -15,5 +15,8 @@
     font = "Monospace 8";
   };
 
-  home.file.".icons/default/index.theme".source = ../../../../dotfiles/icons/default/index.theme;
+  xsession.pointerCursor = {
+    name = "Vanilla-DMZ";
+    package = pkgs.vanilla-dmz;
+  };
 }

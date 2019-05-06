@@ -39,7 +39,5 @@ pkgs: with pkgs; [
   xclip
   feh
 
-  vanilla-dmz
-
   gparted
 ]
