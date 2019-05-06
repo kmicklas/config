@@ -16,7 +16,6 @@ pkgs: with pkgs; [
   transmission_gtk
   thunderbird
   xournal
-  slack
   zoom-us
   signal-desktop
   hexchat
@@ -27,13 +26,11 @@ pkgs: with pkgs; [
   gnome3.gnome-screenshot
   gnome3.gedit
   dmenu
-  xflux
   dropbox
   acpi
   xscreensaver
   albert
   arandr
-  compton
   alsaUtils
   pavucontrol
   xclip
