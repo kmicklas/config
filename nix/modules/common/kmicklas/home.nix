@@ -1,6 +1,13 @@
 { ... }:
 
+let
+  nixpkgsConfig = ../../../../dotfiles/config/nixpkgs/config.nix;
+in
+
 {
+  nixpkgs.config = import nixpkgsConfig;
+  xdg.configFile."nixpkgs/config.nix".source = nixpkgsConfig;
+
   programs.git.enable = true;
   programs.git.userName = "Ken Micklas";
   programs.git.userEmail = "kmicklas@gmail.com";
