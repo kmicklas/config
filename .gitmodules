@@ -1,6 +1,3 @@
-[submodule "vim/bundles/idris-vim"]
-	path = dotfiles/vim/bundles/idris-vim
-	url = git@github.com:idris-hackers/idris-vim.git
 [submodule "dotfiles/emacs.d"]
 	path = dotfiles/emacs.d
 	url = https://github.com/syl20bnr/spacemacs
