@@ -9,6 +9,17 @@
   services.redshift.enable = true;
   services.redshift.provider = "geoclue2";
 
+  xsession.enable = true;
+  xsession.initExtra = ''
+    albert &
+  '';
+
+  xsession.windowManager.xmonad = {
+    enable = true;
+    enableContribAndExtras = true;
+    config = ../../../../dotfiles/xmonad/xmonad.hs;
+  };
+
   services.compton = {
     enable = true;
     fade = true;
