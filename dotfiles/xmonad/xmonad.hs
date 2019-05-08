@@ -15,8 +15,8 @@ workspace0Keys conf@(XConfig {modMask = modm}) = M.fromList $
 
 launcherKeys conf@(XConfig {modMask = modm}) = M.fromList $
   [ ((modm, xK_a), spawn "autorandr -c")
-  , ((modm, xK_s), spawn "xscreensaver-command -lock; systemctl suspend")
-  , ((modm, xK_d), spawn "xscreensaver-command -lock")
+  , ((modm, xK_s), spawn "systemctl suspend")
+  , ((modm, xK_d), spawn "physlock")
   , ((modm, xK_f), spawn "emacseditor")
   ]
 
