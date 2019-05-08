@@ -50,6 +50,7 @@
   '';
 
   services.physlock.enable = true;
+  services.physlock.allowAnyUser = true;
 
   services.redshift = {
     enable = true;
