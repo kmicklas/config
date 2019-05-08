@@ -52,11 +52,6 @@
   services.physlock.enable = true;
   services.physlock.allowAnyUser = true;
 
-  services.redshift = {
-    enable = true;
-    provider = "geoclue2";
-  };
-
   services.compton = {
     enable = true;
     fade = true;

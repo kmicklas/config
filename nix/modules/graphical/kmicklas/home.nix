@@ -6,6 +6,9 @@
   services.xscreensaver.enable = true;
   services.xscreensaver.settings.mode = "blank";
 
+  services.redshift.enable = true;
+  services.redshift.provider = "geoclue2";
+
   xresources.properties = {
     "Xft.dpi" = 192;
     "Xft.antialias" = true;
