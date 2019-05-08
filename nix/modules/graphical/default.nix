@@ -42,6 +42,13 @@
     };
   };
 
+  services.logind.lidSwitch = "suspend";
+  services.logind.lidSwitchDocked = "suspend";
+  services.logind.lidSwitchExternalPower = "suspend";
+  services.logind.extraConfig = ''
+    HandlePowerKey=suspend
+  '';
+
   services.redshift = {
     enable = true;
     provider = "geoclue2";
