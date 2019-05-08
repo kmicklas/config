@@ -5,42 +5,20 @@
   # To fix kernel panic due to i2c bug:
   boot.kernelPackages = pkgs.linuxPackages_5_0;
 
-  hardware = {
-    bluetooth.enable = true;
-    pulseaudio = {
-      enable = true;
-      package = pkgs.pulseaudioFull;
-      daemon.config.flat-volumes = "no";
-    };
-  };
+  environment.systemPackages = import ./packages.nix pkgs;
+  fonts = import ./fonts.nix pkgs;
 
-  environment.systemPackages = (import ./packages.nix) pkgs;
-  fonts = (import ./fonts.nix) pkgs;
+  hardware.bluetooth.enable = true;
+  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.package = pkgs.pulseaudioFull;
+  hardware.pulseaudio.daemon.config.flat-volumes = "no";
 
   networking.networkmanager.enable = true;
-
   services.printing.enable = true;
 
-  programs.adb.enable = true;
-
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    enableCtrlAltBackspace = true;
-
-    displayManager = {
-      sessionCommands = ''
-        xscreensaver -no-splash &
-        albert &
-      '';
-    };
-
-    windowManager = {
-      xmonad.enable = true;
-      xmonad.enableContribAndExtras = true;
-      default = "xmonad";
-    };
-  };
+  services.xserver.enable = true;
+  services.xserver.layout = "us";
+  services.xserver.enableCtrlAltBackspace = true;
 
   services.logind.lidSwitch = "suspend";
   services.logind.lidSwitchDocked = "suspend";
@@ -51,4 +29,6 @@
 
   services.physlock.enable = true;
   services.physlock.allowAnyUser = true;
+
+  programs.adb.enable = true;
 }
