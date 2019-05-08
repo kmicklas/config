@@ -2,8 +2,6 @@ pkgs: with pkgs; [
   wget
   neovim
   python
-  gitAndTools.gitFull
-  gitAndTools.hub
   unzip
   tmux
   termite.terminfo
@@ -17,8 +15,4 @@ pkgs: with pkgs; [
   psmisc # killall
   fuse_exfat
   exfat-utils
-
-  stack
-  cabal-install
-  haskellPackages.ghcid
 ]

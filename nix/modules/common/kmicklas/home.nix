@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 let
   nixpkgsConfig = ../../../../dotfiles/config/nixpkgs/config.nix;
@@ -8,11 +8,12 @@ in
   nixpkgs.config = import nixpkgsConfig;
   xdg.configFile."nixpkgs/config.nix".source = nixpkgsConfig;
 
-  home.packages = [
+  home.packages = (import ./packages.nix pkgs) ++ [
     (import ../../../../dep/obelisk {}).command
   ];
 
   programs.git.enable = true;
+  programs.git.package = pkgs.gitAndTools.gitFull;
   programs.git.userName = "Ken Micklas";
   programs.git.userEmail = "kmicklas@gmail.com";
   programs.git.extraConfig = {
