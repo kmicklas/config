@@ -52,11 +52,6 @@
     };
   };
 
-  services.emacs = {
-    enable = true;
-    defaultEditor = true;
-  };
-
   # Theoretically will reduce hangs during nix-builds.
   services.fstrim.enable = true;
 

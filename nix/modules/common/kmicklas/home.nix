@@ -33,4 +33,9 @@ in
   ];
 
   home.file.".ghci".source = ../../../../dotfiles/ghci;
+
+  programs.emacs.enable = true;
+  services.emacs.enable = true;
+  home.sessionVariables.EDITOR = "emacseditor --create-frame --tty";
+  home.sessionVariables.VISUAL = "emacseditor --create-frame";
 }
