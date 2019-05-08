@@ -18,7 +18,7 @@ launcherKeys conf@(XConfig {modMask = modm}) = M.fromList $
   [ ((modm, xK_a), spawn "autorandr -c")
   , ((modm, xK_s), spawn "systemctl suspend")
   , ((modm, xK_d), spawn "physlock")
-  , ((modm, xK_f), spawn "emacseditor")
+  , ((modm, xK_f), spawn "emacsclient --create-frame")
   ]
 
 main = xmonad $ def
