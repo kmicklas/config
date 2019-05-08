@@ -8,6 +8,11 @@
 
   xresources.properties = {
     "Xft.dpi" = 192;
+    "Xft.antialias" = true;
+    "Xft.hintin" = true;
+    "Xft.rgba" = "rgb";
+    "Xft.hintstyle" = "hintslight";
+    "Xft.lcdfilter" = "lcddefault";
     "Xcursor.size" = 48;
   };
 
