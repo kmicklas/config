@@ -11,27 +11,23 @@
 
   time.timeZone = "America/New_York";
 
-  nix = {
-    readOnlyStore = true;
-    autoOptimiseStore = true;
-    nixPath = let
-      nixpkgs = builtins.toPath ../../../dep/nixpkgs;
-    in [
-      ("nixos=" + nixpkgs)
-      ("nixpkgs=" + nixpkgs)
-    ];
-  };
+  nix.readOnlyStore = true;
+  nix.autoOptimiseStore = true;
+  nix.nixPath = let
+    nixpkgs = builtins.toPath ../../../dep/nixpkgs;
+  in [
+    ("nixos=" + nixpkgs)
+    ("nixpkgs=" + nixpkgs)
+  ];
 
   i18n.defaultLocale = "pt_BR.UTF-8";
 
   nixpkgs.config.allowUnfree = true;
 
-  services.openssh = {
-    enable = true;
-    forwardX11 = true;
-    permitRootLogin = "no";
-    passwordAuthentication = false;
-  };
+  services.openssh.enable = true;
+  services.openssh.forwardX11 = true;
+  services.openssh.permitRootLogin = "no";
+  services.openssh.passwordAuthentication = false;
 
   services.postgresql.enable = true;
 
