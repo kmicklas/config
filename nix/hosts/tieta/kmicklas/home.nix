@@ -19,14 +19,12 @@
             enable = true;
             position = "0x0";
             mode = "3840x2160";
-            rate = "29.97";
             primary = true;
           };
           "eDP-1" = {
             enable = true;
             position = "640x2160";
             mode = "2560x1440";
-            rate = "59.94";
           };
         };
       };
@@ -39,7 +37,6 @@
             enable = true;
             position = "0x0";
             mode = "2560x1440";
-            rate = "59.98";
             primary = true;
           };
         };
