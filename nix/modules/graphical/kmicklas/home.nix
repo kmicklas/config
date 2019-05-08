@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  home.packages = import ./packages.nix pkgs;
+
   services.xscreensaver.enable = true;
   services.xscreensaver.settings.mode = "blank";
 
