@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Layout.NoBorders
 import XMonad.Layout.ThreeColumns
 
 import qualified Data.Map as M
@@ -22,8 +23,11 @@ launcherKeys conf@(XConfig {modMask = modm}) = M.fromList $
 
 main = xmonad $ def
   { modMask = mod4Mask
-  , layoutHook = layoutHook def ||| ThreeColMid 1 (3/100) (1/2)
-  , borderWidth = 0
+  -- TODO: Put this back to smartBorders once
+  -- https://github.com/xmonad/xmonad-contrib/issues/280 is fixed.
+  , layoutHook = lessBorders OtherIndicated $
+      layoutHook def ||| ThreeColMid 1 (3/100) (1/2)
+  , borderWidth = 2
   , terminal = "termite"
   , workspaces = myWorkspaces
   , keys = workspace0Keys <+> launcherKeys <+> keys def
