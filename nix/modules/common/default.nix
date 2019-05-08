@@ -7,6 +7,8 @@
     ../../../private/nix
   ];
 
+  environment.systemPackages = import ./packages.nix pkgs;
+
   time.timeZone = "America/New_York";
 
   nix = {
@@ -21,12 +23,6 @@
   };
 
   i18n.defaultLocale = "pt_BR.UTF-8";
-
-  environment.systemPackages = builtins.concatLists [
-    (import ./packages.nix pkgs)
-    # TODO: Consider using nixpkgs version once it's more stable/up-to-date.
-    [ (import ../../../dep/home-manager { inherit pkgs; }).home-manager ]
-  ];
 
   nixpkgs.config.allowUnfree = true;
 

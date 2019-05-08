@@ -9,6 +9,8 @@ in
   xdg.configFile."nixpkgs/config.nix".source = nixpkgsConfig;
 
   home.packages = (import ./packages.nix pkgs) ++ [
+    # TODO: Consider using nixpkgs version once it's more stable/up-to-date.
+    (import ../../../../dep/home-manager { inherit pkgs; }).home-manager
     (import ../../../../dep/obelisk {}).command
   ];
 
