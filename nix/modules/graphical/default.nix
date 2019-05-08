@@ -49,6 +49,8 @@
     HandlePowerKey=suspend
   '';
 
+  services.physlock.enable = true;
+
   services.redshift = {
     enable = true;
     provider = "geoclue2";
