@@ -1,5 +1,4 @@
 pkgs: with pkgs; [
-  firefoxWrapper
   google-chrome
   torbrowser
   evince

@@ -38,6 +38,8 @@
     font = "Monospace 8";
   };
 
+  programs.firefox.enable = true;
+
   xsession.pointerCursor = {
     name = "Vanilla-DMZ";
     package = pkgs.vanilla-dmz;
