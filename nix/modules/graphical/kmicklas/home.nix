@@ -9,6 +9,13 @@
   services.redshift.enable = true;
   services.redshift.provider = "geoclue2";
 
+  services.compton = {
+    enable = true;
+    fade = true;
+    fadeDelta = 5;
+    extraOptions = "inactive-dim = 0.05;";
+  };
+
   xresources.properties = {
     "Xft.dpi" = 192;
     "Xft.antialias" = true;

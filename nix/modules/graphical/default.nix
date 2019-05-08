@@ -51,11 +51,4 @@
 
   services.physlock.enable = true;
   services.physlock.allowAnyUser = true;
-
-  services.compton = {
-    enable = true;
-    fade = true;
-    fadeDelta = 5;
-    extraOptions = "inactive-dim = 0.05;";
-  };
 }
