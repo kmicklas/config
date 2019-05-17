@@ -1,5 +1,5 @@
 [submodule "dotfiles/emacs.d"]
-	path = dotfiles/emacs.d
+	path = dep/spacemacs
 	url = https://github.com/syl20bnr/spacemacs
 [submodule "private"]
 	path = private
