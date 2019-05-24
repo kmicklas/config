@@ -7,5 +7,6 @@
     ./haskell.nix
     ./home-manager.nix
     ./nixpkgs.nix
+    ./zsh.nix
   ];
 }
