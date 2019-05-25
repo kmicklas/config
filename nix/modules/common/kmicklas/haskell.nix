@@ -7,6 +7,7 @@
     stack
     cabal-install
     haskellPackages.ghcid
+    haskellPackages.stylish-haskell
   ]);
 
   programs.git.ignores = [
