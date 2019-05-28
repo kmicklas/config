@@ -75,6 +75,8 @@ you should place your code here."
     (let ((evil-this-register ?0))
       (call-interactively 'evil-paste-after)))
 
+  (setq-default evil-escape-delay 0.5)
+
   (define-key evil-visual-state-map "p" 'evil-paste-after-from-0)
   (define-key evil-normal-state-map (kbd "RET") 'newline-and-indent)
   (define-key evil-normal-state-map "." 'evil-window-next)
