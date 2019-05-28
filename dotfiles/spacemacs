@@ -81,6 +81,7 @@ you should place your code here."
 
   (spacemacs/toggle-smartparens-globally-off)
 
+  (remove-hook 'magit-refs-sections-hook 'magit-insert-tags)
   (setq vc-handled-backends (delq 'Git vc-handled-backends))
 
   (setq-default
