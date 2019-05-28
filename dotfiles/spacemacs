@@ -81,6 +81,8 @@ you should place your code here."
 
   (spacemacs/toggle-smartparens-globally-off)
 
+  (setq vc-handled-backends (delq 'Git vc-handled-backends))
+
   (setq-default
    haskell-process-type 'cabal-repl
    projectile-enable-caching t
