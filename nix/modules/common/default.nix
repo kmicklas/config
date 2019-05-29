@@ -33,20 +33,8 @@
 
   security.sudo.wheelNeedsPassword = false;
 
-  programs.fish.enable = true;
-  users.defaultUserShell = "/run/current-system/sw/bin/fish";
-
-  programs.zsh = {
-    enable = true;
-    ohMyZsh = {
-      enable = true;
-      plugins = [
-        "dotenv"
-        "git"
-        "man"
-      ];
-    };
-  };
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
   # Theoretically will reduce hangs during nix-builds.
   services.fstrim.enable = true;
