@@ -86,6 +86,7 @@ you should place your code here."
   (setq-default
    evil-escape-delay 0.5
    projectile-enable-caching t
+   projectile-git-submodule-command nil
    vc-handled-backends (delq 'Git vc-handled-backends)
    haskell-process-type 'cabal-repl
    )
