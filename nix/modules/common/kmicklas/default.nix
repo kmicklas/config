@@ -1,9 +1,11 @@
-{
+let homedir = "/home/kmicklas";
+in {
   isNormalUser = true;
   isSystemUser = false;
   uid = 1000;
   createHome = true;
-  home = "/home/kmicklas";
+  home = homedir;
+  shell = homedir + "/.nix-profile/bin/zsh";
   description = "Ken Micklas";
   extraGroups = [ "kmicklas" "wheel" "networkmanager" ];
   useDefaultShell = true;
