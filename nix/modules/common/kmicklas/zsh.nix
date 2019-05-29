@@ -5,7 +5,9 @@
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.oh-my-zsh.enable = true;
   programs.zsh.oh-my-zsh.plugins = [
+    "dotenv"
     "git"
+    "man"
   ];
   programs.zsh.initExtra = ''
     function prompt_status_indicator {
