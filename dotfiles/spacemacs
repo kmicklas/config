@@ -33,11 +33,7 @@ values."
      javascript
      go
      )
-   dotspacemacs-additional-packages
-   '(
-     evil-escape
-     haskell-mode
-     )
+   dotspacemacs-additional-packages '(evil-escape)
    ))
 
 (defun dotspacemacs/init ()
