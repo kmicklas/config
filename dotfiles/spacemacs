@@ -29,6 +29,9 @@ values."
 
      yaml
      csv
+
+     javascript
+     go
      )
    dotspacemacs-additional-packages
    '(
