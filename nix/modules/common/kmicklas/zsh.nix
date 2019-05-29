@@ -11,12 +11,23 @@
     function prompt_status_indicator {
       local last_command_status=$?
       if test $last_command_status -gt 0
-      then echo "%{$fg[red]%}($last_command_status)%{$reset_color%}"
-      else echo "%{$fg[green]%}($last_command_status)%{$reset_color%}"
+      then echo "%{$fg_bold[red]%}($last_command_status)%{$reset_color%}"
+      else echo "%{$fg_bold[green]%}($last_command_status)%{$reset_color%}"
+      fi
+    }
+    function prompt_nix_shell_indicator {
+      if [[ -v IN_NIX_SHELL ]]
+      then echo " %{$fg_bold[red]%}<NIX>%{$reset_color%}"
+      fi
+    }
+    function prompt_git_branch_indicator {
+      local branch=$(git_current_branch)
+      if [[ ! -z $branch ]]
+      then echo " ($branch)"
       fi
     }
 
     autoload -U colors && colors
-    PROMPT='$(prompt_status_indicator) %{$fg[white]%}%~%{$reset_color%}'$'\n'"> "
+    PROMPT='$(prompt_status_indicator) [%*] %{$fg_bold[blue]%}%n@%M%{$reset_color%} %~$(prompt_git_branch_indicator)$(prompt_nix_shell_indicator)'$'\n'"> "
   '';
 }
