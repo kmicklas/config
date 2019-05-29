@@ -75,8 +75,6 @@ you should place your code here."
     (let ((evil-this-register ?0))
       (call-interactively 'evil-paste-after)))
 
-  (setq-default evil-escape-delay 0.5)
-
   (define-key evil-visual-state-map "p" 'evil-paste-after-from-0)
   (define-key evil-normal-state-map (kbd "RET") 'newline-and-indent)
   (define-key evil-normal-state-map "." 'evil-window-next)
@@ -84,10 +82,11 @@ you should place your code here."
   (spacemacs/toggle-smartparens-globally-off)
 
   (remove-hook 'magit-refs-sections-hook 'magit-insert-tags)
-  (setq vc-handled-backends (delq 'Git vc-handled-backends))
 
   (setq-default
-   haskell-process-type 'cabal-repl
+   evil-escape-delay 0.5
    projectile-enable-caching t
+   vc-handled-backends (delq 'Git vc-handled-backends)
+   haskell-process-type 'cabal-repl
    )
   )
