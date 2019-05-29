@@ -8,22 +8,26 @@ values."
      helm
      auto-completion
      better-defaults
-     emacs-lisp
-     git
+
      markdown
      org
+
+     shell-scripts
      (shell :variables
             shell-default-shell 'ansi-term
             shell-default-height 30
             shell-default-position 'bottom)
-     shell-scripts
+
      version-control
+     git
+
+     emacs-lisp
      haskell
+     rust
      nixos
      sql
+
      yaml
-     rust
-     scala
      csv
      )
    dotspacemacs-additional-packages
