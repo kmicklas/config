@@ -30,4 +30,7 @@
     autoload -U colors && colors
     PROMPT='$(prompt_status_indicator) [%*] %{$fg_bold[blue]%}%n@%M%{$reset_color%} %~$(prompt_git_branch_indicator)$(prompt_nix_shell_indicator)'$'\n'"> "
   '';
+  programs.zsh.shellAliases = {
+    nix-zsh = "nix-shell --run zsh";
+  };
 }
