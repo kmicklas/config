@@ -35,5 +35,7 @@
   '';
   programs.zsh.shellAliases = {
     nix-zsh = "nix-shell --run zsh";
+    e = "emacseditor --create-frame --tty";
+    v = "emacseditor --create-frame";
   };
 }
