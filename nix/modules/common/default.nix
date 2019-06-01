@@ -20,6 +20,8 @@
     ("nixpkgs=" + nixpkgs)
   ];
 
+  boot.tmpOnTmpfs = true;
+
   i18n.defaultLocale = "pt_BR.UTF-8";
 
   nixpkgs.config.allowUnfree = true;
