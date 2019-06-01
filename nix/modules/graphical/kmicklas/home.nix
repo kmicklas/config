@@ -13,6 +13,7 @@
   xsession.initExtra = ''
     albert &
   '';
+  xdg.configFile."albert/albert.conf".source = ../../../../dotfiles/config/albert/albert.conf;
 
   xsession.windowManager.xmonad = {
     enable = true;
