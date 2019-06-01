@@ -23,6 +23,7 @@
   boot.tmpOnTmpfs = true;
 
   i18n.defaultLocale = "pt_BR.UTF-8";
+  i18n.consoleFont = "latarcyrheb-sun32";
 
   nixpkgs.config.allowUnfree = true;
 
