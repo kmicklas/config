@@ -5,5 +5,4 @@ with import <nixpkgs> {};
   inherit neovim;
 
   inherit tmux;
-  inherit fish;
 }
