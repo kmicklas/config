@@ -11,6 +11,8 @@
 
   services.xserver.videoDrivers = [ "amdgpu" ];
 
+  hardware.cpu.amd.updateMicrocode = true;
+
   boot.initrd.luks.devices = [
     {
       name = "root";
