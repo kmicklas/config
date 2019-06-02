@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Hooks.ManageDocks
 import XMonad.Layout.NoBorders
 import XMonad.Layout.ThreeColumns
 
@@ -21,11 +22,11 @@ launcherKeys conf@(XConfig {modMask = modm}) = M.fromList $
   , ((modm, xK_f), spawn "emacsclient --create-frame")
   ]
 
-main = xmonad $ def
+main = xmonad $ docks $ def
   { modMask = mod4Mask
   -- TODO: Put this back to smartBorders once
   -- https://github.com/xmonad/xmonad-contrib/issues/280 is fixed.
-  , layoutHook = lessBorders OtherIndicated $
+  , layoutHook = avoidStruts $ lessBorders OtherIndicated $
       layoutHook def ||| ThreeColMid 1 (3/100) (1/2)
   , borderWidth = 2
   , terminal = "termite"
