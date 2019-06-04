@@ -23,6 +23,8 @@
     config = ../../../../dotfiles/xmonad/xmonad.hs;
   };
 
+  services.dunst.enable = true;
+
   xresources.properties = {
     "Xft.dpi" = 192;
     "Xft.antialias" = true;
