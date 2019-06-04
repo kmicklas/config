@@ -1,0 +1,12 @@
+cabal-version:       2.0
+
+name:                my-taffybar
+version:             0.1.0.0
+build-type:          Simple
+
+executable taffybar
+  main-is:             Main.hs
+  build-depends:       base, taffybar
+  default-language:    Haskell2010
+
+  ghc-options:         -threaded -O2

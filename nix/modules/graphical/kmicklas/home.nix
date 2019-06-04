@@ -25,6 +25,10 @@
 
   services.dunst.enable = true;
 
+  services.taffybar.enable = true;
+  services.taffybar.package =
+    pkgs.haskellPackages.callCabal2nix "taffybar" ../../../../my-taffybar {};
+
   xresources.properties = {
     "Xft.dpi" = 192;
     "Xft.antialias" = true;
