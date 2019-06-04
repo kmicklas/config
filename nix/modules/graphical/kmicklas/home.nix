@@ -21,9 +21,13 @@
     # https://github.com/xmonad/xmonad-contrib/issues/280
     enableContribAndExtras = true;
     config = ../../../../dotfiles/xmonad/xmonad.hs;
+    extraPackages = self: with self; [ taffybar ];
   };
 
   services.dunst.enable = true;
+
+  services.taffybar.enable = true;
+  xdg.configFile."taffybar/taffybar.hs".source = ../../../../dotfiles/config/taffybar/taffybar.hs;
 
   xresources.properties = {
     "Xft.dpi" = 192;
