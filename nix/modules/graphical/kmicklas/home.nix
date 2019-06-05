@@ -11,6 +11,7 @@
 
   xsession.enable = true;
   xsession.initExtra = ''
+    xset r rate 250 30
     albert &
   '';
   xdg.configFile."albert/albert.conf".source = ../../../../dotfiles/config/albert/albert.conf;
