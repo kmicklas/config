@@ -81,6 +81,8 @@ you should place your code here."
   (define-key evil-visual-state-map "p" 'evil-paste-after-from-0)
   (define-key evil-normal-state-map (kbd "RET") 'newline-and-indent)
   (define-key evil-normal-state-map "." 'evil-window-next)
+  (define-key evil-normal-state-map "f" 'evil-avy-goto-char)
+  (define-key evil-normal-state-map "F" 'evil-avy-goto-char2)
 
   (spacemacs/toggle-smartparens-globally-off)
 
