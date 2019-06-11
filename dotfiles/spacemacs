@@ -35,6 +35,7 @@ values."
      )
    dotspacemacs-additional-packages
    '(
+     editorconfig
      evil-escape
      keyfreq
      )
