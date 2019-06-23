@@ -1,19 +1,19 @@
-[submodule "dotfiles/emacs.d"]
+[submodule "dep/home-manager"]
+	path = dep/home-manager
+	url = git@github.com:rycee/home-manager.git
+	branch = release-19.03
+[submodule "dep/nixpkgs"]
+	path = dep/nixpkgs
+	url = git@github.com:NixOS/nixpkgs-channels.git
+	branch = nixos-19.03
+[submodule "dep/obelisk"]
+	path = dep/obelisk
+	url = https://github.com/obsidiansystems/obelisk.git
+	branch = master
+[submodule "dep/spacemacs"]
 	path = dep/spacemacs
 	url = https://github.com/syl20bnr/spacemacs
 	branch = master
 [submodule "private"]
 	path = private
 	url = git@gitlab.com:kmicklas/config-private.git
-[submodule "dep/nixpkgs"]
-	path = dep/nixpkgs
-	url = git@github.com:NixOS/nixpkgs-channels.git
-	branch = nixos-19.03
-[submodule "dep/home-manager"]
-	path = dep/home-manager
-	url = git@github.com:rycee/home-manager.git
-	branch = release-19.03
-[submodule "dep/obelisk"]
-	path = dep/obelisk
-	url = https://github.com/obsidiansystems/obelisk.git
-	branch = master
