@@ -31,7 +31,7 @@ values."
      csv
 
      javascript
-     go
+     (go :variables go-tab-width 2)
      )
    dotspacemacs-additional-packages
    '(
