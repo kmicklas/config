@@ -89,6 +89,8 @@ you should place your code here."
   (define-key evil-normal-state-map "f" 'evil-avy-goto-char)
   (define-key evil-normal-state-map "F" 'evil-avy-goto-char2)
 
+  (define-key helm-map (kbd "<home>") 'beginning-of-line-text)
+
   (spacemacs/toggle-smartparens-globally-off)
 
   (remove-hook 'magit-refs-sections-hook 'magit-insert-tags)
