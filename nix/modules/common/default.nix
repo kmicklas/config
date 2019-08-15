@@ -3,8 +3,6 @@
 {
   imports = [
     ./reflex.nix
-  ] ++ lib.optionals (builtins.pathExists ../../../private/nix) [
-    ../../../private/nix
   ];
 
   environment.systemPackages = import ./packages.nix pkgs;
