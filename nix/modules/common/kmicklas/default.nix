@@ -10,7 +10,7 @@ in {
   extraGroups = [ "kmicklas" "wheel" "networkmanager" ];
   useDefaultShell = true;
   openssh.authorizedKeys.keys = map builtins.readFile [
-    ./laptop.pub
+    ../../../hosts/tieta/kmicklas/id_rsa.pub
     ./macbook.pub
   ];
 }
