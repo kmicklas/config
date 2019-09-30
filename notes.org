@@ -3,3 +3,4 @@
 *** mapping
 map J nextTab
 map K previousTab
+*** TODO gmail excluded keys
