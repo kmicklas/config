@@ -11,3 +11,8 @@ map K previousTab
 *** gmail excluded keys
 **** url: =https?://mail.google.com/*=
 **** keys: =?jknpxercgils#uld/om=
+* mac
+** amethyst for tiling window manager
+** honer for red borders like xmonad
+** alfred for launcher if launchpad breaks
+** get emacs from =https://emacsformacosx.com/=
