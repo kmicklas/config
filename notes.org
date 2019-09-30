@@ -1,6 +1,13 @@
 * browser
+** gmail
+*** keyboard shortcuts
+**** archive: =a=
+**** reply: =rr=
+**** reply all: =ra=
 ** vimium (firefox and chrome)
 *** mapping
 map J nextTab
 map K previousTab
-*** TODO gmail excluded keys
+*** gmail excluded keys
+**** url: =https?://mail.google.com/*=
+**** keys: =?jknpxercgils#uld/om=
