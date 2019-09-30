@@ -1,0 +1,5 @@
+* browser
+** vimium (firefox and chrome)
+*** mapping
+map J nextTab
+map K previousTab
