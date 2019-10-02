@@ -17,3 +17,14 @@
 ** alfred for launcher if launchpad breaks
 *** TODO set key to alt+space for consistency with albert
 ** get emacs from [[https://emacsformacosx.com/]]
+* nixos install
+** qfpl guide (LUKS): [[https://qfpl.io/posts/installing-nixos/]]
+*** put LUKS directly on physical partition without LVM
+**** =gdisk= code: =8390=
+** Will Fancher guide (zfs): [[https://elvishjerricco.github.io/2018/12/06/encrypted-boot-on-zfs-with-nixos.html]]
+*** ignore encrypted boot stuff
+*** if zfs kernel module isn't loaded: =boot.supportedFilesystems = [ "zfs" ];=
+*** suggested zfs devices
+**** =zroot/nixos=
+**** =zroot/nixos/nix=
+**** =zroot/nixos/nix=
