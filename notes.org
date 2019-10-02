@@ -6,8 +6,8 @@
 **** reply all: =ra=
 ** vimium (firefox and chrome)
 *** mapping
-map J nextTab
-map K previousTab
+**** map J nextTab
+**** map K previousTab
 *** gmail excluded keys
 **** url: =https?://mail.google.com/*=
 **** keys: =?jknpxercgils#uld/om=
@@ -15,4 +15,4 @@ map K previousTab
 ** amethyst for tiling window manager
 ** honer for red borders like xmonad
 ** alfred for launcher if launchpad breaks
-** get emacs from =https://emacsformacosx.com/=
+** get emacs from [[https://emacsformacosx.com/]]
