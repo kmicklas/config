@@ -1,29 +1,29 @@
 * browser
-** gmail
+** GMail
 *** keyboard shortcuts
 **** archive: =a=
 **** reply: =rr=
 **** reply all: =ra=
-** vimium (firefox and chrome)
+** Vimium (Firefox and Chrome)
 *** mapping
 **** map J nextTab
 **** map K previousTab
-*** gmail excluded keys
+*** GMail excluded keys
 **** url: =https?://mail.google.com/*=
 **** keys: =?jknpxercgils#uld/om=
-* mac
-** amethyst for tiling window manager
-** honer for red borders like xmonad
-** alfred for launcher if launchpad breaks
-*** TODO set key to alt+space for consistency with albert
-** get emacs from [[https://emacsformacosx.com/]]
-* nixos install
-** qfpl guide (LUKS): [[https://qfpl.io/posts/installing-nixos/]]
+* Mac
+** Amethyst for tiling window manager
+** Honer for red borders like XMonad
+** Alfred for launcher if Launchpad breaks
+*** TODO set key to =alt+space= for consistency with Albert
+** [[https://emacsformacosx.com/][best Emacs install]]
+* NixOS install
+** [[https://qfpl.io/posts/installing-nixos/][QFPL guide (LUKS)]]
 *** put LUKS directly on physical partition without LVM
 **** =gdisk= code: =8390=
-** Will Fancher guide (zfs): [[https://elvishjerricco.github.io/2018/12/06/encrypted-boot-on-zfs-with-nixos.html]]
+** [[https://elvishjerricco.github.io/2018/12/06/encrypted-boot-on-zfs-with-nixos.html][Will Fancher guide (ZFS)]]
 *** ignore encrypted boot stuff
-*** if zfs kernel module isn't loaded: =boot.supportedFilesystems = [ "zfs" ];=
+*** if =zfs= kernel module isn't loaded: =boot.supportedFilesystems = [ "zfs" ];=
 *** suggested zfs devices
 **** =zroot/nixos=
 **** =zroot/nixos/nix=
