@@ -15,4 +15,5 @@
 ** amethyst for tiling window manager
 ** honer for red borders like xmonad
 ** alfred for launcher if launchpad breaks
+*** TODO set key to alt+space for consistency with albert
 ** get emacs from [[https://emacsformacosx.com/]]
