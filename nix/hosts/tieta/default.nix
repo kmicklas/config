@@ -10,6 +10,13 @@
     ./hardware-configuration.nix
   ];
 
+  boot.initrd.luks.devices = {
+    root = {
+      device = "/dev/disk/by-uuid/7d3e45db-d4da-4f17-a725-dda0fdac9826";
+      allowDiscards = true;
+    };
+  };
+
   networking.hostName = "tieta";
   networking.hostId = "af5f7ecb";
 

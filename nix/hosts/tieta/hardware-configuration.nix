@@ -14,8 +14,18 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/03f9c2f7-f55e-4f48-85cd-380c29671dcf";
-      fsType = "btrfs";
+    { device = "zroot/nixos";
+      fsType = "zfs";
+    };
+
+  fileSystems."/nix" =
+    { device = "zroot/nixos/nix";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home" =
+    { device = "zroot/nixos/home";
+      fsType = "zfs";
     };
 
   fileSystems."/boot" =
