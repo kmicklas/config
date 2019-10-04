@@ -106,4 +106,9 @@ you should place your code here."
 
   (keyfreq-mode 1)
   (keyfreq-autosave-mode 1)
+
+  (when (eq system-type 'darwin)
+   (setq mac-option-modifier 'alt)
+   (setq mac-command-modifier 'control)
+   )
   )
