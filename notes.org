@@ -17,6 +17,9 @@
 ** Alfred for launcher if Launchpad breaks
 *** TODO set key to =alt+space= for consistency with Albert
 ** [[https://emacsformacosx.com/][best Emacs install]]
+* Emacs
+** org-mode
+*** TODO keybinding to insert subheading
 * NixOS install
 ** [[https://qfpl.io/posts/installing-nixos/][QFPL guide (LUKS)]]
 *** put LUKS directly on physical partition without LVM
