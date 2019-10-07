@@ -15,7 +15,8 @@
 ** Amethyst for tiling window manager
 ** Honer for red borders like XMonad
 ** Alfred for launcher if Launchpad breaks
-*** TODO set key to =alt+space= for consistency with Albert
+*** DONE set key to =alt+space= for consistency with Albert
+    CLOSED: [2019-10-07 Mon 10:09]
 ** [[https://emacsformacosx.com/][best Emacs install]]
 * Emacs
 ** org-mode
