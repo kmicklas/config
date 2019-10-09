@@ -21,6 +21,36 @@
 * Emacs
 ** org-mode
 *** TODO keybinding to insert subheading
+** magit
+*** TODO always show recent commits
+** TODO better evil keys from keyfreq data
+** TODO fix TLS setup
+** TODO support arrow key editing in helm
+*** suggested =(customize-set-variable 'helm-ff-lynx-style-map t)=
+** TODO figure out good shell workflow
+* shell
+** TODO resurrect pushover fish function for zsh
+* desktop
+** XMonad
+*** TODO [[https://github.com/xmonad/xmonad-contrib/issues/280][fix multi-monitor smart borders]]
+** TODO switch to Wayland
+*** Sway looks most promising
+** TODO setup dock
+*** desired indicators
+**** time
+**** battery
+**** RAM
+**** CPU
+**** temperature
+** TODO keyboard shortcut to dismiss notifications
+** peripherals
+*** TODO get bluetooth headphones working
+* data independence
+** TODO non-GMail email
+*** Fastmail?
+** TODO pass password manager
+** task management
+*** TODO try [[https://github.com/orgzly/orgzly-android/issues/24#issuecomment-539868242][Orgzly git support]]
 * NixOS install
 ** [[https://qfpl.io/posts/installing-nixos/][QFPL guide (LUKS)]]
 *** put LUKS directly on physical partition without LVM
@@ -32,3 +62,8 @@
 **** =zroot/nixos=
 **** =zroot/nixos/nix=
 **** =zroot/nixos/nix=
+** TODO upgrade to 19.09
+* misc
+** TODO offsite backup
+*** encrypted S3?
+** TODO learn Colemak
