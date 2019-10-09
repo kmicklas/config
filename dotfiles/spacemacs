@@ -103,10 +103,7 @@ you should place your code here."
    vc-handled-backends (delq 'Git vc-handled-backends)
    haskell-process-type 'cabal-repl
    system-time-locale "C"
-   org-agenda-files
-   '("~/config/notes.org"
-     "~/notes/"
-     )
+   org-agenda-files (file-expand-wildcards "~/*/*.org")
    )
 
   (keyfreq-mode 1)
