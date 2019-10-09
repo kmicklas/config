@@ -31,7 +31,6 @@ values."
      csv
 
      javascript
-     lua
      (go :variables go-tab-width 2)
      )
    dotspacemacs-additional-packages
