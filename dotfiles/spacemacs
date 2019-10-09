@@ -61,6 +61,7 @@ values."
    dotspacemacs-line-numbers t
    dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("ag")
+   dotspacemacs-enable-lazy-installation nil
    ))
 
 (defun dotspacemacs/user-init ()
