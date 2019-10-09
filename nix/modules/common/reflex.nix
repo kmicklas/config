@@ -1,7 +1,7 @@
 { config, options, pkgs, ... }:
 
 {
-  nix.binaryCaches = options.nix.binaryCaches.default ++ [
+  nix.binaryCaches = [
     "https://nixcache.reflex-frp.org"
   ];
   nix.binaryCachePublicKeys = [

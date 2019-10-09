@@ -62,7 +62,8 @@
 **** =zroot/nixos=
 **** =zroot/nixos/nix=
 **** =zroot/nixos/nix=
-** TODO upgrade to 19.09
+** DONE upgrade to 19.09
+   CLOSED: [2019-10-09 Wed 18:05]
 * misc
 ** TODO offsite backup
 *** encrypted S3?
