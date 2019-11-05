@@ -104,6 +104,7 @@ you should place your code here."
    haskell-process-type 'cabal-repl
    system-time-locale "C"
    org-agenda-files (file-expand-wildcards "~/*/*.org")
+   org-fontify-done-headline t
    )
 
   (keyfreq-mode 1)
