@@ -20,7 +20,8 @@
 ** [[https://emacsformacosx.com/][best Emacs install]]
 * Emacs
 ** org-mode
-*** TODO keybinding to insert subheading
+*** TODO [#A] keybinding to insert subheading
+*** TODO [#A] grey out DONE headlines
 ** magit
 *** TODO always show recent commits
 ** TODO better evil keys from keyfreq data
@@ -29,7 +30,7 @@
 *** suggested =(customize-set-variable 'helm-ff-lynx-style-map t)=
 ** TODO figure out good shell workflow
 * shell
-** TODO resurrect pushover fish function for zsh
+** TODO [#C] resurrect pushover fish function for zsh
 * desktop
 ** XMonad
 *** TODO [[https://github.com/xmonad/xmonad-contrib/issues/280][fix multi-monitor smart borders]]
@@ -67,4 +68,4 @@
 * misc
 ** TODO offsite backup
 *** encrypted S3?
-** TODO learn Colemak
+** TODO [#C] learn Colemak
