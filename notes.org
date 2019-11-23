@@ -47,8 +47,8 @@
 ** peripherals
 *** TODO get bluetooth headphones working
 * data independence
-** TODO non-GMail email
-*** Fastmail?
+** DONE non-GMail email
+   CLOSED: [2019-11-23 Sat 14:49]
 ** TODO pass password manager
 ** task management
 *** TODO try [[https://github.com/orgzly/orgzly-android/issues/24#issuecomment-539868242][Orgzly git support]]

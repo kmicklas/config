@@ -4,7 +4,7 @@
   programs.git.enable = true;
   programs.git.package = pkgs.gitAndTools.gitFull;
   programs.git.userName = "Ken Micklas";
-  programs.git.userEmail = "kmicklas@gmail.com";
+  programs.git.userEmail = "git@kmicklas.com";
   programs.git.extraConfig = {
     mergeTool.keepBackup = false;
     push.default = "simple";
