@@ -11,6 +11,8 @@
 *** GMail excluded keys
 **** url: =https?://mail.google.com/*=
 **** keys: =?jknpxercgils#uld/om=
+*** Fastmail excluded keys
+*** keys: =jkyb=
 * Mac
 ** Amethyst for tiling window manager
 ** Honer for red borders like XMonad
