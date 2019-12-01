@@ -6,6 +6,7 @@
     ../../modules/graphical
     ../../modules/libinput.nix
     ../../modules/efi-boot.nix
+    ../../modules/gitlab-runner
     ./hardware-configuration.nix
   ];
 
