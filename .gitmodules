@@ -17,3 +17,7 @@
 [submodule "private"]
 	path = private
 	url = git@gitlab.com:kmicklas/config-private.git
+[submodule "dep/nixos-gitlab-runner"]
+	path = dep/nixos-gitlab-runner
+	url = git@gitlab.com:arianvp/nixos-gitlab-runner.git
+	branch = master
