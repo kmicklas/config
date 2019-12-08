@@ -25,6 +25,7 @@
   };
 
   services.dunst.enable = true;
+  services.dunst.settings.shortcuts.close_all = "mod4+g";
 
   xresources.properties = {
     "Xft.dpi" = 192;

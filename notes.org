@@ -45,7 +45,8 @@
 **** RAM
 **** CPU
 **** temperature
-** TODO keyboard shortcut to dismiss notifications
+** DONE keyboard shortcut to dismiss notifications
+   CLOSED: [2019-12-08 Sun 12:24]
 ** peripherals
 *** TODO get bluetooth headphones working
 * data independence
