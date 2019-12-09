@@ -27,7 +27,7 @@
   services.dunst.enable = true;
   services.dunst.settings = {
     global = {
-      geometry = "1000x10+20-20";
+      geometry = "0x10+20-20";
       padding = 20;
       horizontal_padding = 20;
       corner_radius = 20;
