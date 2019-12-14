@@ -37,7 +37,6 @@
 ** XMonad
 *** TODO [[https://github.com/xmonad/xmonad-contrib/issues/280][fix multi-monitor smart borders]]
 ** TODO switch to Wayland
-*** Sway looks most promising
 ** TODO setup dock
 *** desired indicators
 **** time
