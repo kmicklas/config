@@ -28,7 +28,7 @@ main = xmonad $ docks $ def
   -- https://github.com/xmonad/xmonad-contrib/issues/280 is fixed.
   , layoutHook = avoidStruts $ lessBorders OtherIndicated $
       layoutHook def ||| ThreeColMid 1 (3/100) (1/2)
-  , borderWidth = 2
+  , borderWidth = 5
   , terminal = "termite"
   , workspaces = myWorkspaces
   , keys = workspace0Keys <+> launcherKeys <+> keys def
