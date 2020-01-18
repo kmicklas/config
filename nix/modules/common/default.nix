@@ -17,6 +17,11 @@
     ("nixos=" + nixpkgs)
     ("nixpkgs=" + nixpkgs)
   ];
+  nix.envVars = {
+    NIX_GITHUB_PRIVATE_USERNAME = "kmicklas";
+    NIX_GITHUB_PRIVATE_PASSWORD = builtins.replaceStrings ["\n"] [""]
+      (builtins.readFile /root/github-access-token);
+  };
 
   boot.tmpOnTmpfs = true;
 
