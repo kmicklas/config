@@ -31,6 +31,7 @@
 ** TODO support arrow key editing in helm
 *** suggested =(customize-set-variable 'helm-ff-lynx-style-map t)=
 ** TODO figure out good shell workflow
+** TODO hoogle from local port by default
 * shell
 ** TODO [#C] resurrect pushover fish function for zsh
 * desktop
