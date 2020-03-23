@@ -5,6 +5,7 @@
     ./emacs.nix
     ./git.nix
     ./haskell.nix
+    ./rust.nix
     ./home-manager.nix
     ./nixpkgs.nix
     ./pass.nix
