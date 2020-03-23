@@ -44,7 +44,6 @@
     "Xft.rgba" = "rgb";
     "Xft.hintstyle" = "hintslight";
     "Xft.lcdfilter" = "lcddefault";
-    "Xcursor.size" = 48;
   };
 
   programs.termite = {
@@ -59,5 +58,6 @@
   xsession.pointerCursor = {
     name = "Vanilla-DMZ";
     package = pkgs.vanilla-dmz;
+    size = 48;
   };
 }
