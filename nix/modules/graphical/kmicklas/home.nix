@@ -52,7 +52,6 @@
     font = "Monospace 8";
   };
 
-  programs.browserpass.enable = true;
   programs.firefox.enable = true;
 
   xsession.pointerCursor = {
