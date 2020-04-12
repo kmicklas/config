@@ -15,6 +15,8 @@
   services.xserver.enable = true;
   services.xserver.layout = "us";
   services.xserver.enableCtrlAltBackspace = true;
+  # Needed for .xsession on NixOS 20.03.
+  services.xserver.desktopManager.xterm.enable = true;
 
   services.logind.lidSwitch = "suspend";
   services.logind.lidSwitchDocked = "suspend";
