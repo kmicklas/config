@@ -10,6 +10,8 @@
   hardware.pulseaudio.daemon.config.flat-volumes = "no";
 
   networking.networkmanager.enable = true;
+  networking.dhcpcd.enable = false;
+
   services.printing.enable = true;
 
   services.xserver.enable = true;
