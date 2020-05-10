@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./emacs.nix
+    ./emacs
     ./git.nix
     ./haskell.nix
     ./rust.nix
