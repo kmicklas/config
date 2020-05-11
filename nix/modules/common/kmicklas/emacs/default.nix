@@ -77,6 +77,10 @@ in {
         '';
       };
 
+      haskell-mode = {
+        enable = true;
+      };
+
       ivy = {
         enable = true;
         demand = true;
@@ -126,10 +130,6 @@ in {
             "pf" '(projectile-find-file :which-key "Find in project")
             "pl" '(projectile-switch-project :which-key "Switch project"))
         '';
-      };
-
-      haskell-mode = {
-        enable = true;
       };
 
       which-key = {
