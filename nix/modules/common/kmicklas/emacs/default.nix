@@ -122,13 +122,16 @@ in {
             (setq projectile-enable-caching t)
             (setq projectile-require-project-root nil)
             (setq projectile-completion-system 'ivy)
-            (add-to-list 'projectile-globally-ignored-files ".DS_Store"))
+            (add-to-list 'projectile-globally-ignored-files ".DS_Store")
+            )
 
           (general-nmap
             :prefix "SPC"
-            "p"  '(:ignore t :which-key "Project")
-            "pf" '(projectile-find-file :which-key "Find in project")
-            "pl" '(projectile-switch-project :which-key "Switch project"))
+            "p"  '(:ignore t :which-key "project")
+            "pf" '(projectile-find-file)
+            "pi" '(projectile-invalidate-cache)
+            "pl" '(projectile-switch-project)
+            )
         '';
       };
 
