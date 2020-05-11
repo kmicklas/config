@@ -108,8 +108,8 @@ in {
 
           (general-nmap
             :prefix "SPC"
-            "bb" '(ivy-switch-buffer :which-key "switch buffer")
-            "fr" '(ivy-recentf :which-key "recent file")
+            "bb" 'ivy-switch-buffer
+            "fr" 'ivy-recentf
             )
         '';
       };
