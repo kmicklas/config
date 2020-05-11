@@ -107,8 +107,10 @@ in {
         config = ''
           (general-nmap
             :prefix "SPC"
-            "g" '(:ignore t :which-key "Git")
-            "gs" 'magit-status)
+            "g" '(:ignore t :which-key "git")
+            "gb" 'magit-blame
+            "gg" 'magit-status
+            )
         '';
       };
 
