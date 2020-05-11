@@ -28,11 +28,20 @@ in {
 
     usePackage = {
 
+      editorconfig = {
+        enable = true;
+      };
+
       evil = {
         enable = true;
         config = ''
           (evil-mode 1)
         '';
+      };
+
+      evil-escape = {
+        enable = true;
+        after = [ "evil" ];
       };
 
       evil-magit = {
@@ -77,6 +86,10 @@ in {
         '';
       };
 
+      go-mode = {
+        enable = true;
+      };
+
       haskell-mode = {
         enable = true;
       };
@@ -101,6 +114,10 @@ in {
         '';
       };
 
+      keyfreq = {
+        enable = true;
+      };
+
       magit = {
         enable = true;
         after = [ "general" ];
@@ -112,6 +129,14 @@ in {
             "gg" 'magit-status
             )
         '';
+      };
+
+      markdown-mode = {
+        enable = true;
+      };
+
+      nix-mode = {
+        enable = true;
       };
 
       projectile = {
@@ -135,6 +160,10 @@ in {
             "pl" 'projectile-switch-project
             )
         '';
+      };
+
+      rust-mode = {
+        enable = true;
       };
 
       which-key = {
