@@ -56,23 +56,23 @@ in {
             :prefix "SPC m")
           (general-nmap
             :prefix "SPC"
+
             "b"  '(:ignore t :which-key "buffer")
-            "bd" '(kill-this-buffer :which-key "kill buffer")
+            "bd" 'kill-this-buffer
+
             "f"  '(:ignore t :which-key "file")
-            "ff" '(find-file :which-key "find")
-            "fs" '(save-buffer :which-key "save")
+            "ff" 'find-file
+            "fs" 'save-buffer
+
             "m"  '(:ignore t :which-key "mode")
+
             "t"  '(:ignore t :which-key "toggle")
-            "tf" '(toggle-frame-fullscreen :which-key "fullscreen")
-            "wv" '(split-window-horizontally :which-key "split vertical")
-            "ws" '(split-window-vertically :which-key "split horizontal")
-            "wk" '(evil-window-up :which-key "up")
-            "wj" '(evil-window-down :which-key "down")
-            "wh" '(evil-window-left :which-key "left")
-            "wl" '(evil-window-right :which-key "right")
-            "wd" '(delete-window :which-key "delete")
-            "q"  '(:ignore t :which-key "quit")
-            "qq" '(save-buffers-kill-emacs :which-key "quit")
+            "tf" 'toggle-frame-fullscreen
+
+            "w"  '(:ignore t :which-key "window")
+            "wv" 'split-window-horizontally
+            "ws" 'split-window-vertically
+            "wd" 'delete-window
             )
         '';
       };
@@ -130,9 +130,9 @@ in {
           (general-nmap
             :prefix "SPC"
             "p"  '(:ignore t :which-key "project")
-            "pf" '(projectile-find-file)
-            "pi" '(projectile-invalidate-cache)
-            "pl" '(projectile-switch-project)
+            "pf" 'projectile-find-file
+            "pi" 'projectile-invalidate-cache
+            "pl" 'projectile-switch-project
             )
         '';
       };
