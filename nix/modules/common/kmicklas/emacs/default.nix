@@ -184,6 +184,14 @@ in {
 
       org = {
         enable = true;
+
+      perspective = {
+        enable = true;
+        config = ''
+          (persp-mode)
+          (setq persp-state-default-file "~/.emacs.d/perspectives")
+          (add-hook 'kill-emacs-hook #'persp-state-save)
+        '';
       };
 
       projectile = {
