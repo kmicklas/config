@@ -69,9 +69,9 @@ in {
           (setq helm-mode-fuzzy-match t)
           (general-nmap
             :prefix "SPC"
-            "SPC" 'helm-M-x
-            "bb" 'helm-mini
-            "fr" 'helm-recentf
+            "SPC" '(helm-M-x :which-key "execute")
+            "bb" '(helm-mini :which-key "switch")
+            "fr" '(helm-recentf :which-key "recent files")
             )
         '';
       };
@@ -82,7 +82,7 @@ in {
         config = ''
           (general-nmap
             :prefix "SPC"
-            "pf" 'helm-projectile-find-file
+            "pf" '(helm-projectile-find-file :which-key "find file")
             )
         '';
       };
@@ -110,23 +110,23 @@ in {
             :prefix "SPC"
 
             "b"  '(:ignore t :which-key "buffer")
-            "bd" 'kill-this-buffer
+            "bd" '(kill-this-buffer :which-key "delete")
 
-            "d" 'dired-other-window
+            "d" '(dired-other-window :which-key "dired")
 
             "f"  '(:ignore t :which-key "file")
-            "ff" 'find-file
-            "fs" 'save-buffer
+            "ff" '(find-file :which-key "find")
+            "fs" '(save-buffer :which-key "save")
 
             "m"  '(:ignore t :which-key "mode")
 
             "t"  '(:ignore t :which-key "toggle")
-            "tf" 'toggle-frame-fullscreen
+            "tf" '(toggle-frame-fullscreen :which-key "fullscreen")
 
             "w"  '(:ignore t :which-key "window")
             "wv" 'split-window-horizontally
             "ws" 'split-window-vertically
-            "wd" 'delete-window
+            "wd" '(delete-window :which-key "delete")
             )
         '';
       };
@@ -161,8 +161,8 @@ in {
         config = ''
           (general-nmap
             :prefix "SPC"
-            "fb" 'magit-blame
-            "g" 'magit-status
+            "fb" '(magit-blame :which-key "git blame")
+            "g" '(magit-status :which-key "magit")
             )
         '';
       };
@@ -216,9 +216,9 @@ in {
           (general-nmap
             :prefix "SPC"
             "p"  '(:ignore t :which-key "project")
-            "pi" 'projectile-invalidate-cache
-            "pp" 'projectile-switch-project
-            "ps" 'helm-do-ag-project-root
+            "pi" '(projectile-invalidate-cache :whick-key "invalidate cache")
+            "pl" '(projectile-switch-project :whick-key "load")
+            "ps" '(helm-do-ag-project-root :which-key "search in project")
             )
         '';
       };
