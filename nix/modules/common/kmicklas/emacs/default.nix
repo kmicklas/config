@@ -71,7 +71,7 @@ in {
             :prefix "SPC"
             "SPC" '(helm-M-x :which-key "execute")
             "bb" '(helm-mini :which-key "switch")
-            "fr" '(helm-recentf :which-key "recent files")
+            "fr" '(helm-recentf :which-key "recent")
             )
         '';
       };
@@ -227,8 +227,8 @@ in {
           (general-nmap
             :prefix "SPC"
             "p"  '(:ignore t :which-key "project")
-            "pi" '(projectile-invalidate-cache :whick-key "invalidate cache")
-            "pl" '(projectile-switch-project :whick-key "load")
+            "pi" '(projectile-invalidate-cache :which-key "invalidate cache")
+            "pl" '(projectile-switch-project :which-key "load")
             "ps" '(helm-do-ag-project-root :which-key "search in project")
             )
         '';
