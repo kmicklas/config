@@ -6,8 +6,7 @@
  initial-scratch-message nil
  )
 
-(when window-system
-  (set-frame-font "Source Code Pro 10"))
+(when window-system (set-frame-font "Source Code Pro 8"))
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
