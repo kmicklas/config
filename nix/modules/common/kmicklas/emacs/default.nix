@@ -57,6 +57,11 @@ in {
         after = [ "magit" ];
       };
 
+      forge = {
+        enable = true;
+        after = [ "magit" ];
+      };
+
       helm = {
         enable = true;
         after = [ "general" ];
@@ -129,6 +134,14 @@ in {
         enable = true;
       };
 
+      json-mode = {
+        enable = true;
+      };
+
+      js2-mode = {
+        enable = true;
+      };
+
       keyfreq = {
         enable = true;
       };
@@ -150,7 +163,19 @@ in {
         enable = true;
       };
 
+      nix-drv-mode = {
+        enable = true;
+      };
+
       nix-mode = {
+        enable = true;
+      };
+
+      nix-update = {
+        enable = true;
+      };
+
+      org = {
         enable = true;
       };
 
@@ -180,6 +205,10 @@ in {
         enable = true;
       };
 
+      sudo-edit = {
+        enable = true;
+      };
+
       which-key = {
         enable = true;
         diminish = [ "which-key-mode" ];
@@ -188,6 +217,10 @@ in {
           (setq which-key-sort-order 'which-key-key-order-alpha
                 which-key-idle-delay 0.05)
         '';
+      };
+
+      yaml-mode = {
+        enable = true;
       };
 
     };
