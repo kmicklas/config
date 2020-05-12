@@ -208,12 +208,10 @@ in {
         diminish = [ "projectile-mode" ];
         config = ''
           (projectile-mode 1)
-          (progn
-            (setq projectile-enable-caching t)
-            (setq projectile-require-project-root nil)
-            (setq projectile-completion-system 'helm)
-            (add-to-list 'projectile-globally-ignored-files ".DS_Store")
-            )
+          (setq projectile-enable-caching t)
+          (setq projectile-require-project-root nil)
+          (setq projectile-completion-system 'helm)
+          (add-to-list 'projectile-globally-ignored-files ".DS_Store")
 
           (general-nmap
             :prefix "SPC"
