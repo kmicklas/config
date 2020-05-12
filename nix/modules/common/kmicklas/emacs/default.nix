@@ -112,6 +112,8 @@ in {
             "b"  '(:ignore t :which-key "buffer")
             "bd" 'kill-this-buffer
 
+            "d" 'dired-other-window
+
             "f"  '(:ignore t :which-key "file")
             "ff" 'find-file
             "fs" 'save-buffer
@@ -159,9 +161,8 @@ in {
         config = ''
           (general-nmap
             :prefix "SPC"
-            "g" '(:ignore t :which-key "git")
-            "gb" 'magit-blame
-            "gg" 'magit-status
+            "fb" 'magit-blame
+            "g" 'magit-status
             )
         '';
       };
