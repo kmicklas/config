@@ -6,7 +6,7 @@
  initial-scratch-message nil
  )
 
-(when window-system (set-frame-font "Source Code Pro 8"))
+(add-to-list 'default-frame-alist '(font . "Source Code Pro 8"))
 
 (when (not window-system) (xterm-mouse-mode 1))
 
