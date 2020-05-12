@@ -47,6 +47,9 @@ in {
       evil-escape = {
         enable = true;
         after = [ "evil" ];
+        config = ''
+          (evil-escape-mode 1)
+        '';
       };
 
       evil-magit = {
