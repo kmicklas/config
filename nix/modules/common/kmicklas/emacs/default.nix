@@ -28,6 +28,11 @@ in {
 
     usePackage = {
 
+      # TODO: Get spacemacs-theme to work.
+      ample-theme = {
+        enable = true;
+      };
+
       editorconfig = {
         enable = true;
       };
