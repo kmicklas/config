@@ -217,7 +217,7 @@ in {
             :prefix "SPC"
             "p"  '(:ignore t :which-key "project")
             "pi" 'projectile-invalidate-cache
-            "pl" 'projectile-switch-project
+            "pp" 'projectile-switch-project
             "ps" 'helm-do-ag-project-root
             )
         '';
