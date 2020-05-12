@@ -202,6 +202,17 @@ in {
         '';
       };
 
+      persp-projectile = {
+        enable = true;
+        after = [ "general" "perspective" "projectile" ];
+        config = ''
+          (general-nmap
+            :prefix "SPC"
+            "pp" '(projectile-persp-switch-project :which-key "perspective")
+            )
+        '';
+      };
+
       projectile = {
         enable = true;
         after = [ "general" "helm" ];
