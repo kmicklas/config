@@ -146,6 +146,10 @@ in {
 
       keyfreq = {
         enable = true;
+        config = ''
+          (keyfreq-mode 1)
+          (keyfreq-autosave-mode 1)
+        '';
       };
 
       magit = {
