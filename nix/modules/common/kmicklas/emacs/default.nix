@@ -66,6 +66,7 @@ in {
         enable = true;
         after = [ "general" ];
         config = ''
+          (setq helm-mode-fuzzy-match t)
           (general-nmap
             :prefix "SPC"
             "SPC" 'helm-M-x
