@@ -185,6 +185,13 @@ in {
 
       org = {
         enable = true;
+        config = ''
+          (setq
+            org-agenda-files (file-expand-wildcards "~/*/*.org")
+            org-fontify-done-headline t
+            )
+        '';
+      };
 
       perspective = {
         enable = true;
