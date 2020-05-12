@@ -54,12 +54,39 @@ in {
         after = [ "magit" ];
       };
 
+      helm = {
+        enable = true;
+        after = [ "general" ];
+        config = ''
+          (general-nmap
+            :prefix "SPC"
+            "SPC" 'helm-M-x
+            "bb" 'helm-mini
+            "fr" 'helm-recentf
+            )
+        '';
+      };
+
+      helm-projectile = {
+        enable = true;
+        after = [ "helm" "projectile" "general" ];
+        config = ''
+          (general-nmap
+            :prefix "SPC"
+            "pf" 'helm-projectile-find-file
+            )
+        '';
+      };
+
       general = {
         enable = true;
         after = [ "evil" "which-key" ];
         config = ''
           (eval-when-compile (general-evil-setup))
 
+          (general-nmap
+            "." 'evil-window-next
+            )
           (general-mmap
             ";" 'evil-ex
             ":" 'evil-repeat-find-char
@@ -99,26 +126,6 @@ in {
         enable = true;
       };
 
-      ivy = {
-        enable = true;
-        demand = true;
-        diminish = [ "ivy-mode" ];
-        after = [ "general" ];
-        config = ''
-          (ivy-mode 1)
-          (setq ivy-use-virtual-buffers t
-                ivy-height 20
-                ivy-count-format "(%d/%d) "
-                ivy-initial-inputs-alist nil)
-
-          (general-nmap
-            :prefix "SPC"
-            "bb" 'ivy-switch-buffer
-            "fr" 'ivy-recentf
-            )
-        '';
-      };
-
       keyfreq = {
         enable = true;
       };
@@ -146,21 +153,20 @@ in {
 
       projectile = {
         enable = true;
-        after = [ "general" "ivy" ];
+        after = [ "general" "helm" ];
         diminish = [ "projectile-mode" ];
         config = ''
           (projectile-mode 1)
           (progn
             (setq projectile-enable-caching t)
             (setq projectile-require-project-root nil)
-            (setq projectile-completion-system 'ivy)
+            (setq projectile-completion-system 'helm)
             (add-to-list 'projectile-globally-ignored-files ".DS_Store")
             )
 
           (general-nmap
             :prefix "SPC"
             "p"  '(:ignore t :which-key "project")
-            "pf" 'projectile-find-file
             "pi" 'projectile-invalidate-cache
             "pl" 'projectile-switch-project
             )
