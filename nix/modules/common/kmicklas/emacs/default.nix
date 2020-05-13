@@ -286,6 +286,10 @@ in {
         enable = true;
       };
 
+      thrift = {
+        enable = true;
+      };
+
       which-key = {
         enable = true;
         diminish = [ "which-key-mode" ];
