@@ -67,6 +67,7 @@ in {
         after = [ "general" ];
         config = ''
           (setq helm-mode-fuzzy-match t)
+          (setq helm-M-x-fuzzy-match t)
           (general-nmap
             :prefix "SPC"
             "SPC" '(helm-M-x :which-key "execute")
