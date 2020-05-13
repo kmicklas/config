@@ -8,6 +8,11 @@
  custom-file "~/.emacs.d/custom.el"
  )
 
+(setq-default
+ tab-width 2
+ c-basic-offset 2
+ )
+
 (add-to-list 'default-frame-alist '(font . "Source Code Pro 8"))
 
 (when (not window-system) (xterm-mouse-mode 1))
