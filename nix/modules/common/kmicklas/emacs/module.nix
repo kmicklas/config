@@ -388,12 +388,11 @@ in
       let
         getPkg = v:
           if isFunction v
-          then [ (v epkgs) ]
-          else optional (isString v && hasAttr v epkgs) epkgs.${v};
+          then v epkgs
+          else epkgs.${v};
 
         packages =
-          concatMap (v: getPkg (v.package))
-          (builtins.attrValues cfg.usePackage);
+          map (v: getPkg (v.package)) (builtins.attrValues cfg.usePackage);
       in
         [
           (epkgs.trivialBuild {
