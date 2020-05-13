@@ -6,7 +6,7 @@ let pkgs = import <nixpkgs> {};
 
 in {
   imports = [
-    (import ../../../../../dep/rycee-nur {}).hmModules.emacs-init
+    ./module.nix
   ];
 
   programs.emacs.enable = true;

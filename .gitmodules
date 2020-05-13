@@ -21,6 +21,3 @@
 	path = dep/nixos-gitlab-runner
 	url = git@gitlab.com:arianvp/nixos-gitlab-runner.git
 	branch = master
-[submodule "dep/rycee-nur"]
-	path = dep/rycee-nur
-	url = https://gitlab.com/rycee/nur-expressions
