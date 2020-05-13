@@ -4,6 +4,8 @@
 
  initial-major-mode 'fundamental-mode
  initial-scratch-message nil
+
+ custom-file "~/.emacs.d/custom.el"
  )
 
 (add-to-list 'default-frame-alist '(font . "Source Code Pro 8"))
