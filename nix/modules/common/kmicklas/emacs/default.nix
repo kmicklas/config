@@ -255,6 +255,7 @@ in {
           (general-nmap
             :prefix "SPC"
             "p"  '(:ignore t :which-key "project")
+            "pa" '(projectile-add-known-project :which-key "add")
             "pi" '(projectile-invalidate-cache :which-key "invalidate cache")
             "pl" '(projectile-switch-project :which-key "load")
             "ps" '(helm-do-ag-project-root :which-key "search in project")
