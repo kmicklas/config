@@ -51,6 +51,10 @@ in {
         after = [ "company" "lsp-mode" ];
       };
 
+      csv-mode = {
+        enable = true;
+      };
+
       direnv = {
         enable = true;
         config = ''
