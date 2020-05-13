@@ -33,11 +33,22 @@ in {
         enable = true;
       };
 
+      # TODO: Use Google-official bazel-mode.
+      bazel-mode = {
+        enable = true;
+      };
+
       company = {
         enable = true;
+        diminish = [ "company-mode" ];
         config = ''
           (global-company-mode)
         '';
+      };
+
+      company-lsp = {
+        enable = true;
+        after = [ "company" "lsp-mode" ];
       };
 
       direnv = {
@@ -199,10 +210,6 @@ in {
         enable = true;
       };
 
-      nix-drv-mode = {
-        enable = true;
-      };
-
       nix-mode = {
         enable = true;
       };
@@ -261,6 +268,14 @@ in {
             "ps" '(helm-do-ag-project-root :which-key "search in project")
             )
         '';
+      };
+
+      protobuf-mode = {
+        enable = true;
+      };
+
+      python = {
+        enable = true;
       };
 
       rust-mode = {
