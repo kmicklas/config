@@ -33,6 +33,20 @@ in {
         enable = true;
       };
 
+      company = {
+        enable = true;
+        config = ''
+          (global-company-mode)
+        '';
+      };
+
+      direnv = {
+        enable = true;
+        config = ''
+          (direnv-mode)
+        '';
+      };
+
       editorconfig = {
         enable = true;
       };
@@ -156,6 +170,15 @@ in {
         '';
       };
 
+      lsp-mode = {
+        enable = true;
+      };
+
+      lsp-ui = {
+        enable = true;
+        after = [ "lsp-mode" ];
+      };
+
       magit = {
         enable = true;
         after = [ "general" ];
@@ -169,6 +192,10 @@ in {
       };
 
       markdown-mode = {
+        enable = true;
+      };
+
+      nix-buffer = {
         enable = true;
       };
 
