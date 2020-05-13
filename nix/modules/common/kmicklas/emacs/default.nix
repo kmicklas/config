@@ -2,7 +2,7 @@
 
 # For reasons I dont't understand there is infinite recursion if I take pkgs as
 # a parameter.
-let pkgs = import <nixpkgs> {};
+let isDarwin = (import <nixpkgs> {}).stdenv.isDarwin;
 
 in {
   imports = [
@@ -24,7 +24,14 @@ in {
     enable = true;
     recommendedGcSettings = true;
 
-    prelude = builtins.readFile ./prelude.el;
+    prelude = lib.concatStringsSep "\n" [
+      (builtins.readFile ./prelude.el)
+      (lib.optionalString isDarwin ''
+        (setq
+          mac-option-modifier 'alt
+          mac-command-modifier 'control)
+      '')
+    ];
 
     usePackage = {
 
@@ -310,6 +317,6 @@ in {
 
     };
   };
-} // lib.optionalAttrs (!pkgs.stdenv.isDarwin) {
+} // lib.optionalAttrs (!isDarwin) {
   services.emacs.enable = true;
 }
