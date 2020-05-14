@@ -95,6 +95,11 @@ in {
         after = [ "magit" ];
       };
 
+      evil-org = {
+        enable = true;
+        after = [ "evil" "org" ];
+      };
+
       forge = {
         enable = true;
         after = [ "magit" ];
