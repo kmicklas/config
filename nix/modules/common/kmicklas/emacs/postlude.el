@@ -20,6 +20,7 @@
   "." 'evil-window-next
   "f" 'evil-avy-goto-char
   "F" 'evil-avy-goto-char2
+  (kbd "RET") 'newline-and-indent
   )
 
 (general-nmap
