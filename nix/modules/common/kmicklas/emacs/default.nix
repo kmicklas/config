@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 
 # For reasons I dont't understand there is infinite recursion if I take pkgs as
 # a parameter.
@@ -175,6 +175,9 @@ in {
 
       nix-mode = {
         enable = true;
+        config = ''
+          (setq nix-nixfmt-bin "${pkgs.nixfmt}/bin/nixfmt")
+        '';
       };
 
       nix-update = {
