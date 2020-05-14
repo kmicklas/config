@@ -28,8 +28,9 @@ in {
       (builtins.readFile ./prelude.el)
       (lib.optionalString isDarwin ''
         (setq
-          mac-option-modifier 'alt
-          mac-command-modifier 'control)
+          mac-command-modifier 'control
+          mac-option-modifier 'meta
+          mac-control-modifier nil)
       '')
     ];
 
