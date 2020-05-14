@@ -21,7 +21,7 @@
   )
 
 (general-mmap
-  :keymaps 'override
+  :keymaps 'override ;; Needed for motion and other states
 
   :prefix "SPC"
 
