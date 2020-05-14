@@ -20,7 +20,9 @@
   (kbd "RET") 'newline-and-indent
   )
 
-(general-nmap
+(general-mmap
+  :keymaps 'override
+
   :prefix "SPC"
 
   "SPC" '(helm-M-x :which-key "execute")
