@@ -91,6 +91,7 @@ in {
       evil-escape = {
         enable = true;
         after = [ "evil" ];
+        diminish = [ "evil-escape-mode" ];
         config = ''
           (evil-escape-mode 1)
         '';
