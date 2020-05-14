@@ -124,6 +124,9 @@ in {
       helm-projectile = {
         enable = true;
         after = [ "helm" "projectile" ];
+        config = ''
+          (setq helm-ag-base-command "${pkgs.ag}/bin/ag --nocolor --nogroup")
+        '';
       };
 
       general = {
