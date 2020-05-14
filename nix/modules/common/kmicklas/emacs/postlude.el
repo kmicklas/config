@@ -32,6 +32,9 @@
   "bb" '(helm-mini :which-key "switch")
   "bd" '(kill-this-buffer :which-key "delete")
 
+  "c" '(:ignore t :which-key "code")
+  "cl" '(comment-line :which-key "comment")
+
   "d" '(dired-other-window :which-key "dired")
 
   "f" '(:ignore t :which-key "file")
