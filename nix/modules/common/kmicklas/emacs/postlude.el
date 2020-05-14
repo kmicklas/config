@@ -8,9 +8,6 @@
         (kill-new file-name))
       (error "Buffer not visiting a file"))))
 
-(general-create-definer my-leader-def :prefix "SPC")
-(general-create-definer my-local-leader-def :prefix "SPC m")
-
 (general-mmap
   ";" 'evil-ex
   ":" 'evil-repeat-find-char
