@@ -83,6 +83,11 @@ in {
         '';
       };
 
+      evil-collection = {
+        enable = true;
+        after = [ "evil" ];
+      };
+
       evil-escape = {
         enable = true;
         after = [ "evil" ];
