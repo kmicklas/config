@@ -33,6 +33,8 @@ in {
       '')
     ];
 
+    postlude = builtins.readFile ./postlude.el;
+
     usePackage = {
 
       # TODO: Get spacemacs-theme to work.
