@@ -1,19 +1,19 @@
 (setq
- inhibit-startup-screen t
- inhibit-startup-message t
+  inhibit-startup-screen t
+  inhibit-startup-message t
 
- initial-major-mode 'fundamental-mode
- initial-scratch-message nil
+  initial-major-mode 'fundamental-mode
+  initial-scratch-message nil
 
- custom-file "~/.emacs.d/custom.el"
- )
+  custom-file "~/.emacs.d/custom.el"
+  )
 
 (setq-default
- indent-tabs-mode nil
- tab-width 2
- c-basic-offset 2
- show-trailing-whitespace t
- )
+  indent-tabs-mode nil
+  tab-width 2
+  c-basic-offset 2
+  show-trailing-whitespace t
+  )
 
 (prefer-coding-system 'utf-8)
 

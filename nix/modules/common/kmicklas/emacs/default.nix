@@ -102,28 +102,17 @@ in {
 
       helm = {
         enable = true;
-        after = [ "general" ];
         config = ''
-          (setq helm-mode-fuzzy-match t)
-          (setq helm-M-x-fuzzy-match t)
-          (general-nmap
-            :prefix "SPC"
-            "SPC" '(helm-M-x :which-key "execute")
-            "bb" '(helm-mini :which-key "switch")
-            "fr" '(helm-recentf :which-key "recent")
+          (setq
+            helm-mode-fuzzy-match t
+            helm-M-x-fuzzy-match t
             )
         '';
       };
 
       helm-projectile = {
         enable = true;
-        after = [ "helm" "projectile" "general" ];
-        config = ''
-          (general-nmap
-            :prefix "SPC"
-            "pf" '(helm-projectile-find-file :which-key "find file")
-            )
-        '';
+        after = [ "helm" "projectile" ];
       };
 
       general = {
@@ -131,42 +120,6 @@ in {
         after = [ "evil" "which-key" ];
         config = ''
           (eval-when-compile (general-evil-setup))
-
-          (general-nmap
-            "." 'evil-window-next
-            "f" 'evil-avy-goto-char
-            "F" 'evil-avy-goto-char2
-            )
-          (general-mmap
-            ";" 'evil-ex
-            ":" 'evil-repeat-find-char
-            )
-          (general-create-definer my-leader-def
-            :prefix "SPC")
-          (general-create-definer my-local-leader-def
-            :prefix "SPC m")
-          (general-nmap
-            :prefix "SPC"
-
-            "b"  '(:ignore t :which-key "buffer")
-            "bd" '(kill-this-buffer :which-key "delete")
-
-            "d" '(dired-other-window :which-key "dired")
-
-            "f"  '(:ignore t :which-key "file")
-            "ff" '(find-file :which-key "find")
-            "fs" '(save-buffer :which-key "save")
-
-            "m"  '(:ignore t :which-key "mode")
-
-            "t"  '(:ignore t :which-key "toggle")
-            "tf" '(toggle-frame-fullscreen :which-key "fullscreen")
-
-            "w"  '(:ignore t :which-key "window")
-            "wv" 'split-window-horizontally
-            "ws" 'split-window-vertically
-            "wd" '(delete-window :which-key "delete")
-            )
         '';
       };
 
@@ -205,14 +158,6 @@ in {
 
       magit = {
         enable = true;
-        after = [ "general" ];
-        config = ''
-          (general-nmap
-            :prefix "SPC"
-            "fb" '(magit-blame :which-key "git blame")
-            "g" '(magit-status :which-key "magit")
-            )
-        '';
       };
 
       markdown-mode = {
@@ -252,34 +197,21 @@ in {
 
       persp-projectile = {
         enable = true;
-        after = [ "general" "perspective" "projectile" ];
-        config = ''
-          (general-nmap
-            :prefix "SPC"
-            "pp" '(projectile-persp-switch-project :which-key "perspective")
-            )
-        '';
+        after = [ "perspective" "projectile" ];
       };
 
       projectile = {
         enable = true;
-        after = [ "general" "helm" ];
+        after = [ "helm" ];
         diminish = [ "projectile-mode" ];
         config = ''
           (projectile-mode 1)
-          (setq projectile-enable-caching t)
-          (setq projectile-require-project-root nil)
-          (setq projectile-completion-system 'helm)
-          (add-to-list 'projectile-globally-ignored-files ".DS_Store")
-
-          (general-nmap
-            :prefix "SPC"
-            "p"  '(:ignore t :which-key "project")
-            "pa" '(projectile-add-known-project :which-key "add")
-            "pi" '(projectile-invalidate-cache :which-key "invalidate cache")
-            "pl" '(projectile-switch-project :which-key "load")
-            "ps" '(helm-do-ag-project-root :which-key "search in project")
+          (setq
+            projectile-enable-caching t
+            projectile-require-project-root nil
+            projectile-completion-system 'helm
             )
+          (add-to-list 'projectile-globally-ignored-files ".DS_Store")
         '';
       };
 
@@ -308,8 +240,10 @@ in {
         diminish = [ "which-key-mode" ];
         config = ''
           (which-key-mode)
-          (setq which-key-sort-order 'which-key-key-order-alpha
-                which-key-idle-delay 0.05)
+          (setq
+            which-key-sort-order 'which-key-key-order-alpha
+            which-key-idle-delay 0.05
+            )
         '';
       };
 
