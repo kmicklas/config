@@ -219,6 +219,9 @@ in {
           (persp-mode)
           (setq persp-state-default-file "~/.emacs.d/perspectives")
           (add-hook 'kill-emacs-hook #'persp-state-save)
+
+          ;; See https://github.com/nex3/perspective-el/issues/128#issuecomment-627041576
+          (ad-deactivate 'persp-init-frame)
         '';
       };
 
