@@ -60,6 +60,7 @@
 
   "w" '(:ignore t :which-key "window")
   "wv" 'split-window-horizontally
+  "wr" '(window-swap-states :whick-key "rotate")
   "ws" 'split-window-vertically
   "wd" '(delete-window :which-key "delete")
   )
