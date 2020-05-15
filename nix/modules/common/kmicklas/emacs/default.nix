@@ -107,6 +107,10 @@ in {
         after = [ "evil" "org" ];
       };
 
+      flycheck = {
+        enable = true;
+      };
+
       forge = {
         enable = true;
         after = [ "magit" ];
@@ -160,6 +164,11 @@ in {
           (keyfreq-mode 1)
           (keyfreq-autosave-mode 1)
         '';
+      };
+
+      lsp-haskell = {
+        after = [ "lsp-mode" ];
+        enable = true;
       };
 
       lsp-mode = {
@@ -266,6 +275,10 @@ in {
       };
 
       yaml-mode = {
+        enable = true;
+      };
+
+      yasnippet = {
         enable = true;
       };
 
