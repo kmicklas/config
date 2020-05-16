@@ -240,6 +240,7 @@ in {
             projectile-enable-caching t
             projectile-require-project-root nil
             projectile-completion-system 'helm
+            projectile-git-submodule-command nil
             )
           (add-to-list 'projectile-globally-ignored-files ".DS_Store")
         '';
