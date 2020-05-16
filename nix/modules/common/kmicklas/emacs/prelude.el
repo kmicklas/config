@@ -5,6 +5,9 @@
   initial-major-mode 'fundamental-mode
   initial-scratch-message nil
 
+  make-backup-files nil
+  auto-save-default nil
+
   custom-file "~/.emacs.d/custom.el"
   )
 
