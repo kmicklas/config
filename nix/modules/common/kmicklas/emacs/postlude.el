@@ -43,6 +43,14 @@
   "fs" '(save-buffer :which-key "save")
   "fy" 'copy-buffer-file-name
 
+  "h" '(:ignore t :which-key "help")
+  "hf" 'describe-function
+  "hk" 'describe-key
+  "hm" 'describe-mode
+  "hp" 'describe-package
+  "hs" 'describe-symbol
+  "hv" 'describe-variable
+
   "m" '(:ignore t :which-key "mode")
 
   "g" '(magit-status :which-key "magit")
