@@ -8,13 +8,13 @@
         (kill-new file-name))
       (error "Buffer not visiting a file"))))
 
-(general-mmap
-  ";" 'evil-ex
-  ":" 'evil-repeat-find-char
-  )
-
 (general-nmap
   "." 'evil-window-next
+  )
+
+(general-mmap
+  ";" 'evil-ex
+
   "f" 'evil-avy-goto-char
   "F" 'evil-avy-goto-char2
   "gd" 'lsp-find-definition
