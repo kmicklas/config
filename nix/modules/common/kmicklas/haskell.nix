@@ -8,6 +8,9 @@
     cabal-install
     haskellPackages.ghcid
     (haskellPackages.extend (_: super: {
+      Cabal = super.Cabal_3_0_0_0;
+    })).cabal-fmt
+    (haskellPackages.extend (_: super: {
       HsYAML = super.HsYAML_0_2_1_0;
       haskell-src-exts = super.haskell-src-exts_1_23_0;
     })).stylish-haskell
