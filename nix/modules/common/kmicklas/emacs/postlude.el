@@ -17,6 +17,7 @@
   "." 'evil-window-next
   "f" 'evil-avy-goto-char
   "F" 'evil-avy-goto-char2
+  "gd" 'lsp-find-definition
   (kbd "RET") 'newline-and-indent
   )
 
