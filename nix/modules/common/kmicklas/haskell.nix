@@ -4,8 +4,12 @@
   home.packages = [
     (import ../../../../dep/obelisk {}).command
   ] ++ (with pkgs; [
-    stack
+    binutils # 'ar' is needed by cabal.
+
+    ghc
     cabal-install
+    stack
+
     haskellPackages.ghcid
     (haskellPackages.extend (_: super: {
       Cabal = super.Cabal_3_0_0_0;
