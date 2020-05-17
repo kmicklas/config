@@ -169,6 +169,12 @@ in {
       lsp-haskell = {
         after = [ "lsp-mode" ];
         enable = true;
+        config = ''
+          (setq
+            lsp-haskell-process-path-hie "ghcide"
+            lsp-haskell-process-args-hie '()
+            )
+        '';
       };
 
       lsp-mode = {
