@@ -11,6 +11,8 @@
     stack
 
     haskellPackages.ghcid
+    haskellPackages.ghcide
+
     (haskellPackages.extend (_: super: {
       Cabal = super.Cabal_3_0_0_0;
     })).cabal-fmt
