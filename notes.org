@@ -27,11 +27,16 @@
 ** magit
 *** TODO always show recent commits
 ** TODO better evil keys from keyfreq data
-** TODO fix TLS setup
 ** TODO support arrow key editing in helm
 *** suggested =(customize-set-variable 'helm-ff-lynx-style-map t)=
 ** TODO figure out good shell workflow
 ** TODO hoogle from local port by default
+** TODO [#A] perspectives shared across frames (may need persp-mode fork)
+** TODO disable undo-tree
+** TODO diminish auto-revert-mode
+** TODO diminish eldoc
+** TODO better theme
+** TODO better modeline
 * shell
 ** TODO [#C] resurrect pushover fish function for zsh
 * desktop
