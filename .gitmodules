@@ -6,10 +6,6 @@
 	path = dep/nixpkgs
 	url = git@github.com:NixOS/nixpkgs-channels.git
 	branch = nixos-19.09
-[submodule "dep/obelisk"]
-	path = dep/obelisk
-	url = https://github.com/obsidiansystems/obelisk.git
-	branch = master
 [submodule "dep/spacemacs"]
 	path = dep/spacemacs
 	url = https://github.com/syl20bnr/spacemacs
