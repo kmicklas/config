@@ -240,6 +240,11 @@ in {
         '';
       };
 
+      # TODO: Consider switching to window-purpose.
+      popwin = {
+        enable = true;
+      };
+
       persp-projectile = {
         enable = true;
         after = [ "perspective" "projectile" ];

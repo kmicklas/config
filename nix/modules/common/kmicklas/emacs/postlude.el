@@ -68,10 +68,11 @@
   "tf" '(toggle-frame-fullscreen :which-key "fullscreen")
 
   "w" '(:ignore t :which-key "window")
-  "wv" 'split-window-horizontally
+  "wd" '(delete-window :which-key "delete")
+  "wm" '(popwin:messages :which-key "messages")
   "wr" '(window-swap-states :whick-key "rotate")
   "ws" 'split-window-vertically
-  "wd" '(delete-window :which-key "delete")
+  "wv" 'split-window-horizontally
   )
 
 (general-nmap
