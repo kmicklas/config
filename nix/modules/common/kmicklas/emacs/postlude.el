@@ -42,6 +42,7 @@
 
   "c" '(:ignore t :which-key "code")
   "cl" '(comment-line :which-key "comment")
+  "cs" 'lsp
 
   "d" '(dired-other-window :which-key "dired")
 
