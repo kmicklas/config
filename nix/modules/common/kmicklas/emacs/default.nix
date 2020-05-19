@@ -190,6 +190,10 @@ in {
         enable = true;
       };
 
+      magit-todos = {
+        enable = true;
+      };
+
       markdown-mode = {
         enable = true;
       };
