@@ -85,7 +85,7 @@ in {
 
       evil-collection = {
         enable = true;
-        after = [ "evil" ];
+        after = [ "evil" "magit-todos" ];
       };
 
       evil-escape = {
