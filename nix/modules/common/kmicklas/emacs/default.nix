@@ -20,6 +20,11 @@ in {
     (load-file (concat spacemacs-start-directory "init.el"))
   '';
 
+  home.packages = with pkgs; [
+    # direnv-mode doesn't seem to have a variable to get this except from $PATH.
+    direnv
+  ];
+
   programs.emacs.init = {
     enable = true;
     recommendedGcSettings = true;
