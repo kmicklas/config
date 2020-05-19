@@ -73,3 +73,9 @@
   "ws" 'split-window-vertically
   "wd" '(delete-window :which-key "delete")
   )
+
+(general-nmap
+  :keymaps 'org-mode-map
+
+  "t" 'org-todo
+  )
