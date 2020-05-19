@@ -8,6 +8,14 @@
         (kill-new file-name))
       (error "Buffer not visiting a file"))))
 
+(defhydra hydra-window-size ()
+  "window size"
+  ("f" enlarge-window-horizontally "enlarge horizontally")
+  ("d" shrink-window-horizontally "shrink horizontally")
+  ("j" enlarge-window "enlarge vertically")
+  ("k" shrink-window "shrink vertically")
+  )
+
 (general-nmap
   "." 'evil-window-next
   )
@@ -73,6 +81,7 @@
   "wr" '(window-swap-states :whick-key "rotate")
   "ws" 'split-window-vertically
   "wv" 'split-window-horizontally
+  "ww" '(hydra-window-size/body :which-key "size")
   )
 
 (general-nmap

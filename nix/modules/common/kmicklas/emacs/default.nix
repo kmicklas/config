@@ -155,6 +155,10 @@ in {
         enable = true;
       };
 
+      hydra = {
+        enable = true;
+      };
+
       json-mode = {
         enable = true;
       };
