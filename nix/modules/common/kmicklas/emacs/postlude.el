@@ -41,8 +41,8 @@
   "bd" '(kill-this-buffer :which-key "delete")
 
   "c" '(:ignore t :which-key "code")
-  "cl" '(comment-line :which-key "comment")
-  "cs" 'lsp
+  "cc" '(comment-line :which-key "comment")
+  "cl" 'lsp
 
   "d" '(dired-other-window :which-key "dired")
 
