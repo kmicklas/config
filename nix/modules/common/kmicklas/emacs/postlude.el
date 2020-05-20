@@ -89,4 +89,6 @@
   :keymaps 'org-mode-map
 
   "t" 'org-todo
+  "H" 'org-promote-subtree
+  "L" 'org-demote-subtree
   )
