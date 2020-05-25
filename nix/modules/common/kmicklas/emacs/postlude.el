@@ -71,6 +71,8 @@
   "pi" '(projectile-invalidate-cache :which-key "invalidate cache")
   "pl" '(projectile-switch-project :which-key "load")
   "pp" '(projectile-persp-switch-project :which-key "perspective")
+  "pr" '(projectile-replace :which-key "replace")
+  "pR" '(projectile-replace-regexp :which-key "replace regex")
   "ps" '(helm-do-ag-project-root :which-key "search in project")
 
   "t"  '(:ignore t :which-key "toggle")

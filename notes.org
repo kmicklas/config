@@ -42,7 +42,7 @@
 ** TODO disable flymake
 ** TODO evil navigation in magit-todos
 ** TODO fix customize
-** TODO replace in project
+** DONE replace in project
 ** TODO default to current word in project search
 * shell
 ** TODO [#C] resurrect pushover fish function for zsh
