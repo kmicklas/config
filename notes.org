@@ -37,6 +37,13 @@
 ** TODO diminish eldoc
 ** TODO better theme
 ** TODO better modeline
+** TODO fix tab/indentation behavior
+** TODO add text objects from Spacemacs
+** TODO disable flymake
+** TODO evil navigation in magit-todos
+** TODO fix customize
+** TODO replace in project
+** TODO default to current word in project search
 * shell
 ** TODO [#C] resurrect pushover fish function for zsh
 * desktop
@@ -77,3 +84,5 @@
 ** TODO offsite backup
 *** encrypted S3?
 ** TODO [#C] learn Colemak
+** TODO separate NixOS and home-manager modules
+** TODO convert submodules to thunks
