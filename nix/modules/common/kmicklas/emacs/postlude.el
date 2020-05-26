@@ -93,4 +93,5 @@
   "t" 'org-todo
   "H" 'org-promote-subtree
   "L" 'org-demote-subtree
+  (kbd "RET") 'org-insert-heading-respect-content
   )
