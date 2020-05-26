@@ -27,6 +27,7 @@
   "F" 'evil-avy-goto-char2
   "gd" 'lsp-find-definition
   (kbd "RET") 'newline-and-indent
+  (kbd "<backspace>") 'delete-backward-char
   )
 
 (general-mmap
