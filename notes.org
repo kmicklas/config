@@ -44,6 +44,7 @@
 ** TODO fix customize
 ** DONE replace in project
 ** TODO default to current word in project search
+** TODO make evil end of word move cursor past last character
 * shell
 ** TODO [#C] resurrect pushover fish function for zsh
 * desktop
