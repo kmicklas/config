@@ -85,6 +85,12 @@ in {
         enable = true;
         config = ''
           (evil-mode 1)
+          (setq
+            evil-cross-lines t
+            evil-move-beyond-eol t
+            evil-move-cursor-back nil
+            evil-want-Y-yank-to-eol t
+            )
         '';
       };
 
