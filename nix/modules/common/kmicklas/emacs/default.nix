@@ -96,7 +96,11 @@ in {
 
       evil-collection = {
         enable = true;
-        after = [ "evil" "magit-todos" ];
+        after = [ "company" "evil" "magit-todos" ];
+        config = ''
+          (require 'company-tng)
+          (evil-collection-init)
+        '';
       };
 
       evil-escape = {
