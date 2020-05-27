@@ -26,6 +26,8 @@
 *** TODO [#A] grey out DONE headlines
 ** magit
 *** TODO always show recent commits
+*** forge
+**** [[https://github.com/magit/ghub/issues/104#issuecomment-586970342][token setup]]
 ** TODO better evil keys from keyfreq data
 ** TODO support arrow key editing in helm
 *** suggested =(customize-set-variable 'helm-ff-lynx-style-map t)=
