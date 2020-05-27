@@ -130,10 +130,12 @@ in {
       helm = {
         enable = true;
         config = ''
+          (require 'helm-config)
           (setq
             helm-mode-fuzzy-match t
             helm-M-x-fuzzy-match t
             )
+          (helm-mode)
         '';
       };
 
