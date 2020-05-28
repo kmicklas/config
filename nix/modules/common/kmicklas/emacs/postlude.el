@@ -74,6 +74,11 @@ If BIGWORD is non-nil, move by WORDS."
 
   "d" '(dired-jump-other-window :which-key "dired")
 
+  "e" '(:ignore t :which-key "eval")
+  "eb" '(eval-buffer :which-key "buffer")
+  "ee" '(eval-expression :which-key "expression")
+  "er" '(eval-region :which-key "region")
+
   "f" '(:ignore t :which-key "file")
   "fb" '(magit-blame :which-key "git blame")
   "ff" '(find-file :which-key "find")
