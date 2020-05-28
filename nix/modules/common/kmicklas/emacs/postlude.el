@@ -34,15 +34,24 @@ If BIGWORD is non-nil, move by WORDS."
 
 (general-nmap
   "." 'evil-window-next
+
+  ;; Unmap these so that we can remap in motion state:
+  "a" nil
+  "A" nil
+  "i" nil
+
+  "f" 'evil-insert
+  "F" 'evil-insert-line
   )
 
 (general-mmap
   ";" 'evil-ex
 
-  "f" 'evil-avy-goto-char
-  "F" 'evil-avy-goto-char2
+  "a" 'evil-avy-goto-char
+  "A" 'evil-avy-goto-char2
   "e" 'evil-forward-past-word-end
   "E" 'evil-forward-past-WORD-end
+  "i" 'evil-end-of-line
   "gd" 'lsp-find-definition
   (kbd "RET") 'newline-and-indent
   (kbd "<backspace>") 'delete-backward-char
