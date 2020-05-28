@@ -8,6 +8,22 @@
         (kill-new file-name))
       (error "Buffer not visiting a file"))))
 
+(evil-define-motion evil-forward-past-word-end (count &optional bigword)
+  "Move the cursor past the end of the COUNT-th next word.
+If BIGWORD is non-nil, move by WORDS."
+  :type inclusive
+  (evil-forward-word-end count bigword)
+  ;; HACK: In the operator state we want to behave exactly like
+  ;; evil-forward-word-end, because operators operate on the following
+  ;; character. Ideally we would somehow make the operators work like
+  ;; the movements with inter-character cursors.
+  (unless (or (evil-operator-state-p) (eobp)) (forward-char)))
+
+(evil-define-motion evil-forward-past-WORD-end (count)
+  "Move the cursor past the end of the COUNT-th next WORD."
+  :type inclusive
+  (evil-forward-past-word-end count t))
+
 (defhydra hydra-window-size ()
   "window size"
   ("f" enlarge-window-horizontally "enlarge horizontally")
@@ -25,6 +41,8 @@
 
   "f" 'evil-avy-goto-char
   "F" 'evil-avy-goto-char2
+  "e" 'evil-forward-past-word-end
+  "E" 'evil-forward-past-WORD-end
   "gd" 'lsp-find-definition
   (kbd "RET") 'newline-and-indent
   (kbd "<backspace>") 'delete-backward-char
