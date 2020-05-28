@@ -83,14 +83,17 @@ in {
 
       evil = {
         enable = true;
+        init = ''
+          (setq evil-want-keybinding nil)
+        '';
         config = ''
-          (evil-mode 1)
           (setq
             evil-cross-lines t
             evil-move-beyond-eol t
             evil-move-cursor-back nil
             evil-want-Y-yank-to-eol t
             )
+          (evil-mode 1)
         '';
       };
 

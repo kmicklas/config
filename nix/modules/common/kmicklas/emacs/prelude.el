@@ -9,8 +9,6 @@
   auto-save-default nil
 
   custom-file "~/.emacs.d/custom.el"
-
-  evil-want-keybinding nil
   )
 
 (setq-default
