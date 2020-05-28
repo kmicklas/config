@@ -47,7 +47,7 @@
 ** TODO fix tab/indentation behavior
 ** TODO add text objects from Spacemacs
 ** TODO disable flymake
-** TODO evil navigation in magit-todos
+** DONE evil navigation in magit-todos
 ** DONE replace in project
 ** TODO default to current word in project search
 ** DONE make evil end of word move cursor past last character
