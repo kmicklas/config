@@ -215,7 +215,11 @@ in {
       };
 
       magit-todos = {
+        after = [ "magit" ];
         enable = true;
+        config = ''
+          (magit-todos-mode)
+        '';
       };
 
       markdown-mode = {
