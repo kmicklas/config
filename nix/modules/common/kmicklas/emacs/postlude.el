@@ -45,7 +45,7 @@
   "cc" '(comment-line :which-key "comment")
   "cl" 'lsp
 
-  "d" '(dired-other-window :which-key "dired")
+  "d" '(dired-jump-other-window :which-key "dired")
 
   "f" '(:ignore t :which-key "file")
   "fb" '(magit-blame :which-key "git blame")
