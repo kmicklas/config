@@ -48,7 +48,6 @@
 ** TODO add text objects from Spacemacs
 ** TODO disable flymake
 ** TODO evil navigation in magit-todos
-** TODO fix customize
 ** DONE replace in project
 ** TODO default to current word in project search
 ** TODO make evil end of word move cursor past last character
