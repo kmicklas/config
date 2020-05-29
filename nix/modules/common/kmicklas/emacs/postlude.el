@@ -54,7 +54,7 @@ If BIGWORD is non-nil, move by WORDS."
   "i" 'evil-end-of-line
   "gd" 'lsp-find-definition
   (kbd "RET") 'newline-and-indent
-  (kbd "<backspace>") 'delete-backward-char
+  (kbd "<backspace>") 'evil-delete-backward-char
   )
 
 (general-mmap
