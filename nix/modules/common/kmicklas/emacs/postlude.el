@@ -32,37 +32,73 @@ If BIGWORD is non-nil, move by WORDS."
   ("k" shrink-window "shrink vertically")
   )
 
+;; For some reason this doesn't work with general-nmap
+(define-key evil-normal-state-map "u" nil)
+
+(general-define-key
+  :keymaps '(evil-operator-state-map evil-visual-state-map)
+
+  ;; Unmap these so that we can remap in motion state:
+  "i" nil
+  "I" nil
+  "o" nil
+  "O" nil
+  "u" nil
+  "U" nil
+
+  "f" evil-inner-text-objects-map
+  )
+
 (general-nmap
   ;; Unmap these so that we can remap in motion state:
+  ";" nil
+  ":" nil
+  "i" nil
+  "I" nil
   "m" nil
   "o" nil
   "O" nil
+  "u" nil
+  "U" nil
 
   "." 'evil-window-next
 
+  "a" 'evil-open-below
+  "A" 'evil-open-above
   "c" 'evil-substitute
   "C" 'evil-change-whole-line
+  "e" 'evil-append
+  "E" 'evil-append-line
   "f" 'evil-insert
   "F" 'evil-insert-line
-  "i" 'evil-open-below
-  "I" 'evil-open-above
   "s" 'evil-change
-  "S" 'evil-change-line
+  "s" 'evil-change-line
+  "w" 'undo
+  "W" 'undo-tree-visualize
   )
 
 (general-mmap
-  ";" 'evil-ex
+  ;; Unmap these so that we can remap in normal state:
+  "e" nil
+  "E" nil
+  "w" nil
+  "W" nil
 
-  "e" 'evil-forward-past-word-end
-  "E" 'evil-forward-past-WORD-end
+  ";" 'evil-end-of-line
+  ":" 'evil-first-non-blank
+  "RET" 'newline-and-indent
+  "<backspace>" 'evil-delete-backward-char
+
   "gd" 'lsp-find-definition
   "gl" 'evil-avy-goto-line
-  "o" 'evil-end-of-line
-  "O" 'evil-first-non-blank
+  "i" 'evil-forward-word-begin
+  "I" 'evil-forward-WORD-begin
+  "o" 'evil-forward-past-word-end
+  "O" 'evil-forward-past-WORD-end
   "m" 'evil-avy-goto-char
   "M" 'evil-avy-goto-char-2
-  (kbd "RET") 'newline-and-indent
-  (kbd "<backspace>") 'evil-delete-backward-char
+  "u" 'evil-backward-word-begin
+  "U" 'evil-backward-WORD-begin
   )
 
 (general-mmap
