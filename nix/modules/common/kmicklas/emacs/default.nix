@@ -43,6 +43,10 @@ in {
 
     usePackage = {
 
+      all-the-icons = {
+        enable = true;
+      };
+
       # TODO: Get spacemacs-theme to work.
       ample-theme = {
         enable = true;
@@ -74,6 +78,15 @@ in {
         enable = true;
         config = ''
           (direnv-mode)
+        '';
+      };
+
+      doom-modeline = {
+        enable = true;
+        after = [ "all-the-icons" ];
+        config = ''
+          (setq doom-modeline-height 0)
+          (doom-modeline-mode 1)
         '';
       };
 
