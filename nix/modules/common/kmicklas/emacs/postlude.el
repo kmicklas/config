@@ -71,6 +71,7 @@ If BIGWORD is non-nil, move by WORDS."
   :prefix "SPC"
 
   "SPC" '(helm-M-x :which-key "execute")
+  ";" 'evil-ex
 
   "b" '(:ignore t :which-key "buffer")
   "bb" '(helm-mini :which-key "switch")
