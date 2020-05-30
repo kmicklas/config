@@ -108,6 +108,7 @@ If BIGWORD is non-nil, move by WORDS."
 
   "p" '(:ignore t :which-key "project")
   "pa" '(projectile-add-known-project :which-key "add")
+  "pd" '(projectile-remove-known-project :which-key "remove")
   "pf" '(helm-projectile-find-file :which-key "find file")
   "pi" '(projectile-invalidate-cache :which-key "invalidate cache")
   "pl" '(projectile-switch-project :which-key "load")
