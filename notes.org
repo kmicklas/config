@@ -51,6 +51,7 @@
 ** DONE replace in project
 ** TODO default to current word in project search
 ** DONE make evil end of word move cursor past last character
+** TODO make SPC leader work in places it doesn't (e.g. magit)
 * shell
 ** TODO [#C] resurrect pushover fish function for zsh
 * desktop
