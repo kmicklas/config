@@ -105,6 +105,7 @@ If BIGWORD is non-nil, move by WORDS."
   :keymaps 'override ;; Needed for motion and other states
 
   :prefix "SPC"
+  :non-normal-prefix "C-SPC"
 
   "SPC" '(helm-M-x :which-key "execute")
   ";" 'evil-ex
