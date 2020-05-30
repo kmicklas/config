@@ -117,6 +117,10 @@ If BIGWORD is non-nil, move by WORDS."
   "pR" '(projectile-replace-regexp :which-key "replace regex")
   "ps" '(helm-do-ag-project-root :which-key "search in project")
 
+  "r" '(:ignore t :which-key "replace")
+  "rr" '(replace-regexp :which-key "regex")
+  "rs" '(replace-string :which-key "string")
+
   "t"  '(:ignore t :which-key "toggle")
   "tf" '(toggle-frame-fullscreen :which-key "fullscreen")
 
