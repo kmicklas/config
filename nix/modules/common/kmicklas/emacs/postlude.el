@@ -72,7 +72,7 @@ If BIGWORD is non-nil, move by WORDS."
   "f" 'evil-insert
   "F" 'evil-insert-line
   "s" 'evil-change
-  "s" 'evil-change-line
+  "S" 'evil-change-line
   "w" 'undo
   "W" 'undo-tree-visualize
   )
