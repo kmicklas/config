@@ -295,6 +295,15 @@ in {
         enable = true;
       };
 
+      prettier-js = {
+        enable = true;
+        after = [ "js2-mode" ];
+        config = ''
+          (setq prettier-js-command "${pkgs.nodePackages.prettier}/bin/prettier")
+          (add-hook 'js2-mode-hook 'prettier-js-mode)
+        '';
+      };
+
       projectile = {
         enable = true;
         after = [ "helm" ];
