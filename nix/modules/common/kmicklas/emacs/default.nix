@@ -92,6 +92,9 @@ in {
 
       editorconfig = {
         enable = true;
+        config = ''
+          (editorconfig-mode 1)
+        '';
       };
 
       evil = {
