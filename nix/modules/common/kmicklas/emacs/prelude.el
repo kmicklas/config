@@ -8,6 +8,8 @@
   make-backup-files nil
   auto-save-default nil
 
+  vc-handled-backends '()
+
   custom-file "~/.emacs.d/custom.el"
   )
 
