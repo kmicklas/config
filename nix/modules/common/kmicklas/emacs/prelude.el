@@ -1,8 +1,6 @@
 (setq
   inhibit-startup-screen t
   inhibit-startup-message t
-
-  initial-major-mode 'fundamental-mode
   initial-scratch-message nil
 
   make-backup-files nil
