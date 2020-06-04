@@ -85,7 +85,10 @@ in {
         enable = true;
         after = [ "all-the-icons" ];
         config = ''
-          (setq doom-modeline-height 0)
+          (setq
+            doom-modeline-height 0
+            doom-modeline-buffer-encoding nil
+            )
           (doom-modeline-mode 1)
         '';
       };
