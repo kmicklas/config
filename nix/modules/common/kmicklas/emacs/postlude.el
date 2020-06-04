@@ -86,7 +86,7 @@ If BIGWORD is non-nil, move by WORDS."
 
   ";" 'evil-end-of-line
   ":" 'evil-first-non-blank
-  "RET" 'newline-and-indent
+  "<return>" 'newline-and-indent
   "<backspace>" 'evil-delete-backward-char
 
   "gd" 'lsp-find-definition
@@ -177,5 +177,5 @@ If BIGWORD is non-nil, move by WORDS."
   "t" 'org-todo
   "H" 'org-promote-subtree
   "L" 'org-demote-subtree
-  (kbd "RET") 'org-insert-heading-respect-content
+  "<return>" 'org-insert-heading-respect-content
   )
