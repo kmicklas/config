@@ -228,6 +228,11 @@ in {
 
       lsp-mode = {
         enable = true;
+        config = ''
+          (setq
+            lsp-prefer-flymake nil
+            )
+        '';
       };
 
       lsp-ui = {
