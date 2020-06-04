@@ -14,6 +14,33 @@
   (beginning-of-line)
   (org-insert-heading))
 
+;; TODO: Make count work on these.
+(defun evil-org-open-heading-below ()
+  "Open heading below current."
+  (interactive)
+  (org-insert-heading-respect-content)
+  (evil-append-line 1))
+
+(defun evil-org-open-heading-or-line-below ()
+  "Open heading line below current, depending on whether currently at a heading."
+  (interactive)
+  (if (org-at-heading-p)
+    (evil-org-open-heading-below)
+    (evil-open-below 1)))
+
+(defun evil-org-open-heading-above ()
+  "Open heading above current."
+  (interactive)
+  (org-insert-heading-above)
+  (evil-append-line 1))
+
+(defun evil-org-open-heading-or-line-above ()
+  "Open heading line above current, depending on whether currently at a heading."
+  (interactive)
+  (if (org-at-heading-p)
+    (evil-org-open-heading-above)
+    (evil-open-above 1)))
+
 (evil-define-motion evil-forward-past-word-end (count &optional bigword)
   "Move the cursor past the end of the COUNT-th next word.
 If BIGWORD is non-nil, move by WORDS."
@@ -180,6 +207,8 @@ If BIGWORD is non-nil, move by WORDS."
 (general-nmap
   :keymaps 'org-mode-map
 
+  "a" 'evil-org-open-heading-or-line-below
+  "A" 'evil-org-open-heading-or-line-above
   "t" 'org-todo
   "H" 'org-promote-subtree
   "L" 'org-demote-subtree
