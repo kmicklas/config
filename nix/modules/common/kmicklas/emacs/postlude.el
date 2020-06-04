@@ -8,6 +8,12 @@
         (kill-new file-name))
       (error "Buffer not visiting a file"))))
 
+(defun org-insert-heading-above ()
+  "Insert heading above current."
+  (interactive)
+  (beginning-of-line)
+  (org-insert-heading))
+
 (evil-define-motion evil-forward-past-word-end (count &optional bigword)
   "Move the cursor past the end of the COUNT-th next word.
 If BIGWORD is non-nil, move by WORDS."
@@ -178,4 +184,5 @@ If BIGWORD is non-nil, move by WORDS."
   "H" 'org-promote-subtree
   "L" 'org-demote-subtree
   "<return>" 'org-insert-heading-respect-content
+  "<S-return>" 'org-insert-heading-above
   )
