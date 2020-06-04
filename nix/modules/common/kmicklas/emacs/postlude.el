@@ -134,6 +134,10 @@ If BIGWORD is non-nil, move by WORDS."
   "U" 'evil-backward-WORD-begin
   )
 
+(general-vmap
+  "F" 'evil-insert
+  )
+
 (general-mmap
   :keymaps 'override ;; Needed for motion and other states
 
