@@ -52,6 +52,9 @@
 ** TODO default to current word in project search
 ** DONE make evil end of word move cursor past last character
 ** TODO make SPC leader work in places it doesn't (e.g. magit)
+** TODO fix enter in non-standard modes (e.g. magit, describe-key)
+** TODO make [ and ] move paragraphs
+** TODO put =lsp-find-definition= in =evil-goto-definition-functions=
 * shell
 ** TODO [#C] resurrect pushover fish function for zsh
 * desktop
@@ -69,6 +72,8 @@
    CLOSED: [2019-12-08 Sun 12:24]
 ** peripherals
 *** TODO get bluetooth headphones working
+*** webcam
+**** test with guvcview
 * data independence
 ** DONE non-GMail email
    CLOSED: [2019-11-23 Sat 14:49]
