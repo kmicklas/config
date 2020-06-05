@@ -179,6 +179,11 @@ If BIGWORD is non-nil, move by WORDS."
 
   "m" '(:ignore t :which-key "mode")
 
+  "n" '(:ignore t :which-key "narrow")
+  "nd" '(narrow-to-defun :which-key "defun")
+  "ns" '(org-narrow-to-subtree :which-key "org subtree")
+  "nw" 'widen
+
   "g" '(magit-status :which-key "magit")
 
   "p" '(:ignore t :which-key "project")
