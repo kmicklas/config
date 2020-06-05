@@ -183,7 +183,7 @@ If BIGWORD is non-nil, move by WORDS."
 
   "p" '(:ignore t :which-key "project")
   "pa" '(projectile-add-known-project :which-key "add")
-  "pd" '(projectile-remove-known-project :which-key "remove")
+  "pd" '(projectile-dired :which-key "dired")
   "pf" '(helm-projectile-find-file :which-key "find file")
   "pi" '(projectile-invalidate-cache :which-key "invalidate cache")
   "pl" '(projectile-switch-project :which-key "load")
@@ -191,6 +191,7 @@ If BIGWORD is non-nil, move by WORDS."
   "pr" '(projectile-replace :which-key "replace")
   "pR" '(projectile-replace-regexp :which-key "replace regex")
   "ps" '(helm-do-ag-project-root :which-key "search in project")
+  "px" '(projectile-remove-known-project :which-key "remove")
 
   "r" '(:ignore t :which-key "replace")
   "rr" '(replace-regexp :which-key "regex")
