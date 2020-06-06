@@ -41,6 +41,18 @@
     (evil-org-open-heading-above)
     (evil-open-above 1)))
 
+;; Use evil-visual-highlight?
+(defun evil-rotate-visual-state ()
+  "Rotate between visual state types."
+  (interactive)
+  (if (evil-visual-state-p)
+    (evil-visual-refresh evil-visual-mark evil-visual-point
+      (pcase evil-visual-selection
+        ('char 'block)
+        ('block 'line)
+        (_ 'char)))
+    (evil-visual-state)))
+
 (evil-define-motion evil-forward-past-word-end (count &optional bigword)
   "Move the cursor past the end of the COUNT-th next word.
 If BIGWORD is non-nil, move by WORDS."
