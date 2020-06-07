@@ -7,18 +7,12 @@ let isDarwin = (import <nixpkgs> {}).stdenv.isDarwin;
 in {
   imports = [
     ./module.nix
+    ./spacemacs.nix
   ];
 
   programs.emacs.enable = true;
   home.sessionVariables.EDITOR = "emacsclient --create-frame --tty";
   home.sessionVariables.VISUAL = "emacsclient --create-frame";
-
-  home.file.".spacemacs".source = ../../../../../dotfiles/spacemacs;
-  home.file.".emacs.d/spacemacs".source = ../../../../../dep/spacemacs;
-  home.file.".emacs.d/spacemacs.el".text = ''
-    (setq spacemacs-start-directory "~/.emacs.d/spacemacs/")
-    (load-file (concat spacemacs-start-directory "init.el"))
-  '';
 
   home.packages = with pkgs; [
     # direnv-mode doesn't seem to have a variable to get this except from $PATH.
