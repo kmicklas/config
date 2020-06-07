@@ -8,7 +8,6 @@
 
     ghc
     cabal-install
-    stack
 
     haskellPackages.ghcid
     (haskellPackages.extend (self: _: {
