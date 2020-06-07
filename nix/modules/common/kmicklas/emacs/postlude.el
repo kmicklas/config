@@ -147,6 +147,8 @@ If BIGWORD is non-nil, move by WORDS."
   "SPC" '(helm-M-x :which-key "execute")
   ";" 'evil-ex
 
+  "a" '(org-agenda :which-key "agenda")
+
   "b" '(:ignore t :which-key "buffer")
   "bb" '(helm-mini :which-key "switch")
   "bd" '(kill-this-buffer :which-key "delete")

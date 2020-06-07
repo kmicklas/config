@@ -148,6 +148,10 @@ in {
       evil-org = {
         enable = true;
         after = [ "evil" "org" ];
+        config = ''
+          (require 'evil-org-agenda)
+          (evil-org-agenda-set-keys)
+        '';
       };
 
       flycheck = {
