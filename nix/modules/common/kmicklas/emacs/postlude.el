@@ -119,7 +119,7 @@ If BIGWORD is non-nil, move by WORDS."
 
   ";" 'evil-end-of-line
   ":" 'evil-first-non-blank
-  "<return>" 'newline-and-indent
+  "RET" 'newline-and-indent
   "<backspace>" 'evil-delete-backward-char
 
   "gd" 'lsp-find-definition
@@ -217,11 +217,12 @@ If BIGWORD is non-nil, move by WORDS."
 (general-nmap
   :keymaps 'org-mode-map
 
+  "<return>" 'org-insert-heading-respect-content
+  "<S-return>" 'org-insert-heading-above
+
   "a" 'evil-org-open-heading-or-line-below
   "A" 'evil-org-open-heading-or-line-above
   "t" 'org-todo
   "H" 'org-promote-subtree
   "L" 'org-demote-subtree
-  "<return>" 'org-insert-heading-respect-content
-  "<S-return>" 'org-insert-heading-above
   )
