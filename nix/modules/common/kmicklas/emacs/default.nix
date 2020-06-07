@@ -242,6 +242,10 @@ in {
 
       magit = {
         enable = true;
+        config = ''
+          (setf (alist-get 'unpushed magit-section-initial-visibility-alist) 'show)
+          (setf (alist-get 'stashes magit-section-initial-visibility-alist) 'show)
+        '';
       };
 
       magit-todos = {

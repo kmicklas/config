@@ -25,7 +25,7 @@
 *** TODO [#A] keybinding to insert subheading
 *** TODO [#A] grey out DONE headlines
 ** magit
-*** TODO always show recent commits
+*** DONE always show recent commits
 *** forge
 **** [[https://github.com/magit/ghub/issues/104#issuecomment-586970342][token setup]]
 ** better evil keys from keyfreq data
