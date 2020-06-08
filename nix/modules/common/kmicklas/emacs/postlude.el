@@ -214,6 +214,10 @@ If BIGWORD is non-nil, move by WORDS."
   "ws" 'split-window-vertically
   "wv" 'split-window-horizontally
   "ww" '(hydra-window-size/body :which-key "size")
+
+  "q" '(:ignore t :which-key "quit")
+  "qq" '(evil-quit 'which-key "window")
+  "qa" '(evil-quit-all 'which-key "all")
   )
 
 (general-nmap
