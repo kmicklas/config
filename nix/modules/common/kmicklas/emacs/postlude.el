@@ -138,8 +138,9 @@ If BIGWORD is non-nil, move by WORDS."
   "F" 'evil-insert
   )
 
-(general-mmap
-  :keymaps 'override ;; Needed for motion and other states
+(general-define-key
+  :states '(normal visual motion)
+  :keymaps 'override
 
   :prefix "SPC"
   :non-normal-prefix "C-SPC"

@@ -182,6 +182,16 @@ in {
         after = [ "evil" "which-key" ];
         config = ''
           (eval-when-compile (general-evil-setup))
+          (setq general-override-states
+            '(insert
+              emacs
+              hybrid
+              normal
+              visual
+              motion
+              operator
+              replace
+              ))
         '';
       };
 
