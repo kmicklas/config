@@ -216,8 +216,8 @@ If BIGWORD is non-nil, move by WORDS."
   "ww" '(hydra-window-size/body :which-key "size")
 
   "q" '(:ignore t :which-key "quit")
-  "qq" '(evil-quit 'which-key "window")
-  "qa" '(evil-quit-all 'which-key "all")
+  "qq" '(evil-quit :which-key "window")
+  "qa" '(evil-quit-all :which-key "all")
   )
 
 (general-nmap
