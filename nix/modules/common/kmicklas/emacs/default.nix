@@ -367,7 +367,7 @@ in {
           (which-key-mode)
           (setq
             which-key-sort-order 'which-key-key-order-alpha
-            which-key-idle-delay 0.05
+            which-key-idle-delay 0.1
             )
         '';
       };
