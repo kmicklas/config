@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 # For reasons I dont't understand there is infinite recursion if I take pkgs as
 # a parameter.
@@ -11,8 +11,8 @@ in {
   ];
 
   programs.emacs.enable = true;
-  home.sessionVariables.EDITOR = "emacsclient --create-frame --tty";
-  home.sessionVariables.VISUAL = "emacsclient --create-frame";
+  home.sessionVariables.EDITOR = "${config.programs.emacs.package}/bin/emacsclient --create-frame --tty";
+  home.sessionVariables.VISUAL = "${config.programs.emacs.package}/bin/emacsclient --create-frame";
 
   home.packages = with pkgs; [
     # direnv-mode doesn't seem to have a variable to get this except from $PATH.
