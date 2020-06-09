@@ -234,3 +234,20 @@ If BIGWORD is non-nil, move by WORDS."
   "H" 'org-promote-subtree
   "L" 'org-demote-subtree
   )
+
+;; evil-org-mode assumes a lot of evil keys that we have remapped.
+(general-define-key
+  :keymaps 'evil-outer-text-objects-map
+  "e" 'evil-org-an-object
+  "E" 'evil-org-an-element
+  "r" 'evil-org-a-greater-element
+  "R" 'evil-org-a-subtree
+  )
+
+(general-define-key
+  :keymaps 'evil-inner-text-objects-map
+  "e" 'evil-org-inner-object
+  "E" 'evil-org-inner-element
+  "r" 'evil-org-inner-greater-element
+  "R" 'evil-org-inner-subtree
+  )
