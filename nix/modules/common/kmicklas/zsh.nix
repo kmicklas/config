@@ -5,6 +5,7 @@
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.oh-my-zsh.enable = true;
   programs.zsh.oh-my-zsh.plugins = [
+    "direnv"
     "dotenv"
     "git"
     "man"
