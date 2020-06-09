@@ -167,6 +167,7 @@ If BIGWORD is non-nil, move by WORDS."
 
   "f" '(:ignore t :which-key "file")
   "fb" '(magit-blame :which-key "git blame")
+  "fe" '(revert-buffer :which-key "revert")
   "ff" '(find-file :which-key "find")
   "fr" '(helm-recentf :which-key "recent")
   "fs" '(save-buffer :which-key "save")
