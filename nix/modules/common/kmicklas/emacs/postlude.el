@@ -112,6 +112,7 @@ If BIGWORD is non-nil, move by WORDS."
 
 (general-mmap
   ;; Unmap these so that we can remap in normal state:
+  "C-f" nil
   "e" nil
   "E" nil
   "w" nil
@@ -220,6 +221,12 @@ If BIGWORD is non-nil, move by WORDS."
   "q" '(:ignore t :which-key "quit")
   "qq" '(evil-quit :which-key "window")
   "qa" '(evil-quit-all :which-key "all")
+  )
+
+(general-define-key
+  "C-f" 'evil-search-forward
+  "C-s" 'save-buffer
+  "C-w" 'kill-this-buffer ;; TODO: Unbind C-w prefix so this works.
   )
 
 (general-nmap

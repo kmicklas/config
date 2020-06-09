@@ -33,7 +33,7 @@
 **** need to figure out how to replace
 *** DONE word motions on right hand
 *** DONE make =s= do something more useful
-*** TODO faster key to save file than =SPC fs=
+*** DONE faster key to save file than =SPC fs=
 ** TODO support arrow key editing in helm
 *** suggested =(customize-set-variable 'helm-ff-lynx-style-map t)=
 ** TODO figure out good shell workflow
