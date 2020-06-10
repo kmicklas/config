@@ -175,7 +175,9 @@ If BIGWORD is non-nil, move by WORDS."
   "fy" 'copy-buffer-file-name
 
   "h" '(:ignore t :which-key "help")
+  "hc" 'describe-char
   "hf" 'describe-function
+  "hF" 'describe-face
   "hk" 'describe-key
   "hm" 'describe-mode
   "hp" 'describe-package
