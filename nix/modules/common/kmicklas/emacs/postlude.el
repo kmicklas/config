@@ -167,6 +167,7 @@ If BIGWORD is non-nil, move by WORDS."
   "er" '(eval-region :which-key "region")
 
   "f" '(:ignore t :which-key "file")
+  "fc" '(write-file :which-key "copy")
   "fb" '(magit-blame :which-key "git blame")
   "fe" '(revert-buffer :which-key "revert")
   "ff" '(find-file :which-key "find")
