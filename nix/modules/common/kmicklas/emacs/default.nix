@@ -157,26 +157,6 @@ in {
         after = [ "magit" ];
       };
 
-      helm = {
-        enable = true;
-        config = ''
-          (require 'helm-config)
-          (setq
-            helm-mode-fuzzy-match t
-            helm-M-x-fuzzy-match t
-            )
-          (helm-mode)
-        '';
-      };
-
-      helm-projectile = {
-        enable = true;
-        after = [ "helm" "projectile" ];
-        config = ''
-          (setq helm-ag-base-command "${pkgs.ag}/bin/ag --nocolor --nogroup")
-        '';
-      };
-
       general = {
         enable = true;
         after = [ "evil" "which-key" ];
@@ -201,6 +181,26 @@ in {
 
       haskell-mode = {
         enable = true;
+      };
+
+      helm = {
+        enable = true;
+        config = ''
+          (require 'helm-config)
+          (setq
+            helm-mode-fuzzy-match t
+            helm-M-x-fuzzy-match t
+            )
+          (helm-mode)
+        '';
+      };
+
+      helm-projectile = {
+        enable = true;
+        after = [ "helm" "projectile" ];
+        config = ''
+          (setq helm-ag-base-command "${pkgs.ag}/bin/ag --nocolor --nogroup")
+        '';
       };
 
       hydra = {
