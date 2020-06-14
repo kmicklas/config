@@ -8,6 +8,7 @@ pkgs: with pkgs; [
   ag
   jq
   gnupg
+  file
 
   iotop
   htop
