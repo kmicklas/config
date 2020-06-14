@@ -175,6 +175,13 @@ in {
         '';
       };
 
+      git-gutter = {
+        enable = true;
+        config = ''
+          (global-git-gutter-mode)
+        '';
+      };
+
       go-mode = {
         enable = true;
       };
