@@ -148,6 +148,10 @@ in {
         '';
       };
 
+      expand-region = {
+        enable = true;
+      };
+
       flycheck = {
         enable = true;
       };
