@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./ao.nix
+  ];
+
   home.packages = import ./packages.nix pkgs;
 
   services.xscreensaver.enable = true;
