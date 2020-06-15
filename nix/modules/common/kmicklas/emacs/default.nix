@@ -150,6 +150,9 @@ in {
 
       expand-region = {
         enable = true;
+        config = ''
+          (add-to-list 'er/try-expand-list #'mark-paragraph)
+        '';
       };
 
       flycheck = {
