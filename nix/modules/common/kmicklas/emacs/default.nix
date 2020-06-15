@@ -234,6 +234,10 @@ in {
         '';
       };
 
+      key-seq = {
+        enable = true;
+      };
+
       lsp-haskell = {
         after = [ "lsp-mode" ];
         enable = true;
@@ -277,6 +281,13 @@ in {
 
       markdown-mode = {
         enable = true;
+      };
+
+      modalka = {
+        enable = true;
+        config = ''
+          (define-key modalka-mode-map [remap self-insert-command] 'ignore)
+        '';
       };
 
       nix-buffer = {

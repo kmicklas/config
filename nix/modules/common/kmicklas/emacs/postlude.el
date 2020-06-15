@@ -143,7 +143,7 @@ If BIGWORD is non-nil, move by WORDS."
 
 (general-define-key
   :states '(normal visual motion)
-  :keymaps 'override
+  :keymaps '(override modalka-mode-map)
 
   :prefix "SPC"
   :non-normal-prefix "C-SPC"
@@ -263,4 +263,56 @@ If BIGWORD is non-nil, move by WORDS."
   "E" 'evil-org-inner-element
   "r" 'evil-org-inner-greater-element
   "R" 'evil-org-inner-subtree
+  )
+
+(defun modalka ()
+  "Switch between modalka and evil."
+  (interactive)
+  (if evil-mode
+    (progn
+      (evil-mode -1)
+      (modalka-mode 1))
+    (progn
+      (modalka-mode -1)
+      (evil-mode 1))))
+
+(defun kill-or-insert ()
+  "Kill region if active or enter insert mode."
+  (interactive)
+  (if mark-active
+    (kill-region (point) (mark))
+    (modalka-mode -1)))
+
+(key-seq-define-global "jk" 'modalka)
+
+(general-define-key
+  :keymaps 'modalka-mode-map
+
+  "C-r" 'redo
+  "w" 'undo
+  "W" 'undo-tree-visualize
+
+  "s" 'er/expand-region
+  "d" 'kill-or-insert
+  "f" 'set-mark-command
+
+  "x" ctl-x-map
+
+  "j" 'next-line
+  "k" 'previous-line
+
+  "h" 'backward-char
+  "l" 'forward-char
+
+  ";" 'end-of-line
+  ":" 'beginning-of-line ;; TODO: Make this go to first non-blank first.
+
+  "u" 'backward-word
+  "i" 'forward-word
+  "o" nil ;; TODO: Go to end of word.
+
+  "m" 'avy-goto-char
+  "M" 'avy-goto-char-2
+
+  "." 'other-window
   )
