@@ -95,6 +95,7 @@ If BIGWORD is non-nil, move by WORDS."
   "U" nil
 
   "." 'evil-window-next
+  "," 'er/expand-region
 
   "a" 'evil-open-below
   "A" 'evil-open-above
@@ -113,6 +114,7 @@ If BIGWORD is non-nil, move by WORDS."
 (general-mmap
   ;; Unmap these so that we can remap in normal state:
   "C-f" nil
+  "," nil
   "e" nil
   "E" nil
   "w" nil
