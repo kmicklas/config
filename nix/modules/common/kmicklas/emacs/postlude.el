@@ -282,12 +282,44 @@ If BIGWORD is non-nil, move by WORDS."
 (add-hook 'magit-mode-hook #'evil-local-mode)
 (add-hook 'org-agenda-mode-hook #'evil-local-mode)
 
-(defun kill-or-insert ()
-  "Kill region if active or enter insert mode."
+(defun kill-insert ()
+  "Kill region if active and enter insert mode."
+  (interactive)
+  (when mark-active (kill-region (point) (mark)))
+  (modalka-mode -1))
+
+(defun mark-or-kill (&optional arg)
+  "Kill region if active or set mark."
   (interactive)
   (if mark-active
     (kill-region (point) (mark))
-    (modalka-mode -1)))
+    (set-mark-command arg)))
+
+(defun beginning-of-line-alternate ()
+  "Alternate between first non-indentation character and beginning of line."
+  (interactive)
+  (let ((p (point)))
+    (beginning-of-line-text)
+    (when (eq p (point)) (beginning-of-line))))
+
+(defun open-below ()
+  "Open new line below."
+  (interactive)
+  (deactivate-mark)
+  (end-of-line)
+  (newline)
+  (indent-for-tab-command)
+  (modalka-mode -1))
+
+(defun open-above ()
+  "Open new line above."
+  (interactive)
+  (deactivate-mark)
+  (beginning-of-line)
+  (newline)
+  (previous-line)
+  (indent-for-tab-command)
+  (modalka-mode -1))
 
 (key-seq-define-global "jk" #'modalka-mode)
 
@@ -311,11 +343,15 @@ If BIGWORD is non-nil, move by WORDS."
   "w" 'undo
   "W" 'undo-tree-visualize
 
+  "a" 'open-below
+  "A" 'open-above
   "s" 'er/expand-region
-  "d" 'kill-or-insert
-  "f" 'set-mark-command
+  "d" 'mark-or-kill
+  "D" 'kill-whole-line
+  "f" 'kill-insert
 
   "v" 'yank
+  "c" 'copy-region-as-kill
 
   "x" ctl-x-map
 
@@ -329,14 +365,16 @@ If BIGWORD is non-nil, move by WORDS."
   "l" 'forward-char
 
   ";" 'end-of-line
-  ":" 'beginning-of-line ;; TODO: Make this go to first non-blank first.
+  ":" 'beginning-of-line-alternate
 
   "u" 'backward-word
   "i" 'forward-to-word
   "o" 'forward-word
 
-  "m" 'avy-goto-char
-  "M" 'avy-goto-char-2
+  "m" 'avy-goto-word-1
+  "M" 'avy-goto-char
+
+  "," 'mark-line
 
   "." 'other-window
   )
