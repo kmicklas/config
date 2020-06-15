@@ -265,16 +265,8 @@ If BIGWORD is non-nil, move by WORDS."
   "R" 'evil-org-inner-subtree
   )
 
-(defun modalka ()
-  "Switch between modalka and evil."
-  (interactive)
-  (if evil-mode
-    (progn
-      (evil-mode -1)
-      (modalka-mode 1))
-    (progn
-      (modalka-mode -1)
-      (evil-mode 1))))
+(add-hook 'modalka-mode-hook (lambda () (when modalka-mode (evil-mode -1))))
+(add-hook 'evil-mode-hook (lambda () (when evil-mode (modalka-mode -1))))
 
 (defun kill-or-insert ()
   "Kill region if active or enter insert mode."
@@ -283,7 +275,7 @@ If BIGWORD is non-nil, move by WORDS."
     (kill-region (point) (mark))
     (modalka-mode -1)))
 
-(key-seq-define-global "jk" 'modalka)
+(key-seq-define-global "jk" #'modalka-mode)
 
 (general-define-key
   :keymaps 'modalka-mode-map
