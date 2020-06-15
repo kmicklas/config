@@ -143,7 +143,9 @@ If BIGWORD is non-nil, move by WORDS."
 
 (general-define-key
   :states '(normal visual motion)
-  :keymaps '(override modalka-mode-map)
+  :keymaps '(override)
+
+  :prefix-command 'meta-leader
 
   :prefix "SPC"
   :non-normal-prefix "C-SPC"
@@ -263,6 +265,11 @@ If BIGWORD is non-nil, move by WORDS."
   "E" 'evil-org-inner-element
   "r" 'evil-org-inner-greater-element
   "R" 'evil-org-inner-subtree
+  )
+
+(general-define-key
+  :keymaps '(modalka-mode-map dired-mode-map magit-mode-map)
+  "SPC" meta-leader
   )
 
 (add-hook 'modalka-mode-hook (lambda () (when modalka-mode (evil-mode -1))))
