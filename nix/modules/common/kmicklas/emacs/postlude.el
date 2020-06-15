@@ -294,6 +294,8 @@ If BIGWORD is non-nil, move by WORDS."
 (general-define-key
   :keymaps 'modalka-mode-map
 
+  "SPC" meta-leader
+
   "0" 'digit-argument
   "1" 'digit-argument
   "2" 'digit-argument
