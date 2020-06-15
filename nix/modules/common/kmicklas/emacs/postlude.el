@@ -8,6 +8,14 @@
         (kill-new file-name))
       (error "Buffer not visiting a file"))))
 
+(defun mark-line ()
+  "Mark whole line."
+  (interactive)
+  (beginning-of-line)
+  (push-mark (point))
+  (activate-mark)
+  (forward-line))
+
 (defun org-insert-heading-above ()
   "Insert heading above current."
   (interactive)
