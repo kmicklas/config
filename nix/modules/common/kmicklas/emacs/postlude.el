@@ -305,10 +305,15 @@ If BIGWORD is non-nil, move by WORDS."
   "d" 'kill-or-insert
   "f" 'set-mark-command
 
+  "v" 'yank
+
   "x" ctl-x-map
 
   "j" 'next-line
   "k" 'previous-line
+
+  "J" 'forward-paragraph
+  "K" 'backward-paragraph
 
   "h" 'backward-char
   "l" 'forward-char
