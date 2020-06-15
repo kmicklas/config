@@ -321,6 +321,11 @@ If BIGWORD is non-nil, move by WORDS."
   (indent-for-tab-command)
   (modalka-mode -1))
 
+(defun beginning-or-end-of-buffer ()
+  "Go to beginning or end of buffer."
+  (interactive)
+  (if (bobp) (end-of-buffer) (beginning-of-buffer)))
+
 (key-seq-define-global "jk" #'modalka-mode)
 
 (general-define-key
@@ -354,6 +359,8 @@ If BIGWORD is non-nil, move by WORDS."
   "c" 'copy-region-as-kill
 
   "x" ctl-x-map
+
+  "b" 'beginning-or-end-of-buffer
 
   "j" 'next-line
   "k" 'previous-line
