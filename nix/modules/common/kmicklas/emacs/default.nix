@@ -236,6 +236,9 @@ in {
 
       key-seq = {
         enable = true;
+        config = ''
+          (key-chord-mode)
+        '';
       };
 
       lsp-haskell = {
