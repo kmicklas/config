@@ -267,13 +267,12 @@ If BIGWORD is non-nil, move by WORDS."
   "R" 'evil-org-inner-subtree
   )
 
-(general-define-key
-  :keymaps '(modalka-mode-map dired-mode-map magit-mode-map)
-  "SPC" meta-leader
-  )
-
 (add-hook 'modalka-mode-hook (lambda () (when modalka-mode (evil-mode -1))))
 (add-hook 'evil-mode-hook (lambda () (when evil-mode (modalka-mode -1))))
+
+(add-hook 'dired-mode-hook #'evil-local-mode)
+(add-hook 'magit-mode-hook #'evil-local-mode)
+(add-hook 'org-agenda-mode-hook #'evil-local-mode)
 
 (defun kill-or-insert ()
   "Kill region if active or enter insert mode."
