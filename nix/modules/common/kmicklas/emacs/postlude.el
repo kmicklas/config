@@ -317,8 +317,8 @@ If BIGWORD is non-nil, move by WORDS."
   ":" 'beginning-of-line ;; TODO: Make this go to first non-blank first.
 
   "u" 'backward-word
-  "i" 'forward-word
-  "o" nil ;; TODO: Go to end of word.
+  "i" 'forward-to-word
+  "o" 'forward-word
 
   "m" 'avy-goto-char
   "M" 'avy-goto-char-2
