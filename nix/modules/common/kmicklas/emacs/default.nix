@@ -201,10 +201,8 @@ in {
         enable = true;
         config = ''
           (require 'helm-config)
-          (setq
-            helm-mode-fuzzy-match t
-            helm-M-x-fuzzy-match t
-            )
+          ;; TODO: Update to 'flex on emacs 27.
+          (add-to-list 'completion-styles 'helm-flex)
           (helm-mode)
         '';
       };
