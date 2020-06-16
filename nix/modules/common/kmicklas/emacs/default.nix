@@ -46,6 +46,10 @@ in {
         enable = true;
       };
 
+      anzu = {
+        enable = true;
+      };
+
       avy = {
         enable = true;
       };

@@ -220,8 +220,8 @@ If BIGWORD is non-nil, move by WORDS."
   "px" '(projectile-remove-known-project :which-key "remove")
 
   "r" '(:ignore t :which-key "replace")
-  "rr" '(replace-regexp :which-key "regex")
-  "rs" '(replace-string :which-key "string")
+  "rr" '(anzu-query-replace-regexp :which-key "regex")
+  "rs" '(anzu-query-replace :which-key "string")
 
   "t"  '(:ignore t :which-key "toggle")
   "tf" '(toggle-frame-fullscreen :which-key "fullscreen")
