@@ -8,6 +8,11 @@
         (kill-new file-name))
       (error "Buffer not visiting a file"))))
 
+(defun beginning-or-end-of-buffer ()
+  "Go to beginning or end of buffer."
+  (interactive)
+  (if (bobp) (goto-char (point-max)) (goto-char (point-min))))
+
 (defun mark-line ()
   "Mark whole line."
   (interactive)
@@ -133,6 +138,7 @@ If BIGWORD is non-nil, move by WORDS."
   "RET" 'newline-and-indent
   "<backspace>" 'evil-delete-backward-char
 
+  "b" 'beginning-or-end-of-buffer
   "gd" 'lsp-find-definition
   "gl" 'evil-avy-goto-line
   "i" 'evil-forward-word-begin
@@ -320,11 +326,6 @@ If BIGWORD is non-nil, move by WORDS."
   (forward-line -1)
   (indent-for-tab-command)
   (modalka-mode -1))
-
-(defun beginning-or-end-of-buffer ()
-  "Go to beginning or end of buffer."
-  (interactive)
-  (if (bobp) (goto-char (point-max)) (goto-char (point-min))))
 
 (key-seq-define-global "jk" #'modalka-mode)
 
