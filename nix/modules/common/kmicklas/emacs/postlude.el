@@ -317,14 +317,14 @@ If BIGWORD is non-nil, move by WORDS."
   (deactivate-mark)
   (beginning-of-line)
   (newline)
-  (previous-line)
+  (forward-line -1)
   (indent-for-tab-command)
   (modalka-mode -1))
 
 (defun beginning-or-end-of-buffer ()
   "Go to beginning or end of buffer."
   (interactive)
-  (if (bobp) (end-of-buffer) (beginning-of-buffer)))
+  (if (bobp) (goto-char (point-max)) (goto-char (point-min))))
 
 (key-seq-define-global "jk" #'modalka-mode)
 
