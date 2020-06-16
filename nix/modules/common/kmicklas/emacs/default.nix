@@ -46,6 +46,10 @@ in {
         enable = true;
       };
 
+      avy = {
+        enable = true;
+      };
+
       # TODO: Use Google-official bazel-mode.
       bazel-mode = {
         enable = true;
@@ -207,12 +211,17 @@ in {
         '';
       };
 
-      helm-projectile = {
+      helm-ag = {
         enable = true;
-        after = [ "helm" "projectile" ];
+        after = [ "helm" ];
         config = ''
           (setq helm-ag-base-command "${pkgs.ag}/bin/ag --nocolor --nogroup")
         '';
+      };
+
+      helm-projectile = {
+        enable = true;
+        after = [ "helm" "projectile" ];
       };
 
       hydra = {
