@@ -294,11 +294,11 @@ If BIGWORD is non-nil, move by WORDS."
   (when mark-active (kill-region (point) (mark)))
   (modalka-mode -1))
 
-(defun mark-or-kill (&optional arg)
-  "Kill region if active or set mark."
+(defun mark-or-kill-or-mark-line (&optional arg)
+  "Kill region if active and non-empty, or set mark. Mark line if region is empty."
   (interactive)
   (if mark-active
-    (kill-region (point) (mark))
+    (if (eq (point) (mark)) (mark-line) (kill-region (point) (mark)))
     (set-mark-command arg)))
 
 (defun beginning-of-line-alternate ()
@@ -352,7 +352,7 @@ If BIGWORD is non-nil, move by WORDS."
   "a" 'open-below
   "A" 'open-above
   "s" 'er/expand-region
-  "d" 'mark-or-kill
+  "d" 'mark-or-kill-or-mark-line
   "D" 'kill-whole-line
   "f" 'kill-insert
 
