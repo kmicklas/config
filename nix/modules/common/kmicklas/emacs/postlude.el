@@ -13,6 +13,14 @@
   (interactive)
   (if (bobp) (goto-char (point-max)) (goto-char (point-min))))
 
+(defun alternate-line-boundaries ()
+  "Alternate between end, first non-indentation character, and beginning of line."
+  (interactive)
+  (cond
+   ((bolp) (beginning-of-line-text))
+   ((eolp) (beginning-of-line))
+   (t (end-of-line))))
+
 (defun mark-line ()
   "Mark whole line."
   (interactive)
@@ -53,6 +61,10 @@
   (if (org-at-heading-p)
     (evil-org-open-heading-above)
     (evil-open-above 1)))
+
+(evil-define-motion evil-alternate-line-boundaries (count)
+  "Alternate between end, first non-indentation character, and beginning of line."
+  (alternate-line-boundaries))
 
 (evil-define-motion evil-forward-past-word-end (count &optional bigword)
   "Move the cursor past the end of the COUNT-th next word.
@@ -133,7 +145,7 @@ If BIGWORD is non-nil, move by WORDS."
   "w" nil
   "W" nil
 
-  ";" 'evil-end-of-line
+  ";" 'evil-alternate-line-boundaries
   ":" 'evil-first-non-blank
   "RET" 'newline-and-indent
   "<backspace>" 'evil-delete-backward-char
@@ -374,8 +386,8 @@ If BIGWORD is non-nil, move by WORDS."
   "h" 'backward-char
   "l" 'forward-char
 
-  ";" 'end-of-line
-  ":" 'beginning-of-line-alternate
+  ";" 'alternate-line-boundaries
+  ":" 'beginning-of-line-text
 
   "u" 'backward-word
   "i" 'forward-to-word
