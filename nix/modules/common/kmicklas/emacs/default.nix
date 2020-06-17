@@ -248,11 +248,16 @@ in {
         '';
       };
 
-      key-seq = {
+      key-chord = {
         enable = true;
         config = ''
-          (key-chord-mode)
+          (key-chord-mode 1)
         '';
+      };
+
+      key-seq = {
+        enable = true;
+        after = [ "key-chord" ];
       };
 
       lsp-haskell = {
