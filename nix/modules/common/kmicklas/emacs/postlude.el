@@ -387,4 +387,10 @@ If BIGWORD is non-nil, move by WORDS."
   "," 'mark-line
 
   "." 'other-window
+
+  "/" 'isearch-forward-regexp
+  "?" 'isearch-forward
+
+  "n" 'isearch-repeat-forward
+  "N" 'isearch-repeat-backward
   )
