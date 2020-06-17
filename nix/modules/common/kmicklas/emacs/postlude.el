@@ -400,7 +400,9 @@ If BIGWORD is non-nil, move by WORDS."
 
   "m" 'avy-goto-word-1
   "M" 'avy-goto-char
+  "y" 'avy-goto-char-in-line
 
+  "p" 'mark-paragraph
   "," 'mark-line
 
   "." 'other-window
