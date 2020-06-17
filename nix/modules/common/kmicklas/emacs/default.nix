@@ -308,6 +308,8 @@ in {
       modalka = {
         enable = true;
         config = ''
+          (setq-default cursor-type '(bar . 1))
+          (setq modalka-cursor-type 'box)
           (define-key modalka-mode-map [remap self-insert-command] 'ignore)
         '';
       };
