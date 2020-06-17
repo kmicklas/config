@@ -17,9 +17,11 @@
   "Alternate between end, first non-indentation character, and beginning of line."
   (interactive)
   (cond
-   ((bolp) (beginning-of-line-text))
-   ((eolp) (beginning-of-line))
-   (t (end-of-line))))
+    ((bolp) (end-of-line))
+    ((eolp) (beginning-of-line-text))
+    (t (let ((p (point)))
+         (beginning-of-line-text)
+         (if (eq p (point)) (beginning-of-line) (end-of-line))))))
 
 (defun mark-line ()
   "Mark whole line."
