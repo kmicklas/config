@@ -198,7 +198,9 @@ If BIGWORD is non-nil, move by WORDS."
   "hf" 'describe-function
   "hF" 'describe-face
   "hk" 'describe-key
+  "hK" '(which-key-show-top-level :which-key "top level keys")
   "hm" 'describe-mode
+  "hM" '(which-key-show-keymap :which-key "keymap")
   "hp" 'describe-package
   "hs" 'describe-symbol
   "hv" 'describe-variable
