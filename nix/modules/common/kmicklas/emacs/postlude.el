@@ -308,19 +308,23 @@ If BIGWORD is non-nil, move by WORDS."
   (when mark-active (kill-region (point) (mark)))
   (modalka-mode -1))
 
-(defun mark-or-kill-or-mark-line (&optional arg)
-  "Kill region if active and non-empty, or set mark. Mark line if region is empty."
+(defun kill-line-insert ()
+  "Kill rest of line and enter insert mode."
+  (interactive)
+  (kill-line)
+  (modalka-mode -1))
+
+(defun kill-line-or-join (&optional arg)
+  "Kill rest of line or join next line if at end."
+  (interactive)
+  (if (eolp) (join-line t) (kill-line arg)))
+
+(defun mark-or-kill-or-kill-whole-line (&optional arg)
+  "Kill region if active and non-empty, or set mark. Kill whole line if region is empty."
   (interactive)
   (if mark-active
-    (if (eq (point) (mark)) (mark-line) (kill-region (point) (mark)))
+    (if (eq (point) (mark)) (kill-whole-line) (kill-region (point) (mark)))
     (set-mark-command arg)))
-
-(defun beginning-of-line-alternate ()
-  "Alternate between first non-indentation character and beginning of line."
-  (interactive)
-  (let ((p (point)))
-    (beginning-of-line-text)
-    (when (eq p (point)) (beginning-of-line))))
 
 (defun open-below ()
   "Open new line below."
@@ -366,9 +370,10 @@ If BIGWORD is non-nil, move by WORDS."
   "a" 'open-below
   "A" 'open-above
   "s" 'er/expand-region
-  "d" 'mark-or-kill-or-mark-line
-  "D" 'kill-whole-line
+  "d" 'mark-or-kill-or-kill-whole-line
+  "D" 'kill-line-or-join
   "f" 'kill-insert
+  "F" 'kill-line-insert
 
   "v" 'yank
   "c" 'copy-region-as-kill
