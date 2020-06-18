@@ -387,6 +387,7 @@ If BIGWORD is non-nil, move by WORDS."
 
   "v" 'yank
   "c" 'copy-region-as-kill
+  "e" 'comment-line
 
   "x" ctl-x-map
 
