@@ -72,6 +72,14 @@ in {
         after = [ "company" "lsp-mode" ];
       };
 
+      company-nixos-options = {
+        enable = true;
+        after = [ "company" ];
+        config = ''
+          (add-to-list 'company-backends 'company-nixos-options)
+        '';
+      };
+
       csv-mode = {
         enable = true;
       };
@@ -222,6 +230,11 @@ in {
         config = ''
           (setq helm-ag-base-command "${pkgs.ag}/bin/ag --nocolor --nogroup")
         '';
+      };
+
+      helm-nixos-options = {
+        enable = true;
+        after = [ "helm" ];
       };
 
       helm-projectile = {

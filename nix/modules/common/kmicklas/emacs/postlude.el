@@ -225,6 +225,7 @@ If BIGWORD is non-nil, move by WORDS."
   "hv" 'describe-variable
 
   "i" '(:ignore t :which-key "insert")
+  "in" '(helm-nixos-options :which-key "NixOS option")
   "ip" 'insert-project-name-tag
 
   "m" '(:ignore t :which-key "mode")
