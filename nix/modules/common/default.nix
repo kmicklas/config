@@ -24,6 +24,9 @@
   };
 
   boot.tmpOnTmpfs = true;
+  boot.kernel.sysctl = {
+    "kernel.sysrq" = 1;
+  };
 
   i18n.defaultLocale = "pt_BR.UTF-8";
   console.font = "latarcyrheb-sun32";
