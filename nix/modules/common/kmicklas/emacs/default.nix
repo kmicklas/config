@@ -200,6 +200,9 @@ in {
 
       go-mode = {
         enable = true;
+        config = ''
+          (add-hook 'before-save-hook 'gofmt-before-save)
+        '';
       };
 
       haskell-mode = {
