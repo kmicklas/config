@@ -11,7 +11,9 @@
   services.xscreensaver.settings.mode = "blank";
 
   services.redshift.enable = true;
-  services.redshift.provider = "geoclue2";
+  services.redshift.provider = "manual";
+  services.redshift.latitude = "40.712772";
+  services.redshift.longitude = "-74.006058";
 
   xsession.enable = true;
   xsession.initExtra = ''
