@@ -20,8 +20,6 @@
 
 (prefer-coding-system 'utf-8)
 
-(add-to-list 'default-frame-alist '(font . "Source Code Pro 8"))
-
 (when (not window-system) (xterm-mouse-mode 1))
 
 (tool-bar-mode -1)
