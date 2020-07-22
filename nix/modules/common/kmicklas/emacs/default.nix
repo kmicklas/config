@@ -443,4 +443,6 @@ in {
   };
 } // lib.optionalAttrs (!isDarwin) {
   services.emacs.enable = true;
+} // lib.optionalAttrs isDarwin {
+  programs.emacs.package = pkgs.emacsMacport;
 }
