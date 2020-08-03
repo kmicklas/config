@@ -15,5 +15,6 @@ pkgs: {
     source-han-sans-traditional-chinese
     wqy_microhei
     wqy_zenhei
+    emacs-all-the-icons-fonts
   ];
 }
