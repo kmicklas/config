@@ -16,6 +16,7 @@
   tab-width 2
   c-basic-offset 2
   show-trailing-whitespace t
+  system-time-locale "C"
   )
 
 (prefer-coding-system 'utf-8)
