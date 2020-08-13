@@ -355,8 +355,6 @@ If BIGWORD is non-nil, move by WORDS."
   (indent-for-tab-command)
   (modalka-mode -1))
 
-(key-seq-define-global "jk" #'modalka-mode)
-
 (general-define-key
   :keymaps 'modalka-mode-map
 
