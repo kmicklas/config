@@ -6,8 +6,8 @@ import XMonad.Layout.ThreeColumns
 import qualified Data.Map as M
 import qualified XMonad.StackSet as W
 
-myWorkspaces = pure <$> ['0' .. '9']
-myWorkspaceKeys = [xK_0 .. xK_9]
+myWorkspaces = fmap pure $ ['1' .. '9'] ++ ['0']
+myWorkspaceKeys = [xK_1 .. xK_9] ++ [xK_0]
 
 workspace0Keys conf@(XConfig {modMask = modm}) = M.fromList $
   [ ((m .|. modm, k), windows $ f i)
