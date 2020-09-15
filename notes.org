@@ -32,11 +32,8 @@
 *** forge
 **** [[https://github.com/magit/ghub/issues/104#issuecomment-586970342][token setup]]
 ** better evil keys from keyfreq data
-*** DONE make =;= =helm-M-X=
 **** need to figure out how to replace
-*** DONE word motions on right hand
-*** DONE make =s= do something more useful
-*** DONE faster key to save file than =SPC fs=
+*** TODO faster key to save file than =SPC fs=
 ** TODO support arrow key editing in helm
 *** suggested =(customize-set-variable 'helm-ff-lynx-style-map t)=
 ** TODO figure out good shell workflow
@@ -50,8 +47,6 @@
 ** TODO fix tab/indentation behavior
 ** TODO add text objects from Spacemacs
 ** TODO disable flymake
-** DONE evil navigation in magit-todos
-** DONE replace in project
 ** TODO default to current word in project search
 ** DONE make evil end of word move cursor past last character
 ** DONE make SPC leader work in places it doesn't (e.g. magit)
@@ -64,6 +59,7 @@
 * desktop
 ** XMonad
 *** TODO [[https://github.com/xmonad/xmonad-contrib/issues/280][fix multi-monitor smart borders]]
+*** TODO keybinding to enable/disable screensaver
 ** TODO switch to Wayland
 ** TODO setup dock
 *** desired indicators
@@ -72,15 +68,11 @@
 **** RAM
 **** CPU
 **** temperature
-** DONE keyboard shortcut to dismiss notifications
-   CLOSED: [2019-12-08 Sun 12:24]
 ** peripherals
 *** TODO get bluetooth headphones working
 *** webcam
 **** test with guvcview
 * data independence
-** DONE non-GMail email
-   CLOSED: [2019-11-23 Sat 14:49]
 ** TODO pass password manager
 ** task management
 *** TODO try [[https://github.com/orgzly/orgzly-android/issues/24#issuecomment-539868242][Orgzly git support]]
@@ -95,8 +87,6 @@
 **** =zroot/nixos=
 **** =zroot/nixos/nix=
 **** =zroot/nixos/nix=
-** DONE upgrade to 19.09
-   CLOSED: [2019-10-09 Wed 18:05]
 * misc
 ** TODO offsite backup
 *** encrypted S3?
