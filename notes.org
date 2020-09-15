@@ -13,6 +13,8 @@
 **** keys: =?jknpxercgils#uld/om=
 *** Fastmail excluded keys
 *** keys: =jkyb=
+** Firefox
+*** disable clipboard events: =dom.event.clipboardevents.enabled=
 * Mac
 ** Amethyst for tiling window manager
 ** Honer for red borders like XMonad
