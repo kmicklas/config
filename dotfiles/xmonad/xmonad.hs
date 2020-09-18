@@ -15,11 +15,18 @@ workspace0Keys conf@(XConfig {modMask = modm}) = M.fromList $
   , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]
   ]
 
+setScreensaverStatus :: MonadIO m => String -> String -> m ()
+setScreensaverStatus status message = do
+  spawn $ "systemctl --user " <> status <> " xscreensaver.service"
+  spawn $ "notify-send '" <> message <> "'"
+
 launcherKeys conf@(XConfig {modMask = modm}) = M.fromList $
   [ ((modm, xK_a), spawn "autorandr -c")
   , ((modm, xK_s), spawn "systemctl suspend")
   , ((modm, xK_d), spawn "physlock")
   , ((modm, xK_f), spawn "emacsclient --create-frame")
+  , ((modm, xK_u), setScreensaverStatus "stop" "Deactivated screensaver")
+  , ((modm, xK_i), setScreensaverStatus "start" "Activated screensaver")
   ]
 
 main = xmonad $ docks $ def

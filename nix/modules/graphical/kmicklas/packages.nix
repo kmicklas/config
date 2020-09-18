@@ -34,6 +34,7 @@ pkgs: with pkgs; [
   pavucontrol
   xclip
   feh
+  libnotify # notify-send
 
   # Not actually graphical but mainly of use on laptop/desktop:
   lm_sensors
