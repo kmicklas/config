@@ -46,9 +46,6 @@
         ];
 
         runScript = "${dist}/bin/anki";
-        extraInstallCommands = ''
-          ls -l $out/bin
-        '';
       };
     })
   ];
