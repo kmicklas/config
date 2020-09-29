@@ -28,6 +28,7 @@
           glib
           libGL
           libxkbcommon
+          mpv
           nspr
           nss
           systemd
