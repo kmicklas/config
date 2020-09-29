@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./anki.nix
     ./ao.nix
   ];
 
