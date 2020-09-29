@@ -15,9 +15,11 @@
             buildCommand = "cp -r $src $out";
           });
       in self.buildFHSUserEnv {
-        name = super.anki.name;
+        name = super.anki.pname;
+        inherit (super.anki) meta;
+
         passthru = {
-          inherit (super.anki) meta man;
+          inherit (super.anki) man;
           inherit version;
         };
 
