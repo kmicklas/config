@@ -4,15 +4,6 @@
   nixpkgs.overlays = [
     (self: _: {
       obelisk = (import ../../../../dep/obelisk {}).command;
-
-      cabal-fmt = (self.haskellPackages.extend (_: super: {
-        Cabal = super.Cabal_3_0_0_0;
-      })).cabal-fmt;
-
-      stylish-haskell = (self.haskellPackages.extend (_: super: {
-        HsYAML = super.HsYAML_0_2_1_0;
-        haskell-src-exts = super.haskell-src-exts_1_23_0;
-      })).stylish-haskell;
     })
   ];
   home.packages = with pkgs; [
@@ -26,7 +17,7 @@
     ghcid
     haskellPackages.ghcide
 
-    cabal-fmt
+    haskellPackages.cabal-fmt
     stylish-haskell
   ];
 
