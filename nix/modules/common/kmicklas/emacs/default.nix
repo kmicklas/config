@@ -218,8 +218,7 @@ in {
         enable = true;
         config = ''
           (require 'helm-config)
-          ;; TODO: Update to 'flex on emacs 27.
-          (add-to-list 'completion-styles 'helm-flex)
+          (add-to-list 'completion-styles 'flex)
           (helm-mode)
         '';
       };
