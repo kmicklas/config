@@ -1,15 +1,6 @@
 { ... }:
 
 {
-  nixpkgs.overlays = [
-    (_: super: {
-      # TODO: Remove this once oh-my-zsh is upgraded in nixpkgs.
-      oh-my-zsh = super.oh-my-zsh.overrideAttrs (_: {
-        src = import ../../../../dep/ohmyzsh/thunk.nix;
-      });
-    })
-  ];
-
   programs.zsh.enable = true;
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.oh-my-zsh.enable = true;
