@@ -125,12 +125,6 @@ in {
       };
 
       evil-collection = {
-        # Upgraded to fix 'j' in magit-todos.
-        # TODO: Remove this once evil-collection is updated in nixpkgs.
-        package = epkgs: epkgs.evil-collection.overrideAttrs (_: {
-          src = import ../../../../../dep/evil-collection/thunk.nix;
-        });
-
         enable = true;
         after = [ "company" "evil" "magit-todos" ];
         config = ''
