@@ -274,7 +274,7 @@ in {
         enable = true;
         config = ''
           (setq
-            lsp-haskell-process-path-hie "${pkgs.ghcide}/bin/ghcide"
+            lsp-haskell-process-path-hie "${pkgs.haskellPackages.ghcide}/bin/ghcide"
             lsp-haskell-process-args-hie '()
             )
         '';
