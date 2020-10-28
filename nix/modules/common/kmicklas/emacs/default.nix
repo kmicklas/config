@@ -49,6 +49,9 @@ in {
       # TODO: Get spacemacs-theme to work.
       ample-theme = {
         enable = true;
+        config = ''
+          (ample-theme)
+        '';
       };
 
       anzu = {
