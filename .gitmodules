@@ -1,7 +1,7 @@
 [submodule "dep/home-manager"]
 	path = dep/home-manager
 	url = git@github.com:rycee/home-manager.git
-	branch = release-19.09
+	branch = release-20.09
 [submodule "dep/nixpkgs"]
 	path = dep/nixpkgs
 	url = git@github.com:NixOS/nixpkgs.git
