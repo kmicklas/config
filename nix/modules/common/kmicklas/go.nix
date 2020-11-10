@@ -8,7 +8,6 @@
     goimports
     golangci-lint
     golint
-    gometalinter
     gomodifytags
     gopkgs
     gotests
