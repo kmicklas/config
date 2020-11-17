@@ -23,9 +23,7 @@ pkgs: with pkgs; [
   gnome3.gnome_settings_daemon
   gnome3.gnome_control_center
   gnome3.gnome-screenshot
-  gnome3.gedit
   dmenu
-  dropbox
   acpi
   xscreensaver
   albert
