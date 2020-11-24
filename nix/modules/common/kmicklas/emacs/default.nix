@@ -7,7 +7,6 @@ let isDarwin = (import <nixpkgs> {}).stdenv.isDarwin;
 in {
   imports = [
     ./module.nix
-    ./spacemacs.nix
   ];
 
   programs.emacs.enable = true;
