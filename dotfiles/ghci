@@ -1,6 +1,7 @@
 :set -Wwarn
 :set -Wall
 :set -fdefer-type-errors
+:set -fno-show-valid-hole-fits
 :set -XPartialTypeSignatures
 :set prompt "\ESC[30;42m\STX%s\ESC[m\STX > "
 :set -fdiagnostics-color=always
