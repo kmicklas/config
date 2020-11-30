@@ -72,7 +72,6 @@
 *** webcam
 **** test with guvcview
 * data independence
-** TODO pass password manager
 ** task management
 *** TODO try [[https://github.com/orgzly/orgzly-android/issues/24#issuecomment-539868242][Orgzly git support]]
 * NixOS install
