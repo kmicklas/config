@@ -2,7 +2,6 @@ pkgs: with pkgs; [
   google-chrome
   torbrowser
   evince
-  gnome3.nautilus
   libreoffice
   gimp
   shotwell
@@ -20,9 +19,12 @@ pkgs: with pkgs; [
   hexchat
   calibre
 
-  gnome3.gnome_settings_daemon
-  gnome3.gnome_control_center
+  gnome3.gnome-control-center
   gnome3.gnome-screenshot
+  gnome3.gnome-settings-daemon
+  gnome3.nautilus
+
+  dconf # needed for GNOME apps
   dmenu
   acpi
   xscreensaver
