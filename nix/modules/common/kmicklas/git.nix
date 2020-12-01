@@ -19,6 +19,7 @@
   programs.git.ignores = [
     "*~"
   ];
+  programs.git.delta.enable = true;
 
   home.packages = with pkgs; [
     gitAndTools.hub
