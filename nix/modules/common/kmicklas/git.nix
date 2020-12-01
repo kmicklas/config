@@ -8,6 +8,7 @@
   programs.git.extraConfig = {
     mergeTool.keepBackup = false;
     push.default = "simple";
+    pull.ff = "only";
 
     github.user = "kmicklas";
 
