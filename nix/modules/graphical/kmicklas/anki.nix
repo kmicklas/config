@@ -4,12 +4,12 @@
   nixpkgs.overlays = [
     (self: super: {
       anki = let
-        version = "2.1.22";
+        version = "2.1.35";
         dist = self.stdenv.mkDerivation {
           name = "anki-dist";
           src = self.fetchzip {
             url = "https://github.com/ankitects/anki/releases/download/${version}/anki-${version}-linux-amd64.tar.bz2";
-            sha256 = "02a6jz3aj46v9vy7jbdkhj7hx8m8s6w2wpjrbz99w9bmx5px51x3";
+            sha256 = "0kzblbb0hzy7hp8141rjyg68020d6kgbjdzsm632ng5y5g5i2f29";
           };
           buildCommand = "cp -r $src $out";
         };
@@ -44,6 +44,10 @@
           xorg.libXrandr
           xorg.libXrender
           xorg.libxcb
+          xorg.xcbutilimage
+          xorg.xcbutilkeysyms
+          xorg.xcbutilrenderutil
+          xorg.xcbutilwm
         ];
 
         runScript = "${dist}/bin/anki";
