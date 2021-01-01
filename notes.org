@@ -59,6 +59,7 @@
 * desktop
 ** XMonad
 *** TODO [[https://github.com/xmonad/xmonad-contrib/issues/280][fix multi-monitor smart borders]]
+*** TODO disable keys which change number of windows in workspace section
 ** TODO switch to Wayland
 ** TODO setup dock
 *** desired indicators
