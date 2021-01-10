@@ -16,6 +16,7 @@ pkgs: with pkgs; [
   xournal
   zoom-us
   signal-desktop
+  element-desktop
   hexchat
   calibre
 
