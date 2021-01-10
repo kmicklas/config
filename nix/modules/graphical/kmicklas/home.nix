@@ -19,9 +19,16 @@
   xsession.enable = true;
   xsession.initExtra = ''
     xset r rate 250 30
+    ibus-daemon &
     albert &
   '';
   xdg.configFile."albert/albert.conf".source = ../../../../dotfiles/config/albert/albert.conf;
+
+  home.sessionVariables = {
+    GTK_IM_MODULE = "ibus";
+    QT_IM_MODULE = "ibus";
+    XMODIFIERS = "@im=ibus";
+  };
 
   xsession.windowManager.xmonad = {
     enable = true;

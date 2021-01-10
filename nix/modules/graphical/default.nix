@@ -20,6 +20,9 @@
   # Needed for .xsession on NixOS 20.03.
   services.xserver.desktopManager.xterm.enable = true;
 
+  i18n.inputMethod.enabled = "ibus";
+  i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ libpinyin ];
+
   services.logind.lidSwitch = "suspend";
   services.logind.lidSwitchDocked = "suspend";
   services.logind.lidSwitchExternalPower = "suspend";
