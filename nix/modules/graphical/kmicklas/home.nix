@@ -4,6 +4,7 @@
   imports = [
     ./anki.nix
     ./ao.nix
+    ./mpv.nix
   ];
 
   home.packages = import ./packages.nix pkgs;
