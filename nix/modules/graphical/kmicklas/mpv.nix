@@ -32,6 +32,32 @@
         inherit version;
       };
     })
+    (pkgs.stdenv.mkDerivation rec {
+      pname = "mpv-sub-scripts";
+      version = "2020-11-27";
+      src = pkgs.fetchFromGitHub {
+        owner = "Ben-Kerman";
+        repo = "mpv-sub-scripts";
+        rev = "b2b2b0cba40306d17f7b1b9e443b99961fbce39e";
+        sha256 = "1wx56anw4yg8krc20hps0gbmgs4x3j4nj64gkhm0d6l53wfqy02b";
+      };
+
+      dontBuild = true;
+      installPhase = ''
+        mkdir -p $out/share/mpv/scripts
+        cp *.lua $out/share/mpv/scripts
+
+        for script in *.lua; do
+          echo "dofile(\""$out/share/mpv/scripts/$script"\")" >> $out/share/mpv/scripts/sub-scripts.lua
+        done
+      '';
+      passthru.scriptName = "sub-scripts.lua";
+
+      meta = {
+        homepage = "https://github.com/Ben-Kerman/mpv-sub-scripts";
+        inherit version;
+      };
+    })
   ];
 
   xdg.configFile."mpv/script-opts/subs2srs.conf".text = ''
