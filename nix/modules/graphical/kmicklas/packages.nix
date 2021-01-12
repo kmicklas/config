@@ -20,6 +20,7 @@ pkgs: with pkgs; [
   hexchat
   calibre
 
+  blueman
   gnome3.gnome-control-center
   gnome3.gnome-screenshot
   gnome3.gnome-settings-daemon

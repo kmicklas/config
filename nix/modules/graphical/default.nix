@@ -5,8 +5,15 @@
   fonts = import ./fonts.nix pkgs;
 
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.config = {
+    General = {
+      Enable = "Source,Sink,Media,Socket";
+    };
+  };
+
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.package = pkgs.pulseaudioFull;
+  hardware.pulseaudio.extraModules = [ pkgs.pulseaudio-modules-bt ];
   hardware.pulseaudio.daemon.config.flat-volumes = "no";
 
   networking.networkmanager.enable = true;
