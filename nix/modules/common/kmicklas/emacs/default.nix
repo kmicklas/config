@@ -289,6 +289,10 @@ in {
         after = [ "lsp-mode" ];
       };
 
+      lua-mode = {
+        enable = true;
+      };
+
       magit = {
         enable = true;
         config = ''
