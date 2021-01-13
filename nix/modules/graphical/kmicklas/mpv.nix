@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   programs.mpv.enable = true;
@@ -32,8 +32,9 @@
         inherit version;
       };
     })
-    (pkgs.stdenv.mkDerivation rec {
-      pname = "mpv-sub-scripts";
+  ] ++ lib.flip map ["sub-pause" "sub-skip"] (script:
+    pkgs.stdenv.mkDerivation rec {
+      pname = script;
       version = "2020-11-27";
       src = pkgs.fetchFromGitHub {
         owner = "Ben-Kerman";
@@ -45,20 +46,16 @@
       dontBuild = true;
       installPhase = ''
         mkdir -p $out/share/mpv/scripts
-        cp *.lua $out/share/mpv/scripts
-
-        for script in *.lua; do
-          echo "dofile(\""$out/share/mpv/scripts/$script"\")" >> $out/share/mpv/scripts/sub-scripts.lua
-        done
+        cp ${script}.lua $out/share/mpv/scripts
       '';
-      passthru.scriptName = "sub-scripts.lua";
+      passthru.scriptName = "${script}.lua";
 
       meta = {
         homepage = "https://github.com/Ben-Kerman/mpv-sub-scripts";
         inherit version;
       };
-    })
-  ];
+    }
+  );
 
   xdg.configFile."mpv/script-opts/subs2srs.conf".text = ''
     deck_name=inbox
