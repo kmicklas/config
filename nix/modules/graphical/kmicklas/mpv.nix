@@ -63,5 +63,6 @@
     sentence_field=Expression
     audio_field=Audio
     image_field=Meaning
+    nuke_spaces=no
   '';
 }
