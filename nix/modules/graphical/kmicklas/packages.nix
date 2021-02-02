@@ -25,6 +25,7 @@ pkgs: with pkgs; [
   gnome3.gnome-screenshot
   gnome3.gnome-settings-daemon
   gnome3.nautilus
+  gnome3.gedit
 
   dconf # needed for GNOME apps
   dmenu
