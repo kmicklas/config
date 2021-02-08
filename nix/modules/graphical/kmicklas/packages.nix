@@ -19,6 +19,7 @@ pkgs: with pkgs; [
   element-desktop
   hexchat
   calibre
+  youtube-dl
 
   blueman
   gnome3.gnome-control-center
