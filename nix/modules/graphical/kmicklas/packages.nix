@@ -17,6 +17,7 @@ pkgs: with pkgs; [
   zoom-us
   signal-desktop
   element-desktop
+  discord
   hexchat
   calibre
   youtube-dl
