@@ -85,7 +85,7 @@
 *** suggested zfs devices
 **** =zroot/nixos=
 **** =zroot/nixos/nix=
-**** =zroot/nixos/nix=
+**** =zroot/nixos/home=
 * misc
 ** TODO offsite backup
 *** encrypted S3?
