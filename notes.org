@@ -86,6 +86,16 @@
 **** =zroot/nixos=
 **** =zroot/nixos/nix=
 **** =zroot/nixos/home=
+** expanding partitions
+*** LUKS
+**** =parted=
+***** =print= to get partition ID
+***** =resizepart <id>=
+***** =q=
+**** =sudo cryptsetup resize root -v=
+*** ZFS
+*** =zpool status zroot= to get device name
+*** =sudo zpool online -e zroot <device-name>=
 * misc
 ** TODO offsite backup
 *** encrypted S3?
