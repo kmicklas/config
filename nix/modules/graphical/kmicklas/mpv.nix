@@ -59,7 +59,7 @@
 
   xdg.configFile."mpv/script-opts/subs2srs.conf".text = ''
     deck_name=inbox::subs
-    model_name=Migaku Chinese (TW)
+    model_name=Chinese (simplified)
     sentence_field=Expression
     audio_field=Audio
     image_field=Meaning
