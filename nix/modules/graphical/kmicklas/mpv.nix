@@ -62,7 +62,7 @@
     model_name=Chinese (simplified)
     sentence_field=Expression
     audio_field=Audio
-    image_field=Meaning
+    image_field=Snapshot
     nuke_spaces=no
   '';
 }
