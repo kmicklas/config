@@ -226,6 +226,7 @@ If BIGWORD is non-nil, move by WORDS."
 
   "i" '(:ignore t :which-key "insert")
   "ip" 'insert-project-name-tag
+  "iu" 'uuidgen
 
   "m" '(:ignore t :which-key "mode")
 
