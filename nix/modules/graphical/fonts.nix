@@ -13,4 +13,4 @@ pkgs: with pkgs; [
   wqy_microhei
   wqy_zenhei
   emacs-all-the-icons-fonts
-];
+]
