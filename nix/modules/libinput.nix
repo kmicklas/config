@@ -7,6 +7,7 @@
   services.xserver.libinput.touchpad.accelProfile = "adaptive";
 
   services.xserver.libinput.touchpad.naturalScrolling = true;
+  services.xserver.libinput.mouse.naturalScrolling = true;
 
   services.xserver.libinput.touchpad.tapping = false;
 }
