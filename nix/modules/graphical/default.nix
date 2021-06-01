@@ -2,7 +2,10 @@
 
 {
   environment.systemPackages = import ./packages.nix pkgs;
-  fonts = import ./fonts.nix pkgs;
+
+  fonts.fontDir.enable = true;
+  fonts.enableGhostscriptFonts = true;
+  fonts.fonts = import ./fonts.nix pkgs;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.settings = {
