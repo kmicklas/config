@@ -1,14 +1,12 @@
 { config, pkgs, ... }:
 
 {
-  services.xserver.libinput = {
-    enable = true;
+  services.xserver.libinput.enable = true;
 
-    accelSpeed = "1.0";
-    accelProfile = "adaptive";
+  services.xserver.libinput.touchpad.accelSpeed = "1.0";
+  services.xserver.libinput.touchpad.accelProfile = "adaptive";
 
-    naturalScrolling = true;
+  services.xserver.libinput.touchpad.naturalScrolling = true;
 
-    tapping = false;
-  };
+  services.xserver.libinput.touchpad.tapping = false;
 }

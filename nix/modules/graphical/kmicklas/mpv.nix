@@ -12,26 +12,7 @@
     sub-font-size = "50";
   };
   programs.mpv.scripts = [
-    (pkgs.stdenv.mkDerivation rec {
-      pname = "mpvacious";
-      version = "0.12";
-      src = pkgs.fetchzip {
-        url = "https://github.com/Ajatt-Tools/mpvacious/archive/v${version}.tar.gz";
-        sha256 = "1xz4qh2ibfv03m3pfdasim9byvlm78wigx1linmih19vgg99vky2";
-      };
-
-      dontBuild = true;
-      installPhase = ''
-        mkdir -p $out/share/mpv/scripts
-        cp subs2srs.lua $out/share/mpv/scripts
-      '';
-      passthru.scriptName = "subs2srs.lua";
-
-      meta = {
-        homepage = "https://github.com/Ajatt-Tools/mpvacious";
-        inherit version;
-      };
-    })
+    pkgs.mpvScripts.mpvacious
   ] ++ lib.flip map ["sub-pause" "sub-skip"] (script:
     pkgs.stdenv.mkDerivation rec {
       pname = script;

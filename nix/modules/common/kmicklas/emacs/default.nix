@@ -62,7 +62,7 @@ in {
       };
 
       # TODO: Use Google-official bazel-mode.
-      bazel-mode = {
+      bazel = {
         enable = true;
       };
 
@@ -72,11 +72,6 @@ in {
         config = ''
           (global-company-mode)
         '';
-      };
-
-      company-lsp = {
-        enable = true;
-        after = [ "company" "lsp-mode" ];
       };
 
       csv-mode = {
@@ -128,7 +123,7 @@ in {
 
       evil-collection = {
         enable = true;
-        after = [ "company" "evil" "magit-todos" ];
+        after = [ "company" "evil" "magit" "magit-todos" ];
         config = ''
           (require 'company-tng)
           (evil-collection-init)
@@ -142,11 +137,6 @@ in {
         config = ''
           (evil-escape-mode 1)
         '';
-      };
-
-      evil-magit = {
-        enable = true;
-        after = [ "magit" ];
       };
 
       evil-org = {
