@@ -72,6 +72,7 @@
 *** TODO get bluetooth headphones working
 *** webcam
 **** test with guvcview
+** TODO make console font bigger on high DPI screen
 * data independence
 ** task management
 *** TODO try [[https://github.com/orgzly/orgzly-android/issues/24#issuecomment-539868242][Orgzly git support]]
