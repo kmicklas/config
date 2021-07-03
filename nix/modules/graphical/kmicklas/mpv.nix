@@ -46,4 +46,9 @@
     image_field=Snapshot
     nuke_spaces=no
   '';
+
+  home.packages = with pkgs; [
+    ffmpeg
+    ffmpeg-normalize
+  ];
 }
