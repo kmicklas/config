@@ -3,6 +3,7 @@ pkgs: with pkgs; [
   neovim
   python
   unzip
+  zstd
   tmux
   termite.terminfo
   ag
