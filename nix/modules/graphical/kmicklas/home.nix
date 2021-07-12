@@ -1,6 +1,12 @@
 { pkgs, ... }:
 
-{
+let
+  wallpaper = builtins.fetchurl {
+    url = "http://static.simpledesktops.com/uploads/desktops/2020/06/28/Big_Sur_Simple.png";
+    sha256 = "1ah7s792z7jd3bnmcb0spd7dql55ch3pd06zdpmh0pggn8qp8dk4";
+  };
+
+in {
   imports = [
     ./anki.nix
     ./ao.nix
@@ -19,6 +25,7 @@
 
   xsession.enable = true;
   xsession.initExtra = ''
+    ${pkgs.feh}/bin/feh --bg-fill ${wallpaper}
     xset r rate 250 30
     ibus-daemon &
     albert &
