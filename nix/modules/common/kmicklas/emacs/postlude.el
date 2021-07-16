@@ -1,3 +1,19 @@
+(defun zoom-in ()
+  "Increase font size by 10 points"
+  (interactive)
+  (set-face-attribute 'default nil
+                      :height
+                      (+ (face-attribute 'default :height)
+                         10)))
+
+(defun zoom-out ()
+  "Decrease font size by 10 points"
+  (interactive)
+  (set-face-attribute 'default nil
+                      :height
+                      (- (face-attribute 'default :height)
+                         10)))
+
 (defun copy-buffer-file-name ()
   "Copy and show the full path to the current file."
   (interactive)
@@ -90,6 +106,12 @@ If BIGWORD is non-nil, move by WORDS."
   ("d" shrink-window-horizontally "shrink horizontally")
   ("j" enlarge-window "enlarge vertically")
   ("k" shrink-window "shrink vertically")
+  )
+
+(defhydra hydra-zoom ()
+  "font size"
+  ("j" zoom-in "zoom in")
+  ("k" zoom-out "zoom-out")
   )
 
 (defun insert-project-name-tag ()
@@ -268,6 +290,8 @@ If BIGWORD is non-nil, move by WORDS."
   "q" '(:ignore t :which-key "quit")
   "qq" '(evil-quit :which-key "window")
   "qa" '(evil-quit-all :which-key "all")
+
+  "z" '(hydra-zoom/body :which-key "zoom")
   )
 
 (general-define-key
