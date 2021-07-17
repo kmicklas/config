@@ -405,8 +405,6 @@ in
               ++ optional hasBind epkgs.bind-key
               ++ optional hasDiminish epkgs.diminish
               ++ optional hasChords epkgs.use-package-chords;
-            preferLocalBuild = true;
-            allowSubstitutes = false;
           })
         ];
 
