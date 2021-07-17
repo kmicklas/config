@@ -117,6 +117,7 @@ in {
             evil-want-change-word-to-end nil
             evil-want-Y-yank-to-eol t
             )
+          (evil-set-undo-system 'undo-tree)
           (evil-mode 1)
         '';
       };
@@ -399,6 +400,13 @@ in {
 
       thrift = {
         enable = true;
+      };
+
+      undo-tree = {
+        enable = true;
+        config = ''
+          (global-undo-tree-mode)
+        '';
       };
 
       uuidgen = {

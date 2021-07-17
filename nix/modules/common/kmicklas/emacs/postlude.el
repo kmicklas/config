@@ -161,7 +161,7 @@ If BIGWORD is non-nil, move by WORDS."
   "F" 'evil-insert-line
   "s" 'evil-change
   "S" 'evil-change-line
-  "w" 'undo
+  "w" 'evil-undo
   "W" 'undo-tree-visualize
   )
 
@@ -396,8 +396,8 @@ If BIGWORD is non-nil, move by WORDS."
   "8" 'digit-argument
   "9" 'digit-argument
 
-  "C-r" 'redo
-  "w" 'undo
+  "C-r" 'undo-tree-redo
+  "w" 'undo-tree-undo
   "W" 'undo-tree-visualize
 
   "a" 'open-below
