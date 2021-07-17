@@ -258,10 +258,7 @@ in {
         after = [ "lsp-mode" ];
         enable = true;
         config = ''
-          (setq
-            lsp-haskell-process-path-hie "${pkgs.haskellPackages.ghcide}/bin/ghcide"
-            lsp-haskell-process-args-hie '()
-            )
+          (setq lsp-haskell-server-path "${pkgs.haskell-language-server}/bin/haskell-language-server")
         '';
       };
 
