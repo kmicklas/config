@@ -38,6 +38,13 @@
   services.openssh.permitRootLogin = "no";
   services.openssh.passwordAuthentication = false;
 
+  programs.ssh.enable = true;
+  programs.ssh.extraConfig = ''
+    Host kjuk
+      HostName 192.168.1.231
+      User kmicklas
+  '';
+
   services.postgresql.enable = true;
 
   security.sudo.wheelNeedsPassword = false;
