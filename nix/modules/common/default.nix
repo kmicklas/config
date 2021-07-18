@@ -38,13 +38,6 @@
   services.openssh.permitRootLogin = "no";
   services.openssh.passwordAuthentication = false;
 
-  programs.ssh.enable = true;
-  programs.ssh.extraConfig = ''
-    Host kjuk
-      HostName 192.168.1.231
-      User kmicklas
-  '';
-
   security.sudo.wheelNeedsPassword = false;
 
   programs.zsh.enable = true;
