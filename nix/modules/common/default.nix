@@ -45,8 +45,6 @@
       User kmicklas
   '';
 
-  services.postgresql.enable = true;
-
   security.sudo.wheelNeedsPassword = false;
 
   programs.zsh.enable = true;
