@@ -19,4 +19,10 @@
 
   networking.hostName = "kjuk";
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
+
+  services.ddclient.enable = true;
+  services.ddclient.server = "api.dynu.com";
+  services.ddclient.username = "kmicklas";
+  services.ddclient.password = builtins.readFile /root/dynu-password;
+  services.ddclient.domains = [ "home.kmicklas.com" ];
 }
