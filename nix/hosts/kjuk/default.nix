@@ -17,6 +17,8 @@
 
   swapDevices = [ ];
 
+  networking.firewall.allowedTCPPorts = [ 80 ];
+
   networking.hostName = "kjuk";
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 
@@ -25,4 +27,18 @@
   services.ddclient.username = "kmicklas";
   services.ddclient.password = builtins.readFile /root/dynu-password;
   services.ddclient.domains = [ "home.kmicklas.com" ];
+
+  services.miniflux.enable = true;
+
+  services.nginx.enable = true;
+  services.nginx.recommendedProxySettings = true;
+  services.nginx.virtualHosts."rss.home.kmicklas.com" = {
+    locations."/" = {
+      proxyPass = "http://127.0.0.1:" + toString 8080;
+      proxyWebsockets = true;
+      extraConfig = ''
+        access_log off;
+      '';
+    };
+  };
 }
