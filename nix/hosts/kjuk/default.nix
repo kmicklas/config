@@ -9,6 +9,7 @@
     ./dynamic-dns.nix
     ./feeds.nix
     ./http.nix
+    ./ssl.nix
   ];
 
   fileSystems = {
