@@ -6,6 +6,7 @@
     # TODO: Make this a thunk or submodule.
     "${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/41775780a0b6b32b3d32dcc32bb9bc6df809062d.tar.gz"}/raspberry-pi/4"
     ./dns.nix
+    ./dynamic-dns.nix
   ];
 
   fileSystems = {
@@ -22,12 +23,6 @@
 
   networking.hostName = "kjuk";
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
-
-  services.ddclient.enable = true;
-  services.ddclient.server = "api.dynu.com";
-  services.ddclient.username = "kmicklas";
-  services.ddclient.password = builtins.readFile /root/dynu-password;
-  services.ddclient.domains = [ "home.kmicklas.com" ];
 
   services.miniflux.enable = true;
 
