@@ -255,14 +255,6 @@ in {
         after = [ "key-chord" ];
       };
 
-      lsp-haskell = {
-        after = [ "lsp-mode" ];
-        enable = true;
-        config = ''
-          (setq lsp-haskell-server-path "${pkgs.haskell-language-server}/bin/haskell-language-server")
-        '';
-      };
-
       lsp-mode = {
         enable = true;
         config = ''

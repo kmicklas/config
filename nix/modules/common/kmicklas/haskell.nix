@@ -27,4 +27,16 @@
   ];
 
   home.file.".ghci".source = ../../../../dotfiles/ghci;
+
+  programs.emacs.init = {
+    usePackage = {
+      lsp-haskell = {
+        after = [ "lsp-mode" ];
+        enable = true;
+        config = ''
+          (setq lsp-haskell-server-path "${pkgs.haskell-language-server}/bin/haskell-language-server")
+        '';
+      };
+    };
+  };
 }
