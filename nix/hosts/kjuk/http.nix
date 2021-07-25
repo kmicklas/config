@@ -5,7 +5,7 @@
 
   services.nginx.enable = true;
   services.nginx.recommendedProxySettings = true;
-  services.nginx.virtualHosts."rss.home.kmicklas.com" = {
+  services.nginx.virtualHosts."feeds.home.kmicklas.com" = {
     locations."/" = {
       proxyPass = "http://127.0.0.1:" + toString 8080;
       proxyWebsockets = true;
