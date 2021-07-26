@@ -260,6 +260,7 @@ in {
         config = ''
           (setq
             lsp-prefer-flymake nil
+            lsp-nix-server-path "${pkgs.rnix-lsp}/bin/rnix-lsp"
             )
         '';
       };
