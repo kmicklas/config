@@ -259,6 +259,8 @@ If BIGWORD is non-nil, move by WORDS."
 
   "g" '(magit-status :which-key "magit")
 
+  "l" '(:keymap lsp-command-map :which-key "language server")
+
   "p" '(:ignore t :which-key "project")
   "pa" '(projectile-add-known-project :which-key "add")
   "pc" '(projectile-cleanup-known-projects :which-key "clean up known projects")
