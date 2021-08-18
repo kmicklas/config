@@ -1,3 +1,4 @@
+#+TODO: TODO BLOCKED | DONE INVALID
 * browser
 ** GMail
 *** keyboard shortcuts
@@ -39,13 +40,13 @@
 ** TODO figure out good shell workflow
 ** TODO hoogle from local port by default
 ** TODO [#A] perspectives shared across frames (may need persp-mode fork)
-** TODO disable undo-tree
+** INVALID disable undo-tree
 ** TODO diminish auto-revert-mode
 ** TODO diminish eldoc
-** TODO better theme
+** INVALID better theme
 ** TODO better modeline
 ** TODO fix tab/indentation behavior
-** TODO add text objects from Spacemacs
+** INVALID add text objects from Spacemacs
 ** TODO disable flymake
 ** TODO default to current word in project search
 ** DONE make evil end of word move cursor past last character
