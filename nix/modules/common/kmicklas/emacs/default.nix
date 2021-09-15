@@ -124,7 +124,7 @@ in {
 
       evil-collection = {
         enable = true;
-        after = [ "company" "evil" "magit" "magit-todos" ];
+        after = [ "company" "evil" "magit" ] ++ lib.optional config.programs.emacs.init.usePackage.magit-todos.enable "magit-todos";
         config = ''
           (require 'company-tng)
           (evil-collection-init)
@@ -284,7 +284,7 @@ in {
 
       magit-todos = {
         after = [ "magit" ];
-        enable = true;
+        enable = !isDarwin;
         config = ''
           (magit-todos-mode)
         '';
