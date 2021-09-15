@@ -39,5 +39,12 @@
     nz = "nix-shell --run zsh";
     e = "eval $EDITOR";
     v = "eval $VISUAL";
+    b = "bazel";
+    bb = "bazel build";
+    bba = "bazel build '...'";
+    bt = "bazel test";
+    bta = "bazel test '...'";
+    br = "bazel run";
+    g = "git";
   };
 }
