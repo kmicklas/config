@@ -205,7 +205,9 @@ in {
         enable = true;
         config = ''
           (require 'helm-config)
+        '' + lib.optionalString (!isDarwin) ''
           (add-to-list 'completion-styles 'flex)
+        '' + ''
           (helm-mode)
         '';
       };
