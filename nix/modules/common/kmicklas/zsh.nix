@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, pkgs, ... }:
 
 {
   programs.zsh.enable = true;
@@ -10,6 +10,12 @@
     "git"
     "man"
   ];
+  # Mac OS can't reliably keep this in /etc/zshrc after updates.
+  programs.zsh.initExtraFirst = lib.optionalString pkgs.stdenv.isDarwin ''
+    if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+      . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+    fi
+  '';
   programs.zsh.initExtra = ''
     function prompt_status_indicator {
       local last_command_status=$?
