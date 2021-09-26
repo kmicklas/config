@@ -40,8 +40,6 @@ in {
 
   xsession.windowManager.xmonad = {
     enable = true;
-    # TODO: Patch xmonad-contrib to fix
-    # https://github.com/xmonad/xmonad-contrib/issues/280
     enableContribAndExtras = true;
     config = ../../../../dotfiles/xmonad/xmonad.hs;
   };
