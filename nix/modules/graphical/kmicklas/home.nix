@@ -66,10 +66,10 @@ in {
     "Xft.lcdfilter" = "lcddefault";
   };
 
-  programs.termite = {
-    enable = true;
-    scrollbackLines = 100000;
-    font = "Monospace 8";
+  programs.alacritty.enable = true;
+  programs.alacritty.settings = {
+    font.size = 8;
+    scrolling.history = 100000;
   };
 
   programs.firefox.enable = true;

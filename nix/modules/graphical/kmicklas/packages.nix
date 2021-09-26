@@ -9,7 +9,6 @@ pkgs: with pkgs; [
   vlc
   spotify
   skype
-  termite
   anki
   transmission_gtk
   thunderbird

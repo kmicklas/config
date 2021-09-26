@@ -36,7 +36,7 @@ main = xmonad $ docks $ def
   , layoutHook = avoidStruts $ lessBorders OtherIndicated $
       layoutHook def ||| ThreeColMid 1 (3/100) (1/2)
   , borderWidth = 5
-  , terminal = "termite"
+  , terminal = "alacritty"
   , workspaces = myWorkspaces
   , keys = workspace0Keys <+> launcherKeys <+> keys def
   }

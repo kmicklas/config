@@ -5,7 +5,7 @@ pkgs: with pkgs; [
   unzip
   zstd
   tmux
-  termite.terminfo
+  alacritty.terminfo
   ag
   jq
   gnupg
