@@ -13,9 +13,7 @@
     cabal-install
 
     obelisk
-
     ghcid
-    haskellPackages.ghcide
 
     haskellPackages.cabal-fmt
     stylish-haskell
