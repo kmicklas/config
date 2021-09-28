@@ -411,6 +411,13 @@ in {
         enable = true;
       };
 
+      vterm = {
+        enable = true;
+        config = ''
+          (add-hook 'vterm-mode-hook (lambda () (setq show-trailing-whitespace nil)))
+        '';
+      };
+
       which-key = {
         enable = true;
         diminish = [ "which-key-mode" ];
