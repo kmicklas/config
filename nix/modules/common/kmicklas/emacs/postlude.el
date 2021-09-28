@@ -279,6 +279,7 @@ If BIGWORD is non-nil, move by WORDS."
   "rs" '(anzu-query-replace :which-key "string")
 
   "s" 'vterm-other-window
+  "S" 'vterm
 
   "t"  '(:ignore t :which-key "toggle")
   "tf" '(toggle-frame-fullscreen :which-key "fullscreen")
