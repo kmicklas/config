@@ -1,7 +1,3 @@
-[submodule "dep/nixpkgs"]
-	path = dep/nixpkgs
-	url = git@github.com:NixOS/nixpkgs.git
-	branch = nixos-21.05
 [submodule "private"]
 	path = private
 	url = git@gitlab.com:kmicklas/config-private.git

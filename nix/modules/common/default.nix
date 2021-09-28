@@ -15,7 +15,7 @@ in {
   nix.readOnlyStore = true;
   nix.autoOptimiseStore = true;
   nix.nixPath = let
-    nixpkgs = import ../../../dep/nixpkgs-thunk/thunk.nix;
+    nixpkgs = import ../../../dep/nixpkgs/thunk.nix;
   in [
     ("nixos=" + nixpkgs)
     ("nixpkgs=" + nixpkgs)
