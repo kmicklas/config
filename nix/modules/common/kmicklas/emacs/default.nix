@@ -61,7 +61,6 @@ in {
         enable = true;
       };
 
-      # TODO: Use Google-official bazel-mode.
       bazel = {
         enable = true;
       };
