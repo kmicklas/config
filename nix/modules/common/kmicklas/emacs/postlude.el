@@ -207,7 +207,6 @@ If BIGWORD is non-nil, move by WORDS."
 
   "SPC" '(helm-M-x :which-key "execute")
   ";" 'evil-ex
-  "'" 'vterm-other-window
 
   "a" '(org-agenda :which-key "agenda")
 
@@ -278,6 +277,8 @@ If BIGWORD is non-nil, move by WORDS."
   "r" '(:ignore t :which-key "replace")
   "rr" '(anzu-query-replace-regexp :which-key "regex")
   "rs" '(anzu-query-replace :which-key "string")
+
+  "s" 'vterm-other-window
 
   "t"  '(:ignore t :which-key "toggle")
   "tf" '(toggle-frame-fullscreen :which-key "fullscreen")
