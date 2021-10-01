@@ -15,6 +15,8 @@
     if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
       . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
     fi
+  '' + ''
+    # TODO: Should this be unconditional? It seems needed for single user install on Linux.
     if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
       . ~/.nix-profile/etc/profile.d/nix.sh
     fi
