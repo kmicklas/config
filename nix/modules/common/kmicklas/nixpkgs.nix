@@ -11,5 +11,6 @@ in
   home.packages = with pkgs; [
     cachix
     haskellPackages.nix-thunk
+    nix-tree
   ];
 }
