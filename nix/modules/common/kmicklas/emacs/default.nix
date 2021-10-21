@@ -283,6 +283,15 @@ in {
         '';
       };
 
+      magit-delta = {
+        enable = true;
+        after = [ "magit" ];
+        config = ''
+          (setq magit-delta-delta-executable "${pkgs.delta}/bin/delta")
+          (add-hook 'magit-mode-hook (lambda () (magit-delta-mode 1)))
+        '';
+      };
+
       magit-todos = {
         after = [ "magit" ];
         enable = !isDarwin;
