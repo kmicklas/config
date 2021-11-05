@@ -1,0 +1,3 @@
+#!/bin/sh
+BASEDIR=$(dirname "$0")
+home-manager switch -I nixpkgs=$(nix eval --raw "(import $BASEDIR/../dep/nixpkgs/thunk.nix)")

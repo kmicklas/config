@@ -14,11 +14,9 @@ in {
 
   nix.readOnlyStore = true;
   nix.autoOptimiseStore = true;
-  nix.nixPath = let
-    nixpkgs = builtins.toPath ../../../dep/nixpkgs;
-  in [
-    ("nixos=" + nixpkgs)
-    ("nixpkgs=" + nixpkgs)
+  nix.nixPath = [
+    "nixos=${<nixpkgs>}"
+    "nixpkgs=${<nixpkgs>}"
   ];
   nix.envVars = lib.optionalAttrs (builtins.pathExists githubAccessTokenPath) {
     NIX_GITHUB_PRIVATE_USERNAME = "kmicklas";

@@ -13,4 +13,6 @@
   ] ++ lib.optionals (builtins.pathExists ../../../../private/nix/home/common) [
     ../../../../private/nix/home/common
   ];
+
+  home.sessionPath = [ (builtins.toPath ./../../../../bin) ];
 }
