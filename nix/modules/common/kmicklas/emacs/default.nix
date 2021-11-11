@@ -135,6 +135,7 @@ in {
         after = [ "evil" ];
         diminish = [ "evil-escape-mode" ];
         config = ''
+          (setq evil-escape-delay 0.5)
           (evil-escape-mode 1)
         '';
       };
