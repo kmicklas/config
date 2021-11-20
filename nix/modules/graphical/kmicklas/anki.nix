@@ -47,6 +47,14 @@
         ];
 
         runScript = "${src}/bin/anki";
+
+        extraInstallCommands = ''
+          mkdir -p $out/share/applications
+          mkdir -p $out/share/pixmaps
+          cp ${src}/anki.desktop $out/share/applications
+          cp ${src}/anki.png ${src}/anki.xpm $out/share/pixmaps
+          substituteInPlace $out/share/applications/anki.desktop --replace Exec=anki Exec=$out/bin/anki
+        '';
       };
     })
   ];
