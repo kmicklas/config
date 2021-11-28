@@ -10,7 +10,11 @@ in
 
   home.packages = with pkgs; [
     cachix
-    haskellPackages.nix-thunk
+    (haskell.lib.doJailbreak (haskellPackages.nix-thunk.override (_: {
+      github = haskellPackages.github.overrideAttrs (_: {
+        patches = [];
+      });
+    })))
     nix-tree
   ];
 }
