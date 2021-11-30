@@ -259,10 +259,10 @@ in {
 
       lsp-mode = {
         enable = true;
-        # TODO: Re-add rnix-lsp
         config = ''
           (setq
             lsp-prefer-flymake nil
+            lsp-nix-server-path "${pkgs.rnix-lsp}/bin/rnix-lsp"
             )
         '';
       };
