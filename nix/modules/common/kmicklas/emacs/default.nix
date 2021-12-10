@@ -165,6 +165,10 @@ in {
         after = [ "magit" ];
       };
 
+      format-all = {
+        enable = true;
+      };
+
       general = {
         enable = true;
         after = [ "evil" "which-key" ];
