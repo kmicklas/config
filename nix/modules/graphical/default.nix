@@ -26,6 +26,24 @@
 
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.sessionPackages = [
+    (pkgs.stdenvNoCC.mkDerivation {
+      name = "wayland-session";
+      path = "share/wayland-sessions/wayland-session.desktop";
+      content = ''
+        [Desktop Entry]
+        Name=User Wayland Session
+        Comment=User configured Wayland session in .waylandsession
+        Exec=~/.wayland-session
+        Type=Application
+      '';
+      dontUnpack = true;
+      dontInstall = true;
+      buildPhase = ''
+        mkdir -p $out/$(dirname $path)
+        echo -n "$content" > $out/$path
+      '';
+      passthru.providedSessions = [ "wayland-session" ];
+    })
     pkgs.sway
   ];
 
