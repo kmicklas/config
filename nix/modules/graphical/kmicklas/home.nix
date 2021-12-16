@@ -52,9 +52,6 @@ in {
       horizontal_padding = 20;
       corner_radius = 20;
     };
-    shortcuts = {
-      close_all = "mod4+g";
-    };
   };
 
   xresources.properties = {
