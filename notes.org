@@ -103,4 +103,4 @@
 *** encrypted S3?
 ** TODO [#C] learn Colemak
 ** TODO separate NixOS and home-manager modules
-** TODO convert submodules to thunks
+** DONE convert submodules to thunks
