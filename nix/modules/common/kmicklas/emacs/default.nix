@@ -451,6 +451,9 @@ in {
         enable = true;
       };
 
+      zig-mode = {
+        enable = true;
+      };
     };
   };
 } // lib.optionalAttrs (!isDarwin) {
