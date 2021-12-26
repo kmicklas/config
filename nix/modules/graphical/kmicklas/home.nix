@@ -11,6 +11,7 @@ in {
     ./anki.nix
     ./ao.nix
     ./mpv.nix
+    ./river.nix
   ];
 
   home.packages = import ./packages.nix pkgs;
