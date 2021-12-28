@@ -71,14 +71,16 @@
           ${riverctl} map $mode None XF86MonBrightnessDown spawn '${light} -U 5'
       done
 
-      ${riverctl} background-color 0x002b36
-      ${riverctl} border-color-focused 0x93a1a1
-      ${riverctl} border-color-unfocused 0x586e75
+      ${riverctl} border-color-focused 0xff0000
+      ${riverctl} border-color-unfocused 0xcccccc
 
-      ${riverctl} set-repeat 50 300
+      ${riverctl} set-repeat 30 250
 
       ${riverctl} default-layout rivertile
-      exec ${rivertile} -view-padding 6 -outer-padding 6
+
+      systemctl --user import-environment
+
+      exec ${rivertile} -view-padding 0 -outer-padding 0
     '';
   };
 }
