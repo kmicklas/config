@@ -9,7 +9,14 @@ in {
     ./module.nix
   ];
 
+  nixpkgs.overlays = [
+    (import ../../../../../dep/emacs-overlay)
+  ];
+
   programs.emacs.enable = true;
+  # TODO: Use emacsUnstable once it has pgtk and native comp.
+  programs.emacs.package = pkgs.emacsPgtkGcc;
+
   home.sessionVariables.EDITOR = "${config.programs.emacs.package}/bin/emacsclient --create-frame --tty";
   home.sessionVariables.VISUAL = "${config.programs.emacs.package}/bin/emacsclient --create-frame";
 
