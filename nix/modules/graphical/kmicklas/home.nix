@@ -2,8 +2,8 @@
 
 let
   wallpaper = builtins.fetchurl {
-    url = "http://static.simpledesktops.com/uploads/desktops/2020/06/28/Big_Sur_Simple.png";
-    sha256 = "1ah7s792z7jd3bnmcb0spd7dql55ch3pd06zdpmh0pggn8qp8dk4";
+    url = "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg";
+    sha256 = "0xb1q07719zwxcldx0fqy6c50sgkajrcv9h01yd765p9ldhi7a9b";
   };
 
 in {
