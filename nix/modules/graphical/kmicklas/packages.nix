@@ -1,23 +1,18 @@
 pkgs: with pkgs; [
   google-chrome
-  torbrowser
   evince
   libreoffice
   gimp
-  shotwell
   audacity
   vlc
   spotify
-  skype
   anki
   transmission_gtk
-  thunderbird
   xournal
   zoom-us
   signal-desktop
   element-desktop
   discord
-  hexchat
   calibre
   youtube-dl
 
