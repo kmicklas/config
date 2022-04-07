@@ -19,6 +19,7 @@
   };
   programs.git.ignores = [
     "*~"
+    ".projectile"
   ];
   programs.git.delta.enable = true;
 
