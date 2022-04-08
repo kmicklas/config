@@ -1,4 +1,6 @@
 import XMonad
+import XMonad.Hooks.DynamicProperty
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.NoBorders
 import XMonad.Layout.ThreeColumns
@@ -31,7 +33,7 @@ launcherKeys conf@(XConfig {modMask = modm}) = M.fromList $
   , ((modm, xK_i), setScreensaverStatus "start" "Activated screensaver")
   ]
 
-main = xmonad $ docks $ def
+main = xmonad $ ewmh $ docks $ def
   { modMask = mod4Mask
   -- TODO: Put this back to smartBorders once
   -- https://github.com/xmonad/xmonad-contrib/issues/280 is fixed.
@@ -41,4 +43,24 @@ main = xmonad $ docks $ def
   , terminal = "alacritty"
   , workspaces = myWorkspaces
   , keys = workspace0Keys <+> launcherKeys <+> keys def
+
+  , manageHook = manageZoomHook <+> manageHook def
+  , handleEventHook = dynamicTitle manageZoomHook <+> handleEventHook def
   }
+
+-- Zoom stuff from https://www.peterstuart.org/posts/2021-09-06-xmonad-zoom/
+manageZoomHook = composeAll
+  [ (className =? zoomClassName) <&&> shouldFloat <$> title --> doFloat
+  , (className =? zoomClassName) <&&> shouldSink <$> title --> doSink
+  ]
+  where
+    zoomClassName = "zoom"
+    tileTitles =
+      [ "Zoom - Free Account" -- main window
+      , "Zoom - Licensed Account" -- main window
+      , "Zoom" -- meeting window on creation
+      , "Zoom Meeting" -- meeting window shortly after creation
+      ]
+    shouldFloat title = title `notElem` tileTitles
+    shouldSink title = title `elem` tileTitles
+    doSink = (ask >>= doF . W.sink) <+> doF W.swapDown
