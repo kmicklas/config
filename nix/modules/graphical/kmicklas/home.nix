@@ -26,7 +26,7 @@ in {
 
   xsession.enable = true;
   xsession.initExtra = ''
-    ${pkgs.feh}/bin/feh --bg-fill ${wallpaper}
+    ${pkgs.xwallpaper}/bin/xwallpaper --daemon --zoom ${wallpaper}
     xset r rate 250 30
     ibus-daemon &
     albert &
