@@ -10,7 +10,7 @@ in {
 
   environment.systemPackages = import ./packages.nix pkgs;
 
-  time.timeZone = "America/New_York";
+  time.timeZone = "Europe/London";
 
   nix.readOnlyStore = true;
   nix.autoOptimiseStore = true;
