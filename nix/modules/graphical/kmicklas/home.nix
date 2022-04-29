@@ -21,8 +21,8 @@ in {
 
   services.redshift.enable = true;
   services.redshift.provider = "manual";
-  services.redshift.latitude = "40.712772";
-  services.redshift.longitude = "-74.006058";
+  services.redshift.latitude = "51.5072";
+  services.redshift.longitude = "-0.1276";
 
   xsession.enable = true;
   xsession.initExtra = ''
