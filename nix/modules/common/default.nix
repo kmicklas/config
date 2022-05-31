@@ -16,10 +16,6 @@ in {
 
   nix.readOnlyStore = true;
   nix.autoOptimiseStore = true;
-  nix.nixPath = [
-    "nixos=${<nixpkgs>}"
-    "nixpkgs=${<nixpkgs>}"
-  ];
   nix.envVars = lib.optionalAttrs (builtins.pathExists githubAccessTokenPath) {
     NIX_GITHUB_PRIVATE_USERNAME = "kmicklas";
     NIX_GITHUB_PRIVATE_PASSWORD = builtins.replaceStrings ["\n"] [""] (builtins.readFile githubAccessTokenPath);
