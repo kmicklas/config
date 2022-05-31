@@ -12,7 +12,7 @@ in {
   programs.emacs.enable = true;
   # TODO: Use emacs-overlay again if switching to Wayland and unstable doesn't
   # have pgtk yet.
-  programs.emacs.package = (import ../../../../../dep/nixpkgs-unstable {}).emacsNativeComp;
+  programs.emacs.package = pkgs.emacsNativeComp;
 
   home.sessionVariables.EDITOR = "${config.programs.emacs.package}/bin/emacsclient --create-frame --tty";
   home.sessionVariables.VISUAL = "${config.programs.emacs.package}/bin/emacsclient --create-frame";
@@ -224,7 +224,7 @@ in {
         enable = true;
         after = [ "helm" ];
         config = ''
-          (setq helm-ag-base-command "${pkgs.ag}/bin/ag --nocolor --nogroup")
+          (setq helm-ag-base-command "${pkgs.silver-searcher}/bin/ag --nocolor --nogroup")
         '';
       };
 

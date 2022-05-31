@@ -7,7 +7,7 @@ pkgs: with pkgs; [
   vlc
   spotify
   anki
-  transmission_gtk
+  transmission-gtk
   xournal
   zoom-us
   signal-desktop

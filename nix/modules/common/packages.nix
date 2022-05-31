@@ -6,7 +6,7 @@ pkgs: with pkgs; [
   zstd
   tmux
   alacritty.terminfo
-  ag
+  silver-searcher
   jq
   gnupg
   file
@@ -15,6 +15,5 @@ pkgs: with pkgs; [
   htop
   ncdu
   psmisc # killall
-  fuse_exfat
-  exfat-utils
+  exfat
 ]
