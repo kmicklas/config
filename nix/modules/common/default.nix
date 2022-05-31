@@ -8,6 +8,8 @@ in {
     ./reflex.nix
   ];
 
+  system.stateVersion = "21.11"; # TODO: Upgrade to 22.05
+
   environment.systemPackages = import ./packages.nix pkgs;
 
   time.timeZone = "Europe/London";
