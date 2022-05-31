@@ -24,6 +24,9 @@ in {
     NIX_GITHUB_PRIVATE_USERNAME = "kmicklas";
     NIX_GITHUB_PRIVATE_PASSWORD = builtins.replaceStrings ["\n"] [""] (builtins.readFile githubAccessTokenPath);
   };
+  nix.extraOptions = ''
+    experimental-features = nix-command
+  '';
 
   boot.tmpOnTmpfs = true;
   boot.kernel.sysctl = {
