@@ -16,6 +16,9 @@
     "url \"ssh://git@github.com\"".insteadOf = "https://github.com";
     "url \"ssh://git@gitlab.com\"".insteadOf = "https://gitlab.com";
     "url \"ssh://git@bitbucket.com\"".insteadOf = "https://bitbucket.com";
+
+    # https://github.blog/2021-09-01-improving-git-protocol-security-github/#no-more-unauthenticated-git
+    "url \"https://github.com/\"".insteadOf = "git://github.com/";
   };
   programs.git.ignores = [
     "*~"
