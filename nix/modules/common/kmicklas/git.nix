@@ -28,5 +28,6 @@
 
   home.packages = with pkgs; [
     gitAndTools.hub
+    git-delete-merged-branches
   ];
 }
