@@ -5,12 +5,12 @@
     gocode
     godef
     gogetdoc
-    goimports
     golangci-lint
     golint
     gomodifytags
     gopkgs
     gotests
+    gotools
     impl
   ];
 }
