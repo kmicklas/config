@@ -9,6 +9,7 @@
     mergeTool.keepBackup = false;
     push.default = "simple";
     pull.ff = "only";
+    feature.manyFiles = true;
 
     github.user = "kmicklas";
 
