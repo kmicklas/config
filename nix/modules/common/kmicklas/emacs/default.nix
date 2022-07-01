@@ -289,6 +289,11 @@ in {
         config = ''
           (setf (alist-get 'unpushed magit-section-initial-visibility-alist) 'show)
           (setf (alist-get 'stashes magit-section-initial-visibility-alist) 'show)
+
+          (remove-hook 'magit-status-sections-hook 'magit-insert-tags-header)
+          (remove-hook 'magit-status-sections-hook 'magit-insert-status-headers)
+
+          (setq magit-log-section-commit-count 5)
         '';
       };
 
