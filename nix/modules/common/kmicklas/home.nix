@@ -4,6 +4,7 @@
   imports = [
     ./emacs
     ./git.nix
+    ./go.nix
     ./haskell.nix
     ./rust.nix
     ./home-manager.nix

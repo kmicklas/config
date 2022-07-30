@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    go_1_18
     gocode
     godef
     gogetdoc
@@ -13,4 +14,6 @@
     gotools
     impl
   ];
+
+  home.sessionPath = [ "$HOME/go/bin" ];
 }
