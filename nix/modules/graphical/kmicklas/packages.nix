@@ -10,6 +10,7 @@ pkgs: with pkgs; [
   transmission-gtk
   xournal
   zoom-us
+  teams
   signal-desktop
   element-desktop
   discord
