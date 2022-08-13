@@ -13,6 +13,8 @@
     gotests
     gotools
     impl
+
+    gcc
   ];
 
   home.sessionPath = [ "$HOME/go/bin" ];
