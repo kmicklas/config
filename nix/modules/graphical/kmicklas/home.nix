@@ -72,7 +72,7 @@ in {
 
   programs.firefox.enable = true;
 
-  xsession.pointerCursor = {
+  home.pointerCursor = {
     name = "Vanilla-DMZ";
     package = pkgs.vanilla-dmz;
     size = 48;
