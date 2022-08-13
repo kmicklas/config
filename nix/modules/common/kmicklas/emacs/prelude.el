@@ -5,6 +5,7 @@
 
   make-backup-files nil
   auto-save-default nil
+  undo-tree-auto-save-history nil
 
   vc-handled-backends '()
 
