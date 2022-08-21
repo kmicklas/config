@@ -30,7 +30,7 @@
   programs.git.delta.enable = true;
 
   home.packages = with pkgs; [
-    gitAndTools.hub
+    gh
     git-delete-merged-branches
   ];
 }
