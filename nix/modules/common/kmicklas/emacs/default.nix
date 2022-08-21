@@ -458,6 +458,9 @@ in {
 
       yasnippet = {
         enable = true;
+        config = ''
+          (yas-global-mode)
+        '';
       };
 
       zig-mode = {
