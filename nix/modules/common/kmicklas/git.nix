@@ -13,6 +13,8 @@
 
     github.user = "kmicklas";
 
+    init.defaultBranch = "main";
+
     # TODO: Auto-generate these.
     "url \"ssh://git@github.com\"".insteadOf = "https://github.com";
     "url \"ssh://git@gitlab.com\"".insteadOf = "https://gitlab.com";
