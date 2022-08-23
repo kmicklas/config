@@ -335,6 +335,28 @@ If BIGWORD is non-nil, move by WORDS."
   "R" 'evil-org-inner-subtree
   )
 
+;; Work around https://github.com/haskell/haskell-mode/issues/1265
+;; Adapted from https://github.com/doomemacs/doomemacs/pull/2351
+;; and https://github.com/doomemacs/doomemacs/commit/616956ac948def18d3ae12dad73c5b3623cdf5bd
+(defun haskell/evil-open-above ()
+  (interactive)
+  (evil-beginning-of-line)
+  (haskell-indentation-newline-and-indent)
+  (evil-previous-line)
+  (haskell-indentation-indent-line)
+  (evil-append-line nil))
+
+(defun haskell/evil-open-below ()
+  (interactive)
+  (evil-append-line nil)
+  (haskell-indentation-newline-and-indent))
+
+(general-nmap
+  :keymaps 'haskell-mode-map
+  "a" 'haskell/evil-open-below
+  "A" 'haskell/evil-open-above
+  )
+
 (add-hook 'dired-mode-hook #'evil-local-mode)
 (add-hook 'magit-mode-hook #'evil-local-mode)
 (add-hook 'org-agenda-mode-hook #'evil-local-mode)
