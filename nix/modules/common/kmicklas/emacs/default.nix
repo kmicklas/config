@@ -173,6 +173,14 @@ in {
         enable = true;
       };
 
+      fullframe = {
+        enable = true;
+        after = [ "magit" ];
+        config = ''
+          (fullframe magit-status magit-mode-quit-window)
+        '';
+      };
+
       general = {
         enable = true;
         after = [ "evil" "which-key" ];
