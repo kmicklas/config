@@ -20,6 +20,8 @@
   system-time-locale "C"
   )
 
+(load custom-file) ;; Without this custom is saved but ignored
+
 (prefer-coding-system 'utf-8)
 
 (when (not window-system) (xterm-mouse-mode 1))
