@@ -1,23 +1,19 @@
 { pkgs, ... }:
 
 {
-  nixpkgs.overlays = [
-    (self: _: {
-      obelisk = (import ../../../../dep/obelisk {}).command;
-    })
-  ];
-  home.packages = with pkgs; [
+  home.packages = [
+    (import ../../../../dep/obelisk {}).command
+  ] ++ (with pkgs; [
     binutils # 'ar' is needed by cabal.
 
     ghc
     cabal-install
 
-    obelisk
     ghcid
 
     haskellPackages.cabal-fmt
     stylish-haskell
-  ];
+  ]);
 
   programs.git.ignores = [
     "cabal.project.local"
