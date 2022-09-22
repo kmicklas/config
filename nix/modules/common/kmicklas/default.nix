@@ -12,5 +12,6 @@ in {
   openssh.authorizedKeys.keys = map builtins.readFile [
     ../../../hosts/pej/kmicklas/id_rsa.pub
     ../../../hosts/tieta/kmicklas/id_rsa.pub
+    ./pixel.pub
   ];
 }
