@@ -2,5 +2,5 @@
 
 {
   security.acme.acceptTerms = true;
-  security.acme.email = "accounts@kmicklas.com";
+  security.acme.defaults.email = "accounts@kmicklas.com";
 }
