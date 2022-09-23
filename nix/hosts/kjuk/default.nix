@@ -23,5 +23,7 @@
   swapDevices = [ ];
 
   networking.hostName = "kjuk";
+  networking.networkmanager.enable = true;
+
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 }
