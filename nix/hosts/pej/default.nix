@@ -23,5 +23,7 @@
   networking.hostName = "pej";
   networking.hostId = "3d3f0c83";
 
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 }
