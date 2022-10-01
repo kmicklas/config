@@ -1,5 +1,4 @@
 pkgs: with pkgs; [
-  alacritty.terminfo
   exfat
   file
   gnupg

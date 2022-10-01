@@ -11,6 +11,7 @@ in {
   system.stateVersion = "22.05";
 
   environment.systemPackages = import ./packages.nix pkgs;
+  environment.enableAllTerminfo = true;
 
   time.timeZone = "Europe/London";
 
