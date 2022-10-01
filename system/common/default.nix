@@ -19,7 +19,7 @@ in {
   nix.autoOptimiseStore = true;
 
   nix.nixPath = let
-    nixpkgs = builtins.toPath ../../../dep/nixpkgs;
+    nixpkgs = builtins.toPath ../../dep/nixpkgs;
   in [
     "nixos=${nixpkgs}"
     "nixpkgs=${nixpkgs}"
@@ -56,6 +56,4 @@ in {
 
   # Theoretically will reduce hangs during nix-builds.
   services.fstrim.enable = true;
-
-  users.users.kmicklas = import ./kmicklas;
 }

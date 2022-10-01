@@ -1,11 +1,28 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = import ./packages.nix pkgs;
+  environment.systemPackages = with pkgs; [
+    gparted
+  ];
 
   fonts.fontDir.enable = true;
   fonts.enableGhostscriptFonts = true;
-  fonts.fonts = import ./fonts.nix pkgs;
+  fonts.fonts = with pkgs; [
+    corefonts
+    emacs-all-the-icons-fonts
+    google-fonts
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    source-han-sans-japanese
+    source-han-sans-korean
+    source-han-sans-simplified-chinese
+    source-han-sans-traditional-chinese
+    ubuntu_font_family
+    unifont
+    wqy_microhei
+    wqy_zenhei
+  ];
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.settings = {

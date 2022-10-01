@@ -31,7 +31,7 @@ in {
     ibus-daemon &
     albert &
   '';
-  xdg.configFile."albert/albert.conf".source = ../../../../dotfiles/config/albert/albert.conf;
+  xdg.configFile."albert/albert.conf".source = ../../dotfiles/config/albert/albert.conf;
 
   home.sessionVariables = {
     GTK_IM_MODULE = "ibus";
@@ -42,7 +42,7 @@ in {
   xsession.windowManager.xmonad = {
     enable = true;
     enableContribAndExtras = true;
-    config = ../../../../dotfiles/xmonad/xmonad.hs;
+    config = ../../dotfiles/xmonad/xmonad.hs;
   };
 
   services.dunst.enable = true;

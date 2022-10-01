@@ -2,7 +2,7 @@
 
 {
   home.packages = [
-    (import ../../../../dep/obelisk {}).command
+    (import ../dep/obelisk {}).command
   ] ++ (with pkgs; [
     binutils # 'ar' is needed by cabal.
 
@@ -20,7 +20,7 @@
     "dist-newstyle"
   ];
 
-  home.file.".ghci".source = ../../../../dotfiles/ghci;
+  home.file.".ghci".source = ../dotfiles/ghci;
 
   programs.emacs.init = {
     usePackage = {

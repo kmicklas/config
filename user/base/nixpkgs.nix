@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  nixpkgsConfig = ../../../../dotfiles/config/nixpkgs/config.nix;
+  nixpkgsConfig = ../../dotfiles/config/nixpkgs/config.nix;
 in
 
 {

@@ -2,12 +2,14 @@
 
 {
   imports = [
-    ../../modules/common
-    ../../modules/graphical
-    ../../modules/libinput.nix
-    ../../modules/media-keys.nix
-    ../../modules/efi-boot.nix
     ./hardware-configuration.nix
+
+    ../../system/common
+    ../../system/efi-boot.nix
+    ../../system/graphical.nix
+    ../../system/kmicklas.nix
+    ../../system/libinput.nix
+    ../../system/media-keys.nix
   ];
 
   hardware.enableRedistributableFirmware = true;

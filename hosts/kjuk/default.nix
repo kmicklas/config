@@ -2,8 +2,11 @@
 
 {
   imports = [
-    ../../modules/common
-    "${import ../../../dep/nixos-hardware/thunk.nix}/raspberry-pi/4"
+    "${import ../../dep/nixos-hardware/thunk.nix}/raspberry-pi/4"
+
+    ../../system/common
+    ../../system/kmicklas.nix
+
     ./dns.nix
     ./dynamic-dns.nix
     ./feeds.nix

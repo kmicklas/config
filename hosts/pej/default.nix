@@ -2,11 +2,13 @@
 
 {
   imports = [
-    ../../modules/common
-    ../../modules/graphical
-    ../../modules/libinput.nix
-    ../../modules/efi-boot.nix
     ./hardware-configuration.nix
+
+    ../../system/common
+    ../../system/efi-boot.nix
+    ../../system/graphical.nix
+    ../../system/kmicklas.nix
+    ../../system/libinput.nix
   ];
 
   services.xserver.videoDrivers = [ "amdgpu" ];
