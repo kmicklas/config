@@ -108,12 +108,6 @@ If BIGWORD is non-nil, move by WORDS."
   ("k" shrink-window "shrink vertically")
   )
 
-(defhydra hydra-zoom ()
-  "font size"
-  ("j" zoom-in "zoom in")
-  ("k" zoom-out "zoom-out")
-  )
-
 (defun insert-project-name-tag ()
   "Insert [PROJECT NAME]."
   (interactive)
@@ -295,14 +289,16 @@ If BIGWORD is non-nil, move by WORDS."
   "q" '(:ignore t :which-key "quit")
   "qq" '(evil-quit :which-key "window")
   "qa" '(evil-quit-all :which-key "all")
-
-  "z" '(hydra-zoom/body :which-key "zoom")
   )
 
 (general-define-key
   "C-f" 'evil-search-forward
   "C-s" 'save-buffer
   "C-w" 'kill-this-buffer ;; TODO: Unbind C-w prefix so this works.
+
+  "C-+" 'zoom-in
+  "C-=" 'zoom-in
+  "C--" 'zoom-out
   )
 
 (general-nmap
