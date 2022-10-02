@@ -20,6 +20,10 @@
     "url \"ssh://git@gitlab.com\"".insteadOf = "https://gitlab.com";
     "url \"ssh://git@bitbucket.com\"".insteadOf = "https://bitbucket.com";
 
+    # https://github.com/killercup/cargo-edit/issues/687
+    "url \"https://github.com/rust-lang/crates.io-index\"".insteadOf =
+      "https://github.com/rust-lang/crates.io-index";
+
     # https://github.blog/2021-09-01-improving-git-protocol-security-github/#no-more-unauthenticated-git
     "url \"https://github.com/\"".insteadOf = "git://github.com/";
   };
