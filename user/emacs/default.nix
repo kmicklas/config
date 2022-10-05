@@ -404,6 +404,9 @@ in {
 
       python = {
         enable = true;
+        config = ''
+          (setq python-indent-def-block-scale 1)
+        '';
       };
 
       rust-mode = {
