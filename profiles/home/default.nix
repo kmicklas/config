@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -11,5 +11,9 @@
     ../../user/haskell.nix
     ../../user/ssh.nix
     ../../user/rust.nix
+  ];
+
+  home.packages = with pkgs; [
+    wally-cli
   ];
 }

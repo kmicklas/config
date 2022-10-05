@@ -60,4 +60,6 @@
   services.physlock.allowAnyUser = true;
 
   programs.adb.enable = true;
+
+  hardware.keyboard.zsa.enable = true;
 }
