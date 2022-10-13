@@ -6,4 +6,6 @@
     ./nixpkgs.nix
     ./zsh.nix
   ];
+
+  home.sessionPath = [ "$HOME/.local/bin" ];
 }
