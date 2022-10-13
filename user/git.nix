@@ -30,7 +30,7 @@
   programs.git.ignores = [
     "*~"
     ".projectile"
-    "/.venv"
+    "/.direnv/"
   ];
   programs.git.delta.enable = true;
 
