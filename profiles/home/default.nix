@@ -13,6 +13,8 @@
     ../../user/rust.nix
   ];
 
+  programs.git.userEmail = "git@kmicklas.com";
+
   home.packages = with pkgs; [
     wally-cli
   ];
