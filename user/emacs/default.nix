@@ -69,6 +69,13 @@ in {
         enable = true;
       };
 
+      clipetty = {
+        enable = true;
+        config = ''
+          (global-clipetty-mode)
+        '';
+      };
+
       company = {
         enable = true;
         diminish = [ "company-mode" ];
