@@ -356,6 +356,7 @@ If BIGWORD is non-nil, move by WORDS."
 (add-hook 'dired-mode-hook #'evil-local-mode)
 (add-hook 'magit-mode-hook #'evil-local-mode)
 (add-hook 'org-agenda-mode-hook #'evil-local-mode)
+(add-hook 'evil-normal-state-entry-hook #'company-abort)
 
 (defun set-exec-path-from-shell-PATH ()
   "Set up Emacs' `exec-path' and PATH environment variable to match
