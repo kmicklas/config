@@ -95,6 +95,10 @@ in {
         '';
       };
 
+      dockerfile-mode = {
+        enable = true;
+      };
+
       doom-modeline = {
         enable = true;
         after = [ "all-the-icons" ];
