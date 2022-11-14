@@ -24,6 +24,18 @@
         (kill-new file-name))
       (error "Buffer not visiting a file"))))
 
+(defun copy-projectile-buffer-file-name ()
+  "Copy and show the project-relative path to the current file."
+  (interactive)
+  (let ((file-name (buffer-file-name))
+        (project-root (projectile-project-root)))
+    (if (and file-name project-root)
+      (let ((relative-path (file-relative-name file-name project-root)))
+        (progn
+          (message relative-path)
+          (kill-new relative-path)))
+      (error "Buffer not visiting a file"))))
+
 (defun beginning-or-end-of-buffer ()
   "Go to beginning or end of buffer."
   (interactive)
@@ -224,6 +236,7 @@ If BIGWORD is non-nil, move by WORDS."
   "fb" '(magit-blame :which-key "git blame")
   "fe" '(revert-buffer :which-key "revert")
   "ff" '(find-file :which-key "find")
+  "fp" 'copy-projectile-buffer-file-name
   "fr" '(helm-recentf :which-key "recent")
   "fs" '(save-buffer :which-key "save")
   "fy" 'copy-buffer-file-name
