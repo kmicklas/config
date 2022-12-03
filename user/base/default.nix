@@ -7,7 +7,10 @@
     ./zsh.nix
   ];
 
-  home.sessionPath = [ "$HOME/.local/bin" ];
+  home.sessionPath = [
+    "$HOME/.local/bin"
+    (builtins.toPath ../../bin)
+  ];
 
   home.homeDirectory = "/home/kmicklas";
   home.username = "kmicklas";
