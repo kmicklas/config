@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -10,6 +10,10 @@
   home.sessionPath = [
     "$HOME/.local/bin"
     (builtins.toPath ../../bin)
+  ];
+
+  home.packages = with pkgs; [
+    tree
   ];
 
   home.homeDirectory = "/home/kmicklas";
