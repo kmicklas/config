@@ -12,7 +12,7 @@
     sub-font-size = "50";
   };
   programs.mpv.scripts = [
-    (pkgs.callPackage "${import ../../dep/nixpkgs-unstable/thunk.nix}/pkgs/applications/video/mpv/scripts/mpvacious.nix" {})
+    pkgs.mpvScripts.mpvacious
   ] ++ lib.flip map ["sub-pause" "sub-skip"] (script:
     pkgs.stdenv.mkDerivation rec {
       pname = script;
