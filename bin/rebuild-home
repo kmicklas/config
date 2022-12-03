@@ -1,6 +1,5 @@
 #!/bin/sh
 BASEDIR=$(dirname "$0")
 home-manager switch \
-  -I nixpkgs=$(nix eval --impure --raw --expr "(import $BASEDIR/../dep/nixpkgs/thunk.nix)") \
-  -I home-manager=$(nix eval --impure --raw --expr "(import $BASEDIR/../dep/home-manager/thunk.nix)") \
+  -I home-manager=$(realpath "$BASEDIR/../dep/home-manager") \
   $@
