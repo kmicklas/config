@@ -72,9 +72,8 @@ in {
 
   programs.firefox.enable = true;
 
-  home.pointerCursor = {
-    name = "Vanilla-DMZ";
-    package = pkgs.vanilla-dmz;
-    size = 48;
-  };
+  home.pointerCursor.x11.enable = true;
+  home.pointerCursor.name = "Vanilla-DMZ";
+  home.pointerCursor.package = pkgs.vanilla-dmz;
+  home.pointerCursor.size = 48;
 }
