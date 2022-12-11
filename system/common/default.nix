@@ -16,7 +16,7 @@ in {
   time.timeZone = "Europe/London";
 
   nix.readOnlyStore = true;
-  nix.autoOptimiseStore = true;
+  nix.settings.auto-optimise-store = true;
 
   nix.nixPath = let
     nixpkgs = builtins.toPath ../../dep/nixpkgs;
