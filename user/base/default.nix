@@ -13,6 +13,8 @@
   ];
 
   home.packages = with pkgs; [
+    bat
+    exa
     tree
   ];
 
