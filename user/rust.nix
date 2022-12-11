@@ -7,9 +7,12 @@
   '';
 
   home.packages = with pkgs; [
-    cargo
     cargo-edit
-    rustc
+    rustup
     rust-analyzer
+  ];
+
+  home.sessionPath = [
+    "$HOME/.cargo/bin"
   ];
 }
