@@ -8,7 +8,7 @@ in {
     ./reflex.nix
   ];
 
-  system.stateVersion = "22.05";
+  system.stateVersion = "22.11";
 
   environment.systemPackages = import ./packages.nix pkgs;
   environment.enableAllTerminfo = true;
