@@ -9,7 +9,10 @@
   ];
 
   programs.git.extraConfig = {
-    "url \"https://github.com\"".insteadOf = "ssh://git@github.com";
+    "url \"https://github.com/\"".insteadOf = [
+      "git@github.com:"
+      "ssh://git@github.com:"
+    ];
   };
 
   programs.emacs.init = {

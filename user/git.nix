@@ -19,7 +19,7 @@
       "https://github.com/rust-lang/crates.io-index";
 
     # https://github.blog/2021-09-01-improving-git-protocol-security-github/#no-more-unauthenticated-git
-    "url \"https://github.com/\"".insteadOf = "git://github.com/";
+    "url \"https://github.com/\"".insteadOf = [ "git://github.com/" ];
   };
   programs.git.ignores = [
     "*~"
