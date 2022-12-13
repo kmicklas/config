@@ -383,3 +383,6 @@ apps are not started from a shell."
     (setq exec-path (split-string path-from-shell path-separator))))
 
 (set-exec-path-from-shell-PATH)
+
+;; Start server for environments without home-manager user systemd
+(unless (server-running-p) (server-start))
