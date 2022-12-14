@@ -8,6 +8,10 @@
     ../../user/git.nix
   ];
 
+  home.sessionVariables = {
+    NIX_PATH = "$NIX_PATH\${NIX_PATH:+:}nixpkgs=${builtins.toPath ../../dep/nixpkgs}";
+  };
+
   programs.git.extraConfig = {
     "url \"https://github.com/\"".insteadOf = [
       "git@github.com:"
