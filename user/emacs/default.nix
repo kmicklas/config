@@ -261,6 +261,9 @@ in {
 
       js2-mode = {
         enable = true;
+        config = ''
+          (setq js-indent-level 2)
+        '';
       };
 
       keyfreq = {
