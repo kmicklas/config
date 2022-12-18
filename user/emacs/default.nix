@@ -430,10 +430,6 @@ in {
         enable = true;
       };
 
-      thrift = {
-        enable = true;
-      };
-
       undo-tree = {
         enable = true;
         config = ''
