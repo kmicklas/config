@@ -186,8 +186,6 @@ If BIGWORD is non-nil, move by WORDS."
   "<backspace>" 'evil-delete-backward-char
 
   "b" 'beginning-or-end-of-buffer
-  "gd" 'lsp-find-definition
-  "gl" 'evil-avy-goto-line
   "i" 'evil-forward-word-begin
   "I" 'evil-forward-WORD-begin
   "o" 'evil-forward-past-word-end
@@ -252,6 +250,13 @@ If BIGWORD is non-nil, move by WORDS."
   "hp" 'describe-package
   "hs" 'describe-symbol
   "hv" 'describe-variable
+
+  "j" '(:ignore t :which-key "jump")
+  "jd" '(lsp-find-definition :which-key "definition")
+  "je" '(flycheck-next-error :which-key "error")
+  "jE" '(flycheck-previous-error :which-key "error")
+  "jl" '(evil-avy-goto-line :which-key "line")
+  "jr" '(lsp-find-references :which-key "references")
 
   "i" '(:ignore t :which-key "insert")
   "ip" 'insert-project-name-tag
