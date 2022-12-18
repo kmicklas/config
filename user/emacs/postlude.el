@@ -290,6 +290,7 @@ If BIGWORD is non-nil, move by WORDS."
 
   "t"  '(:ignore t :which-key "toggle")
   "tf" '(toggle-frame-fullscreen :which-key "fullscreen")
+  "ts" '(smartparens-mode :which-key "smartparens")
 
   "w" '(:ignore t :which-key "window")
   "wd" '(delete-window :which-key "delete")

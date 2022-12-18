@@ -429,6 +429,13 @@ in {
         '';
       };
 
+      smartparens = {
+        enable = true;
+        config = ''
+          (add-hook 'prog-mode-hook 'smartparens-mode)
+        '';
+      };
+
       sudo-edit = {
         enable = true;
       };
