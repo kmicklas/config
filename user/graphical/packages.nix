@@ -28,7 +28,6 @@ pkgs: with pkgs; [
   dmenu
   acpi
   xscreensaver
-  albert
   arandr
   alsaUtils
   pavucontrol

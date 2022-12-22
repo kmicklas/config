@@ -29,9 +29,7 @@ in {
     ${pkgs.xwallpaper}/bin/xwallpaper --daemon --zoom ${wallpaper}
     xset r rate 250 30
     ibus-daemon &
-    albert &
   '';
-  xdg.configFile."albert/albert.conf".source = ../../dotfiles/config/albert/albert.conf;
 
   home.sessionVariables = {
     GTK_IM_MODULE = "ibus";
