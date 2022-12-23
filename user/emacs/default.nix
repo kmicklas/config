@@ -440,6 +440,14 @@ in {
         enable = true;
       };
 
+      tree-sitter = {
+        enable = true;
+      };
+
+      tree-sitter-langs = {
+        enable = true;
+      };
+
       undo-tree = {
         enable = true;
         config = ''
