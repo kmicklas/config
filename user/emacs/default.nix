@@ -10,8 +10,7 @@ in {
   ];
 
   programs.emacs.enable = true;
-  # TODO: Use emacs-overlay again if switching to Wayland and unstable doesn't
-  # have pgtk yet.
+  programs.emacs.package = pkgs.emacs-gtk;
 
   home.sessionVariables.EDITOR = "${config.programs.emacs.package}/bin/emacsclient --create-frame --tty";
   home.sessionVariables.VISUAL = "${config.programs.emacs.package}/bin/emacsclient --create-frame";
