@@ -4,7 +4,6 @@ pkgs: with pkgs; [
   gnupg
   htop
   iotop
-  jq
   ncdu
   neovim
   psmisc # killall
