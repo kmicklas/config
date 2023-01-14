@@ -420,9 +420,6 @@ in {
 
       rust-mode = {
         enable = true;
-        config = ''
-          (setq rust-rustfmt-bin "${pkgs.rustfmt}/bin/rustfmt")
-        '';
       };
 
       smartparens = {
