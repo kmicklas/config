@@ -283,7 +283,7 @@ If BIGWORD is non-nil, move by WORDS."
   "pp" '(projectile-persp-switch-project :which-key "perspective")
   "pr" '(projectile-replace :which-key "replace")
   "pR" '(projectile-replace-regexp :which-key "replace regex")
-  "ps" '(helm-do-ag-project-root :which-key "search in project")
+  "ps" '(helm-projectile-rg :which-key "search in project")
   "px" '(projectile-remove-known-project :which-key "remove")
 
   "r" '(:ignore t :which-key "replace")

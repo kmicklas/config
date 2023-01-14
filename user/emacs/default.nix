@@ -237,17 +237,14 @@ in {
         '';
       };
 
-      helm-ag = {
-        enable = true;
-        after = [ "helm" ];
-        config = ''
-          (setq helm-ag-base-command "${pkgs.silver-searcher}/bin/ag --nocolor --nogroup")
-        '';
-      };
-
       helm-projectile = {
         enable = true;
         after = [ "helm" "projectile" ];
+      };
+
+      helm-rg = {
+        enable = true;
+        after = [ "helm" ];
       };
 
       hydra = {
