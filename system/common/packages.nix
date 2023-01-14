@@ -8,7 +8,6 @@ pkgs: with pkgs; [
   neovim
   psmisc # killall
   python
-  silver-searcher
   tmux
   unzip
   wget
