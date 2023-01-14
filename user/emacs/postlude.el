@@ -211,6 +211,7 @@ If BIGWORD is non-nil, move by WORDS."
 
   "SPC" '(helm-M-x :which-key "execute")
   ";" 'evil-ex
+  "/" '(rg-menu :which-key "search")
 
   "a" '(org-agenda :which-key "agenda")
 

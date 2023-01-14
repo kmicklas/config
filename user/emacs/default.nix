@@ -418,6 +418,13 @@ in {
         '';
       };
 
+      rg = {
+        enable = true;
+        config = ''
+          (rg-enable-default-bindings)
+        '';
+      };
+
       rust-mode = {
         enable = true;
       };
