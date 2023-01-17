@@ -120,11 +120,6 @@ If BIGWORD is non-nil, move by WORDS."
   ("k" shrink-window "shrink vertically")
   )
 
-(defun insert-project-name-tag ()
-  "Insert [PROJECT NAME]."
-  (interactive)
-  (insert (concat "[" (projectile-project-name) "] ")))
-
 ;; For some reason this doesn't work with general-nmap
 (define-key evil-normal-state-map "u" nil)
 
@@ -262,7 +257,6 @@ If BIGWORD is non-nil, move by WORDS."
   "jt" '(lsp-find-type-definition :which-key "type")
 
   "i" '(:ignore t :which-key "insert")
-  "ip" 'insert-project-name-tag
   "iu" 'uuidgen
 
   "m" '(:ignore t :which-key "mode")
