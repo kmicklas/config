@@ -13,11 +13,12 @@
   )
 
 (setq-default
-  indent-tabs-mode nil
-  tab-width 2
   c-basic-offset 2
+  indent-tabs-mode nil
+  next-screen-context-lines 10
   show-trailing-whitespace t
   system-time-locale "C"
+  tab-width 2
   )
 
 (load custom-file) ;; Without this custom is saved but ignored
