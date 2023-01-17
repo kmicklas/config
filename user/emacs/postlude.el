@@ -258,6 +258,7 @@ If BIGWORD is non-nil, move by WORDS."
   "jE" '(flycheck-previous-error :which-key "error")
   "jl" '(evil-avy-goto-line :which-key "line")
   "jr" '(lsp-find-references :which-key "references")
+  "jt" '(lsp-find-type-definition :which-key "type")
 
   "i" '(:ignore t :which-key "insert")
   "ip" 'insert-project-name-tag
