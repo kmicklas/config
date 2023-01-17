@@ -222,6 +222,7 @@ If BIGWORD is non-nil, move by WORDS."
   "c" '(:ignore t :which-key "code")
   "cc" '(comment-line :which-key "comment")
   "cl" 'lsp
+  "cs" '(sort-lines :which-key "sort lines")
 
   "d" '(dired-jump-other-window :which-key "dired")
 
