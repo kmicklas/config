@@ -427,6 +427,9 @@ in {
 
       rust-mode = {
         enable = true;
+        config = ''
+          (setq rust-format-on-save t)
+        '';
       };
 
       smartparens = {
