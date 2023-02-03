@@ -67,6 +67,14 @@ in {
         enable = true;
       };
 
+      cargo = {
+        enable = true;
+        after = [ "rust-mode" ];
+        config = ''
+          (add-hook 'rust-mode-hook 'cargo-minor-mode)
+        '';
+      };
+
       clipetty = {
         enable = true;
         config = ''
