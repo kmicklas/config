@@ -26,12 +26,7 @@ in {
 
     prelude = lib.concatStringsSep "\n" [
       (builtins.readFile ./prelude.el)
-      (lib.optionalString (!isDarwin) ''
-        (add-to-list 'default-frame-alist '(font . "Source Code Pro 8"))
-      '')
       (lib.optionalString isDarwin ''
-        (add-to-list 'default-frame-alist '(font . "Source Code Pro 18"))
-
         (setq
           mac-command-modifier 'control
           mac-option-modifier 'meta
