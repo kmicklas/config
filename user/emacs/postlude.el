@@ -218,6 +218,7 @@ If BIGWORD is non-nil, move by WORDS."
   "cc" '(comment-line :which-key "comment")
   "cl" 'lsp
   "cs" '(sort-lines :which-key "sort lines")
+  "ct" 'delete-trailing-whitespace
 
   "d" '(dired-jump-other-window :which-key "dired")
 
