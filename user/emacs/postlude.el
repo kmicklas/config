@@ -51,14 +51,6 @@
          (beginning-of-line-text)
          (if (eq p (point)) (beginning-of-line) (end-of-line))))))
 
-(defun mark-line ()
-  "Mark whole line."
-  (interactive)
-  (beginning-of-line)
-  (push-mark (point))
-  (activate-mark)
-  (forward-line))
-
 (defun org-insert-heading-above ()
   "Insert heading above current."
   (interactive)
