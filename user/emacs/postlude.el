@@ -51,6 +51,11 @@
          (beginning-of-line-text)
          (if (eq p (point)) (beginning-of-line) (end-of-line))))))
 
+(defun revert-buffer-preserve-modes ()
+  "Revert buffer preserving active modes and without confirmation."
+  (interactive)
+  (revert-buffer nil t t))
+
 (defun org-insert-heading-above ()
   "Insert heading above current."
   (interactive)
@@ -222,7 +227,7 @@ If BIGWORD is non-nil, move by WORDS."
   "f" '(:ignore t :which-key "file")
   "fc" '(write-file :which-key "copy")
   "fb" '(magit-blame :which-key "git blame")
-  "fe" '(revert-buffer :which-key "revert")
+  "fe" '(revert-buffer-preserve-modes :which-key "revert")
   "ff" '(find-file :which-key "find")
   "fp" 'copy-projectile-buffer-file-name
   "fr" '(helm-recentf :which-key "recent")
