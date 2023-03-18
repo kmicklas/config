@@ -54,6 +54,11 @@
     HandlePowerKey=suspend
   '';
 
+  # Prevent user services from blocking shutdown for a long time
+  systemd.extraConfig = ''
+    DefaultTimeoutStopSec=20s
+  '';
+
   services.physlock.enable = true;
   services.physlock.allowAnyUser = true;
 
