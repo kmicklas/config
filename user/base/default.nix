@@ -16,6 +16,7 @@
     bat
     exa
     jq
+    ncdu
     ripgrep
     tree
   ];
