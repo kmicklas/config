@@ -15,6 +15,7 @@
   home.packages = with pkgs; [
     bat
     exa
+    htop
     jq
     ncdu
     ripgrep
