@@ -34,7 +34,7 @@
 
   home.packages = with pkgs; [
     dive
-    go_1_18
+    go_1_20
     gopls
     nix
     pyright
