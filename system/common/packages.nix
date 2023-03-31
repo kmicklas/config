@@ -7,7 +7,7 @@ pkgs: with pkgs; [
   ncdu
   neovim
   psmisc # killall
-  python
+  python3
   tmux
   unzip
   wget
