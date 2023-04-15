@@ -23,6 +23,7 @@
 
 (load custom-file) ;; Without this custom is saved but ignored
 
+(setenv "LANG" "en_US.UTF-8")
 (prefer-coding-system 'utf-8)
 
 (when (not window-system) (xterm-mouse-mode 1))

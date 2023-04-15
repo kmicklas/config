@@ -12,6 +12,10 @@ in {
   programs.emacs.enable = true;
   programs.emacs.package = pkgs.emacs-gtk;
 
+  home.programs = with pkgs; [
+    (hunspellWithDicts [ hunspellDicts.en-us-large ])
+  ];
+
   home.sessionVariables.EDITOR = "${config.programs.emacs.package}/bin/emacsclient --create-frame --tty";
   home.sessionVariables.VISUAL = "${config.programs.emacs.package}/bin/emacsclient --create-frame";
 
