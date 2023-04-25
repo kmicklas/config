@@ -12,16 +12,13 @@ in {
   programs.emacs.enable = true;
   programs.emacs.package = pkgs.emacs-gtk;
 
-  home.programs = with pkgs; [
-    (hunspellWithDicts [ hunspellDicts.en-us-large ])
-  ];
-
   home.sessionVariables.EDITOR = "${config.programs.emacs.package}/bin/emacsclient --create-frame --tty";
   home.sessionVariables.VISUAL = "${config.programs.emacs.package}/bin/emacsclient --create-frame";
 
   home.packages = with pkgs; [
     # direnv-mode doesn't seem to have a variable to get this except from $PATH.
     direnv
+    (hunspellWithDicts [ hunspellDicts.en-us-large ])
   ];
 
   programs.emacs.init = {
