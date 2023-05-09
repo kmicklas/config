@@ -117,6 +117,14 @@ If BIGWORD is non-nil, move by WORDS."
   ("k" shrink-window "shrink vertically")
   )
 
+(defhydra hydra-brackets ()
+  "brackets"
+  ("c" sp-wrap-curly "{wrap}")
+  ("r" sp-wrap-round "(wrap)")
+  ("s" sp-wrap-square "[wrap]")
+  ("d" sp-unwrap-sexp "unwrap")
+  )
+
 ;; For some reason this doesn't work with general-nmap
 (define-key evil-normal-state-map "u" nil)
 
@@ -165,6 +173,7 @@ If BIGWORD is non-nil, move by WORDS."
 
 (general-mmap
   ;; Unmap these so that we can remap in normal state:
+  "C-b" nil
   "C-f" nil
   "," nil
   "e" nil
@@ -306,6 +315,7 @@ If BIGWORD is non-nil, move by WORDS."
   )
 
 (general-define-key
+  "C-b" 'hydra-brackets/body
   "C-f" 'evil-search-forward
   "C-s" 'save-buffer
   "C-w" 'kill-this-buffer ;; TODO: Unbind C-w prefix so this works.
