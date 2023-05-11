@@ -13,7 +13,6 @@ pkgs: with pkgs; [
   teams
   signal-desktop
   element-desktop
-  discord
   calibre
   youtube-dl
 
