@@ -9,6 +9,7 @@
     ../../user/git.nix
     ../../user/go.nix
     ../../user/haskell.nix
+    ../../user/ocaml.nix
     ../../user/ssh.nix
     ../../user/rust.nix
   ];
