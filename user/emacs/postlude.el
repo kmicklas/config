@@ -254,6 +254,7 @@ If BIGWORD is non-nil, move by WORDS."
   "hp" 'describe-package
   "hs" 'describe-symbol
   "hv" 'describe-variable
+  "hy" '(yas-describe-tables :which-key "yasnippets")
 
   "j" '(:ignore t :which-key "jump")
   "jd" '(lsp-find-definition :which-key "definition")
