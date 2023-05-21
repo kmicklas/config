@@ -455,6 +455,10 @@ in {
         enable = true;
       };
 
+      tuareg = {
+        enable = true;
+      };
+
       undo-tree = {
         enable = true;
         config = ''
