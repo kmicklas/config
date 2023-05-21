@@ -10,7 +10,6 @@ in {
   ];
 
   programs.emacs.enable = true;
-  programs.emacs.package = pkgs.emacs-gtk;
 
   home.sessionVariables.EDITOR = "${config.programs.emacs.package}/bin/emacsclient --create-frame --tty";
   home.sessionVariables.VISUAL = "${config.programs.emacs.package}/bin/emacsclient --create-frame";
@@ -495,6 +494,11 @@ in {
         config = ''
           (yas-global-mode)
         '';
+      };
+
+      yasnippet-snippets = {
+        enable = true;
+        after = [ "yasnippet" ];
       };
 
       zig-mode = {
