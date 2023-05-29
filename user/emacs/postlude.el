@@ -302,6 +302,10 @@ If BIGWORD is non-nil, move by WORDS."
   "tf" '(toggle-frame-fullscreen :which-key "fullscreen")
   "ts" '(smartparens-mode :which-key "smartparens")
 
+  "v" '(:ignore t :which-key "view")
+  "vv" '(persp-switch :which-key "switch")
+  "vx" '(persp-kill :which-key "remove")
+
   "w" '(:ignore t :which-key "window")
   "wd" '(delete-window :which-key "delete")
   "wm" '(popwin:messages :which-key "messages")
