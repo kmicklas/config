@@ -15,7 +15,7 @@ in {
 
   time.timeZone = "Europe/London";
 
-  nix.readOnlyStore = true;
+  boot.readOnlyNixStore = true;
   nix.settings.auto-optimise-store = true;
 
   nix.nixPath = let
@@ -34,7 +34,7 @@ in {
     experimental-features = nix-command
   '';
 
-  boot.tmpOnTmpfs = true;
+  boot.tmp.useTmpfs = true;
   boot.kernel.sysctl = {
     "kernel.sysrq" = 1;
   };
@@ -45,9 +45,9 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   services.openssh.enable = true;
-  services.openssh.forwardX11 = true;
-  services.openssh.permitRootLogin = "no";
-  services.openssh.passwordAuthentication = false;
+  services.openssh.settings.X11Forwarding = true;
+  services.openssh.settings.PermitRootLogin = "no";
+  services.openssh.settings.PasswordAuthentication = false;
 
   security.sudo.wheelNeedsPassword = false;
 
