@@ -8,10 +8,7 @@
 
   home.packages = with pkgs; [
     cargo-edit
-    rust-analyzer
-  ] ++ [
-    # TODO: Remove this override when nixpkgs caches rustup again.
-    (pkgs.rustup.overrideAttrs (drv: { doCheck = false; }))
+    rustup
   ];
 
   home.sessionPath = [
