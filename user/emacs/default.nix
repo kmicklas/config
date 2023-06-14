@@ -443,6 +443,11 @@ in {
         '';
       };
 
+      # TODO: Switch to native SQLite in Emacs 29.
+      sqlite3 = {
+        enable = true;
+      };
+
       sudo-edit = {
         enable = true;
       };
