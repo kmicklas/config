@@ -5,6 +5,7 @@
     go_1_18
     gocode
     godef
+    gofumpt
     gogetdoc
     golangci-lint
     golint
