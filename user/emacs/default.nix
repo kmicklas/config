@@ -231,9 +231,7 @@ in {
 
       helm = {
         enable = true;
-        config = ''
-          (require 'helm-config)
-        '' + lib.optionalString (!isDarwin) ''
+        config = lib.optionalString (!isDarwin) ''
           (add-to-list 'completion-styles 'flex)
         '' + ''
           (helm-mode)
