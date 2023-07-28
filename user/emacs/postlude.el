@@ -226,7 +226,8 @@ If BIGWORD is non-nil, move by WORDS."
   "cs" '(sort-lines :which-key "sort lines")
   "ct" 'delete-trailing-whitespace
 
-  "d" '(dired-jump-other-window :which-key "dired")
+  "d" '(dired-jump-other-window :which-key "dired other window")
+  "D" '(dired-jump :which-key "dired")
 
   "e" '(:ignore t :which-key "eval")
   "eb" '(eval-buffer :which-key "buffer")
