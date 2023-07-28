@@ -261,6 +261,8 @@ If BIGWORD is non-nil, move by WORDS."
   "jd" '(lsp-find-definition :which-key "definition")
   "je" '(flycheck-next-error :which-key "error")
   "jE" '(flycheck-previous-error :which-key "error")
+  "jf" '(beginning-of-defun :whick-key "function start")
+  "jF" '(end-of-defun :whick-key "function end")
   "jl" '(evil-avy-goto-line :which-key "line")
   "jr" '(lsp-find-references :which-key "references")
   "jt" '(lsp-find-type-definition :which-key "type")
