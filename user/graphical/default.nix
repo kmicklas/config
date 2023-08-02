@@ -27,7 +27,7 @@ in {
   xsession.enable = true;
   xsession.initExtra = ''
     ${pkgs.xwallpaper}/bin/xwallpaper --daemon --zoom ${wallpaper}
-    xset r rate 250 30
+    xset r rate 200 50
     ibus-daemon &
   '';
 
