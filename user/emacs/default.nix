@@ -10,6 +10,7 @@ in {
   ];
 
   programs.emacs.enable = true;
+  programs.emacs.package = pkgs.emacs29;
 
   home.sessionVariables.EDITOR = "${config.programs.emacs.package}/bin/emacsclient --create-frame --tty";
   home.sessionVariables.VISUAL = "${config.programs.emacs.package}/bin/emacsclient --create-frame";
@@ -450,12 +451,9 @@ in {
         enable = true;
       };
 
-      tree-sitter = {
+      treesit-grammars = {
         enable = true;
-      };
-
-      tree-sitter-langs = {
-        enable = true;
+        package = epkgs: epkgs.treesit-grammars.with-all-grammars;
       };
 
       tuareg = {
