@@ -15,6 +15,7 @@ pkgs: with pkgs; [
   element-desktop
   calibre
   youtube-dl
+  todoist-electron
 
   blueman
   gnome3.gnome-control-center
