@@ -16,6 +16,7 @@
     bat
     exa
     htop
+    hyperfine
     jq
     ncdu
     ripgrep
