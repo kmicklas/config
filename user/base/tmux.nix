@@ -12,6 +12,7 @@
     set -g default-terminal 'tmux-256color'
     set -ga terminal-overrides ',xterm-256color:RGB'
 
+    bind g new-window -c "#{pane_current_path}" lazygit
     bind Q kill-session
     bind r rename-window "#{b:pane_current_path}"
     bind R source-file ~/.config/tmux/tmux.conf
