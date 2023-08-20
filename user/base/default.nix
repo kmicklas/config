@@ -4,6 +4,7 @@
   imports = [
     ./home-manager.nix
     ./nixpkgs.nix
+    ./tmux.nix
     ./zsh.nix
   ];
 
