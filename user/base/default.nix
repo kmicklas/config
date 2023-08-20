@@ -33,8 +33,9 @@
 
   programs.lazygit.enable = true;
   programs.lazygit.settings = {
-    git.paging.colorArg = "always";
-    git.paging.pager = "delta --dark --paging=never";
+    # TODO: Get delta colors working properly inside tmux
+    # git.paging.colorArg = "always";
+    # git.paging.pager = "delta --dark --paging=never";
   };
 
   home.homeDirectory = "/home/kmicklas";
