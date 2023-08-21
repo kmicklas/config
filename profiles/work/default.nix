@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
@@ -6,6 +6,8 @@
 
     ../../user/emacs
     ../../user/git.nix
+  ] ++ lib.optionals (builtins.pathExists ../../../local-config) [
+    ../../../local-config
   ];
 
   home.sessionVariables = {
