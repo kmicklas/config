@@ -56,6 +56,7 @@
     bt = "bazel test";
     bta = "bazel test '...'";
     br = "bazel run";
+    c = "cargo";
     g = "git";
     lg = "lazygit";
   };
