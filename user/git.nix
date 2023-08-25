@@ -9,7 +9,10 @@
     push.autoSetupRemote = true;
     push.default = "simple";
     pull.ff = "only";
-    feature.manyFiles = true;
+
+    # See https://github.com/rust-lang/cargo/issues/11857
+    # and https://github.com/libgit2/libgit2/issues/6531
+    # feature.manyFiles = true;
 
     github.user = "kmicklas";
 
