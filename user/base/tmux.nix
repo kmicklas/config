@@ -9,6 +9,7 @@
   programs.tmux.terminal = "tmux-256color";
 
   programs.tmux.extraConfig = ''
+    set -g allow-passthrough on # Allow Emacs clipetty to work
     set -g default-terminal 'tmux-256color'
     set -ga terminal-overrides ',xterm-256color:RGB'
 
