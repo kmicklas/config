@@ -17,6 +17,7 @@
     gex
     htop
     hyperfine
+    jqp
     ncdu
     ripgrep
     tree
