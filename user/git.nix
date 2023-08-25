@@ -6,6 +6,7 @@
   programs.git.userName = "Ken Micklas";
   programs.git.extraConfig = {
     mergeTool.keepBackup = false;
+    push.autoSetupRemote = true;
     push.default = "simple";
     pull.ff = "only";
     feature.manyFiles = true;
