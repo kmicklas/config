@@ -3,6 +3,7 @@
 {
   imports = [
     ./home-manager.nix
+    ./helix.nix
     ./nixpkgs.nix
     ./tmux.nix
     ./zsh.nix
