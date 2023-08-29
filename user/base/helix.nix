@@ -8,6 +8,7 @@
 
     keys.normal = {
       space.q.q = ":quit";
+      space.space = "command_palette";
 
       "C-f" = "select_regex";
       "C-g" = "collapse_selection";
