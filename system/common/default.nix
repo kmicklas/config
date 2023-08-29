@@ -54,6 +54,8 @@ in {
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
+  virtualisation.containers.enable = true;
+
   # Theoretically will reduce hangs during nix-builds.
   services.fstrim.enable = true;
 }
