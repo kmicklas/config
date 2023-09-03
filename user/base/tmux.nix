@@ -5,7 +5,6 @@
 
   programs.tmux.historyLimit = 1000000;
   programs.tmux.mouse = true;
-  programs.tmux.newSession = true;
   programs.tmux.terminal = "tmux-256color";
 
   programs.tmux.extraConfig = ''
