@@ -13,6 +13,13 @@
     set -g default-terminal 'tmux-256color'
     set -ga terminal-overrides ',xterm-256color:RGB'
 
+    set -g base-index 1
+    setw -g pane-base-index 1
+
+    unbind-key C-b
+    set-option -g prefix C-Space
+    bind-key C-Space send-prefix
+
     bind g new-window -c "#{pane_current_path}" lazygit
     bind Q kill-session
     bind r rename-window "#{b:pane_current_path}"
