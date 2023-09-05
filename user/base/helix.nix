@@ -1,7 +1,7 @@
 { config, ... }:
 
 let
-  normal-keys = {
+  normal-keys = type: {
     space.q.q = ":quit";
     space.q.a = ":quit-all";
     space.space = "command_palette";
@@ -21,13 +21,13 @@ let
     f = "insert_mode";
     F = "insert_at_line_start";
     C-f = "insert_at_line_start";
-    i = "move_next_word_start";
-    I = "move_next_long_word_start";
-    o = "move_next_word_end";
-    O = "move_next_long_word_end";
+    i = "${type}_next_word_start";
+    I = "${type}_next_long_word_start";
+    o = "${type}_next_word_end";
+    O = "${type}_next_long_word_end";
     s = "change_selection";
-    u = "move_prev_word_start";
-    U = "move_prev_long_word_start";
+    u = "${type}_prev_word_start";
+    U = "${type}_prev_long_word_start";
     w = "undo";
     "0" = "goto_line_start";
     ";" = "goto_line_end";
@@ -42,8 +42,8 @@ in {
   programs.helix.settings = {
     theme = "github_dark";
 
-    keys.normal = normal-keys;
-    keys.select = normal-keys;
+    keys.normal = normal-keys "move";
+    keys.select = normal-keys "extend";
 
     keys.insert = {
       f.d = "normal_mode";
