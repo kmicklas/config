@@ -12,6 +12,7 @@
     set -g default-terminal 'tmux-256color'
     set -ga terminal-overrides ',xterm-256color:RGB'
 
+    set -g renumber-windows on
     set -g base-index 1
     setw -g pane-base-index 1
 
