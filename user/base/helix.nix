@@ -21,7 +21,7 @@ let
     f = "insert_mode";
     F = "insert_at_line_start";
     C-f = "insert_at_line_start";
-    # TODO: C-g
+    C-g = "goto_file_end";
     i = "${type}_next_word_start";
     I = "${type}_next_long_word_start";
     C-k = "kill_to_line_end";
@@ -34,16 +34,16 @@ let
     C-t = "till_prev_char";
     u = "${type}_prev_word_start";
     U = "${type}_prev_long_word_start";
-    C-u = "redo";
+    # TODO: C-u
     w = "undo";
-    # TODO: C-w
+    C-w = "redo";
     C-x = "extend_to_line_bounds";
     # TODO: C-y
     "0" = "goto_line_start";
     "," = "expand_selection";
-    "C-," = "unindent";
+    # TODO: "C-," = "unindent";
     # TODO: . = jump mode
-    "C-." = "indent";
+    # TODO: "C-." = "indent";
   };
 
 in {
