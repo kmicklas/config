@@ -21,7 +21,7 @@
 
     set -g status-style "bg=#333333 fg=#bbbbbb dim"
     set -g status-left ""
-    set -g status-right "#W #[fg=#cccccc,bg=#444444] %d/%m #[fg=#bbbbbb,bg=#333333] %H:%M "
+    set -g status-right "#W #[fg=#cccccc,bg=#444444] %H:%M #[fg=#bbbbbb,bg=#333333] %d/%m "
 
     setw -g window-status-separator ""
     setw -g window-status-format "#[fg=#333333,bg=#99bbdd] #I #[fg=#cccccc,bg=#444444] #{b:pane_current_path} "
