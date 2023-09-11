@@ -62,4 +62,17 @@ in {
       f.d = "normal_mode";
     };
   };
+
+  programs.helix.languages = {
+    language = [
+      {
+        name = "python";
+        language-server = {
+          command = "pyright-langserver";
+          args = [ "--stdio" ];
+        };
+        config = {};
+      }
+    ];
+  };
 }
