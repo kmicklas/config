@@ -54,6 +54,7 @@ in {
 
     editor.true-color = true;
     editor.color-modes = true;
+    editor.soft-wrap.enable = true;
 
     keys.normal = normal-keys "move";
     keys.select = normal-keys "extend";
