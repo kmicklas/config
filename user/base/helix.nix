@@ -12,7 +12,7 @@ let
     A = "open_above";
     C-a = "open_above";
     b = "rotate_view";
-    # TODO: C-b
+    C-b = "select_regex";
     c = "keep_primary_selection";
     C-c = "copy_selection_on_next_line";
     e = "append_mode";
