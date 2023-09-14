@@ -7,7 +7,7 @@
   programs.tmux.aggressiveResize = true;
   programs.tmux.baseIndex = 1;
   programs.tmux.clock24 = true;
-  programs.tmux.escapeTime = 0;
+  programs.tmux.escapeTime = 120;
   programs.tmux.historyLimit = 1000000;
   programs.tmux.mouse = true;
   programs.tmux.prefix = "C-Space";
