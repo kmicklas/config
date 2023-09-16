@@ -27,29 +27,21 @@
 *** TODO [#A] keybinding to insert subheading
 *** TODO [#A] grey out DONE headlines
 ** magit
-*** DONE always show recent commits
 *** forge
 **** [[https://github.com/magit/ghub/issues/104#issuecomment-586970342][token setup]]
 ** better evil keys from keyfreq data
 **** need to figure out how to replace
-*** TODO faster key to save file than =SPC fs=
 ** TODO support arrow key editing in helm
 *** suggested =(customize-set-variable 'helm-ff-lynx-style-map t)=
 ** TODO figure out good shell workflow
 ** TODO hoogle from local port by default
 ** TODO [#A] perspectives shared across frames (may need persp-mode fork)
-** INVALID disable undo-tree
 ** TODO diminish auto-revert-mode
 ** TODO diminish eldoc
-** INVALID better theme
 ** TODO better modeline
 ** TODO fix tab/indentation behavior
-** INVALID add text objects from Spacemacs
 ** TODO disable flymake
 ** TODO default to current word in project search
-** DONE make evil end of word move cursor past last character
-** DONE make SPC leader work in places it doesn't (e.g. magit)
-** DONE fix enter in non-standard modes (e.g. magit, describe-key)
 ** TODO make [ and ] move paragraphs
 ** TODO put =lsp-find-definition= in =evil-goto-definition-functions=
 ** TODO make =C-SPC= work in insert mode
@@ -100,5 +92,3 @@
 ** TODO offsite backup
 *** encrypted S3?
 ** TODO [#C] learn Colemak
-** TODO separate NixOS and home-manager modules
-** DONE convert submodules to thunks
