@@ -52,9 +52,10 @@ in {
   programs.helix.settings = {
     theme = "github_dark";
 
-    editor.true-color = true;
     editor.color-modes = true;
+    editor.idle-timeout = 100;
     editor.soft-wrap.enable = true;
+    editor.true-color = true;
 
     keys.normal = normal-keys "move";
     keys.select = normal-keys "extend";
