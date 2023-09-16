@@ -22,29 +22,6 @@
 ** Alfred for launcher if Launchpad breaks
 ** TODO make work with Amethyst
 *** [[https://github.com/cmacrae/config/commit/41ff50e857524bdd20b6e845c9da5aaa3bc38848][possible set of patches]]
-* Emacs
-** org-mode
-*** TODO [#A] keybinding to insert subheading
-*** TODO [#A] grey out DONE headlines
-** magit
-*** forge
-**** [[https://github.com/magit/ghub/issues/104#issuecomment-586970342][token setup]]
-** better evil keys from keyfreq data
-**** need to figure out how to replace
-** TODO support arrow key editing in helm
-*** suggested =(customize-set-variable 'helm-ff-lynx-style-map t)=
-** TODO figure out good shell workflow
-** TODO hoogle from local port by default
-** TODO [#A] perspectives shared across frames (may need persp-mode fork)
-** TODO diminish auto-revert-mode
-** TODO diminish eldoc
-** TODO better modeline
-** TODO fix tab/indentation behavior
-** TODO disable flymake
-** TODO default to current word in project search
-** TODO make [ and ] move paragraphs
-** TODO put =lsp-find-definition= in =evil-goto-definition-functions=
-** TODO make =C-SPC= work in insert mode
 * shell
 ** TODO [#C] resurrect pushover fish function for zsh
 * desktop
