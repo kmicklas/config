@@ -6,6 +6,7 @@
 
     ../../user/emacs
     ../../user/git.nix
+    ../../user/rust.nix
   ] ++ lib.optionals (builtins.pathExists ../../../local-config) [
     ../../../local-config
   ];
