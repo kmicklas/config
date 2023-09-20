@@ -3,8 +3,11 @@
 let
   normal-keys = type: {
     space.c = "toggle_comments";
-    space.q.q = ":quit";
+    space.m.a = ":reload-all";
+    space.m.c = ":config-reload";
+    space.m.r = ":reload";
     space.q.a = ":quit-all";
+    space.q.q = ":quit";
     space.space = "command_palette";
     space.";" = "command_mode";
 
