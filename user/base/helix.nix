@@ -79,5 +79,14 @@ in {
         config = {};
       }
     ];
+    grammar = [
+      {
+        name = "rust";
+        source = {
+          git = "https://github.com/tree-sitter/tree-sitter-rust";
+          rev = "48e053397b587de97790b055a1097b7c8a4ef846";
+        };
+      }
+    ];
   };
 }
