@@ -1,6 +1,8 @@
 { config, ... }:
 
 let
+  source = import ../../nix/sources.nix { };
+
   normal-keys = type: {
     space.c = "toggle_comments";
     space.m.a = ":reload-all";
@@ -79,13 +81,11 @@ in {
         config = {};
       }
     ];
+    # TODO: Build these with nix.
     grammar = [
       {
         name = "rust";
-        source = {
-          git = "https://github.com/tree-sitter/tree-sitter-rust";
-          rev = "48e053397b587de97790b055a1097b7c8a4ef846";
-        };
+        source.path = source.tree-sitter-rust;
       }
     ];
   };

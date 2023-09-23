@@ -1,0 +1,14 @@
+{
+    "tree-sitter-rust": {
+        "branch": "master",
+        "description": "Rust grammar for tree-sitter",
+        "homepage": "",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-rust",
+        "rev": "48e053397b587de97790b055a1097b7c8a4ef846",
+        "sha256": "0jc8sisfj50jra89y3p6pv0b2smn125m4nvkaidz1cnympajbpc6",
+        "type": "tarball",
+        "url": "https://github.com/tree-sitter/tree-sitter-rust/archive/48e053397b587de97790b055a1097b7c8a4ef846.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
