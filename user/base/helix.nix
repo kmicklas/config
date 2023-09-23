@@ -1,7 +1,16 @@
-{ config, ... }:
+{ pkgs, ... }:
 
 let
   source = import ../../nix/sources.nix { };
+
+  makeAlias = name: path: pkgs.stdenv.mkDerivation {
+    name = builtins.baseNameOf name;
+    dontUnpack = true;
+    installPhase = ''
+      mkdir -p $out/bin
+      ln -s ${path} $out/bin/${name}
+    '';
+  };
 
   normal-keys = type: {
     space.c = "toggle_comments";
@@ -89,4 +98,15 @@ in {
       }
     ];
   };
+
+  home.packages = [
+    pkgs.nil
+    pkgs.nodePackages.bash-language-server
+    pkgs.nodePackages.dockerfile-language-server-nodejs
+    pkgs.nodePackages.typescript-language-server
+
+    (makeAlias "vscode-css-language-server" "${pkgs.nodePackages.vscode-css-languageserver-bin}/bin/css-languageserver")
+    # TODO: This one seems broken.
+    (makeAlias "vscode-html-language-server" "${pkgs.nodePackages.vscode-html-languageserver-bin}/bin/html-languageserver")
+  ];
 }
