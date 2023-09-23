@@ -10,6 +10,7 @@
     cabal-install
 
     ghcid
+    haskell-language-server
 
     haskellPackages.cabal-fmt
     stylish-haskell
@@ -27,9 +28,6 @@
       lsp-haskell = {
         after = [ "lsp-mode" ];
         enable = true;
-        config = ''
-          (setq lsp-haskell-server-path "${pkgs.haskellPackages.haskell-language-server}/bin/haskell-language-server")
-        '';
       };
     };
   };
