@@ -14,6 +14,9 @@ let
 
   normal-keys = type: {
     space.c = "toggle_comments";
+    space.l.c = ":lsp-workspace-command";
+    space.l.r = ":lsp-restart";
+    space.l.s = ":lsp-stop";
     space.m.a = ":reload-all";
     space.m.c = ":config-reload";
     space.m.r = ":reload";
