@@ -71,6 +71,7 @@ in {
 
     editor.color-modes = true;
     editor.idle-timeout = 100;
+    editor.lsp.display-messages = true;
     editor.soft-wrap.enable = true;
     editor.true-color = true;
 
