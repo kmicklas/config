@@ -40,6 +40,5 @@
     go_1_20
     gopls
     nix
-    pyright
   ];
 }
