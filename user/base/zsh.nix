@@ -60,4 +60,8 @@
     g = "git";
     lg = "lazygit";
   };
+
+  home.packages = with pkgs; [
+    direnv
+  ];
 }
