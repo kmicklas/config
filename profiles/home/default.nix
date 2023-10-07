@@ -5,7 +5,6 @@
     ../../user/base
     ../../user/graphical
 
-    ../../user/emacs
     ../../user/git.nix
     ../../user/go.nix
     ../../user/haskell.nix

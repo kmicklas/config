@@ -4,7 +4,6 @@
   imports = [
     ../../user/base
 
-    ../../user/emacs
     ../../user/git.nix
     ../../user/rust.nix
   ] ++ lib.optionals (builtins.pathExists ../../../local-config) [
