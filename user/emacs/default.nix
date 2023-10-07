@@ -284,6 +284,11 @@ in {
         after = [ "key-chord" ];
       };
 
+      lsp-haskell = {
+        after = [ "lsp-mode" ];
+        enable = true;
+      };
+
       lsp-mode = {
         enable = true;
         config = ''

@@ -22,13 +22,4 @@
   ];
 
   home.file.".ghci".source = ../dotfiles/ghci;
-
-  programs.emacs.init = {
-    usePackage = {
-      lsp-haskell = {
-        after = [ "lsp-mode" ];
-        enable = true;
-      };
-    };
-  };
 }
