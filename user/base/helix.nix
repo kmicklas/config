@@ -65,6 +65,8 @@ let
 
 in {
   programs.helix.enable = true;
+  # TODO: after upgrading to 23.11: programs.helix.defaultEditor = true;
+  home.sessionVariables.EDITOR = "hx";
 
   programs.helix.settings = {
     theme = "github_dark";
