@@ -348,9 +348,6 @@ in {
 
       nix-mode = {
         enable = true;
-        config = ''
-          (setq nix-nixfmt-bin "${pkgs.nixfmt}/bin/nixfmt")
-        '';
       };
 
       nix-update = {

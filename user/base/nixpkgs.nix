@@ -13,6 +13,7 @@ in
   home.packages = with pkgs; [
     cachix
     niv
+    nixfmt
     nix-tree
   ];
 }
