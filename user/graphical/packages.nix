@@ -10,12 +10,10 @@ pkgs: with pkgs; [
   transmission-gtk
   xournal
   zoom-us
-  teams
   signal-desktop
   element-desktop
   calibre
   youtube-dl
-  todoist-electron
 
   blueman
   gnome3.gnome-control-center
