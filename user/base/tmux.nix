@@ -32,7 +32,7 @@
     bind r rename-window "#{b:pane_current_path}"
     bind R source-file ~/.config/tmux/tmux.conf
     bind s split-window -c "#{pane_current_path}"
-    bind v split-window -h -c "#{pane_current_path}"
+    bind v split-window -h -p 30 -c "#{pane_current_path}"
 
     bind -T root M-j select-pane -t :.+
     bind -T root M-k select-pane -t :.-
