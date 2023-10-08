@@ -22,6 +22,7 @@ let
     space.m.r = ":reload";
     space.q.a = ":quit-all";
     space.q.q = ":quit";
+    space.w.d = "wclose";
     space.space = "command_palette";
     space.";" = "command_mode";
 
