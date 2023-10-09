@@ -223,6 +223,10 @@ in {
         '';
       };
 
+      groovy-mode = {
+        enable = true;
+      };
+
       haskell-mode = {
         enable = true;
       };
@@ -294,6 +298,11 @@ in {
             lsp-nix-server-path "${pkgs.rnix-lsp}/bin/rnix-lsp"
             )
         '';
+      };
+
+      lsp-pyright = {
+        enable = true;
+        after = [ "lsp-mode" ];
       };
 
       lsp-ui = {
