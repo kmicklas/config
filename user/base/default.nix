@@ -22,6 +22,13 @@
     ncdu
     ripgrep
     tree
+    yazi
+  ];
+
+  nixpkgs.overlays = [
+    (self: super: {
+      yazi = (import ../../dep/nixpkgs-unstable {}).yazi;
+    })
   ];
 
   programs.bat.enable = true;
