@@ -61,6 +61,11 @@ let
     # TODO: C-y
     "0" = "goto_line_start";
     "," = "expand_selection";
+
+    backspace = "delete_char_backward";
+    del = "delete_char_forward";
+    ret = "insert_newline";
+
     # TODO: "C-," = "unindent";
     # TODO: . = jump mode
     # TODO: "C-." = "indent";
