@@ -76,6 +76,8 @@ in {
   # TODO: after upgrading to 23.11: programs.helix.defaultEditor = true;
   home.sessionVariables.EDITOR = "hx";
 
+  programs.helix.package = pkgs.callPackage "${import ../../dep/nixpkgs-unstable/thunk.nix}/pkgs/applications/editors/helix" {};
+
   programs.helix.settings = {
     theme = "github_dark";
 
@@ -94,14 +96,17 @@ in {
   };
 
   programs.helix.languages = {
+    language-server = {
+      pyright = {
+        command = "pyright-langserver";
+        args = [ "--stdio" ];
+        config = {};
+      };
+    };
     language = [
       {
         name = "python";
-        language-server = {
-          command = "pyright-langserver";
-          args = [ "--stdio" ];
-        };
-        config = {};
+        language-servers = ["pyright"];
       }
     ];
     # TODO: Build these with nix.
