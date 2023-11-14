@@ -3,6 +3,16 @@
 let
   source = import ../../nix/sources.nix { };
 
+  # TODO: Remove after upgrading to nixpkgs 23.11.
+  helix-23-05 = pkgs.callPackage "${import ../../dep/nixpkgs-unstable/thunk.nix}/pkgs/applications/editors/helix" {};
+
+  helix-fork-src = pkgs.fetchFromGitHub {
+    owner = "kmicklas";
+    repo = "helix";
+    rev = "7f07ce0c5a06be7e3d7b032c5d3eab01ed020775";
+    sha256 = "sha256-9IM4ZKQ4gWH2ccVD0n7pjvdFguyzgYmv0ozygdkiYfo=";
+  };
+
   makeAlias = name: path: pkgs.stdenv.mkDerivation {
     name = builtins.baseNameOf name;
     dontUnpack = true;
@@ -19,6 +29,8 @@ let
     space.l.s = ":lsp-stop";
     space.m.a = ":reload-all";
     space.m.c = ":config-reload";
+    space.m.f = ":yank-filepath-relative";
+    space.m.C-f = ":clipboard-yank-filepath-relative";
     space.m.r = ":reload";
     space.q.a = ":quit-all";
     space.q.C-a = ":quit-all!";
@@ -76,7 +88,18 @@ in {
   # TODO: after upgrading to 23.11: programs.helix.defaultEditor = true;
   home.sessionVariables.EDITOR = "hx";
 
-  programs.helix.package = pkgs.callPackage "${import ../../dep/nixpkgs-unstable/thunk.nix}/pkgs/applications/editors/helix" {};
+  programs.helix.package = helix-23-05.overrideAttrs {
+    src = pkgs.stdenv.mkDerivation {
+      name = "helix-src";
+
+      dontUnpack = true;
+      buildPhase = ''
+        cp -r ${helix-fork-src} $out
+        chmod +w $out/runtime/grammars
+        cp -r ${helix-23-05.src}/runtime/grammars/sources $out/runtime/grammars/sources
+      '';
+    };
+  };
 
   programs.helix.settings = {
     theme = "github_dark";
@@ -86,6 +109,7 @@ in {
     editor.lsp.display-messages = true;
     editor.soft-wrap.enable = true;
     editor.true-color = true;
+    editor.whitespace.render = "trailing";
 
     keys.normal = normal-keys "move";
     keys.select = normal-keys "extend";
