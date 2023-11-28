@@ -6,13 +6,6 @@ let
   # TODO: Remove after upgrading to nixpkgs 23.11.
   helix-23-05 = pkgs.callPackage "${import ../../dep/nixpkgs-unstable/thunk.nix}/pkgs/applications/editors/helix" {};
 
-  helix-fork-src = pkgs.fetchFromGitHub {
-    owner = "kmicklas";
-    repo = "helix";
-    rev = "7f07ce0c5a06be7e3d7b032c5d3eab01ed020775";
-    sha256 = "sha256-9IM4ZKQ4gWH2ccVD0n7pjvdFguyzgYmv0ozygdkiYfo=";
-  };
-
   makeAlias = name: path: pkgs.stdenv.mkDerivation {
     name = builtins.baseNameOf name;
     dontUnpack = true;
@@ -94,7 +87,7 @@ in {
 
       dontUnpack = true;
       buildPhase = ''
-        cp -r ${helix-fork-src} $out
+        cp -r ${source.helix} $out
         chmod +w $out/runtime/grammars
         cp -r ${helix-23-05.src}/runtime/grammars/sources $out/runtime/grammars/sources
       '';
