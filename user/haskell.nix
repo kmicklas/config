@@ -1,8 +1,11 @@
 { pkgs, ... }:
 
-{
+let
+  source = import ../nix/sources.nix { };
+
+in {
   home.packages = [
-    (import ../dep/obelisk {}).command
+    (import source.obelisk {}).command
   ] ++ (with pkgs; [
     binutils # 'ar' is needed by cabal.
 

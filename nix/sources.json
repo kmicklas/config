@@ -11,6 +11,30 @@
         "url": "https://github.com/kmicklas/helix/archive/7a5e4d8b1614cdafada0ff6671fa2da4f196fbe5.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nixpkgs-21.11": {
+        "branch": "nixos-21.11",
+        "description": "Nix Packages collection & NixOS",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "eabc38219184cc3e04a974fe31857d8e0eac098d",
+        "sha256": "04ffwp2gzq0hhz7siskw6qh9ys8ragp7285vi1zh8xjksxn1msc5",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/eabc38219184cc3e04a974fe31857d8e0eac098d.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "obelisk": {
+        "branch": "master",
+        "description": "Functional reactive web and mobile applications, with batteries included.",
+        "homepage": "https://reflex-frp.org",
+        "owner": "obsidiansystems",
+        "repo": "obelisk",
+        "rev": "47a8a46f24ec6b9e252ba60a7ceb31d96b36fde9",
+        "sha256": "1f2xq0hcq04wzavw8ib333qh9v5qrhigcs22kqdh2iv1q252nvhs",
+        "type": "tarball",
+        "url": "https://github.com/obsidiansystems/obelisk/archive/47a8a46f24ec6b9e252ba60a7ceb31d96b36fde9.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "tree-sitter-rust": {
         "branch": "master",
         "description": "Rust grammar for tree-sitter",

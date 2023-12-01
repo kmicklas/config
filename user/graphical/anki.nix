@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
-{
+let
+  source = import ../../nix/sources.nix { };
+
+in {
   nixpkgs.overlays = [
     (self: super: {
       anki = let
@@ -9,7 +12,7 @@
           url = "https://github.com/ankitects/anki/releases/download/${version}/anki-${version}-linux-amd64.tar.bz2";
           sha256 = "0kzblbb0hzy7hp8141rjyg68020d6kgbjdzsm632ng5y5g5i2f29";
         };
-      in (import ../../dep/nixpkgs-21.11 {}).buildFHSUserEnv {
+      in (import source."nixpkgs-21.11" {}).buildFHSUserEnv {
         name = super.anki.pname;
         inherit (super.anki) meta;
 
