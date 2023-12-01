@@ -25,16 +25,10 @@
     yazi
   ];
 
-  nixpkgs.overlays = [
-    (self: super: {
-      yazi = (import ../../dep/nixpkgs-unstable {}).yazi;
-    })
-  ];
-
   programs.bat.enable = true;
 
-  programs.exa.enable = true;
-  programs.exa.enableAliases = true;
+  programs.eza.enable = true;
+  programs.eza.enableAliases = true;
 
   programs.fzf.enable = true;
 

@@ -7,7 +7,7 @@
 
   fonts.fontDir.enable = true;
   fonts.enableGhostscriptFonts = true;
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     corefonts
     emacs-all-the-icons-fonts
     google-fonts

@@ -3,9 +3,6 @@
 let
   source = import ../../nix/sources.nix { };
 
-  # TODO: Remove after upgrading to nixpkgs 23.11.
-  helix-23-05 = pkgs.callPackage "${import ../../dep/nixpkgs-unstable/thunk.nix}/pkgs/applications/editors/helix" {};
-
   makeAlias = name: path: pkgs.stdenv.mkDerivation {
     name = builtins.baseNameOf name;
     dontUnpack = true;
@@ -78,10 +75,9 @@ let
 
 in {
   programs.helix.enable = true;
-  # TODO: after upgrading to 23.11: programs.helix.defaultEditor = true;
-  home.sessionVariables.EDITOR = "hx";
+  programs.helix.defaultEditor = true;
 
-  programs.helix.package = helix-23-05.overrideAttrs {
+  programs.helix.package = pkgs.helix.overrideAttrs {
     src = pkgs.stdenv.mkDerivation {
       name = "helix-src";
 
@@ -89,7 +85,7 @@ in {
       buildPhase = ''
         cp -r ${source.helix} $out
         chmod +w $out/runtime/grammars
-        cp -r ${helix-23-05.src}/runtime/grammars/sources $out/runtime/grammars/sources
+        cp -r ${pkgs.helix.src}/runtime/grammars/sources $out/runtime/grammars/sources
       '';
     };
   };
