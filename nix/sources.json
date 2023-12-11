@@ -29,10 +29,10 @@
         "homepage": "https://reflex-frp.org",
         "owner": "obsidiansystems",
         "repo": "obelisk",
-        "rev": "47a8a46f24ec6b9e252ba60a7ceb31d96b36fde9",
-        "sha256": "1f2xq0hcq04wzavw8ib333qh9v5qrhigcs22kqdh2iv1q252nvhs",
+        "rev": "58c04270d606c061e7ffd2f16345e0f451eba600",
+        "sha256": "167h4qkkc7rvhwlfbv3fdj3gd8jn5svdawh2vzpi04j9xlsw3jlf",
         "type": "tarball",
-        "url": "https://github.com/obsidiansystems/obelisk/archive/47a8a46f24ec6b9e252ba60a7ceb31d96b36fde9.tar.gz",
+        "url": "https://github.com/obsidiansystems/obelisk/archive/58c04270d606c061e7ffd2f16345e0f451eba600.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "tree-sitter-rust": {
@@ -41,10 +41,10 @@
         "homepage": "",
         "owner": "tree-sitter",
         "repo": "tree-sitter-rust",
-        "rev": "48e053397b587de97790b055a1097b7c8a4ef846",
-        "sha256": "0jc8sisfj50jra89y3p6pv0b2smn125m4nvkaidz1cnympajbpc6",
+        "rev": "79456e6080f50fc1ca7c21845794308fa5d35a51",
+        "sha256": "1nvxjswk2a8n3p76m9b5pc0r4scy2yrisxw4c0ay0gz0kqdaxc77",
         "type": "tarball",
-        "url": "https://github.com/tree-sitter/tree-sitter-rust/archive/48e053397b587de97790b055a1097b7c8a4ef846.tar.gz",
+        "url": "https://github.com/tree-sitter/tree-sitter-rust/archive/79456e6080f50fc1ca7c21845794308fa5d35a51.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
