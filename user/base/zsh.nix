@@ -44,6 +44,10 @@
     autoload -U colors && colors
     PROMPT='$(prompt_status_indicator) [%*] %{$fg_bold[blue]%}%n@%M%{$reset_color%} %~$(prompt_git_branch_indicator)$(prompt_nix_shell_indicator)'$'\n'"> "
     RPROMPT=""
+
+    function j {
+        cd "$(find -maxdepth 3 -type d -name .git | sed 's|^\./||' | sed 's|/\.git$||' | fzf --preview 'tree -L 2 {}')" || return 1
+    }
   '';
   programs.zsh.shellAliases = {
     nix-zsh = "nix-shell --run zsh";
