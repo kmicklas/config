@@ -16,14 +16,6 @@
 *** keys: =jkyb=
 ** Firefox
 *** disable clipboard events: =dom.event.clipboardevents.enabled=
-* Mac
-** Amethyst for tiling window manager
-** Honer for red borders like XMonad
-** Alfred for launcher if Launchpad breaks
-** TODO make work with Amethyst
-*** [[https://github.com/cmacrae/config/commit/41ff50e857524bdd20b6e845c9da5aaa3bc38848][possible set of patches]]
-* shell
-** TODO [#C] resurrect pushover fish function for zsh
 * desktop
 ** XMonad
 *** TODO [[https://github.com/xmonad/xmonad-contrib/issues/280][fix multi-monitor smart borders]]
@@ -41,9 +33,6 @@
 *** webcam
 **** test with guvcview
 ** TODO make console font bigger on high DPI screen
-* data independence
-** task management
-*** TODO try [[https://github.com/orgzly/orgzly-android/issues/24#issuecomment-539868242][Orgzly git support]]
 * NixOS install
 ** [[https://qfpl.io/posts/installing-nixos/][QFPL guide (LUKS)]]
 *** put LUKS directly on physical partition without LVM
@@ -68,4 +57,3 @@
 * misc
 ** TODO offsite backup
 *** encrypted S3?
-** TODO [#C] learn Colemak
