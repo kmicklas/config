@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 let
   wallpaper = builtins.fetchurl {
@@ -54,7 +54,7 @@ in {
   };
 
   xresources.properties = {
-    "Xft.dpi" = 192;
+    "Xft.dpi" = lib.mkDefault 192;
     "Xft.antialias" = true;
     "Xft.hintin" = true;
     "Xft.rgba" = "rgb";
