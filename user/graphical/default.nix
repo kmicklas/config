@@ -1,10 +1,8 @@
 { lib, pkgs, ... }:
 
 let
-  wallpaper = builtins.fetchurl {
-    url = "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg";
-    sha256 = "0xb1q07719zwxcldx0fqy6c50sgkajrcv9h01yd765p9ldhi7a9b";
-  };
+  source = import ../../nix/sources.nix { };
+  wallpaper = source.mud;
 
 in {
   imports = [

@@ -1,4 +1,11 @@
 {
+    "anki": {
+        "sha256": "0kzblbb0hzy7hp8141rjyg68020d6kgbjdzsm632ng5y5g5i2f29",
+        "type": "tarball",
+        "url": "https://github.com/ankitects/anki/releases/download/2.1.35/anki-2.1.35-linux-amd64.tar.bz2",
+        "url_template": "https://github.com/ankitects/anki/releases/download/<version>/anki-<version>-linux-amd64.tar.bz2",
+        "version": "2.1.35"
+    },
     "helix": {
         "branch": "personal-fork",
         "description": "A post-modern modal text editor.",
@@ -10,6 +17,24 @@
         "type": "tarball",
         "url": "https://github.com/kmicklas/helix/archive/7a5e4d8b1614cdafada0ff6671fa2da4f196fbe5.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "mpv-sub-scripts": {
+        "branch": "master",
+        "description": "Two mpv scripts for automatically pausing after each subtitle line and skipping intervals between subtitles.",
+        "homepage": "",
+        "owner": "Ben-Kerman",
+        "repo": "mpv-sub-scripts",
+        "rev": "93384711ac0011273762c0034ffb878c62d9600f",
+        "sha256": "0jc8nv7yjnkknbc0azir3baqg58yg76r282ajzn5zjgg18ajj7s4",
+        "type": "tarball",
+        "url": "https://github.com/Ben-Kerman/mpv-sub-scripts/archive/93384711ac0011273762c0034ffb878c62d9600f.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "mud": {
+        "sha256": "0xb1q07719zwxcldx0fqy6c50sgkajrcv9h01yd765p9ldhi7a9b",
+        "type": "file",
+        "url": "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg",
+        "url_template": "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg"
     },
     "nixpkgs-21.11": {
         "branch": "nixos-21.11",

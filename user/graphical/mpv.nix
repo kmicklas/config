@@ -1,6 +1,9 @@
 { lib, pkgs, ... }:
 
-{
+let
+  source = import ../../nix/sources.nix { };
+
+in {
   programs.mpv.enable = true;
   programs.mpv.config = {
     sub-visibility = "yes";
@@ -17,12 +20,7 @@
     pkgs.stdenv.mkDerivation rec {
       pname = script;
       version = "2020-11-27";
-      src = pkgs.fetchFromGitHub {
-        owner = "Ben-Kerman";
-        repo = "mpv-sub-scripts";
-        rev = "b2b2b0cba40306d17f7b1b9e443b99961fbce39e";
-        sha256 = "1wx56anw4yg8krc20hps0gbmgs4x3j4nj64gkhm0d6l53wfqy02b";
-      };
+      src = source.mpv-sub-scripts;
 
       dontBuild = true;
       installPhase = ''
