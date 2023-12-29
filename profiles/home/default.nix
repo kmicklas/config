@@ -20,8 +20,4 @@
     "url \"ssh://git@gitlab.com\"".insteadOf = "https://gitlab.com";
     "url \"ssh://git@bitbucket.com\"".insteadOf = "https://bitbucket.com";
   };
-
-  home.packages = with pkgs; [
-    wally-cli
-  ];
 }
