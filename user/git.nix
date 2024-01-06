@@ -5,6 +5,7 @@
   programs.git.package = pkgs.gitAndTools.gitFull;
   programs.git.userName = "Ken Micklas";
   programs.git.extraConfig = {
+    merge.conflictStyle = "zdiff3";
     mergeTool.keepBackup = false;
     push.autoSetupRemote = true;
     push.default = "simple";
