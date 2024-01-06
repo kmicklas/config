@@ -65,9 +65,6 @@
     lg = "lazygit";
   };
 
+  programs.direnv.enable = true;
   programs.zoxide.enable = true;
-
-  home.packages = with pkgs; [
-    direnv
-  ];
 }
