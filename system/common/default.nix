@@ -43,6 +43,7 @@ in {
   console.font = "latarcyrheb-sun32";
 
   nixpkgs.config.allowUnfree = true;
+  hardware.enableRedistributableFirmware = true;
 
   services.openssh.enable = true;
   services.openssh.settings.X11Forwarding = true;
