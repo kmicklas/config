@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   imports = [
@@ -20,6 +20,4 @@
     "url \"ssh://git@gitlab.com\"".insteadOf = "https://gitlab.com";
     "url \"ssh://git@bitbucket.com\"".insteadOf = "https://bitbucket.com";
   };
-
-  programs.atuin.enable = true;
 }

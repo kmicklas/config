@@ -65,6 +65,7 @@
     lg = "lazygit";
   };
 
+  programs.atuin.enable = true;
   programs.direnv.enable = true;
   programs.zoxide.enable = true;
 }
