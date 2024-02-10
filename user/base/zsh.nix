@@ -66,6 +66,12 @@
   };
 
   programs.atuin.enable = true;
+  programs.atuin.settings = {
+    show_help = false;
+    style = "compact";
+    update_check = false;
+  };
+
   programs.direnv.enable = true;
   programs.zoxide.enable = true;
 }
