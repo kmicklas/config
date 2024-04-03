@@ -5,6 +5,7 @@
     ../../user/base
 
     ../../user/git.nix
+    ../../user/go.nix
     ../../user/rust.nix
   ] ++ lib.optionals (builtins.pathExists ../../../local-config) [
     ../../../local-config
@@ -23,8 +24,6 @@
 
   home.packages = with pkgs; [
     dive
-    go_1_20
-    gopls
     nix
   ];
 }

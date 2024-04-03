@@ -6,6 +6,7 @@
     gofumpt
     golangci-lint
     golint
+    gopls
     gotools
 
     gcc
