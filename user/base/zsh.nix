@@ -1,6 +1,10 @@
 { lib, pkgs, ... }:
 
-{
+let
+  source = import ../../nix/sources.nix { };
+  nixpkgs-unstable = import source.nixpkgs-unstable { };
+
+in {
   programs.zsh.enable = true;
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.oh-my-zsh.enable = true;
@@ -71,6 +75,8 @@
     style = "compact";
     update_check = false;
   };
+  # TODO: Remove once upgrading to 24.05.
+  programs.atuin.package = nixpkgs-unstable.atuin;
 
   programs.direnv.enable = true;
   programs.zoxide.enable = true;
