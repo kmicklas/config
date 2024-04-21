@@ -12,10 +12,10 @@
         "homepage": "https://helix-editor.com",
         "owner": "kmicklas",
         "repo": "helix",
-        "rev": "7a5e4d8b1614cdafada0ff6671fa2da4f196fbe5",
-        "sha256": "127vr4xf7kwb3adxfr2mm9za1mwqr5wwlkw02hmrvy260pnmmnp0",
+        "rev": "b38a96ecc1bf849a90b8f8f190a5d8445671725d",
+        "sha256": "1z6rml9cdfvvcdrnsmrfx8vq2cfqcvw9z143qnl78sp918gnllz9",
         "type": "tarball",
-        "url": "https://github.com/kmicklas/helix/archive/7a5e4d8b1614cdafada0ff6671fa2da4f196fbe5.tar.gz",
+        "url": "https://github.com/kmicklas/helix/archive/b38a96ecc1bf849a90b8f8f190a5d8445671725d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "mpv-sub-scripts": {

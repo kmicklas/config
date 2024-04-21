@@ -2,6 +2,7 @@
 
 let
   source = import ../../nix/sources.nix { };
+  nixpkgs-unstable = import source.nixpkgs-unstable { };
 
   makeAlias = name: path: pkgs.stdenv.mkDerivation {
     name = builtins.baseNameOf name;
@@ -77,7 +78,7 @@ in {
   programs.helix.enable = true;
   programs.helix.defaultEditor = true;
 
-  programs.helix.package = pkgs.helix.overrideAttrs {
+  programs.helix.package = nixpkgs-unstable.helix.overrideAttrs {
     src = pkgs.stdenv.mkDerivation {
       name = "helix-src";
 
@@ -85,7 +86,7 @@ in {
       buildPhase = ''
         cp -r ${source.helix} $out
         chmod +w $out/runtime/grammars
-        cp -r ${pkgs.helix.src}/runtime/grammars/sources $out/runtime/grammars/sources
+        cp -r ${nixpkgs-unstable.helix.src}/runtime/grammars/sources $out/runtime/grammars/sources
       '';
     };
   };
@@ -98,7 +99,7 @@ in {
     editor.lsp.display-messages = true;
     editor.soft-wrap.enable = true;
     editor.true-color = true;
-    editor.whitespace.render = "trailing";
+    # editor.whitespace.render = "trailing";
 
     keys.normal = normal-keys "move";
     keys.select = normal-keys "extend";
