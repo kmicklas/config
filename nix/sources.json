@@ -66,10 +66,10 @@
         "homepage": "",
         "owner": "tree-sitter",
         "repo": "tree-sitter-rust",
-        "rev": "3a56481f8d13b6874a28752502a58520b9139dc7",
-        "sha256": "12806974pngxqv1brj4r15yqzp2fdvid926n7941nylgmdw9f4z9",
+        "rev": "b77c0d8ac28a7c143224e6ed9b4f9e4bd044ff5b",
+        "sha256": "1i1and7lkrcpxkkm3y8p8v1d6wpb6z3b3vrxk9dlw84mwa03y97d",
         "type": "tarball",
-        "url": "https://github.com/tree-sitter/tree-sitter-rust/archive/3a56481f8d13b6874a28752502a58520b9139dc7.tar.gz",
+        "url": "https://github.com/tree-sitter/tree-sitter-rust/archive/b77c0d8ac28a7c143224e6ed9b4f9e4bd044ff5b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
