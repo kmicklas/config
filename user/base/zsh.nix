@@ -71,6 +71,7 @@ in {
 
   programs.atuin.enable = true;
   programs.atuin.settings = {
+    enter_accept = true;
     show_help = false;
     style = "compact";
     update_check = false;
