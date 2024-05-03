@@ -1,10 +1,6 @@
 { lib, pkgs, ... }:
 
-let
-  source = import ../../nix/sources.nix { };
-  nixpkgs-unstable = import source.nixpkgs-unstable { };
-
-in {
+{
   programs.zsh.enable = true;
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.oh-my-zsh.enable = true;
@@ -76,11 +72,6 @@ in {
     style = "compact";
     update_check = false;
   };
-  # TODO: Remove once upgrading to 24.05.
-  programs.atuin.package = nixpkgs-unstable.atuin.overrideAttrs (self: {
-    # TODO: Remove once https://github.com/openzfs/zfs/issues/14290 is fixed.
-    patches = self.patches ++ [ ./atuin-zfs.patch ];
-  });
 
   programs.direnv.enable = true;
   programs.zoxide.enable = true;
