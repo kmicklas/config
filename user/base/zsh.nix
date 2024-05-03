@@ -76,7 +76,10 @@ in {
     update_check = false;
   };
   # TODO: Remove once upgrading to 24.05.
-  programs.atuin.package = nixpkgs-unstable.atuin;
+  programs.atuin.package = nixpkgs-unstable.atuin.overrideAttrs (self: {
+    # TODO: Remove once https://github.com/openzfs/zfs/issues/14290 is fixed.
+    patches = self.patches ++ [ ./atuin-zfs.patch ];
+  });
 
   programs.direnv.enable = true;
   programs.zoxide.enable = true;
