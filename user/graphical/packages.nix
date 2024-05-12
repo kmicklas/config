@@ -3,6 +3,7 @@ pkgs: with pkgs; [
   evince
   libreoffice
   gimp
+  inkscape
   audacity
   vlc
   spotify
