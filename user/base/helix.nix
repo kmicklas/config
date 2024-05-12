@@ -96,6 +96,7 @@ in {
 
     editor.color-modes = true;
     editor.idle-timeout = 100;
+    editor.lsp.display-inlay-hints = true;
     editor.lsp.display-messages = true;
     editor.soft-wrap.enable = true;
     editor.true-color = true;
@@ -115,6 +116,15 @@ in {
         command = "pyright-langserver";
         args = [ "--stdio" ];
         config = {};
+      };
+      rust-analyzer = {
+        command = "rust-analyzer";
+        config = {
+          inlayHints.closureReturnTypeHints.enable = "with_block";
+          inlayHints.discriminantHints.enable = "fieldless";
+          inlayHints.parameterHints.enable = false;
+          inlayHints.typeHints.enable = false;
+        };
       };
     };
     language = [
