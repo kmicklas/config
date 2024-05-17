@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.file.".cargo/config".text = ''
+  home.file.".cargo/config.toml".text = ''
     [net]
     git-fetch-with-cli = true
   '';
