@@ -4,6 +4,7 @@ pkgs: with pkgs; [
   libreoffice
   gimp
   inkscape
+  gpxsee
   audacity
   vlc
   spotify
