@@ -15,11 +15,11 @@
   ];
 
   home.packages = with pkgs; [
+    dua
     gex
     htop
     hyperfine
     jqp
-    ncdu
     ripgrep
     tree
     yazi
