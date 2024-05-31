@@ -1,10 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 
-let
-  source = import ../../nix/sources.nix { };
-  nixpkgs-unstable = import source.nixpkgs-unstable { };
-
-in {
+{
   imports = [
     ../../user/base
     ../../user/graphical
@@ -25,8 +21,7 @@ in {
     "url \"ssh://git@bitbucket.com\"".insteadOf = "https://bitbucket.com";
   };
 
-  # TODO: Remove once upgrading to 24.05.
-  programs.atuin.package = nixpkgs-unstable.atuin.overrideAttrs (self: {
+  programs.atuin.package = pkgs.atuin.overrideAttrs (self: {
     # TODO: Remove once https://github.com/openzfs/zfs/issues/14290 is fixed.
     patches = self.patches ++ [ ./atuin-zfs.patch ];
   });

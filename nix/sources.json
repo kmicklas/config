@@ -54,10 +54,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5c24cf2f0a12ad855f444c30b2421d044120c66f",
-        "sha256": "1fciv64ph4pd0z6id8d157424cvwdxcd19gz7anhw33nh14d5m2y",
+        "rev": "ad57eef4ef0659193044870c731987a6df5cf56b",
+        "sha256": "1fz2yjr8as12g9qhixwc8vzd294v3q5jzmrk5dwp8w44qz3clc2b",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/5c24cf2f0a12ad855f444c30b2421d044120c66f.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/ad57eef4ef0659193044870c731987a6df5cf56b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "obelisk": {
@@ -78,10 +78,10 @@
         "homepage": "",
         "owner": "tree-sitter",
         "repo": "tree-sitter-rust",
-        "rev": "b77c0d8ac28a7c143224e6ed9b4f9e4bd044ff5b",
-        "sha256": "1i1and7lkrcpxkkm3y8p8v1d6wpb6z3b3vrxk9dlw84mwa03y97d",
+        "rev": "9c84af007b0f144954adb26b3f336495cbb320a7",
+        "sha256": "0wjw8wz34c3h624xi0n133pv4ld1gmx4zn60xfkqgv7cmn9f42cv",
         "type": "tarball",
-        "url": "https://github.com/tree-sitter/tree-sitter-rust/archive/b77c0d8ac28a7c143224e6ed9b4f9e4bd044ff5b.tar.gz",
+        "url": "https://github.com/tree-sitter/tree-sitter-rust/archive/9c84af007b0f144954adb26b3f336495cbb320a7.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

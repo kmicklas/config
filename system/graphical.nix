@@ -41,7 +41,7 @@
   services.printing.enable = true;
 
   services.xserver.enable = true;
-  services.xserver.layout = "us";
+  services.xserver.xkb.layout = "us";
   services.xserver.enableCtrlAltBackspace = true;
   services.xserver.autoRepeatDelay = 200;
   services.xserver.autoRepeatInterval = 50;

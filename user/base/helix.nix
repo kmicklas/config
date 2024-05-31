@@ -2,7 +2,6 @@
 
 let
   source = import ../../nix/sources.nix { };
-  nixpkgs-unstable = import source.nixpkgs-unstable { };
 
   makeAlias = name: path: pkgs.stdenv.mkDerivation {
     name = builtins.baseNameOf name;
@@ -78,7 +77,7 @@ in {
   programs.helix.enable = true;
   programs.helix.defaultEditor = true;
 
-  programs.helix.package = nixpkgs-unstable.helix.overrideAttrs {
+  programs.helix.package = pkgs.helix.overrideAttrs {
     src = pkgs.stdenv.mkDerivation {
       name = "helix-src";
 
@@ -86,7 +85,7 @@ in {
       buildPhase = ''
         cp -r ${source.helix} $out
         chmod +w $out/runtime/grammars
-        cp -r ${nixpkgs-unstable.helix.src}/runtime/grammars/sources $out/runtime/grammars/sources
+        cp -r ${pkgs.helix.src}/runtime/grammars/sources $out/runtime/grammars/sources
       '';
     };
   };
