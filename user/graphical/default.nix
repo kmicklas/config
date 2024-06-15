@@ -15,6 +15,10 @@ in {
 
   services.xscreensaver.enable = true;
   services.xscreensaver.settings.mode = "blank";
+  # https://github.com/nix-community/home-manager/issues/4796
+  home.file.".xscreensaver".text = ''
+    mode: blank
+  '';
 
   services.redshift.enable = true;
   services.redshift.provider = "manual";
