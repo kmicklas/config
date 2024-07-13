@@ -15,7 +15,7 @@ pkgs: with pkgs; [
   signal-desktop
   element-desktop
   calibre
-  youtube-dl
+  yt-dlp
 
   blueman
   gedit

@@ -24,10 +24,10 @@
         "homepage": "",
         "owner": "Ben-Kerman",
         "repo": "mpv-sub-scripts",
-        "rev": "93384711ac0011273762c0034ffb878c62d9600f",
-        "sha256": "0jc8nv7yjnkknbc0azir3baqg58yg76r282ajzn5zjgg18ajj7s4",
+        "rev": "73ed44c879a75020da39d1d24368f448085186ae",
+        "sha256": "12hmy15gg2k49dhspf87imfxmf2dlb91c2hy1hnki9a5in1yakbr",
         "type": "tarball",
-        "url": "https://github.com/Ben-Kerman/mpv-sub-scripts/archive/93384711ac0011273762c0034ffb878c62d9600f.tar.gz",
+        "url": "https://github.com/Ben-Kerman/mpv-sub-scripts/archive/73ed44c879a75020da39d1d24368f448085186ae.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "mud": {
@@ -54,10 +54,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "ad57eef4ef0659193044870c731987a6df5cf56b",
-        "sha256": "1fz2yjr8as12g9qhixwc8vzd294v3q5jzmrk5dwp8w44qz3clc2b",
+        "rev": "feb2849fdeb70028c70d73b848214b00d324a497",
+        "sha256": "016ihxx048j09mfxxapaab5mx9kasjlvljqfgnz1vslmw8gcs2b6",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/ad57eef4ef0659193044870c731987a6df5cf56b.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/feb2849fdeb70028c70d73b848214b00d324a497.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "obelisk": {
