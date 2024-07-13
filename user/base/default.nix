@@ -41,6 +41,8 @@
     # git.paging.colorArg = "always";
     # git.paging.pager = "delta --dark --paging=never";
 
+    git.commit.autoWrapCommitMessage = false;
+
     customCommands = [
       {
         # TODO: Fix force pushing issue upstream.
