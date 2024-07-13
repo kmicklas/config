@@ -8,7 +8,7 @@ pkgs: with pkgs; [
   psmisc # killall
   python3
   tmux
-  unzip
   wget
+  zip unzip
   zstd
 ]
