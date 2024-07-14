@@ -16,6 +16,7 @@ pkgs: with pkgs; [
   element-desktop
   calibre
   yt-dlp
+  freerdp3
 
   blueman
   gedit
