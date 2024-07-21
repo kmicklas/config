@@ -12,8 +12,6 @@
     ../../system/media-keys.nix
   ];
 
-  hardware.enableRedistributableFirmware = true;
-
   boot.initrd.luks.devices = {
     root = {
       device = "/dev/disk/by-uuid/7d3e45db-d4da-4f17-a725-dda0fdac9826";
