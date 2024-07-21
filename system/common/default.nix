@@ -57,6 +57,7 @@ in {
 
   virtualisation.containers.enable = true;
 
-  # Theoretically will reduce hangs during nix-builds.
   services.fstrim.enable = true;
+  # Regular fstrim doesn't work for ZFS.
+  services.zfs.trim.enable = true;
 }
