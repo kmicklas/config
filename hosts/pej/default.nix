@@ -20,6 +20,12 @@
     };
   };
 
+  # Keep these in sync with hardware-configuration.nix
+  fileSystems."/".options = [ "noatime" ];
+  fileSystems."/nix".options = [ "noatime" ];
+  fileSystems."/home".options = [ "noatime" ];
+  fileSystems."/boot".options = [ "noatime" ];
+
   networking.hostName = "pej";
   networking.hostId = "3d3f0c83";
 

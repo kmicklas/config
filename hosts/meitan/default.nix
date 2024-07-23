@@ -19,6 +19,12 @@
     };
   };
 
+  # Keep these in sync with hardware-configuration.nix
+  fileSystems."/".options = [ "noatime" ];
+  fileSystems."/nix".options = [ "noatime" ];
+  fileSystems."/home".options = [ "noatime" ];
+  fileSystems."/boot".options = [ "noatime" ];
+
   networking.hostName = "meitan";
   networking.hostId = "96a6ca18";
 
