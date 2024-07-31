@@ -48,18 +48,6 @@
         "url": "https://github.com/NixOS/nixpkgs/archive/eabc38219184cc3e04a974fe31857d8e0eac098d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "nixpkgs-unstable": {
-        "branch": "nixos-unstable",
-        "description": "Nix Packages collection & NixOS",
-        "homepage": "",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "feb2849fdeb70028c70d73b848214b00d324a497",
-        "sha256": "016ihxx048j09mfxxapaab5mx9kasjlvljqfgnz1vslmw8gcs2b6",
-        "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/feb2849fdeb70028c70d73b848214b00d324a497.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "obelisk": {
         "branch": "master",
         "description": "Functional reactive web and mobile applications, with batteries included.",
