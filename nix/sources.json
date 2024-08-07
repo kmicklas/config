@@ -12,10 +12,10 @@
         "homepage": "https://helix-editor.com",
         "owner": "kmicklas",
         "repo": "helix",
-        "rev": "b38a96ecc1bf849a90b8f8f190a5d8445671725d",
-        "sha256": "1z6rml9cdfvvcdrnsmrfx8vq2cfqcvw9z143qnl78sp918gnllz9",
+        "rev": "89096c4b6b5acc1b8ec46e340b6b0d4c906cb167",
+        "sha256": "0qppyiac9cnwkqg7v08wj7zrj8idnl57ahsmdggfnmywhmv9rfyi",
         "type": "tarball",
-        "url": "https://github.com/kmicklas/helix/archive/b38a96ecc1bf849a90b8f8f190a5d8445671725d.tar.gz",
+        "url": "https://github.com/kmicklas/helix/archive/89096c4b6b5acc1b8ec46e340b6b0d4c906cb167.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "mpv-sub-scripts": {
@@ -48,6 +48,18 @@
         "url": "https://github.com/NixOS/nixpkgs/archive/eabc38219184cc3e04a974fe31857d8e0eac098d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nixpkgs-unstable": {
+        "branch": "nixos-unstable",
+        "description": "Nix Packages collection & NixOS",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "cb9a96f23c491c081b38eab96d22fa958043c9fa",
+        "sha256": "19nv90nr810mmckhg7qkzhjml9zgm5wk4idhrvyb63y4i74ih2i0",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/cb9a96f23c491c081b38eab96d22fa958043c9fa.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "obelisk": {
         "branch": "master",
         "description": "Functional reactive web and mobile applications, with batteries included.",
@@ -58,18 +70,6 @@
         "sha256": "0dr0pl9isim1pvvzqlwrzrlqn5w1iwyxj05ygcqbsxgzrc0ww70v",
         "type": "tarball",
         "url": "https://github.com/obsidiansystems/obelisk/archive/135bfd7422b856c146b5cd5dacfe584f0621825e.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "tree-sitter-rust": {
-        "branch": "master",
-        "description": "Rust grammar for tree-sitter",
-        "homepage": "",
-        "owner": "tree-sitter",
-        "repo": "tree-sitter-rust",
-        "rev": "9c84af007b0f144954adb26b3f336495cbb320a7",
-        "sha256": "0wjw8wz34c3h624xi0n133pv4ld1gmx4zn60xfkqgv7cmn9f42cv",
-        "type": "tarball",
-        "url": "https://github.com/tree-sitter/tree-sitter-rust/archive/9c84af007b0f144954adb26b3f336495cbb320a7.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
