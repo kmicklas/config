@@ -29,4 +29,8 @@
   networking.hostId = "96a6ca18";
 
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
+
+  programs.steam.enable = true;
+  programs.steam.remotePlay.openFirewall = true;
+  programs.steam.dedicatedServer.openFirewall = true;
 }
