@@ -43,10 +43,14 @@
   services.xserver.enable = true;
   services.xserver.xkb.layout = "us";
   services.xserver.enableCtrlAltBackspace = true;
-  services.xserver.autoRepeatDelay = 200;
-  services.xserver.autoRepeatInterval = 50;
   # Needed for .xsession on NixOS 20.03.
   services.xserver.desktopManager.xterm.enable = true;
+
+  services.xserver.autoRepeatDelay = 200;
+  services.xserver.autoRepeatInterval = 50;
+  powerManagement.resumeCommands = ''
+    DISPLAY=:0 xset r rate 200 50
+  '';
 
   i18n.inputMethod.enabled = "ibus";
   i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ libpinyin ];
