@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -9,7 +9,6 @@
   fonts.enableGhostscriptFonts = true;
   fonts.packages = with pkgs; [
     corefonts
-    emacs-all-the-icons-fonts
     google-fonts
     noto-fonts
     noto-fonts-cjk

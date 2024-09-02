@@ -26,7 +26,6 @@ launcherKeys conf@(XConfig {modMask = modm}) = M.fromList $
   [ ((modm, xK_a), spawn "autorandr -c")
   , ((modm, xK_s), spawn "systemctl suspend")
   , ((modm, xK_d), spawn "physlock")
-  , ((modm, xK_f), spawn "emacsclient --create-frame")
   , ((modm, xK_g), spawn "dunstctl close-all")
   , ((modm, xK_b), spawn "dunstctl history-pop")
   , ((modm, xK_u), setScreensaverStatus "stop" "Deactivated screensaver")
