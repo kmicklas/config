@@ -8,7 +8,6 @@ pkgs: with pkgs; [
   audacity
   vlc
   spotify
-  anki
   transmission-gtk
   xournal
   zoom-us

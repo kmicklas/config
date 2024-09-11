@@ -4,17 +4,17 @@ let
   source = import ../../nix/sources.nix { };
 
 in {
-  nixpkgs.overlays = [
-    (self: super: {
-      anki = let
+  home.packages = [
+    (
+      let
         version = "2.1.35";
         src = source.anki;
       in (import source."nixpkgs-21.11" {}).buildFHSUserEnv {
-        name = super.anki.pname;
-        inherit (super.anki) meta;
+        name = pkgs.anki.pname;
+        inherit (pkgs.anki) meta;
 
         passthru = {
-          inherit (super.anki) man;
+          inherit (pkgs.anki) man;
           inherit version;
         };
 
@@ -63,7 +63,7 @@ in {
 
           substituteInPlace $out/share/applications/anki.desktop --replace Exec=anki Exec=$out/bin/anki-wrapped
         '';
-      };
-    })
+      }
+    )
   ];
 }
