@@ -48,7 +48,11 @@
   services.xserver.autoRepeatDelay = 200;
   services.xserver.autoRepeatInterval = 50;
   powerManagement.resumeCommands = ''
-    DISPLAY=:0 xset r rate 200 50
+    sleep 10
+    DISPLAY=:0 XAUTHORITY=/home/kmicklas/.Xauthority ${pkgs.xorg.xset}/bin/xset r rate 200 50
+    # Just in case...
+    sleep 60
+    DISPLAY=:0 XAUTHORITY=/home/kmicklas/.Xauthority ${pkgs.xorg.xset}/bin/xset r rate 200 50
   '';
 
   i18n.inputMethod.enabled = "ibus";
