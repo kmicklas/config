@@ -59,9 +59,6 @@
     g = "git";
 
     c = "cargo";
-    cw = "cargo watch";
-    cwc = "cargo watch -x 'check --color=always 2>&1 | less -cR'";
-    cwt = "cargo watch -x 'test --color=always 2>&1 | less -cR'";
 
     b = "bazel";
     bb = "bazel build";

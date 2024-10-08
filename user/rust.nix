@@ -7,6 +7,7 @@
   '';
 
   home.packages = with pkgs; [
+    bacon
     cargo-edit
     lldb
     rustup
