@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
-let
-  source = import ../../nix/sources.nix { };
-  nixpkgs-unstable = import source.nixpkgs-unstable { };
-
-in {
+{
   imports = [
     ./home-manager.nix
     ./helix.nix
@@ -18,7 +14,7 @@ in {
     (builtins.toPath ../../bin)
   ];
 
-  home.packages = (with pkgs; [
+  home.packages = with pkgs; [
     dua
     gex
     htop
@@ -27,8 +23,6 @@ in {
     ripgrep
     tree
     yazi
-  ]) ++ [
-    nixpkgs-unstable.aider-chat
   ];
 
   programs.bat.enable = true;
