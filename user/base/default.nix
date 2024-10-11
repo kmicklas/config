@@ -22,7 +22,6 @@
     jqp
     ripgrep
     tree
-    yazi
   ];
 
   programs.bat.enable = true;
@@ -30,6 +29,12 @@
   programs.eza.enable = true;
   programs.eza.enableBashIntegration = true;
   programs.eza.enableZshIntegration = true;
+
+  programs.yazi.enable = true;
+  # TODO: Use this on 24.11.
+  # programs.yazi.shellWrapperName = "y";
+  programs.yazi.enableBashIntegration = true;
+  programs.yazi.enableZshIntegration = true;
 
   programs.fzf.enable = true;
 
