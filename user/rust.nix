@@ -11,6 +11,7 @@
     cargo-edit
     lldb
     rustup
+    trunk
   ];
 
   home.sessionPath = [
