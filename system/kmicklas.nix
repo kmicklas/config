@@ -10,7 +10,7 @@ in {
     home = homedir;
     shell = homedir + "/.nix-profile/bin/zsh";
     description = "Ken Micklas";
-    extraGroups = [ "kmicklas" "wheel" "networkmanager" ];
+    extraGroups = [ "kmicklas" "wheel" "networkmanager" "systemd-journal" ];
     useDefaultShell = true;
     openssh.authorizedKeys.keys = map builtins.readFile [
       ../hosts/pej/kmicklas/id_rsa.pub
