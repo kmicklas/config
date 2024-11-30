@@ -6,7 +6,7 @@
     kbdlight
   ];
 
-  sound.mediaKeys.enable = true;
+  services.actkbd.enable = true;
   services.actkbd.bindings = [
     { keys = [ 224 ]; events = [ "key" "rep" ]; command = "${pkgs.light}/bin/light -U 4"; }
     { keys = [ 225 ]; events = [ "key" "rep" ]; command = "${pkgs.light}/bin/light -A 4"; }

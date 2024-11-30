@@ -8,7 +8,7 @@ pkgs: with pkgs; [
   audacity
   vlc
   spotify
-  transmission-gtk
+  transmission_4-gtk
   xournal
   zoom-us
   signal-desktop
@@ -19,17 +19,17 @@ pkgs: with pkgs; [
 
   blueman
   gedit
-  gnome3.gnome-control-center
-  gnome3.gnome-screenshot
-  gnome3.gnome-settings-daemon
-  gnome3.nautilus
+  gnome-control-center
+  gnome-screenshot
+  gnome-settings-daemon
+  nautilus
 
   dconf # needed for GNOME apps
   dmenu
   acpi
   xscreensaver
   arandr
-  alsaUtils
+  alsa-utils
   pavucontrol
   xclip
   feh

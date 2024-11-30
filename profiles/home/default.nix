@@ -28,9 +28,4 @@ in {
     "url \"ssh://git@gitlab.com\"".insteadOf = "https://gitlab.com";
     "url \"ssh://git@bitbucket.com\"".insteadOf = "https://bitbucket.com";
   };
-
-  programs.atuin.package = pkgs.atuin.overrideAttrs (self: {
-    # TODO: Remove once https://github.com/openzfs/zfs/issues/14290 is fixed.
-    patches = self.patches ++ [ ./atuin-zfs.patch ];
-  });
 }

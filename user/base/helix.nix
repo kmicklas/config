@@ -140,10 +140,7 @@ in {
     pkgs.nodePackages.bash-language-server
     pkgs.nodePackages.dockerfile-language-server-nodejs
     pkgs.nodePackages.typescript-language-server
+    pkgs.nodePackages.vscode-langservers-extracted
     pkgs.pyright
-
-    (makeAlias "vscode-css-language-server" "${pkgs.nodePackages.vscode-css-languageserver-bin}/bin/css-languageserver")
-    # TODO: This one seems broken.
-    (makeAlias "vscode-html-language-server" "${pkgs.nodePackages.vscode-html-languageserver-bin}/bin/html-languageserver")
   ];
 }

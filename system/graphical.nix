@@ -11,7 +11,7 @@
     corefonts
     google-fonts
     noto-fonts
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-emoji
     source-han-sans-japanese
     source-han-sans-korean
@@ -30,6 +30,8 @@
     };
   };
 
+  # TODO: switch to pipewire?
+  services.pipewire.enable = false;
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.package = pkgs.pulseaudioFull;
   hardware.pulseaudio.daemon.config.flat-volumes = "no";
@@ -55,7 +57,8 @@
     DISPLAY=:0 XAUTHORITY=/home/kmicklas/.Xauthority ${pkgs.xorg.xset}/bin/xset r rate 200 50
   '';
 
-  i18n.inputMethod.enabled = "ibus";
+  i18n.inputMethod.enable = true;
+  i18n.inputMethod.type = "ibus";
   i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ libpinyin ];
 
   services.logind.lidSwitchDocked = "suspend";
