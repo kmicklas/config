@@ -2,8 +2,9 @@
 
 {
   imports = [
-    ./home-manager.nix
+    ./atuin.nix
     ./helix.nix
+    ./home-manager.nix
     ./nixpkgs.nix
     ./tmux.nix
     ./zsh.nix
