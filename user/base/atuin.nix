@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.atuin.enable = true;
@@ -12,6 +12,14 @@
 
   # TODO: use home-manager service once it exists
   systemd.user.services.atuin = {
-    Service.ExecStart = "${config.programs.atuin.package}/bin/atuin daemon";
+    Unit = {
+      Description = "Atuin shell history daemon";
+      Documentation = "https://docs.atuin.sh";
+    };
+    Service = {
+      ExecStartPre="${pkgs.coreutils}/bin/rm -f %h/.local/share/atuin/atuin.sock";
+      ExecStart = "${config.programs.atuin.package}/bin/atuin daemon";
+    };
+    Install.WantedBy = [ "default.target" ];
   };
 }
