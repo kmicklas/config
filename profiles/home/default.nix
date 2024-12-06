@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 let
   source = import ../../nix/sources.nix { };
