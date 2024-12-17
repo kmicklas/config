@@ -4,15 +4,6 @@ let
   source = import ../../nix/sources.nix { };
   nixpkgs-unstable = import source.nixpkgs-unstable { };
 
-  makeAlias = name: path: pkgs.stdenv.mkDerivation {
-    name = builtins.baseNameOf name;
-    dontUnpack = true;
-    installPhase = ''
-      mkdir -p $out/bin
-      ln -s ${path} $out/bin/${name}
-    '';
-  };
-
   normal-keys = type: {
     space.c = "toggle_comments";
     space.l.c = ":lsp-workspace-command";
