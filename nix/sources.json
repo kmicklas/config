@@ -12,10 +12,10 @@
         "homepage": null,
         "owner": "kmicklas",
         "repo": "git-global-status",
-        "rev": "bd0b239069255a42b634b8a4d1c28b10dafe061f",
-        "sha256": "08crkvkih5dn7vg18pi1wdlh386vmj5mzf1f37xrn7f0wwn317qn",
+        "rev": "1678e0584c4ea1cb628abd78a4d92caaf4164270",
+        "sha256": "0ca0pzhmhimsawcb9v3gzhs9fdygqy1iasq69iriya1q65vnfdxb",
         "type": "tarball",
-        "url": "https://github.com/kmicklas/git-global-status/archive/bd0b239069255a42b634b8a4d1c28b10dafe061f.tar.gz",
+        "url": "https://github.com/kmicklas/git-global-status/archive/1678e0584c4ea1cb628abd78a4d92caaf4164270.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "helix": {
