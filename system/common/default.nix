@@ -60,4 +60,9 @@ in {
   services.fstrim.enable = true;
   # Regular fstrim doesn't work for ZFS.
   services.zfs.trim.enable = true;
+
+  # Need to run this manually:
+  # sudo zfs set com.sun:auto-snapshot=true zroot/nixos/home
+  # TODO: Can this be set declaratively?
+  services.zfs.autoSnapshot.enable = true;
 }
