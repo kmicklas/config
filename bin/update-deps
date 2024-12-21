@@ -1,0 +1,4 @@
+#!/bin/sh
+BASEDIR=$(dirname "$0")
+niv -s "$BASEDIR/../nix/sources.json" update
+git -C "$BASEDIR" submodule foreach 'git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch) && git pull'
