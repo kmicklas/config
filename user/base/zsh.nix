@@ -22,7 +22,7 @@
     fi
   '';
   programs.zsh.initExtra = ''
-    function prompt_status_indicator {
+    function command_status_indicator {
       local last_command_status=$?
       if test $last_command_status -gt 0
       then echo "%{$fg_bold[red]%}($last_command_status)%{$reset_color%}"
@@ -41,8 +41,37 @@
       fi
     }
 
+    typeset -g command_start_time
+    typeset -g command_duration
+
+    function command_duration_preexec {
+      command_start_time="$SECONDS"
+    }
+    function command_duration_precmd {
+      if [[ -n "$command_start_time" ]]; then
+        command_duration="$(($SECONDS - $command_start_time))"
+      fi
+      unset command_start_time
+    }
+    preexec_functions+=(command_duration_preexec)
+    precmd_functions+=(command_duration_precmd)
+
+    function command_duration_indicator {
+      if [[ "$command_duration" -gt 0 ]]; then
+        local hh="$(($command_duration / 3600))"
+        local mm="$(($command_duration % 3600 / 60))"
+        local ss="$(($command_duration % 60))"
+
+        echo -n " %{$fg[yellow]%}"
+        if [[ "$hh" -gt 0 ]]; then echo -n "$hh"h; fi
+        if [[ "$mm" -gt 0 ]]; then echo -n "$mm"m; fi
+        if [[ "$ss" -gt 0 ]]; then echo -n "$ss"s; fi
+        echo "%{$reset_color%}"
+      fi
+    }
+
     autoload -U colors && colors
-    PROMPT='$(prompt_status_indicator) [%*] %{$fg_bold[blue]%}%n@%M%{$reset_color%} %~$(prompt_git_branch_indicator)$(prompt_nix_shell_indicator)'$'\n'"> "
+    PROMPT='$(command_status_indicator)$(command_duration_indicator) [%*] %{$fg_bold[blue]%}%n@%M%{$reset_color%} %~$(prompt_git_branch_indicator)$(prompt_nix_shell_indicator)'$'\n'"> "
     RPROMPT=""
 
     function j {
