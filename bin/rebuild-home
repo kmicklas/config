@@ -1,5 +1,5 @@
 #!/bin/sh
 BASEDIR=$(dirname "$0")
 home-manager switch \
-  -I home-manager=$(realpath "$BASEDIR/../dep/home-manager") \
-  $@
+  -I home-manager="$(realpath "$BASEDIR/../dep/home-manager")" \
+  "$@"
