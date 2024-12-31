@@ -9,6 +9,7 @@ in {
     ../../user/base
     ../../user/graphical
 
+    ../../user/dropbox.nix
     ../../user/git.nix
     ../../user/go.nix
     ../../user/haskell.nix
@@ -28,6 +29,4 @@ in {
     "url \"ssh://git@gitlab.com\"".insteadOf = "https://gitlab.com";
     "url \"ssh://git@bitbucket.com\"".insteadOf = "https://bitbucket.com";
   };
-
-  services.dropbox.enable = true;
 }
