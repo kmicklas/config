@@ -75,4 +75,23 @@ in {
   home.pointerCursor.name = "Vanilla-DMZ";
   home.pointerCursor.package = pkgs.vanilla-dmz;
   home.pointerCursor.size = 48;
+
+  xdg.mimeApps.enable = true;
+  xdg.mimeApps.defaultApplications = {
+    # Calibre wants to be the default...
+    "application/pdf" = "org.gnome.Evince.desktop";
+    "application/x-extension-htm" = "firefox.desktop";
+    "application/x-extension-html" = "firefox.desktop";
+    "application/x-extension-shtml" = "firefox.desktop";
+    "application/x-extension-xht" = "firefox.desktop";
+    "application/x-extension-xhtml" = "firefox.desktop";
+    "application/xhtml+xml" = "firefox.desktop";
+    "text/html" = "firefox.desktop";
+    "x-scheme-handler/chrome" = "firefox.desktop";
+    "x-scheme-handler/ftp" = "firefox.desktop";
+    "x-scheme-handler/http" = "firefox.desktop";
+    "x-scheme-handler/https" = "firefox.desktop";
+    "x-scheme-handler/msteams" = "teams.desktop";
+    "x-scheme-handler/sgnl" = "signal-desktop.desktop";
+  };
 }
