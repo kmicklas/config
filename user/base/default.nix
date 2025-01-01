@@ -37,6 +37,8 @@
   programs.yazi.enableBashIntegration = true;
   programs.yazi.enableZshIntegration = true;
 
+  programs.fd.enable = true;
+
   programs.fzf.enable = true;
 
   programs.jq.enable = true;
