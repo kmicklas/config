@@ -33,8 +33,7 @@
   programs.eza.enableZshIntegration = true;
 
   programs.yazi.enable = true;
-  # TODO: Use this on 24.11.
-  # programs.yazi.shellWrapperName = "y";
+  programs.yazi.shellWrapperName = "y";
   programs.yazi.enableBashIntegration = true;
   programs.yazi.enableZshIntegration = true;
 
