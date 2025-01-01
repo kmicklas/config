@@ -1,10 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 
-let
-  source = import ../../nix/sources.nix { };
-  nixpkgs-unstable = import source.nixpkgs-unstable { };
-
-in {
+{
   imports = [
     ../../user/base
     ../../user/graphical
@@ -19,7 +15,7 @@ in {
   ];
 
   home.packages = [
-    nixpkgs-unstable.aider-chat
+    pkgs.aider-chat
   ];
 
   programs.git.userEmail = "git@kmicklas.com";
