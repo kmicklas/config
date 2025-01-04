@@ -8,6 +8,8 @@ in
   nixpkgs.config = import nixpkgsConfig;
   xdg.configFile."nixpkgs/config.nix".source = nixpkgsConfig;
 
+  programs.nix-index.enable = true;
+
   services.lorri.enable = true;
 
   home.packages = with pkgs; [
