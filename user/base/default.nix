@@ -18,7 +18,6 @@
 
   home.packages = with pkgs; [
     dua
-    gex
     htop
     hyperfine
     jqp
