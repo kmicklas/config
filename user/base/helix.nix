@@ -85,6 +85,7 @@ in {
     theme = "github_dark";
 
     editor.color-modes = true;
+    editor.file-picker.hidden = false;
     editor.idle-timeout = 100;
     editor.lsp.display-inlay-hints = true;
     editor.lsp.display-messages = true;
