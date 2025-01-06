@@ -8,8 +8,6 @@
     golint
     gopls
     gotools
-
-    gcc
   ];
 
   home.sessionPath = [ "$HOME/go/bin" ];
