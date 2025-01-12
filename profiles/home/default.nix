@@ -1,10 +1,11 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   imports = [
     ../../user/base
     ../../user/graphical
 
+    ../../user/aider.nix
     ../../user/dropbox.nix
     ../../user/git.nix
     ../../user/go.nix
@@ -12,13 +13,6 @@
     ../../user/ocaml.nix
     ../../user/ssh.nix
     ../../user/rust.nix
-  ];
-
-  home.packages = [
-    pkgs.aider-chat
-  ];
-  programs.git.ignores = [
-    "/.aider.*"
   ];
 
   programs.git.userEmail = "git@kmicklas.com";
