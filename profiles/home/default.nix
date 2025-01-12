@@ -17,6 +17,9 @@
   home.packages = [
     pkgs.aider-chat
   ];
+  programs.git.ignores = [
+    "/.aider.*"
+  ];
 
   programs.git.userEmail = "git@kmicklas.com";
   programs.git.extraConfig = {
