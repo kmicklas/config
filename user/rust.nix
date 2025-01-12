@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     bacon
     cargo-edit
+    gcc # TODO: use clang, but conflict with binutils
     lldb
     rustup
     trunk
