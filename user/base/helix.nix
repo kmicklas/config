@@ -2,6 +2,8 @@
 
 let
   source = import ../../nix/sources.nix { };
+  nixpkgs-unstable = import source.nixpkgs-unstable { };
+  upstreamHelix = nixpkgs-unstable.helix;
 
   normal-keys = type: {
     space.c = "toggle_comments";
@@ -68,7 +70,7 @@ in {
   programs.helix.enable = true;
   programs.helix.defaultEditor = true;
 
-  programs.helix.package = pkgs.helix.overrideAttrs {
+  programs.helix.package = upstreamHelix.overrideAttrs {
     src = pkgs.stdenv.mkDerivation {
       name = "helix-src";
 
@@ -76,7 +78,7 @@ in {
       buildPhase = ''
         cp -r ${source.helix} $out
         chmod +w $out/runtime/grammars
-        cp -r ${pkgs.helix.src}/runtime/grammars/sources $out/runtime/grammars/sources
+        cp -r ${upstreamHelix.src}/runtime/grammars/sources $out/runtime/grammars/sources
       '';
     };
   };

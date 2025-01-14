@@ -24,10 +24,10 @@
         "homepage": "https://helix-editor.com",
         "owner": "kmicklas",
         "repo": "helix",
-        "rev": "89096c4b6b5acc1b8ec46e340b6b0d4c906cb167",
-        "sha256": "0qppyiac9cnwkqg7v08wj7zrj8idnl57ahsmdggfnmywhmv9rfyi",
+        "rev": "c87c97cd2c89d2d1015a862532f1dc7dffc07697",
+        "sha256": "0gx2dn67pqhqinb6kxxyrbyy953ydm8fd1nl36g6bs1n6qwz8gsb",
         "type": "tarball",
-        "url": "https://github.com/kmicklas/helix/archive/89096c4b6b5acc1b8ec46e340b6b0d4c906cb167.tar.gz",
+        "url": "https://github.com/kmicklas/helix/archive/c87c97cd2c89d2d1015a862532f1dc7dffc07697.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "mpv-sub-scripts": {
@@ -66,10 +66,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8f3e1f807051e32d8c95cd12b9b421623850a34d",
-        "sha256": "1cpsxhm3fwsyf5shr35kirj1ajz8iy601q37xi3ma4f8dxd4vagy",
+        "rev": "9abb87b552b7f55ac8916b6fc9e5cb486656a2f3",
+        "sha256": "1i2fhjys1f7vapzjqf3k8f3068cbrin60cdfni827cajk2sl42mb",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/8f3e1f807051e32d8c95cd12b9b421623850a34d.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/9abb87b552b7f55ac8916b6fc9e5cb486656a2f3.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "obelisk": {
