@@ -23,6 +23,7 @@
     jqp
     ripgrep
     tree
+    typos
   ];
 
   programs.bat.enable = true;
