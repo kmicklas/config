@@ -6,7 +6,7 @@
   ];
 
   programs.git.ignores = [
-    "/.aider.*"
+    ".aider.*"
   ];
 
   home.file.".aider.conf.yml".text = ''
