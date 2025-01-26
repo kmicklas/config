@@ -5,6 +5,14 @@ let
   nixpkgs-unstable = import source.nixpkgs-unstable { };
   upstreamHelix = nixpkgs-unstable.helix;
 
+  prettierLang = lang: parser: {
+    name = lang;
+    formatter = {
+      command = "${pkgs.nodePackages.prettier}/bin/prettier";
+      args = [ "--parser" parser ];
+    };
+  };
+
   normal-keys = type: {
     space.c = "toggle_comments";
     space.l.c = ":lsp-workspace-command";
@@ -126,6 +134,15 @@ in {
         name = "python";
         language-servers = ["pyright"];
       }
+
+      # Override bad Microsoft formatters which eat final newlines.
+      # See https://github.com/djpowers/dotfiles/pull/41
+      (prettierLang "css" "css")
+      (prettierLang "html" "html")
+      (prettierLang "javascript" "typescript")
+      (prettierLang "json" "json")
+      (prettierLang "tsx" "typescript")
+      (prettierLang "typescript" "typescript")
     ];
   };
 
