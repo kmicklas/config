@@ -13,6 +13,8 @@
     attribute-author: false
     attribute-committer: false
 
+    check-update: false
+
     gitignore: false
 
     env-file: ${config.xdg.configHome}/aider/env
