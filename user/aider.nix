@@ -10,6 +10,7 @@
   ];
 
   home.file.".aider.conf.yml".text = ''
+    auto-commits: false
     attribute-author: false
     attribute-committer: false
 
