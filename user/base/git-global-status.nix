@@ -8,7 +8,7 @@ in {
     (pkgs.rustPlatform.buildRustPackage {
       name = "git-global-status";
       src = source.git-global-status;
-      cargoHash = "sha256-4ih33jfJXTTluzIzM3ag0PAsQsB9rjcQj6eCls8Z7No=";
+      cargoHash = "sha256-gN6gfohmtdlX5aN+ZPsZmxiqTTQ2EocWJ9600M4sKQE=";
     })
   ];
 }
