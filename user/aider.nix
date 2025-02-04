@@ -1,8 +1,11 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
-{
+let
+  source = import ../nix/sources.nix { };
+  nixpkgs-unstable = import source.nixpkgs-unstable { };
+in {
   home.packages = [
-    pkgs.aider-chat
+    nixpkgs-unstable.aider-chat
   ];
 
   programs.git.ignores = [
