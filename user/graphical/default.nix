@@ -6,7 +6,6 @@ let
 
 in {
   imports = [
-    ./anki.nix
     ./mpv.nix
     ./river.nix
   ];

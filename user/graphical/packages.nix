@@ -1,4 +1,5 @@
 pkgs: with pkgs; [
+  anki
   google-chrome
   evince
   libreoffice
