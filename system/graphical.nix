@@ -48,14 +48,8 @@
   services.xserver.desktopManager.xterm.enable = true;
 
   services.xserver.autoRepeatDelay = 200;
-  services.xserver.autoRepeatInterval = 50;
-  powerManagement.resumeCommands = ''
-    sleep 10
-    DISPLAY=:0 XAUTHORITY=/home/kmicklas/.Xauthority ${pkgs.xorg.xset}/bin/xset r rate 200 50
-    # Just in case...
-    sleep 60
-    DISPLAY=:0 XAUTHORITY=/home/kmicklas/.Xauthority ${pkgs.xorg.xset}/bin/xset r rate 200 50
-  '';
+  # Unlike `xset r rate`, this is milliseconds not Hz.
+  services.xserver.autoRepeatInterval = builtins.floor (1000 / 50);
 
   i18n.inputMethod.enable = true;
   i18n.inputMethod.type = "ibus";
