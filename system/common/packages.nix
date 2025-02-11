@@ -1,4 +1,5 @@
 pkgs: with pkgs; [
+  bubblewrap
   exfat
   file
   gnupg
