@@ -30,9 +30,7 @@ in {
     NIX_GITHUB_PRIVATE_PASSWORD = builtins.replaceStrings ["\n"] [""] (builtins.readFile githubAccessTokenPath);
   };
 
-  nix.extraOptions = ''
-    experimental-features = nix-command
-  '';
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   boot.tmp.useTmpfs = true;
   boot.kernel.sysctl = {
