@@ -8,6 +8,7 @@
 
   home.packages = with pkgs; [
     bacon
+    cargo-binstall
     cargo-edit
     gcc # TODO: use clang, but conflict with binutils
     lldb
