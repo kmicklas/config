@@ -32,6 +32,8 @@ in {
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  programs.nix-ld.enable = true;
+
   boot.tmp.useTmpfs = true;
   boot.kernel.sysctl = {
     "kernel.sysrq" = 1;
