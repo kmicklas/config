@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -28,6 +28,9 @@
   networking.hostId = "3d3f0c83";
 
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
+  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd.qemu.package = pkgs.qemu_kvm;
 
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 }
