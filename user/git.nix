@@ -10,6 +10,9 @@
     push.autoSetupRemote = true;
     push.default = "simple";
     pull.ff = "only";
+    fetch.all = true;
+    fetch.prune = true;
+    fetch.pruneTags = true;
 
     # See https://github.com/rust-lang/cargo/issues/11857
     # and https://github.com/libgit2/libgit2/issues/6531
