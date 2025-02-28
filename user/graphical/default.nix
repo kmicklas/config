@@ -7,7 +7,6 @@ let
 in {
   imports = [
     ./mpv.nix
-    ./river.nix
   ];
 
   home.packages = import ./packages.nix pkgs;
