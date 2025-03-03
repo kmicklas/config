@@ -32,7 +32,9 @@ in {
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Support prebuilt Linux binaries.
   programs.nix-ld.enable = true;
+  services.envfs.enable = true;
 
   boot.tmp.useTmpfs = true;
   boot.kernel.sysctl = {
