@@ -10,6 +10,8 @@
     bacon
     cargo-binstall
     cargo-edit
+    cargo-insta
+    cargo-nextest
     gcc # TODO: use clang, but conflict with binutils
     lldb
     rustup
