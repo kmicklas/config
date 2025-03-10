@@ -39,4 +39,5 @@ pkgs: with pkgs; [
 
   # Not actually graphical but mainly of use on laptop/desktop:
   lm_sensors
+  usbutils
 ]
