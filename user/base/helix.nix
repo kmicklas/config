@@ -98,6 +98,7 @@ in {
 
     editor.color-modes = true;
     editor.continue-comments = false;
+    editor.cursorline = true;
     editor.file-picker.hidden = false;
     editor.idle-timeout = 100;
     editor.lsp.display-inlay-hints = true;
