@@ -10,7 +10,7 @@ pkgs: with pkgs; [
   vlc
   spotify
   transmission_4-gtk
-  xournal
+  xournalpp
   zoom-us
   signal-desktop
   element-desktop
