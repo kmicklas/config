@@ -6,3 +6,6 @@
 	path = dep/nixpkgs
 	url = git@github.com:NixOS/nixpkgs.git
 	branch = nixos-25.05
+[submodule "dep/doomemacs"]
+	path = dep/doomemacs
+	url = git@github.com:doomemacs/doomemacs.git
