@@ -11,7 +11,7 @@
     "man"
   ];
   # Mac OS can't reliably keep this in /etc/zshrc after updates.
-  programs.zsh.initExtraFirst = lib.optionalString pkgs.stdenv.isDarwin ''
+  programs.zsh.initContent = lib.optionalString pkgs.stdenv.isDarwin ''
     if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
       . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
     fi
@@ -20,8 +20,7 @@
     if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
       . ~/.nix-profile/etc/profile.d/nix.sh
     fi
-  '';
-  programs.zsh.initExtra = ''
+
     function command_status_indicator {
       local last_command_status=$?
       if test $last_command_status -gt 0

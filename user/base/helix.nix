@@ -2,8 +2,7 @@
 
 let
   source = import ../../nix/sources.nix { };
-  nixpkgs-unstable = import source.nixpkgs-unstable { };
-  upstreamHelix = nixpkgs-unstable.helix;
+  upstreamHelix = pkgs.helix;
 
   prettierLang = lang: parser: {
     name = lang;
@@ -90,6 +89,8 @@ in {
         chmod +w $out/runtime/grammars
         cp -r ${upstreamHelix.src}/runtime/grammars/sources $out/runtime/grammars/sources
       '';
+
+      dontCheckForBrokenSymlinks = true;
     };
   };
 

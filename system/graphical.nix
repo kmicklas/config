@@ -32,9 +32,9 @@
 
   # TODO: switch to pipewire?
   services.pipewire.enable = false;
-  hardware.pulseaudio.enable = true;
-  hardware.pulseaudio.package = pkgs.pulseaudioFull;
-  hardware.pulseaudio.daemon.config.flat-volumes = "no";
+  services.pulseaudio.enable = true;
+  services.pulseaudio.package = pkgs.pulseaudioFull;
+  services.pulseaudio.daemon.config.flat-volumes = "no";
 
   networking.networkmanager.enable = true;
   networking.dhcpcd.enable = false;

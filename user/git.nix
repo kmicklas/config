@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
-let
-  source = import ../nix/sources.nix { };
-  nixpkgs-unstable = import source.nixpkgs-unstable { };
-
-in {
+{
   programs.git.enable = true;
   programs.git.package = pkgs.gitAndTools.gitFull;
   programs.git.userName = "Ken Micklas";
@@ -38,16 +34,9 @@ in {
     ".projectile"
     ".direnv/"
   ];
-  programs.git.delta.enable = true;
 
-  # TODO(25.04): Use home-manager mergiraf module.
-  programs.git.attributes = [ "* merge=mergiraf" ];
-  programs.git.extraConfig = {
-    merge.mergiraf = {
-      name = "mergiraf";
-      driver = "${nixpkgs-unstable.mergiraf} merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L";
-    };
-  };
+  programs.git.delta.enable = true;
+  programs.mergiraf.enable = true;
 
   home.packages = with pkgs; [
     gh
