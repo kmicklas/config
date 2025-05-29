@@ -12,7 +12,7 @@
     cargo-edit
     cargo-insta
     cargo-nextest
-    gcc # TODO: use clang, but conflict with binutils
+    clang
     lldb
     rustup
     trunk

@@ -7,7 +7,7 @@ in {
   home.packages = [
     (import source.obelisk {}).command
   ] ++ (with pkgs; [
-    binutils # 'ar' is needed by cabal.
+    clang # 'ar' is needed by cabal.
 
     ghc
     cabal-install
