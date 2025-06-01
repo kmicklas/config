@@ -100,6 +100,8 @@
     got = "go test";
     gota = "go test ./...";
     gor = "go run";
+
+    timer = "read DURATION && bash -c \"sleep $DURATION && tmux popup echo Done $DURATION\" & disown";
   };
 
   programs.direnv.enable = true;
