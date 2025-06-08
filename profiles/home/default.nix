@@ -12,8 +12,9 @@
     ../../user/go.nix
     ../../user/haskell.nix
     ../../user/ocaml.nix
-    ../../user/ssh.nix
+    ../../user/rocq.nix
     ../../user/rust.nix
+    ../../user/ssh.nix
   ];
 
   programs.git.userEmail = "git@kmicklas.com";
