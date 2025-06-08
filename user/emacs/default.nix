@@ -5,6 +5,8 @@
   programs.emacs.extraPackages = epkgs: [
     epkgs.ample-theme
     epkgs.consult
+    epkgs.doom-modeline
+    epkgs.doom-themes
     epkgs.format-all
     epkgs.general
     epkgs.git-gutter
