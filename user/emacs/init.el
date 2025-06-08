@@ -9,7 +9,7 @@
 
   vc-handled-backends '()
 
-  custom-file "~/.emacs.d/custom.el"
+  custom-file "~/.config/emacs/custom.el"
 )
 
 (setq-default
