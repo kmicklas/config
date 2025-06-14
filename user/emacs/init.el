@@ -90,6 +90,12 @@
 
 (use-package lsp-mode)
 
+(defun fuzzy-find-file ()
+  "Run consult-fd starting from command-line-default-directory."
+  (interactive)
+  (consult-fd command-line-default-directory)
+)
+
 (global-unset-key (kbd ","))
 
 (general-define-key
@@ -123,7 +129,7 @@
   "fc" '(write-file :which-key "copy")
   "fb" '(magit-blame :which-key "git blame")
   "fe" '(revert-buffer-preserve-modes :which-key "revert")
-  "ff" '(find-file :which-key "find")
+  "ff" '(fuzzy-find-file :which-key "find")
   "fs" '(save-buffer :which-key "save")
   "fy" 'copy-buffer-file-name
 
