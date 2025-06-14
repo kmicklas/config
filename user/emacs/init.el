@@ -45,6 +45,10 @@
   (ample-theme)
 )
 
+(use-package doom-modeline
+  :init (doom-modeline-mode 1)
+)
+
 (use-package consult)
 
 (use-package format-all
