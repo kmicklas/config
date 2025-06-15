@@ -15,6 +15,7 @@
     ../../user/rocq.nix
     ../../user/rust.nix
     ../../user/ssh.nix
+    ../../user/vscode.nix
   ];
 
   programs.git.userEmail = "git@kmicklas.com";
