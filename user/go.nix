@@ -7,7 +7,7 @@
     golangci-lint
     golint
     gopls
-    gotools
+    (hiPrio gotools)
   ];
 
   home.sessionPath = [ "$HOME/go/bin" ];
