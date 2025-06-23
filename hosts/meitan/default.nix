@@ -30,6 +30,8 @@
 
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 
+  services.automatic-timezoned.enable = true;
+
   programs.steam.enable = true;
   programs.steam.remotePlay.openFirewall = true;
   programs.steam.dedicatedServer.openFirewall = true;

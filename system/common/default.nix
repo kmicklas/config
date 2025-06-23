@@ -13,7 +13,7 @@ in {
   environment.systemPackages = import ./packages.nix pkgs;
   environment.enableAllTerminfo = true;
 
-  time.timeZone = "Europe/London";
+  time.timeZone = lib.mkDefault "Europe/London";
 
   boot.readOnlyNixStore = true;
   nix.settings.auto-optimise-store = true;
