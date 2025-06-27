@@ -108,7 +108,7 @@
   "a" '(org-agenda :which-key "agenda")
 
   "b" '(:ignore t :which-key "buffer")
-  "bb" '(helm-mini :which-key "switch")
+  "bb" '(consult-buffer :which-key "switch")
   "bd" '(kill-this-buffer :which-key "delete")
 
   "c" '(:ignore t :which-key "code")
