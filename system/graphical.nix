@@ -51,6 +51,9 @@
   # Unlike `xset r rate`, this is milliseconds not Hz.
   services.xserver.autoRepeatInterval = builtins.floor (1000 / 50);
 
+  programs.niri.enable = true;
+  security.pam.services.swaylock = {};
+
   i18n.inputMethod.enable = true;
   i18n.inputMethod.type = "ibus";
   i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ libpinyin ];

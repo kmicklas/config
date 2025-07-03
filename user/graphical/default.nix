@@ -7,6 +7,7 @@ let
 in {
   imports = [
     ./mpv.nix
+    ./niri
   ];
 
   home.packages = import ./packages.nix pkgs;
