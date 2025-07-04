@@ -19,6 +19,8 @@ layout {
 
 prefer-no-csd
 
+spawn-at-startup "waybar"
+
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
