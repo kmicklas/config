@@ -11,7 +11,27 @@
 
   programs.fuzzel.enable = true;
   programs.swaylock.enable = true;
+
   programs.waybar.enable = true;
+  programs.waybar.settings.main = {
+    modules-left = [
+        "niri/workspaces"
+    ];
+    modules-center = [
+        "niri/window"
+    ];
+    # TODO: add back icons/settings from default config
+    modules-right = [
+        "pulseaudio"
+        "network" # TODO: get back wifi network name
+        "cpu"
+        "memory"
+        "temperature"
+        "battery"
+        "clock"
+        "tray"
+    ];
+  };
 
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
 }
