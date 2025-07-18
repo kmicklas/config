@@ -37,7 +37,7 @@
   programs.yazi.enableBashIntegration = true;
   programs.yazi.enableZshIntegration = true;
   programs.yazi.keymap = {
-    manager.prepend_keymap = [
+    mgr.prepend_keymap = [
       {
         on = [ "g" "b" ];
         run = "cd ~/Dropbox";
