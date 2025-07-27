@@ -80,7 +80,8 @@ in {
 
   xdg.mimeApps.enable = true;
   xdg.mimeApps.defaultApplications = {
-    # Calibre wants to be the default...
+    # Calibre wants to be the default for everything...
+    "application/epub+zip" = "calibre-ebook-viewer.desktop";
     "application/pdf" = "org.gnome.Evince.desktop";
     "application/x-extension-htm" = "firefox.desktop";
     "application/x-extension-html" = "firefox.desktop";
