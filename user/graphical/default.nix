@@ -83,13 +83,19 @@ in {
     # Calibre wants to be the default for everything...
     "application/epub+zip" = "calibre-ebook-viewer.desktop";
     "application/pdf" = "org.gnome.Evince.desktop";
+    "application/vnd.ms-word.document.macroenabled.12" = "writer.desktop";
+    "application/vnd.oasis.opendocument.text" = "writer.desktop";
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "writer.desktop";
     "application/x-extension-htm" = "firefox.desktop";
     "application/x-extension-html" = "firefox.desktop";
     "application/x-extension-shtml" = "firefox.desktop";
     "application/x-extension-xht" = "firefox.desktop";
     "application/x-extension-xhtml" = "firefox.desktop";
     "application/xhtml+xml" = "firefox.desktop";
+    "application/x-mobi8-ebook" = "calibre-ebook-viewer.desktop";
+    "image/vnd.djvu" = "org.gnome.Evince.desktop";
     "text/html" = "firefox.desktop";
+    "text/rtf" = "writer.desktop;";
     "x-scheme-handler/chrome" = "firefox.desktop";
     "x-scheme-handler/ftp" = "firefox.desktop";
     "x-scheme-handler/http" = "firefox.desktop";
