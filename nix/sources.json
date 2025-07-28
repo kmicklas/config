@@ -12,10 +12,10 @@
         "homepage": null,
         "owner": "kmicklas",
         "repo": "git-global-status",
-        "rev": "df8ef420346027509ca081a7f152a24d4ceca27e",
-        "sha256": "09m2vmg7pgiq2r3s9gcrapxv7yja3hi26pk5b9z0hvnql5iknxg4",
+        "rev": "eee6551be8aea45528240e7d5af852e29dcf82ed",
+        "sha256": "1x23p37c4i0fr84wzcx7zcr0ql7hxgakagzkybpib8rxv9c3mdh0",
         "type": "tarball",
-        "url": "https://github.com/kmicklas/git-global-status/archive/df8ef420346027509ca081a7f152a24d4ceca27e.tar.gz",
+        "url": "https://github.com/kmicklas/git-global-status/archive/eee6551be8aea45528240e7d5af852e29dcf82ed.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "helix": {
@@ -66,10 +66,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9e83b64f727c88a7711a2c463a7b16eedb69a84c",
-        "sha256": "08inkl1c4swj4rvvl5w8z3z5v34hccm305qkxvy7picvh61vfvmz",
+        "rev": "17f6bd177404d6d43017595c5264756764444ab8",
+        "sha256": "1nwqbj0bmhdqf34d0y6qbpnwqa9bkhlqd03ffv60yami7fppnyb6",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/9e83b64f727c88a7711a2c463a7b16eedb69a84c.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/17f6bd177404d6d43017595c5264756764444ab8.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "obelisk": {
