@@ -12,7 +12,6 @@
     ../../user/go.nix
     ../../user/haskell.nix
     ../../user/ocaml.nix
-    ../../user/rocq.nix
     ../../user/rust.nix
     ../../user/ssh.nix
   ];
