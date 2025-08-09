@@ -23,6 +23,7 @@ in {
   services.gammastep.provider = "manual";
   services.gammastep.latitude = "51.5072";
   services.gammastep.longitude = "-0.1276";
+  services.gammastep.tray = true;
 
   xsession.enable = true;
   xsession.initExtra = ''
