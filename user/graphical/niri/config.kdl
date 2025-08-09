@@ -75,6 +75,10 @@ binds {
     // Most actions that you can bind here can also be invoked programmatically with
     // `niri msg action do-something`.
 
+    // TODO: Why don't these work? Session environment variables?
+    Mod+G hotkey-overlay-title="Close notifications" { spawn "dunstctl close-all"; }
+    Mod+B hotkey-overlay-title="Previous notification" { spawn "dunstctl history-pop"; }
+
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
