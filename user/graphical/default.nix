@@ -19,10 +19,10 @@ in {
     mode: blank
   '';
 
-  services.redshift.enable = true;
-  services.redshift.provider = "manual";
-  services.redshift.latitude = "51.5072";
-  services.redshift.longitude = "-0.1276";
+  services.gammastep.enable = true;
+  services.gammastep.provider = "manual";
+  services.gammastep.latitude = "51.5072";
+  services.gammastep.longitude = "-0.1276";
 
   xsession.enable = true;
   xsession.initExtra = ''
