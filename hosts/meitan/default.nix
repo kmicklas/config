@@ -35,4 +35,6 @@
   programs.steam.enable = true;
   programs.steam.remotePlay.openFirewall = true;
   programs.steam.dedicatedServer.openFirewall = true;
+
+  services.geoclue2.enable = true;
 }
