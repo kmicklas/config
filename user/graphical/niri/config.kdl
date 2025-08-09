@@ -1,3 +1,7 @@
+output "Philips Consumer Electronics Company PHL 288E2 UK52128001941" {
+    scale 2
+}
+
 // spawn-at-startup "xwayland-satellite"
 
 environment {
