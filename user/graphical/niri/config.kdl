@@ -1,3 +1,11 @@
+// spawn-at-startup "xwayland-satellite"
+
+environment {
+    // DISPLAY ":0"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    NIXOS_OZONE_WL "1"
+}
+
 input {
     keyboard {
         repeat-delay 200

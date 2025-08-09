@@ -34,4 +34,10 @@
   };
 
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
+
+  home.packages = [
+    pkgs.wdisplays
+    pkgs.wlr-randr
+    pkgs.xwayland-satellite
+  ];
 }
