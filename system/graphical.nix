@@ -47,6 +47,10 @@
   # Needed for .xsession on NixOS 20.03.
   services.xserver.desktopManager.xterm.enable = true;
 
+  # Niri doesn't work in lightdm
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm.wayland.enable = true;
+
   services.xserver.autoRepeatDelay = 200;
   # Unlike `xset r rate`, this is milliseconds not Hz.
   services.xserver.autoRepeatInterval = builtins.floor (1000 / 50);
