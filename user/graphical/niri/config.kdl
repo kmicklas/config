@@ -65,6 +65,8 @@ window-rule {
 }
 
 binds {
+    Mod+S { spawn "systemctl" "suspend"; }
+
     Mod+G { spawn "dunstctl" "close-all"; }
     Mod+B { spawn "dunstctl" "history-pop"; }
 
