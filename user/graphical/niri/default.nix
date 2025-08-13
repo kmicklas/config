@@ -37,6 +37,7 @@
 
   home.packages = [
     pkgs.wdisplays
+    pkgs.wl-clipboard-rs
     pkgs.wlr-randr
     pkgs.xwayland-satellite
   ];
