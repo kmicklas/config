@@ -18,10 +18,7 @@
 
   home.packages = with pkgs; [
     dua
-    htop
     hyperfine
-    jqp
-    ripgrep
     tree
     typos
   ];
@@ -29,6 +26,8 @@
   programs.bat.enable = true;
 
   home.shell.enableShellIntegration = true;
+
+  programs.htop.enable = true;
 
   programs.eza.enable = true;
 
@@ -45,10 +44,11 @@
   };
 
   programs.fd.enable = true;
-
   programs.fzf.enable = true;
+  programs.ripgrep.enable = true;
 
   programs.jq.enable = true;
+  programs.jqp.enable = true;
 
   programs.lazygit.enable = true;
   programs.lazygit.settings = {
