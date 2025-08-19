@@ -28,14 +28,12 @@
 
   programs.bat.enable = true;
 
+  home.shell.enableShellIntegration = true;
+
   programs.eza.enable = true;
-  programs.eza.enableBashIntegration = true;
-  programs.eza.enableZshIntegration = true;
 
   programs.yazi.enable = true;
   programs.yazi.shellWrapperName = "y";
-  programs.yazi.enableBashIntegration = true;
-  programs.yazi.enableZshIntegration = true;
   programs.yazi.keymap = {
     mgr.prepend_keymap = [
       {
