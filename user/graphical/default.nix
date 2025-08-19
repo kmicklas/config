@@ -72,6 +72,14 @@ in {
     ];
   };
 
+  programs.ghostty.enable = true;
+  programs.ghostty.settings = {
+    font-size = 8;
+    keybind = [
+      "ctrl+backspace=text:\\x1b\\x7f"
+    ];
+  };
+
   programs.firefox.enable = true;
 
   home.pointerCursor.x11.enable = true;
