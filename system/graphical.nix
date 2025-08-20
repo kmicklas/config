@@ -72,9 +72,6 @@
     DefaultTimeoutStopSec=20s
   '';
 
-  services.physlock.enable = true;
-  services.physlock.allowAnyUser = true;
-
   programs.adb.enable = true;
 
   programs.steam.enable = true;
