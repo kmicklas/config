@@ -1,10 +1,6 @@
 { lib, pkgs, ... }:
 
-let
-  source = import ../../nix/sources.nix { };
-  wallpaper = source.mud;
-
-in {
+{
   imports = [
     ./mpv.nix
     ./niri
@@ -17,13 +13,6 @@ in {
   services.gammastep.latitude = "51.5072";
   services.gammastep.longitude = "-0.1276";
   services.gammastep.tray = true;
-
-  xsession.enable = true;
-  xsession.initExtra = ''
-    ${pkgs.xwallpaper}/bin/xwallpaper --daemon --zoom ${wallpaper}
-    xset r rate 200 50
-    ibus-daemon &
-  '';
 
   home.sessionVariables = {
     GTK_IM_MODULE = "ibus";
