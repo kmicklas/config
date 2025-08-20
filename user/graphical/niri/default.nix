@@ -58,6 +58,12 @@ in {
         "tray"
     ];
   };
+  programs.waybar.style = ''
+    @import "${config.programs.waybar.package}/etc/xdg/waybar/style.css";
+    window#waybar {
+      background-color: rgba(43, 48, 59, 1.0);
+    }
+  '';
 
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
   xdg.configFile."niri/wallpaper".source = wallpaper;
