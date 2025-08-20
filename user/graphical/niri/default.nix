@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
-{
+let
+  source = import ../../../nix/sources.nix { };
+  wallpaper = source.mud;
+
+in {
   # Niri enabled in system config for now.
 
   xdg.portal.enable = true;
@@ -56,8 +60,10 @@
   };
 
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
+  xdg.configFile."niri/wallpaper".source = wallpaper;
 
   home.packages = [
+    pkgs.swaybg
     pkgs.wdisplays
     pkgs.wl-clipboard-rs
     pkgs.wlr-randr
