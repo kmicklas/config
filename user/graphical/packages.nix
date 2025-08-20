@@ -28,7 +28,6 @@ pkgs: with pkgs; [
   dconf # needed for GNOME apps
   dmenu
   acpi
-  xscreensaver
   arandr
   alsa-utils
   pavucontrol

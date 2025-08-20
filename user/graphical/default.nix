@@ -12,13 +12,6 @@ in {
 
   home.packages = import ./packages.nix pkgs;
 
-  services.xscreensaver.enable = true;
-  services.xscreensaver.settings.mode = "blank";
-  # https://github.com/nix-community/home-manager/issues/4796
-  home.file.".xscreensaver".text = ''
-    mode: blank
-  '';
-
   services.gammastep.enable = true;
   services.gammastep.provider = "manual";
   services.gammastep.latitude = "51.5072";
