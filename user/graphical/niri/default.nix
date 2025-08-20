@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   # Niri enabled in system config for now.
@@ -15,6 +15,24 @@
   programs.swaylock.settings = {
     color = "000000";
   };
+
+  services.swayidle.enable = true;
+  services.swayidle.events = [
+    {
+      event = "before-sleep";
+      command = "${config.programs.swaylock.package}/bin/swaylock --daemonize";
+    }
+  ];
+  services.swayidle.timeouts = [
+    {
+      timeout = 60 * 60;
+      command = "${config.programs.swaylock.package}/bin/swaylock --daemonize";
+    }
+    {
+      timeout = 60 * 60 * 2;
+      command = "niri msg action power-off-monitors";
+    }
+  ];
 
   programs.waybar.enable = true;
   programs.waybar.settings.main = {
