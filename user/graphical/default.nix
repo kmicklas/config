@@ -31,12 +31,6 @@ in {
     XMODIFIERS = "@im=ibus";
   };
 
-  xsession.windowManager.xmonad = {
-    enable = true;
-    enableContribAndExtras = true;
-    config = ../../dotfiles/xmonad/xmonad.hs;
-  };
-
   services.dunst.enable = true;
   services.dunst.settings = {
     global = {
