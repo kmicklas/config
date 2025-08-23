@@ -1,10 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.file.".cargo/config.toml".text = ''
-    [net]
-    git-fetch-with-cli = true
-  '';
+  home.file.".cargo/config.toml".source = ./config.toml;
 
   home.packages = with pkgs; [
     bacon

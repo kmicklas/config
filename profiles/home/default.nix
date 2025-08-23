@@ -11,7 +11,7 @@
     ../../user/git.nix
     ../../user/go.nix
     ../../user/haskell.nix
-    ../../user/rust.nix
+    ../../user/rust
     ../../user/ssh.nix
   ];
 

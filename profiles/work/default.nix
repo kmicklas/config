@@ -6,7 +6,7 @@
 
     ../../user/git.nix
     ../../user/go.nix
-    ../../user/rust.nix
+    ../../user/rust
   ] ++ lib.optionals (builtins.pathExists ../../../local-config) [
     ../../../local-config
   ];
