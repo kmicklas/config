@@ -12,6 +12,7 @@
     ../../user/go.nix
     ../../user/haskell.nix
     ../../user/rust
+    ../../user/rust/auto-update.nix
     ../../user/ssh.nix
   ];
 
