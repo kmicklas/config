@@ -33,7 +33,6 @@ pkgs: with pkgs; [
   pavucontrol
   xclip
   feh
-  ueberzugpp # TODO: switch to a terminal with native graphics
   libnotify # notify-send
 
   # Not actually graphical but mainly of use on laptop/desktop:
