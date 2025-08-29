@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
@@ -14,6 +14,10 @@
   home.sessionVariables = {
     NIX_PATH = "$NIX_PATH\${NIX_PATH:+:}nixpkgs=${builtins.toPath ../../dep/nixpkgs}";
   };
+
+  # Recently programs such as git seemed to have stopped reading non-Nix
+  # managed terminfo.
+  home.file.".terminfo".source = config.lib.file.mkOutOfStoreSymlink "/usr/share/terminfo";
 
   programs.git.extraConfig = {
     "url \"https://github.com/\"".insteadOf = [
