@@ -31,8 +31,9 @@
   };
   programs.git.ignores = [
     "*~"
-    ".projectile"
+    ".claude/settings.local.json"
     ".direnv/"
+    ".projectile"
   ];
 
   programs.git.delta.enable = true;
