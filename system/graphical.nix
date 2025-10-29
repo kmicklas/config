@@ -48,8 +48,8 @@
   services.xserver.desktopManager.xterm.enable = true;
 
   # Niri doesn't work in lightdm
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
 
   services.xserver.autoRepeatDelay = 200;
   # Unlike `xset r rate`, this is milliseconds not Hz.
