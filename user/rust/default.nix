@@ -8,6 +8,7 @@
     cargo-binstall
     cargo-edit
     cargo-insta
+    cargo-llvm-cov
     cargo-nextest
     clang
     lldb
