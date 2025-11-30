@@ -12,12 +12,9 @@
     google-fonts
     noto-fonts
     noto-fonts-cjk-sans
-    noto-fonts-emoji
-    source-han-sans-japanese
-    source-han-sans-korean
-    source-han-sans-simplified-chinese
-    source-han-sans-traditional-chinese
-    ubuntu_font_family
+    noto-fonts-color-emoji
+    source-han-sans
+    ubuntu-sans
     unifont
     wqy_microhei
     wqy_zenhei
@@ -64,15 +61,15 @@
   i18n.inputMethod.type = "ibus";
   i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ libpinyin ];
 
-  services.logind.lidSwitchDocked = "suspend";
-  services.logind.extraConfig = ''
-    HandlePowerKey=suspend
-  '';
+  services.logind.settings.Login = {
+    HandleLidSwitchDocked = "suspend";
+    HandlePowerKey = "suspend";
+  };
 
   # Prevent user services from blocking shutdown for a long time
-  systemd.extraConfig = ''
-    DefaultTimeoutStopSec=20s
-  '';
+  systemd.settings.Manager = {
+    DefaultTimeoutStopSec = "20s";
+  };
 
   programs.adb.enable = true;
 

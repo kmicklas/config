@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.packages = with pkgs; [
@@ -7,7 +7,7 @@
     golangci-lint
     golint
     gopls
-    (hiPrio gotools)
+    (lib.hiPrio gotools)
   ];
 
   home.sessionPath = [ "$HOME/go/bin" ];

@@ -151,11 +151,11 @@ in {
   };
 
   home.packages = [
+    pkgs.bash-language-server
+    pkgs.dockerfile-language-server
     pkgs.nil
-    pkgs.nodePackages.bash-language-server
-    pkgs.nodePackages.dockerfile-language-server-nodejs
-    pkgs.nodePackages.typescript-language-server
-    pkgs.nodePackages.vscode-langservers-extracted
     pkgs.pyright
+    pkgs.typescript-language-server
+    pkgs.vscode-langservers-extracted
   ];
 }

@@ -16,8 +16,9 @@
     ../../user/ssh.nix
   ];
 
-  programs.git.userEmail = "git@kmicklas.com";
-  programs.git.extraConfig = {
+  programs.git.settings = {
+    user.email = "git@kmicklas.com";
+
     # TODO: Auto-generate these.
     "url \"ssh://git@github.com\"".insteadOf = "https://github.com";
     "url \"ssh://git@gitlab.com\"".insteadOf = "https://gitlab.com";

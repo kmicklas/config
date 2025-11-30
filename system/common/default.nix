@@ -15,7 +15,6 @@ in {
 
   time.timeZone = lib.mkDefault "Europe/London";
 
-  boot.readOnlyNixStore = true;
   nix.settings.auto-optimise-store = true;
   nix.settings.download-buffer-size = 1024 * 1024 * 1024;
 

@@ -9,12 +9,16 @@
     cargo-edit
     cargo-fuzz
     cargo-insta
-    cargo-llvm-cov
     cargo-nextest
     clang
     lldb
     rustup
     trunk
+
+    # TODO: see if this is fixed in nixpkgs in the future
+    (cargo-llvm-cov.overrideAttrs (_: {
+      doCheck = false;
+    }))
   ];
 
   home.sessionPath = [

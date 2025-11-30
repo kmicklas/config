@@ -19,7 +19,7 @@
   # managed terminfo.
   home.file.".terminfo".source = config.lib.file.mkOutOfStoreSymlink "/usr/share/terminfo";
 
-  programs.git.extraConfig = {
+  programs.git.settings = {
     "url \"https://github.com/\"".insteadOf = [
       "git@github.com:"
       "ssh://git@github.com:"

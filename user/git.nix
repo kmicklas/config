@@ -2,9 +2,11 @@
 
 {
   programs.git.enable = true;
-  programs.git.package = pkgs.gitAndTools.gitFull;
-  programs.git.userName = "Ken Micklas";
-  programs.git.extraConfig = {
+  programs.git.package = pkgs.gitFull;
+  programs.git.settings = {
+    user.name = "Ken Micklas";
+    github.user = "kmicklas";
+
     mergeTool.keepBackup = false;
     push.autoSetupRemote = true;
     push.default = "simple";
@@ -16,8 +18,6 @@
     # See https://github.com/rust-lang/cargo/issues/11857
     # and https://github.com/libgit2/libgit2/issues/6531
     # feature.manyFiles = true;
-
-    github.user = "kmicklas";
 
     init.defaultBranch = "main";
 
@@ -35,7 +35,9 @@
     ".projectile"
   ];
 
-  programs.git.delta.enable = true;
+  programs.delta.enable = true;
+  programs.delta.enableGitIntegration = true;
+
   programs.mergiraf.enable = true;
 
   home.packages = with pkgs; [
