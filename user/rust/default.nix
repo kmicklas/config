@@ -7,6 +7,7 @@
     bacon
     cargo-binstall
     cargo-edit
+    cargo-fuzz
     cargo-insta
     cargo-llvm-cov
     cargo-nextest
