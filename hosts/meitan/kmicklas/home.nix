@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   imports = [
@@ -9,5 +9,5 @@
     "Xft.dpi" = 128;
   };
 
-  services.gammastep.provider = "geoclue2";
+  services.gammastep.provider = lib.mkForce "geoclue2";
 }
