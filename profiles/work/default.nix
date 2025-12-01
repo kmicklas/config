@@ -25,7 +25,7 @@
       "ssh://git@github.com:"
     ];
   };
-  programs.git.package = lib.mkForce (pkgs.gitAndTools.gitFull.override {
+  programs.git.package = lib.mkForce (pkgs.gitFull.override {
     openssh = pkgs.opensshWithKerberos;
   });
 
