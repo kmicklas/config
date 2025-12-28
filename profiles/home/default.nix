@@ -5,7 +5,6 @@
     ../../user/base
     ../../user/graphical
 
-    ../../user/aider.nix
     ../../user/dropbox.nix
     ../../user/emacs
     ../../user/git.nix
