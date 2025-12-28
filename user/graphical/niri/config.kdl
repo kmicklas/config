@@ -31,8 +31,8 @@ layout {
 
 prefer-no-csd
 
+spawn-sh-at-startup "swaybg --image ~/.config/niri/wallpaper"
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg --image ~/.config/niri/wallpaper"
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
