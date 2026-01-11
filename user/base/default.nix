@@ -21,6 +21,8 @@
   home.packages = with pkgs; [
     dua
     hyperfine
+    just
+    just-lsp
     tree
     typos
   ];
