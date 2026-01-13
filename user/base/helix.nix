@@ -2,7 +2,7 @@
 
 let
   source = import ../../nix/sources.nix { };
-  upstreamHelix = (import source.nixpkgs-unstable { }).helix;
+  upstreamHelix = pkgs.helix;
 
   prettierLang = lang: parser: {
     name = lang;
