@@ -1,2 +1,6 @@
 #!/bin/sh
-sudo nixos-rebuild switch --upgrade "$@"
+BASEDIR=$(realpath "$(dirname "$0")/..")
+sudo nixos-rebuild switch --upgrade \
+  -I nixos="$BASEDIR/dep/nixpkgs" \
+  -I nixpkgs="$BASEDIR/dep/nixpkgs" \
+  "$@"
