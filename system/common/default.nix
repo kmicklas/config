@@ -41,7 +41,7 @@ in {
     "kernel.sysrq" = 1;
   };
 
-  i18n.defaultLocale = "en_UK.UTF-8";
+  i18n.defaultLocale = "en_GB.UTF-8";
   console.font = "latarcyrheb-sun32";
 
   nixpkgs.config.allowUnfree = true;
