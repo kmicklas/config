@@ -1,11 +1,13 @@
-output "Philips Consumer Electronics Company PHL 288E2 UK52128001941" {
-    scale 2
-}
-
 environment {
-    // DISPLAY ":0"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     NIXOS_OZONE_WL "1"
+}
+
+spawn-sh-at-startup "swaybg --image ~/.config/niri/wallpaper"
+spawn-at-startup "waybar"
+
+output "Philips Consumer Electronics Company PHL 288E2 UK52128001941" {
+    scale 2
 }
 
 input {
@@ -14,6 +16,8 @@ input {
         repeat-rate 50
     }
 }
+
+prefer-no-csd
 
 layout {
     gaps 0
@@ -26,11 +30,6 @@ layout {
          off
      }
 }
-
-prefer-no-csd
-
-spawn-sh-at-startup "swaybg --image ~/.config/niri/wallpaper"
-spawn-at-startup "waybar"
 
 window-rule {
     open-maximized true
