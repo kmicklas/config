@@ -25,14 +25,16 @@ layout {
     focus-ring {
          off
      }
-
-     default-column-width { proportion 1.0; }
 }
 
 prefer-no-csd
 
 spawn-sh-at-startup "swaybg --image ~/.config/niri/wallpaper"
 spawn-at-startup "waybar"
+
+window-rule {
+    open-maximized true
+}
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
