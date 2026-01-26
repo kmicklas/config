@@ -40,6 +40,40 @@
 
   programs.mergiraf.enable = true;
 
+  programs.lazygit.enable = true;
+  programs.lazygit.settings = {
+    # TODO: Get delta colors working properly inside tmux
+    # git.paging.colorArg = "always";
+    # git.paging.pager = "delta --dark --paging=never";
+
+    git.commit.autoWrapCommitMessage = false;
+
+    customCommands = [
+      {
+        # TODO: Fix force pushing issue upstream.
+        key = "<c-f>";
+        description = "force push";
+        context = "global";
+        command = "git push --force-with-lease {{.Form.Remote}} {{.Form.Ref}}";
+
+        prompts = [
+          {
+            type = "input";
+            title = "Remote:";
+            key = "Remote";
+            initialValue = "{{.SelectedRemote.Name}}";
+          }
+          {
+            type = "input";
+            title = "Ref:";
+            key = "Ref";
+            initialValue = "HEAD";
+          }
+        ];
+      }
+    ];
+  };
+
   home.packages = with pkgs; [
     gh
     git-delete-merged-branches
