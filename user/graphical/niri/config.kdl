@@ -35,6 +35,12 @@ window-rule {
     open-maximized true
 }
 
+// https://github.com/YaLTeR/niri/wiki/Application-Issues#steam
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
