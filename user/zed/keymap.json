@@ -1,0 +1,7 @@
+[
+  {
+    "bindings": {
+      "ctrl-tab": "tab_switcher::ToggleAll",
+    },
+  },
+]

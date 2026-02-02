@@ -14,6 +14,7 @@
     ../../user/rust
     ../../user/rust/auto-update.nix
     ../../user/ssh.nix
+    ../../user/zed
   ];
 
   programs.git.settings = {
