@@ -48,6 +48,18 @@
         "url": "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg",
         "url_template": "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg"
     },
+    "nixpkgs-unstable": {
+        "branch": "nixos-unstable",
+        "description": "Nix Packages collection & NixOS",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e6eae2ee2110f3d31110d5c222cd395303343b08",
+        "sha256": "1mqwcpjyq690m9m52njw0dr9baw715s4j9sh7s8nq5wf8psm6w98",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/e6eae2ee2110f3d31110d5c222cd395303343b08.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "obelisk": {
         "branch": "master",
         "description": "Functional reactive web and mobile applications, with batteries included.",

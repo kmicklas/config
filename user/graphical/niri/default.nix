@@ -2,6 +2,7 @@
 
 let
   source = import ../../../nix/sources.nix { };
+  pkgs-unstable = import source.nixpkgs-unstable { };
   wallpaper = source.mud;
 
 in {
@@ -74,5 +75,7 @@ in {
     pkgs.wl-clipboard-rs
     pkgs.wlr-randr
     pkgs.xwayland-satellite
+    pkgs-unstable.noctalia-shell
+    pkgs.quickshell
   ];
 }
