@@ -14,6 +14,7 @@
 
 (setq-default
   c-basic-offset 2
+  display-line-numbers-width-start t
   indent-tabs-mode nil
   next-screen-context-lines 10
   show-trailing-whitespace t
