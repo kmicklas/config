@@ -78,6 +78,8 @@
     }
   '';
   programs.zsh.shellAliases = {
+    "$" = "";
+
     nix-zsh = "nix-shell --run zsh";
     nz = "nix-shell --run zsh";
 
