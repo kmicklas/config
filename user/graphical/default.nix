@@ -51,6 +51,7 @@
   programs.ghostty.enable = true;
   programs.ghostty.settings = {
     font-size = 8;
+    window-inherit-working-directory = false;
     keybind = [
       "ctrl+backspace=text:\\x1b\\x7f"
     ];
