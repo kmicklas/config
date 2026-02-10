@@ -27,4 +27,27 @@ in {
       ExecStart = "${dropboxCmd} start";
     };
   };
+
+  # Restart daily to work around sync randomly stopping
+  systemd.user.services.dropbox-restart = {
+    Unit = { Description = "Restart Dropbox service"; };
+
+    Service = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.systemd}/bin/systemctl --user restart dropbox.service";
+    };
+  };
+
+  systemd.user.timers.dropbox-restart = {
+    Unit = { Description = "Restart Dropbox service daily"; };
+
+    Timer = {
+      OnCalendar = "daily";
+      Persistent = true;
+    };
+
+    Install = {
+      WantedBy = [ "timers.target" ];
+    };
+  };
 }
