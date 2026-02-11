@@ -15,9 +15,6 @@ input {
         repeat-delay 200
         repeat-rate 50
     }
-    mouse {
-        natural-scroll
-    }
     touchpad {
         natural-scroll
     }
