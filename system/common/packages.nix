@@ -10,6 +10,7 @@ pkgs: with pkgs; [
   python3
   tmux
   wget
-  zip unzip
+  zip
+  unzip
   zstd
 ]

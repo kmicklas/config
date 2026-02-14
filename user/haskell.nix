@@ -3,10 +3,12 @@
 let
   source = import ../nix/sources.nix { };
 
-in {
+in
+{
   home.packages = [
-    (import source.obelisk {}).command
-  ] ++ (with pkgs; [
+    (import source.obelisk { }).command
+  ]
+  ++ (with pkgs; [
     clang # 'ar' is needed by cabal.
 
     ghc

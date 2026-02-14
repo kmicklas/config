@@ -41,7 +41,10 @@
   programs.yazi.keymap = {
     mgr.prepend_keymap = [
       {
-        on = [ "g" "b" ];
+        on = [
+          "g"
+          "b"
+        ];
         run = "cd ~/Dropbox";
         desc = "Go to Dropbox";
       }

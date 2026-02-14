@@ -44,7 +44,11 @@
     font.size = 8;
     scrolling.history = 100000;
     keyboard.bindings = [
-      { key = "Back"; mods = "Control"; chars = "\\u001b\\u007f"; }
+      {
+        key = "Back";
+        mods = "Control";
+        chars = "\\u001b\\u007f";
+      }
     ];
   };
 

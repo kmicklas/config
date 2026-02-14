@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -7,7 +12,8 @@
     ../../user/git.nix
     ../../user/go.nix
     ../../user/rust
-  ] ++ lib.optionals (builtins.pathExists ../../../local-config) [
+  ]
+  ++ lib.optionals (builtins.pathExists ../../../local-config) [
     ../../../local-config
   ];
 
@@ -25,9 +31,11 @@
       "ssh://git@github.com:"
     ];
   };
-  programs.git.package = lib.mkForce (pkgs.gitFull.override {
-    openssh = pkgs.opensshWithKerberos;
-  });
+  programs.git.package = lib.mkForce (
+    pkgs.gitFull.override {
+      openssh = pkgs.opensshWithKerberos;
+    }
+  );
 
   home.packages = with pkgs; [
     dive

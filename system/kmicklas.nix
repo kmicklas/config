@@ -1,7 +1,9 @@
 { ... }:
 
-let homedir = "/home/kmicklas";
-in {
+let
+  homedir = "/home/kmicklas";
+in
+{
   users.users.kmicklas = {
     isNormalUser = true;
     isSystemUser = false;

@@ -3,13 +3,18 @@
 let
   dropboxCmd = "${pkgs.dropbox-cli}/bin/dropbox";
 
-in {
+in
+{
   home.packages = [ pkgs.dropbox-cli ];
 
   systemd.user.services.dropbox = {
-    Unit = { Description = "dropbox"; };
+    Unit = {
+      Description = "dropbox";
+    };
 
-    Install = { WantedBy = [ "default.target" ]; };
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
 
     Service = {
       Environment = [ "DISPLAY=" ];
@@ -30,7 +35,9 @@ in {
 
   # Restart daily to work around sync randomly stopping
   systemd.user.services.dropbox-restart = {
-    Unit = { Description = "Restart Dropbox service"; };
+    Unit = {
+      Description = "Restart Dropbox service";
+    };
 
     Service = {
       Type = "oneshot";
@@ -39,7 +46,9 @@ in {
   };
 
   systemd.user.timers.dropbox-restart = {
-    Unit = { Description = "Restart Dropbox service daily"; };
+    Unit = {
+      Description = "Restart Dropbox service daily";
+    };
 
     Timer = {
       OnCalendar = "daily";

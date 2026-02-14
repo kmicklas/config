@@ -5,7 +5,8 @@ let
   pkgs-unstable = import source.nixpkgs-unstable { };
   wallpaper = source.mud;
 
-in {
+in
+{
   # Niri enabled in system config for now.
 
   xdg.portal.enable = true;
@@ -42,21 +43,21 @@ in {
   programs.waybar.enable = true;
   programs.waybar.settings.main = {
     modules-left = [
-        "niri/workspaces"
+      "niri/workspaces"
     ];
     modules-center = [
-        "niri/window"
+      "niri/window"
     ];
     # TODO: add back icons/settings from default config
     modules-right = [
-        "pulseaudio"
-        "network" # TODO: get back wifi network name
-        "cpu"
-        "memory"
-        "temperature"
-        "battery"
-        "clock"
-        "tray"
+      "pulseaudio"
+      "network" # TODO: get back wifi network name
+      "cpu"
+      "memory"
+      "temperature"
+      "battery"
+      "clock"
+      "tray"
     ];
   };
   programs.waybar.style = ''

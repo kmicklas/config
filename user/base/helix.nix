@@ -8,7 +8,10 @@ let
     name = lang;
     formatter = {
       command = "${pkgs.nodePackages.prettier}/bin/prettier";
-      args = [ "--parser" parser ];
+      args = [
+        "--parser"
+        parser
+      ];
     };
   };
 
@@ -75,7 +78,8 @@ let
     # TODO: "C-." = "indent";
   };
 
-in {
+in
+{
   programs.helix.enable = true;
   programs.helix.defaultEditor = true;
 
@@ -121,7 +125,7 @@ in {
       pyright = {
         command = "pyright-langserver";
         args = [ "--stdio" ];
-        config = {};
+        config = { };
       };
       rust-analyzer = {
         command = "rust-analyzer";
@@ -136,7 +140,7 @@ in {
     language = [
       {
         name = "python";
-        language-servers = ["pyright"];
+        language-servers = [ "pyright" ];
       }
 
       # Override bad Microsoft formatters which eat final newlines.

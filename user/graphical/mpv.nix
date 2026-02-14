@@ -3,7 +3,8 @@
 let
   source = import ../../nix/sources.nix { };
 
-in {
+in
+{
   programs.mpv.enable = true;
   programs.mpv.config = {
     sub-visibility = "yes";
@@ -16,7 +17,9 @@ in {
   };
   programs.mpv.scripts = [
     pkgs.mpvScripts.mpvacious
-  ] ++ lib.flip map ["sub-pause" "sub-skip"] (script:
+  ]
+  ++ lib.flip map [ "sub-pause" "sub-skip" ] (
+    script:
     pkgs.stdenv.mkDerivation rec {
       pname = script;
       version = "2020-11-27";

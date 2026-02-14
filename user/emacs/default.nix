@@ -26,5 +26,7 @@
   ];
 
   # programs.emacs.extraConfig = builtins.readFile ./init.el;
-  xdg.configFile."emacs/init.el".source = config.lib.file.mkOutOfStoreSymlink (builtins.toPath ./init.el);
+  xdg.configFile."emacs/init.el".source = config.lib.file.mkOutOfStoreSymlink (
+    builtins.toPath ./init.el
+  );
 }

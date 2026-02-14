@@ -3,7 +3,8 @@
 let
   source = import ../../nix/sources.nix { };
 
-in {
+in
+{
   home.packages = [
     (pkgs.rustPlatform.buildRustPackage {
       name = "git-global-status";
