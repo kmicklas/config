@@ -18,6 +18,9 @@
   "terminal": {
     "button": false,
     "dock": "right",
+    "env": {
+      "EDITOR": "zeditor --wait",
+    },
   },
   "agent": {
     "enable_feedback": false,
