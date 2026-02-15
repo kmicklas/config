@@ -59,17 +59,5 @@
         "type": "tarball",
         "url": "https://github.com/NixOS/nixpkgs/archive/a82ccc39b39b621151d6732718e3e250109076fa.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "obelisk": {
-        "branch": "master",
-        "description": "Functional reactive web and mobile applications, with batteries included.",
-        "homepage": "https://reflex-frp.org",
-        "owner": "obsidiansystems",
-        "repo": "obelisk",
-        "rev": "135bfd7422b856c146b5cd5dacfe584f0621825e",
-        "sha256": "0dr0pl9isim1pvvzqlwrzrlqn5w1iwyxj05ygcqbsxgzrc0ww70v",
-        "type": "tarball",
-        "url": "https://github.com/obsidiansystems/obelisk/archive/135bfd7422b856c146b5cd5dacfe584f0621825e.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
