@@ -53,7 +53,10 @@
   services.xserver.autoRepeatInterval = builtins.floor (1000 / 50);
 
   programs.niri.enable = true;
-  security.pam.services.swaylock = { };
+
+  services.physlock.enable = true;
+  services.physlock.allowAnyUser = true;
+  services.physlock.disableSysRq = false;
 
   services.flatpak.enable = true;
 

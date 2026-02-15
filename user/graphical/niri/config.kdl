@@ -83,7 +83,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+B hotkey-overlay-title="Rewind notifications" { spawn "dunstctl" "history-pop"; }
     Mod+G hotkey-overlay-title="Close notifications" { spawn "dunstctl" "close-all"; }
-    Mod+D hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
+    Mod+D hotkey-overlay-title="Lock the Screen" { spawn "physlock"; }
     Mod+S hotkey-overlay-title="Suspend" { spawn "systemctl" "suspend"; }
     Mod+P hotkey-overlay-title="Run an Application" { spawn "fuzzel"; }
     Mod+Return hotkey-overlay-title="Open a Terminal" { spawn "ghostty"; }
