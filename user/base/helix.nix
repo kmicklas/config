@@ -83,7 +83,7 @@ in
   programs.helix.enable = true;
   programs.helix.defaultEditor = true;
 
-  programs.helix.package = upstreamHelix.overrideAttrs {
+  programs.helix.package = upstreamHelix.overrideAttrs (let
     src = pkgs.stdenv.mkDerivation {
       name = "helix-src";
 
@@ -96,7 +96,13 @@ in
 
       dontCheckForBrokenSymlinks = true;
     };
-  };
+  in {
+    inherit src;
+    cargoDeps = pkgs.rustPlatform.fetchCargoVendor {
+      inherit src;
+      hash = "sha256-LDn6IdPtaAml3lDydkgxxXxbqpCTaqMz9zGPweEX+W0=";
+    };
+  });
 
   programs.helix.settings = {
     theme = "github_dark";
