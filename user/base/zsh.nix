@@ -105,6 +105,9 @@
     gota = "go test ./...";
     gor = "go run";
 
+    t = "tmux";
+    tn = "printf '\\033]2;%s\\007' \"$(basename \"$PWD\")\"; tmux new -s \"$(basename \"$PWD\")\"";
+
     timer = "read DURATION && bash -c \"sleep $DURATION && tmux popup echo Done $DURATION\" & disown";
   };
 

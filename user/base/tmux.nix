@@ -24,8 +24,8 @@
     set -g status-right "#W #[fg=#cccccc,bg=#444444] %H:%M #[fg=#bbbbbb,bg=#333333] %d/%m "
 
     setw -g window-status-separator ""
-    setw -g window-status-format "#[fg=#333333,bg=#99bbdd] #I #[fg=#cccccc,bg=#444444] #{b:pane_current_path} "
-    setw -g window-status-current-format "#[fg=#333333,bg=#ddbb99] #I #[fg=#cccccc,bg=#444444] #{b:pane_current_path} "
+    setw -g window-status-format "#[fg=#333333,bg=#99bbdd] #I #[fg=#cccccc,bg=#444444] #{pane_current_command} "
+    setw -g window-status-current-format "#[fg=#333333,bg=#ddbb99] #I #[fg=#cccccc,bg=#444444] #{pane_current_command} "
 
     bind g new-window -c "#{pane_current_path}" $SHELL -c "jjui || lazygit"
     bind j new-window $SHELL -i -c "j; exec $SHELL"
