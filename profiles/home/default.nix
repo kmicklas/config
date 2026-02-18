@@ -30,4 +30,6 @@
   programs.jujutsu.settings = {
     user.email = "git@kmicklas.com";
   };
+
+  programs.rclone.enable = true;
 }
