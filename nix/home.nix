@@ -33,15 +33,16 @@
     firefox
     gcc
     geoclue2
-    gnome.gnome-screenshot
-    gnome.nautilus
+    gnome-screenshot
+    nautilus
     google-chrome
     htop
-    konsole
+    kdePackages.konsole     
     libreoffice
     pavucontrol
     pdftk
     redshift
+    ripgrep
     signal-desktop
     tmux
     tor-browser-bundle-bin

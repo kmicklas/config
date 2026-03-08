@@ -47,18 +47,8 @@
      dedicatedServer.openFirewall = true;
   };
 
-
   services.flatpak.enable = true;
   xdg.portal.enable = true;  
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-#  environment.systemPackages = with pkgs; [
-#    # Steam not supported as a user package...
-#    steam
-#    steam-tui
-#    steamcmd    
-#  ];
 
   nixpkgs.config = import ./nix-config.nix;
 
@@ -86,7 +76,11 @@
   hardware.bluetooth.enable = true;
 
   # This is for steam
-  hardware.opengl.driSupport32Bit = true;
+  hardware.opengl = {
+    enable = true;
+#    driSupport = true;
+#    driSupport32bit = true;
+  };
   
   ## X11 SERVER
 
