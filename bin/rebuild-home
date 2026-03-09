@@ -1,7 +1,0 @@
-#!/bin/sh
-BASEDIR=$(realpath "$(dirname "$0")/..")
-home-manager switch \
-  -I nixos="$BASEDIR/dep/nixpkgs" \
-  -I nixpkgs="$BASEDIR/dep/nixpkgs" \
-  -I home-manager="$BASEDIR/dep/home-manager" \
-  "$@"

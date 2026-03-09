@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  sources,
+  ...
+}:
 
 let
-  source = import ../../nix/sources.nix { };
   upstreamHelix = pkgs.helix;
 
   prettierLang = lang: parser: {
@@ -89,7 +92,7 @@ in
 
       dontUnpack = true;
       buildPhase = ''
-        cp -r ${source.helix} $out
+        cp -r ${sources.helix} $out
         chmod +w $out/runtime/grammars
         cp -r ${upstreamHelix.src}/runtime/grammars/sources $out/runtime/grammars/sources
       '';

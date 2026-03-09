@@ -1,11 +1,11 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  sources,
+  ...
+}:
 
-let
-  source = import ../../../nix/sources.nix { };
-  pkgs-unstable = import source.nixpkgs-unstable { };
-  wallpaper = source.mud;
-
-in
 {
   # Niri enabled in system config for now.
 
@@ -53,7 +53,7 @@ in
   '';
 
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
-  xdg.configFile."niri/wallpaper".source = wallpaper;
+  xdg.configFile."niri/wallpaper".source = sources.mud;
 
   home.packages = [
     pkgs.swaybg

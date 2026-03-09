@@ -1,4 +1,10 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  inputs,
+  nixpkgsPath,
+  ...
+}:
 
 let
   githubAccessTokenPath = /root/github-access-token;
@@ -19,14 +25,12 @@ in
   nix.settings.auto-optimise-store = true;
   nix.settings.download-buffer-size = 1024 * 1024 * 1024;
 
-  nix.nixPath =
-    let
-      nixpkgs = builtins.toPath ../../dep/nixpkgs;
-    in
-    [
-      "nixos=${nixpkgs}"
-      "nixpkgs=${nixpkgs}"
-    ];
+  nix.nixPath = [
+    "nixos=${nixpkgsPath}"
+    "nixpkgs=${nixpkgsPath}"
+  ];
+  nix.registry.nixpkgs.flake = inputs.nixpkgs;
+  nix.registry.nixpkgs-unstable.flake = inputs.nixpkgs-unstable;
 
   nix.envVars = lib.optionalAttrs (builtins.pathExists githubAccessTokenPath) {
     NIX_GITHUB_PRIVATE_USERNAME = "kmicklas";

@@ -1,11 +1,7 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  home.packages = [
-    # TODO: Consider using nixpkgs version once it's more stable/up-to-date.
-    (import ../../dep/home-manager { inherit pkgs; }).home-manager
-  ];
-
-  services.home-manager.autoExpire.enable = true;
-  services.home-manager.autoExpire.frequency = "weekly";
+  programs.nh.enable = true;
+  programs.nh.clean.enable = true;
+  programs.nh.clean.extraArgs = "--keep 10 --keep-since 30d";
 }

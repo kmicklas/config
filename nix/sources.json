@@ -47,17 +47,5 @@
         "type": "file",
         "url": "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg",
         "url_template": "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg"
-    },
-    "nixpkgs-unstable": {
-        "branch": "nixos-unstable",
-        "description": "Nix Packages collection & NixOS",
-        "homepage": "",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "aca4d95fce4914b3892661bcb80b8087293536c6",
-        "sha256": "0avw8p8n863vk446kaglskyarzzrymp8iszba883lz2a2cgz2mhk",
-        "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/aca4d95fce4914b3892661bcb80b8087293536c6.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

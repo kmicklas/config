@@ -2,6 +2,8 @@
   config,
   lib,
   pkgs,
+  inputs,
+  nixpkgsPath,
   ...
 }:
 
@@ -13,14 +15,13 @@
     ../../user/go.nix
     ../../user/jujutsu.nix
     ../../user/rust
-  ]
-  ++ lib.optionals (builtins.pathExists ../../../local-config) [
-    ../../../local-config
   ];
 
   home.sessionVariables = {
-    NIX_PATH = "$NIX_PATH\${NIX_PATH:+:}nixpkgs=${builtins.toPath ../../dep/nixpkgs}";
+    NIX_PATH = "$NIX_PATH\${NIX_PATH:+:}nixpkgs=${nixpkgsPath}";
   };
+  nix.registry.nixpkgs.flake = inputs.nixpkgs;
+  nix.registry.nixpkgs-unstable.flake = inputs.nixpkgs-unstable;
 
   # Recently programs such as git seemed to have stopped reading non-Nix
   # managed terminfo.
