@@ -33,6 +33,7 @@
     ".claude/settings.local.json"
     ".direnv/"
     ".projectile"
+    "/.scratch"
   ];
 
   programs.delta.enable = true;
