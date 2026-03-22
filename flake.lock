@@ -1,5 +1,22 @@
 {
   "nodes": {
+    "git-global-status": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1753733928,
+        "narHash": "sha256-ALY6WNo9oxXv8vM/NdXr8FAMMvuns88Jyg5Ews64Q/Q=",
+        "owner": "kmicklas",
+        "repo": "git-global-status",
+        "rev": "eee6551be8aea45528240e7d5af852e29dcf82ed",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kmicklas",
+        "ref": "main",
+        "repo": "git-global-status",
+        "type": "github"
+      }
+    },
     "helix": {
       "inputs": {
         "nixpkgs": [
@@ -43,6 +60,35 @@
         "type": "github"
       }
     },
+    "mpv-sub-scripts": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720505155,
+        "narHash": "sha256-eU3lg41FpTgtDB4KFtKiTbjaXY0HuathS2SK90rwFYo=",
+        "owner": "Ben-Kerman",
+        "repo": "mpv-sub-scripts",
+        "rev": "73ed44c879a75020da39d1d24368f448085186ae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Ben-Kerman",
+        "ref": "master",
+        "repo": "mpv-sub-scripts",
+        "type": "github"
+      }
+    },
+    "mud": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-IB/stR0tKzRBASf3lPY/I4tjN+Knew9HaljQCo8lNkA=",
+        "type": "file",
+        "url": "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1772822230,
@@ -77,8 +123,11 @@
     },
     "root": {
       "inputs": {
+        "git-global-status": "git-global-status",
         "helix": "helix",
         "home-manager": "home-manager",
+        "mpv-sub-scripts": "mpv-sub-scripts",
+        "mud": "mud",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }

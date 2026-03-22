@@ -1,8 +1,8 @@
 {
   config,
+  inputs,
   pkgs,
   pkgs-unstable,
-  sources,
   ...
 }:
 
@@ -53,7 +53,7 @@
   '';
 
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
-  xdg.configFile."niri/wallpaper".source = sources.mud;
+  xdg.configFile."niri/wallpaper".source = inputs.mud;
 
   home.packages = [
     pkgs.swaybg

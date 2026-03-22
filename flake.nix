@@ -7,9 +7,24 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Flakes
     helix = {
       url = "github:kmicklas/helix/personal-fork";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Non-flakes
+    git-global-status = {
+      url = "github:kmicklas/git-global-status/main";
+      flake = false;
+    };
+    mpv-sub-scripts = {
+      url = "github:Ben-Kerman/mpv-sub-scripts/master";
+      flake = false;
+    };
+    mud = {
+      url = "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg";
+      flake = false;
     };
   };
 
@@ -38,8 +53,6 @@
       forAllSystems = f:
         nixpkgs.lib.genAttrs systems (system: f (mkPkgs nixpkgs system));
 
-      mkSources = pkgs: import ./nix/sources.nix { inherit pkgs; };
-
       mkHome = { system, modules, extraSpecialArgs ? { }, }:
         let pkgs = mkPkgs nixpkgs system;
         in home-manager.lib.homeManagerConfiguration {
@@ -50,7 +63,6 @@
             inherit inputs;
             inherit nixpkgsPath;
             pkgs-unstable = mkPkgs nixpkgs-unstable system;
-            sources = mkSources pkgs;
           } // extraSpecialArgs;
         };
 
@@ -63,7 +75,6 @@
             inherit inputs;
             inherit nixpkgsPath;
             pkgs-unstable = mkPkgs nixpkgs-unstable system;
-            sources = mkSources pkgs;
           };
 
           modules = [ (./hosts + "/${name}/default.nix") ];

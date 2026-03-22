@@ -1,7 +1,7 @@
 {
   lib,
   pkgs,
-  sources,
+  inputs,
   ...
 }:
 
@@ -24,7 +24,7 @@
     pkgs.stdenv.mkDerivation rec {
       pname = script;
       version = "2020-11-27";
-      src = sources.mpv-sub-scripts;
+      src = inputs.mpv-sub-scripts;
 
       dontBuild = true;
       installPhase = ''
