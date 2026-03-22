@@ -67,8 +67,7 @@
         };
 
       mkNixos = { name, system }:
-        let pkgs = mkPkgs nixpkgs system;
-        in nixpkgs.lib.nixosSystem {
+        nixpkgs.lib.nixosSystem {
           inherit system;
 
           specialArgs = {
