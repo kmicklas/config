@@ -1,12 +1,10 @@
 {
+  inputs,
   pkgs,
-  sources,
   ...
 }:
 
 let
-  upstreamHelix = pkgs.helix;
-
   prettierLang = lang: parser: {
     name = lang;
     formatter = {
@@ -86,26 +84,13 @@ in
   programs.helix.enable = true;
   programs.helix.defaultEditor = true;
 
-  programs.helix.package = upstreamHelix.overrideAttrs (let
-    src = pkgs.stdenv.mkDerivation {
-      name = "helix-src";
-
-      dontUnpack = true;
-      buildPhase = ''
-        cp -r ${sources.helix} $out
-        chmod +w $out/runtime/grammars
-        cp -r ${upstreamHelix.src}/runtime/grammars/sources $out/runtime/grammars/sources
-      '';
-
-      dontCheckForBrokenSymlinks = true;
-    };
-  in {
-    inherit src;
-    cargoDeps = pkgs.rustPlatform.fetchCargoVendor {
-      inherit src;
-      hash = "sha256-LDn6IdPtaAml3lDydkgxxXxbqpCTaqMz9zGPweEX+W0=";
-    };
-  });
+  programs.helix.package = inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+    includeGrammarIf = grammar: !(builtins.elem grammar.name [
+      # TODO: remove this after updating the helix release
+      # See https://github.com/helix-editor/helix/pull/14746
+      "gotmpl"
+    ]);
+  };
 
   programs.helix.settings = {
     theme = "github_dark";

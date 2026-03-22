@@ -18,18 +18,6 @@
         "url": "https://github.com/kmicklas/git-global-status/archive/eee6551be8aea45528240e7d5af852e29dcf82ed.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "helix": {
-        "branch": "personal-fork",
-        "description": "A post-modern modal text editor.",
-        "homepage": "https://helix-editor.com",
-        "owner": "kmicklas",
-        "repo": "helix",
-        "rev": "976e309f6734860922578b2fbcd29b144909b3a0",
-        "sha256": "1pv0af2y30w15b3qbi0p7x4m2gyywb94lvb2cwayzdvcha5ir308",
-        "type": "tarball",
-        "url": "https://github.com/kmicklas/helix/archive/976e309f6734860922578b2fbcd29b144909b3a0.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "mpv-sub-scripts": {
         "branch": "master",
         "description": "Two mpv scripts for automatically pausing after each subtitle line and skipping intervals between subtitles.",
