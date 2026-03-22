@@ -41,7 +41,6 @@
           system = "x86_64-linux";
         }
       ];
-      systems = [ "x86_64-linux" ];
       nixpkgsPath = nixpkgs.outPath;
 
       mkPkgs = repo: system:
@@ -51,7 +50,8 @@
         };
 
       forAllSystems = f:
-        nixpkgs.lib.genAttrs systems (system: f (mkPkgs nixpkgs system));
+        nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed
+        (system: f (mkPkgs nixpkgs system));
 
       mkHome = { system, modules, extraSpecialArgs ? { }, }:
         let pkgs = mkPkgs nixpkgs system;
