@@ -1,4 +1,0 @@
-#!/bin/sh
-BASEDIR=$(dirname "$0")
-nix flake update "$BASEDIR/.."
-niv -s "$BASEDIR/../nix/sources.json" update

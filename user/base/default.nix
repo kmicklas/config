@@ -13,7 +13,6 @@
 
   home.sessionPath = [
     "$HOME/.local/bin"
-    (builtins.toPath ../../bin)
   ];
 
   home.shell.enableShellIntegration = true;
