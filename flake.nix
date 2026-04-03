@@ -42,11 +42,15 @@
         }
       ];
       nixpkgsPath = nixpkgs.outPath;
+      nixpkgsConfig = {
+        allowBroken = true;
+        allowUnfree = true;
+      };
 
       mkPkgs = repo: system:
         import repo {
           inherit system;
-          config = import ./dotfiles/config/nixpkgs/config.nix;
+          config = nixpkgsConfig;
         };
 
       forAllSystems = f:
@@ -62,6 +66,7 @@
           extraSpecialArgs = {
             inherit inputs;
             inherit nixpkgsPath;
+            inherit nixpkgsConfig;
             pkgs-unstable = mkPkgs nixpkgs-unstable system;
           } // extraSpecialArgs;
         };

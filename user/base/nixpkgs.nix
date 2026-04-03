@@ -1,12 +1,7 @@
-{ pkgs, ... }:
-
-let
-  nixpkgsConfig = ../../dotfiles/config/nixpkgs/config.nix;
-in
+{ lib, nixpkgsConfig, pkgs, ... }:
 
 {
-  nixpkgs.config = import nixpkgsConfig;
-  xdg.configFile."nixpkgs/config.nix".source = nixpkgsConfig;
+  xdg.configFile."nixpkgs/config.nix".text = lib.generators.toPretty {} nixpkgsConfig;
 
   programs.nix-index.enable = true;
 
