@@ -10,6 +10,8 @@ in
 
   programs.nix-index.enable = true;
 
+  programs.direnv.nix-direnv.enable = true;
+
   services.lorri.enable = true;
 
   home.packages = with pkgs; [
