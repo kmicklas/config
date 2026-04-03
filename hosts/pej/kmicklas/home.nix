@@ -2,6 +2,6 @@
 
 {
   imports = [
-    ../../../profiles/home
+    ../../../profiles/kmicklas/home
   ];
 }
