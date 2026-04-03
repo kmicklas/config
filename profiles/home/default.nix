@@ -9,7 +9,7 @@
     ../../user/emacs
     ../../user/git.nix
     ../../user/go.nix
-    ../../user/haskell.nix
+    ../../user/haskell
     ../../user/jujutsu.nix
     ../../user/rust
     ../../user/rust/auto-update.nix

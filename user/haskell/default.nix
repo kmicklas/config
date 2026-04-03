@@ -19,5 +19,5 @@
     "dist-newstyle"
   ];
 
-  home.file.".ghci".source = ../dotfiles/ghci;
+  home.file.".ghci".source = ./ghci;
 }
