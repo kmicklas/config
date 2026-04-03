@@ -1,0 +1,9 @@
+[submodule "nix/nixos-hardware"]
+	path = nix/nixos-hardware
+	url = https://github.com/NixOS/nixos-hardware.git
+[submodule "nix/nixpkgs"]
+	path = nix/nixpkgs
+	url = git@github.com:NixOS/nixpkgs.git
+[submodule "nix/home-manager"]
+	path = nix/home-manager
+	url = https://github.com/nix-community/home-manager.git
