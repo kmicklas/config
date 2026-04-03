@@ -5,31 +5,10 @@
 **** archive: =a=
 **** reply: =rr=
 **** reply all: =ra=
-** Vimium (Firefox and Chrome)
-*** mapping
-**** map J nextTab
-**** map K previousTab
-*** GMail excluded keys
-**** url: =https?://mail.google.com/*=
-**** keys: =?jknpxercgils#uld/om=
-*** Fastmail excluded keys
-*** keys: =jkyb=
 ** Firefox
 *** disable clipboard events: =dom.event.clipboardevents.enabled=
 * desktop
-** XMonad
-*** TODO [[https://github.com/xmonad/xmonad-contrib/issues/280][fix multi-monitor smart borders]]
-*** TODO disable keys which change number of windows in workspace section
-** TODO switch to Wayland
-** TODO setup dock
-*** desired indicators
-**** time
-**** battery
-**** RAM
-**** CPU
-**** temperature
 ** peripherals
-*** TODO get bluetooth headphones working
 *** webcam
 **** test with guvcview
 ** TODO make console font bigger on high DPI screen
