@@ -13,6 +13,7 @@
 
     ../../../user/git.nix
     ../../../user/go.nix
+    ../../../user/helix.nix
     ../../../user/jujutsu.nix
     ../../../user/rust
   ];

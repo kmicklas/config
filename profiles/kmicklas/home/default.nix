@@ -10,6 +10,7 @@
     ../../../user/git.nix
     ../../../user/go.nix
     ../../../user/haskell
+    ../../../user/helix.nix
     ../../../user/jujutsu.nix
     ../../../user/rust
     ../../../user/rust/auto-update.nix

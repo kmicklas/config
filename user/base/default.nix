@@ -3,7 +3,6 @@
 {
   imports = [
     ./atuin.nix
-    ./helix.nix
     ./home-manager.nix
     ./nixpkgs.nix
     ./tmux.nix
