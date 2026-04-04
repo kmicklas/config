@@ -2,8 +2,9 @@
 
 {
   imports = [
-    ../../user/graphical
     ../../user/base/home-manager.nix # TODO: clean up
+    ../../user/graphical
+    ../../user/rust
 
     ./emacs-init.nix
     ./mpv.nix
@@ -18,10 +19,6 @@
   home.sessionVariables = {
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
   };
-
-  home.sessionPath = [
-    "$HOME/.cargo/bin"
-  ];
     
   home.packages = with pkgs; [
     (hunspellWithDicts [ hunspellDicts.en-us-large ])
@@ -39,10 +36,6 @@
     binutils
     stylish-haskell
     haskellPackages.cabal-fmt
-
-    rustup
-    pkg-config
-    cargo-binstall
     
     jre
   ];
