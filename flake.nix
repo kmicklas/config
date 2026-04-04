@@ -94,7 +94,7 @@
         name = "${username}@${host.name}";
         value = mkHome {
           inherit (host) system;
-          modules = [ (./hosts + "/${host.name}/${username}/home.nix") ];
+          modules = [ (./hosts + "/${host.name}/users/${username}/home.nix") ];
         };
       }) hosts);
 

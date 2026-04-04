@@ -1,7 +1,0 @@
-{ ... }:
-
-{
-  imports = [
-    ../../../profiles/kmicklas/home
-  ];
-}

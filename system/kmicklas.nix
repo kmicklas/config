@@ -22,7 +22,7 @@ in
     ];
     useDefaultShell = true;
     openssh.authorizedKeys.keys = map builtins.readFile [
-      ../hosts/pej/kmicklas/id_rsa.pub
+      ../hosts/pej/users/kmicklas/id_rsa.pub
     ];
   };
 }

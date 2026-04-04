@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../../profiles/kmicklas/home
+    ../../../../profiles/kmicklas/home
   ];
 
   xresources.properties = {
