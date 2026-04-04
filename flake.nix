@@ -65,8 +65,8 @@
 
           extraSpecialArgs = {
             inherit inputs;
-            inherit nixpkgsPath;
             inherit nixpkgsConfig;
+            inherit nixpkgsPath;
             pkgs-unstable = mkPkgs nixpkgs-unstable system;
           } // extraSpecialArgs;
         };
@@ -77,6 +77,7 @@
 
           specialArgs = {
             inherit inputs;
+            inherit nixpkgsConfig;
             inherit nixpkgsPath;
             pkgs-unstable = mkPkgs nixpkgs-unstable system;
           };

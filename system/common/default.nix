@@ -2,6 +2,7 @@
   pkgs,
   lib,
   inputs,
+  nixpkgsConfig,
   nixpkgsPath,
   ...
 }:
@@ -56,7 +57,7 @@ in
   i18n.defaultLocale = "en_GB.UTF-8";
   console.font = "latarcyrheb-sun32";
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = nixpkgsConfig;
   hardware.enableRedistributableFirmware = true;
 
   services.openssh.enable = true;
