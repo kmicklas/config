@@ -21,21 +21,18 @@
   ## SERVICES
 
   services.locate.enable = true;
-  
+
   ## USERS
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-   users.extraUsers.maddy = {
-     isNormalUser = true;
-     isSystemUser = false;
-     uid = 1000;
-     createHome = true;
-     home = "/home/maddy";
-     extraGroups = [
-       "maddy" "wheel" "networkmanager"
-     ];
-   };
-
+  users.extraUsers.maddy = {
+    isNormalUser = true;
+    isSystemUser = false;
+    uid = 1000;
+    createHome = true;
+    home = "/home/maddy";
+    extraGroups = [ "maddy" "wheel" "networkmanager" ];
+  };
 
   system.stateVersion = "18.09";
 }
