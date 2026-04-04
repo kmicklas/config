@@ -21,7 +21,7 @@
     "$HOME/.cargo/bin"
   ];
     
-  home.packages = (with pkgs; [
+  home.packages = with pkgs; [
     (hunspellWithDicts [ hunspellDicts.en-us-large ])
     acpi
     anki
@@ -77,9 +77,6 @@
     cargo-binstall
     
     jre
-  ]) ++ [
-    (import ../obelisk {}).command
-    (import ./home-manager { inherit pkgs; }).home-manager
   ];
 
   programs.bash.enable = true;
