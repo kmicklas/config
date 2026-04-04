@@ -2,8 +2,10 @@
 
 {
   imports = [
-    ../../user/base/home-manager.nix # TODO: clean up
     ../../user/graphical
+
+    ../../user/base/home-manager.nix # TODO: clean up
+    ../../user/haskell
     ../../user/rust
 
     ./emacs-init.nix
@@ -30,12 +32,6 @@
     ocamlformat
     ocamlPackages.findlib
     ocamlPackages.core
-    
-    ghc
-    cabal-install
-    binutils
-    stylish-haskell
-    haskellPackages.cabal-fmt
     
     jre
   ];
