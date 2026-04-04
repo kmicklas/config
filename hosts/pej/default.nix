@@ -32,4 +32,6 @@
   virtualisation.libvirtd.qemu.package = pkgs.qemu_kvm;
 
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
+
+  system.stateVersion = "23.05";
 }

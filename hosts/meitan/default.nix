@@ -32,4 +32,6 @@
   services.automatic-timezoned.enable = true;
 
   services.geoclue2.enable = true;
+
+  system.stateVersion = "23.05";
 }
