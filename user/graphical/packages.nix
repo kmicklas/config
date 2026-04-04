@@ -3,7 +3,7 @@ pkgs: with pkgs; [
   google-chrome
   evince
   libreoffice
-  gimp
+  (gimp-with-plugins.override { plugins = [ gimpPlugins.gmic ]; })
   inkscape
   gpxsee
   audacity

@@ -2,9 +2,11 @@
 
 {
   imports = [
+    ../../user/graphical
+    ../../user/base/home-manager.nix # TODO: clean up
+
     ./emacs-init.nix
     ./mpv.nix
-    ../../user/base/home-manager.nix # TODO: clean up
   ];
 
   nixpkgs.config = import ./nix-config.nix;
@@ -23,42 +25,8 @@
     
   home.packages = with pkgs; [
     (hunspellWithDicts [ hunspellDicts.en-us-large ])
-    acpi
-    anki
-    arandr
-    autorandr
-    calibre
-    dmenu
-    element-desktop
-    firefox
-    gcc
-    geoclue2
-    gnome-screenshot
-    nautilus
-    google-chrome
-    htop
-    kdePackages.konsole     
-    libreoffice
-    pavucontrol
-    pdftk
-    redshift
-    ripgrep
-    signal-desktop
-    tmux
-    tor-browser
-    transmission_4-gtk
-    unar
-    unzip
-    vim
-    vlc
-    wget
-    xclip
-    yt-dlp
-    zoom-us
 
-    (gimp-with-plugins.override { plugins = with gimpPlugins; [ gmic ]; })
     gplates
-    inkscape
 
     dune_3
     ocaml
@@ -172,13 +140,6 @@
 
     };
   };
-  
-  services.redshift = {
-    enable = true;
-    provider = "geoclue2";
-  };
-
-  xresources.properties."Xft.dpi" = 128;
 
   xsession.enable = true;
   xsession.initExtra = ''
@@ -187,10 +148,4 @@
   xsession.windowManager.xmonad.enable = true;
   xsession.windowManager.xmonad.enableContribAndExtras = true;
   xsession.windowManager.xmonad.config = ./xmonad.hs;
-
-  home.sessionVariables = {
-    GTK_IM_MODULE = "ibus";
-    QT_IM_MODULE = "ibus";
-    XMODIFIERS = "@im=ibus";
-  };
 }
