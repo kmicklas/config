@@ -104,7 +104,13 @@
           name = "${username}@${host.name}";
           value = mkHome {
             inherit (host) system;
-            modules = [ homePath ];
+            modules = [
+              homePath
+              {
+                home.homeDirectory = "/home/${username}";
+                home.username = username;
+              }
+            ];
           };
         }];
 

@@ -47,7 +47,4 @@
       }
     ];
   };
-
-  home.homeDirectory = "/home/kmicklas";
-  home.username = "kmicklas";
 }

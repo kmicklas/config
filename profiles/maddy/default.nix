@@ -13,8 +13,6 @@
   ];
 
   home.stateVersion = "22.05";
-  home.homeDirectory = "/home/maddy";
-  home.username = "maddy";
 
   home.sessionVariables = {
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
