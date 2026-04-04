@@ -18,7 +18,7 @@
   home.sessionVariables = {
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
   };
-    
+
   home.packages = with pkgs; [
     (hunspellWithDicts [ hunspellDicts.en-us-large ])
 
@@ -29,13 +29,11 @@
     ocamlformat
     ocamlPackages.findlib
     ocamlPackages.core
-    
+
     jre
   ];
 
-  home.sessionVariables = {
-    EDITOR = "emacs -nw";
-  };
+  home.sessionVariables = { EDITOR = "emacs -nw"; };
   programs.zsh.shellAliases = {
     sleep = "systemctl suspend";
     gproject = "_JAVA_AWT_WM_NONREPARENTING=1 ~/G.ProjectorJ/gprojector.sh";
@@ -61,9 +59,7 @@
         config = "(ample-theme)";
       };
 
-      haskell-mode = {
-        enable = true;
-      };
+      haskell-mode = { enable = true; };
 
       rust-mode = {
         enable = true;
@@ -72,42 +68,26 @@
         '';
       };
 
-      lsp-mode = {
-        enable = true;
-      };
+      lsp-mode = { enable = true; };
 
       lsp-ui = {
         enable = true;
         after = [ "lsp-mode" ];
       };
 
-      flycheck = {
-        enable = true;
-      };
-      
-      magit = {
-        enable = true;
-      };
+      flycheck = { enable = true; };
 
-      nix-mode = {
-        enable = true;
-      };
+      magit = { enable = true; };
 
-      tuareg = {
-        enable = true;
-      };
+      nix-mode = { enable = true; };
 
-      uuidgen = {
-        enable = true;
-      };
+      tuareg = { enable = true; };
 
-      org = {
-        enable = true;
-      };
+      uuidgen = { enable = true; };
 
-      wc-mode  = {
-        enable = true;
-      };
+      org = { enable = true; };
+
+      wc-mode = { enable = true; };
 
       which-key = {
         enable = true;
@@ -122,7 +102,6 @@
           (global-company-mode)
         '';
       };
-
     };
   };
 }
