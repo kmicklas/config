@@ -3,7 +3,6 @@
 {
   imports = [
     ./atuin.nix
-    ./git-global-status.nix
     ./helix.nix
     ./home-manager.nix
     ./nixpkgs.nix

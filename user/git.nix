@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   programs.git.enable = true;
@@ -75,8 +75,14 @@
     ];
   };
 
-  home.packages = with pkgs; [
-    gh
-    git-delete-merged-branches
+  home.packages = [
+    pkgs.gh
+    pkgs.git-delete-merged-branches
+
+    (pkgs.rustPlatform.buildRustPackage {
+      name = "git-global-status";
+      src = inputs.git-global-status;
+      cargoHash = "sha256-Nlk0Z1i9RgccuXr4SwyPorYIvqzRoXaJ6NSTvYEPvoo=";
+    })
   ];
 }
