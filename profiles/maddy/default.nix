@@ -9,7 +9,6 @@
     ../../user/rust
 
     ./emacs-init.nix
-    ./mpv.nix
   ];
 
   home.stateVersion = "22.05";
