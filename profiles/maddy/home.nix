@@ -5,6 +5,7 @@
     ./emacs-init.nix
     ./anki.nix
     ./mpv.nix
+    ../../user/base/home-manager.nix # TODO: clean up
   ];
 
   nixpkgs.config = import ./nix-config.nix;
