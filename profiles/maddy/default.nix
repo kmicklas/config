@@ -12,8 +12,6 @@
     ./mpv.nix
   ];
 
-  nixpkgs.config = import ./nix-config.nix;
-
   home.stateVersion = "22.05";
   home.homeDirectory = "/home/maddy";
   home.username = "maddy";
