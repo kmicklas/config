@@ -7,6 +7,7 @@
 
     ../../user/haskell
     ../../user/rust
+    ../../user/rust/auto-update.nix
 
     ./emacs-init.nix
   ];
