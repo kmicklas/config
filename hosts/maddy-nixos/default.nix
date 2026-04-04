@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ inputs, nixpkgsConfig, pkgs, ... }:
 
 {
   ## DISK CONFIGURATION
@@ -10,7 +10,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./nixos-hardware/dell/xps/13-9360
+      inputs.nixos-hardware.nixosModules.dell-xps-13-9360
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -50,13 +50,9 @@
   services.flatpak.enable = true;
   xdg.portal.enable = true;  
 
-  nixpkgs.config = import ./nix-config.nix;
+  nixpkgs.config = nixpkgsConfig;
 
-  nix.nixPath = let nixpkgs = builtins.toPath ./nixpkgs; in [
-    ("nixos=" + nixpkgs)
-    ("nixpkgs=" + nixpkgs)
-    ("nixos-config=" + builtins.toPath ./configuration.nix)
-  ];
+  nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 
   nix.binaryCaches = [ "https://nixcache.reflex-frp.org" ];
   nix.binaryCachePublicKeys = [ "ryantrinkle.com-1:JJiAKaRv9mWgpVAz8dwewnZe0AzzEAzPkagE9SP5NWI=" ];
