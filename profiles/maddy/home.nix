@@ -189,7 +189,7 @@
   '';
   xsession.windowManager.xmonad.enable = true;
   xsession.windowManager.xmonad.enableContribAndExtras = true;
-  xsession.windowManager.xmonad.config = ../dotfiles/xmonad.hs;
+  xsession.windowManager.xmonad.config = ./xmonad.hs;
 
   home.sessionVariables = {
     GTK_IM_MODULE = "ibus";
