@@ -20,7 +20,6 @@
 
   ## NETWORK
 
-  networking.hostName = "maddy-nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
 
 

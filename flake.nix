@@ -88,7 +88,10 @@
             pkgs-unstable = mkPkgs nixpkgs-unstable system;
           };
 
-          modules = [ (./hosts + "/${name}/default.nix") ];
+          modules = [
+            (./hosts + "/${name}/default.nix")
+            { networking.hostName = name; }
+          ];
         };
 
       mkHomeEntries = host: username:

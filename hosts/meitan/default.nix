@@ -25,7 +25,6 @@
   fileSystems."/home".options = [ "noatime" ];
   fileSystems."/boot".options = [ "noatime" ];
 
-  networking.hostName = "meitan";
   networking.hostId = "96a6ca18";
 
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
