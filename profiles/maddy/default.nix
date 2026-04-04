@@ -2,9 +2,9 @@
 
 {
   imports = [
+    ../../user/base
     ../../user/graphical
 
-    ../../user/base/home-manager.nix # TODO: clean up
     ../../user/haskell
     ../../user/rust
 
@@ -33,11 +33,10 @@
     jre
   ];
 
-  programs.bash.enable = true;
-  programs.bash.sessionVariables = {
+  home.sessionVariables = {
     EDITOR = "emacs -nw";
   };
-  programs.bash.shellAliases = {
+  programs.zsh.shellAliases = {
     sleep = "systemctl suspend";
     gproject = "_JAVA_AWT_WM_NONREPARENTING=1 ~/G.ProjectorJ/gprojector.sh";
   };
