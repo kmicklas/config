@@ -39,19 +39,6 @@
     "Xft.lcdfilter" = "lcddefault";
   };
 
-  programs.alacritty.enable = true;
-  programs.alacritty.settings = {
-    font.size = 8;
-    scrolling.history = 100000;
-    keyboard.bindings = [
-      {
-        key = "Back";
-        mods = "Control";
-        chars = "\\u001b\\u007f";
-      }
-    ];
-  };
-
   programs.ghostty.enable = true;
   programs.ghostty.settings = {
     font-size = 8;
