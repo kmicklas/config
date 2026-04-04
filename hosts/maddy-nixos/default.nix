@@ -51,6 +51,11 @@
 
   nixpkgs.config = nixpkgsConfig;
 
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 
   nix.binaryCaches = [ "https://nixcache.reflex-frp.org" ];
