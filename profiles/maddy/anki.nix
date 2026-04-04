@@ -14,7 +14,7 @@
 			      };
             buildCommand = "cp -r $src $out";
           });
-      in self.buildFHSUserEnv {
+      in self.buildFHSEnv {
         name = super.anki.pname;
         inherit (super.anki) meta;
 

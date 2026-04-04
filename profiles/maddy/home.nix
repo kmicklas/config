@@ -45,8 +45,8 @@
     ripgrep
     signal-desktop
     tmux
-    tor-browser-bundle-bin
-    transmission-gtk
+    tor-browser
+    transmission_4-gtk
     unar
     unzip
     vim
@@ -90,9 +90,9 @@
 
   programs.git.enable = true;
   programs.git.ignores = [ "*~" ];
-  programs.git.userName = "Maddy Lea";
-  programs.git.userEmail = "maddy.lea@gmail.com";
-  programs.git.delta.enable = true;
+  programs.git.settings.user.name = "Maddy Lea";
+  programs.git.settings.user.email = "maddy.lea@gmail.com";
+  programs.delta.enable = true;
 
   programs.emacs.enable = true;
   programs.emacs.init = {
