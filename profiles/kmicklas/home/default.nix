@@ -2,20 +2,20 @@
 
 {
   imports = [
-    ../../user/base
-    ../../user/graphical
+    ../../../user/base
+    ../../../user/graphical
 
-    ../../user/dropbox.nix
-    ../../user/emacs
-    ../../user/git.nix
-    ../../user/go.nix
-    ../../user/haskell
-    ../../user/jujutsu.nix
-    ../../user/rust
-    ../../user/rust/auto-update.nix
-    ../../user/ssh.nix
-    ../../user/web
-    ../../user/zed
+    ../../../user/dropbox.nix
+    ../../../user/emacs
+    ../../../user/git.nix
+    ../../../user/go.nix
+    ../../../user/haskell
+    ../../../user/jujutsu.nix
+    ../../../user/rust
+    ../../../user/rust/auto-update.nix
+    ../../../user/ssh.nix
+    ../../../user/web
+    ../../../user/zed
   ];
 
   programs.git.settings = {

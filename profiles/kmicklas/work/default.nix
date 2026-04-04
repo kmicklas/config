@@ -9,12 +9,12 @@
 
 {
   imports = [
-    ../../user/base
+    ../../../user/base
 
-    ../../user/git.nix
-    ../../user/go.nix
-    ../../user/jujutsu.nix
-    ../../user/rust
+    ../../../user/git.nix
+    ../../../user/go.nix
+    ../../../user/jujutsu.nix
+    ../../../user/rust
   ];
 
   home.sessionVariables = {
