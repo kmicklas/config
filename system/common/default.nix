@@ -7,10 +7,6 @@
   ...
 }:
 
-let
-  githubAccessTokenPath = /root/github-access-token;
-
-in
 {
   imports = [
     ./reflex.nix
@@ -32,13 +28,6 @@ in
   ];
   nix.registry.nixpkgs.flake = inputs.nixpkgs;
   nix.registry.nixpkgs-unstable.flake = inputs.nixpkgs-unstable;
-
-  nix.envVars = lib.optionalAttrs (builtins.pathExists githubAccessTokenPath) {
-    NIX_GITHUB_PRIVATE_USERNAME = "kmicklas";
-    NIX_GITHUB_PRIVATE_PASSWORD = builtins.replaceStrings [ "\n" ] [ "" ] (
-      builtins.readFile githubAccessTokenPath
-    );
-  };
 
   nix.settings.experimental-features = [
     "nix-command"
