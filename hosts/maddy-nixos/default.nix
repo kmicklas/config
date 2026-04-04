@@ -10,12 +10,16 @@
     ../../system/graphical.nix
   ];
 
-  users.extraUsers.maddy = {
+  users.extraUsers.maddy = let
+    homedir = "/home/maddy";
+  in {
     isNormalUser = true;
     isSystemUser = false;
     uid = 1000;
     createHome = true;
-    home = "/home/maddy";
+    home = homedir;
+    shell = homedir + "/.nix-profile/bin/zsh";
+    useDefaultShell = true;
     extraGroups = [ "maddy" "wheel" "networkmanager" ];
   };
 
