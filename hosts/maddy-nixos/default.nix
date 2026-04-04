@@ -1,8 +1,6 @@
 { inputs, ... }:
 
 {
-  ## DISK CONFIGURATION
-
   imports = [
     ./hardware-configuration.nix
     inputs.nixos-hardware.nixosModules.dell-xps-13-9360
@@ -12,19 +10,6 @@
     ../../system/graphical.nix
   ];
 
-  boot.supportedFilesystems = [ "ntfs" ];
-
-  ## PACKAGES & ENV
-
-  nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
-
-  ## SERVICES
-
-  services.locate.enable = true;
-
-  ## USERS
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.maddy = {
     isNormalUser = true;
     isSystemUser = false;
@@ -33,6 +18,8 @@
     home = "/home/maddy";
     extraGroups = [ "maddy" "wheel" "networkmanager" ];
   };
+
+  nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 
   system.stateVersion = "18.09";
 }
