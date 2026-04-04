@@ -10,4 +10,6 @@
   };
 
   services.gammastep.provider = lib.mkForce "geoclue2";
+
+  home.stateVersion = "23.05";
 }

@@ -50,6 +50,4 @@
 
   home.homeDirectory = "/home/kmicklas";
   home.username = "kmicklas";
-
-  home.stateVersion = "23.05";
 }
