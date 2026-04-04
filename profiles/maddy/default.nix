@@ -127,12 +127,4 @@
 
     };
   };
-
-  xsession.enable = true;
-  xsession.initExtra = ''
-    ibus-daemon &
-  '';
-  xsession.windowManager.xmonad.enable = true;
-  xsession.windowManager.xmonad.enableContribAndExtras = true;
-  xsession.windowManager.xmonad.config = ./xmonad.hs;
 }
