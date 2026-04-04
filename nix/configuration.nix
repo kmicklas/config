@@ -9,7 +9,7 @@
 
   imports =
     [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
+      ./hardware-configuration.nix
       ./nixos-hardware/dell/xps/13-9360
     ];
 
