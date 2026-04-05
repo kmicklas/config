@@ -30,6 +30,8 @@ let
     space.q.C-a = ":quit-all!";
     space.q.b = ":buffer-close";
     space.q.C-b = ":buffer-close!";
+    space.q.e = ":cquit";
+    space.q.C-e = ":cquit!";
     space.q.q = ":quit";
     space.q.C-q = ":quit!";
     space.w.d = "wclose";
