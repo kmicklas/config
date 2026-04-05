@@ -48,7 +48,6 @@
   hardware.enableRedistributableFirmware = true;
 
   services.openssh.enable = true;
-  services.openssh.settings.X11Forwarding = true;
   services.openssh.settings.PermitRootLogin = "no";
   services.openssh.settings.PasswordAuthentication = false;
 

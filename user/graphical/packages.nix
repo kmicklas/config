@@ -13,7 +13,6 @@ pkgs: with pkgs; [
   xournalpp
   zoom-us
   signal-desktop
-  element-desktop
   calibre
   yt-dlp
   freerdp
@@ -26,12 +25,8 @@ pkgs: with pkgs; [
   nautilus
 
   dconf # needed for GNOME apps
-  dmenu
   acpi
-  arandr
-  alsa-utils
   pavucontrol
-  xclip
   feh
   libnotify # notify-send
 
