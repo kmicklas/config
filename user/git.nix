@@ -31,6 +31,7 @@
   programs.git.ignores = [
     "*~"
     ".claude/settings.local.json"
+    ".codex"
     ".direnv/"
     ".projectile"
     "/.scratch"
