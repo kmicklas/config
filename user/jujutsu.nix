@@ -26,5 +26,10 @@
   programs.jjui.enable = true;
   programs.jjui.settings = {
     preview.show_at_start = true;
+    custom_commands."git.push_allow_empty_description" = {
+      key = [ "G" ];
+      args = [ "git" "push" "--allow-empty-description" ];
+      desc = "push allowing empty description";
+    };
   };
 }
