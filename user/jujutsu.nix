@@ -6,6 +6,7 @@
     user.name = "Ken Micklas";
 
     ui.default-command = "log";
+    ui.conflict-marker-style = "git";
 
     templates.draft_commit_description = ''
       concat(
