@@ -26,6 +26,11 @@
   programs.jjui.enable = true;
   programs.jjui.settings = {
     preview.show_at_start = true;
+
+    keys = {
+      cancel = [ "q" ];
+    };
+
     custom_commands."git.push_allow_empty_description" = {
       key = [ "G" ];
       args = [ "git" "push" "--allow-empty-description" ];
