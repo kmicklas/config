@@ -75,8 +75,40 @@
       PROMPT='$(command_status_indicator)$(command_duration_indicator) [%*] %{$fg_bold[blue]%}%n@%M%{$reset_color%} %~$(prompt_git_branch_indicator)$(prompt_nix_shell_indicator)'$'\n'"> "
       RPROMPT=""
 
+      function tn {
+        local dir
+        dir="''${1:-$PWD}"
+        dir="''${dir:A}"
+
+        printf '\033]2;%s\007' "$(basename "$dir")"
+
+        if tmux has-session -t "=$dir" 2>/dev/null; then
+          exec tmux attach-session -t "=$dir"
+        fi
+
+        tmux new-session -d -s "$dir" -c "$dir"
+        local tmux_status=$?
+        if [[ "$tmux_status" -ne 0 ]]; then
+          return "$tmux_status"
+        fi
+
+        exec tmux attach-session -t "=$dir"
+      }
+
+      function j_dir {
+        find -maxdepth 3 -type d -name .git | sed 's|^\./||' | sed 's|/\.git$||' | fzf --preview 'tree -L 2 {}'
+      }
+
       function j {
-          cd "$(find -maxdepth 3 -type d -name .git | sed 's|^\./||' | sed 's|/\.git$||' | fzf --preview 'tree -L 2 {}')" || return 1
+        local dir
+        dir="$(j_dir)" || return 1
+        cd "$dir"
+      }
+
+      function jt {
+        local dir
+        dir="$(j_dir)" || return 1
+        tn "$dir"
       }
     '';
   programs.zsh.shellAliases = {
@@ -106,7 +138,6 @@
     gor = "go run";
 
     t = "tmux";
-    tn = "printf '\\033]2;%s\\007' \"$(basename \"$PWD\")\"; tmux new -s \"$(basename \"$PWD\")\"";
 
     timer = "read DURATION && bash -c \"sleep $DURATION && tmux popup echo Done $DURATION\" & disown";
   };
