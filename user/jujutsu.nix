@@ -28,7 +28,8 @@
     preview.show_at_start = true;
 
     keys = {
-      cancel = [ "q" ];
+      cancel = [ "esc" "ctrl+c" ];
+      quit = [ "q" "ctrl+c" ];
     };
 
     custom_commands."git.push_allow_empty_description" = {
