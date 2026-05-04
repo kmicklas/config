@@ -4,7 +4,6 @@ environment {
 }
 
 spawn-sh-at-startup "swaybg --image ~/.config/niri/wallpaper"
-spawn-at-startup "waybar"
 
 output "Philips Consumer Electronics Company PHL 288E2 UK52128001941" {
     scale 2
