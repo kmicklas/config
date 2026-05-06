@@ -50,6 +50,10 @@
 
   programs.niri.enable = true;
 
+  # TODO(NixOS 26.05): remove vendored module
+  disabledModules = [ "services/x11/display-managers/default.nix" ];
+  imports = [ ../services-x11-display-managers.nix ];
+
   services.physlock.enable = true;
   services.physlock.allowAnyUser = true;
   services.physlock.disableSysRq = false;
