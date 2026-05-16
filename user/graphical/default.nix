@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, pkgs-25-05, ... }:
 
 {
   imports = [
@@ -6,7 +6,11 @@
     ./niri
   ];
 
-  home.packages = import ./packages.nix pkgs;
+  home.packages = import ./packages.nix pkgs ++ [
+    # Something like https://github.com/FreeRDP/FreeRDP/issues/12388 but
+    # unfortunately 3.26 does not work either, so just pin old version.
+    pkgs-25-05.freerdp
+  ];
 
   services.gammastep.enable = true;
   services.gammastep.provider = "manual";

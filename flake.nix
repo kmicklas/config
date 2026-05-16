@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-25-05.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -29,7 +30,8 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-25-05, nixpkgs-unstable
+    , home-manager, ... }:
     let
       nixpkgsPath = nixpkgs.outPath;
       nixpkgsConfig = {
@@ -74,6 +76,7 @@
             inherit nixpkgsConfig;
             inherit nixpkgsPath;
             pkgs-unstable = mkPkgs nixpkgs-unstable system;
+            pkgs-25-05 = mkPkgs nixpkgs-25-05 system;
           } // extraSpecialArgs;
         };
 
@@ -86,6 +89,7 @@
             inherit nixpkgsConfig;
             inherit nixpkgsPath;
             pkgs-unstable = mkPkgs nixpkgs-unstable system;
+            pkgs-25-05 = mkPkgs nixpkgs-25-05 system;
           };
 
           modules = [
