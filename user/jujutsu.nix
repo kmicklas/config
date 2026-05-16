@@ -8,6 +8,10 @@
     ui.default-command = "log";
     ui.conflict-marker-style = "git";
 
+    aliases.add = [
+      "--config" "snapshot.max-new-file-size=1GB" "file" "track"
+    ];
+
     templates.draft_commit_description = ''
       concat(
         description,
