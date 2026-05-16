@@ -62,7 +62,7 @@
     pkgs.wl-clipboard-rs
     pkgs.wlr-randr
     pkgs.xwayland-satellite
-    pkgs-unstable.noctalia-shell
+    pkgs-unstable.noctalia-shell # TODO(NixOS 26.05): get from stable
     pkgs.quickshell
   ];
 }
