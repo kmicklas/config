@@ -119,7 +119,7 @@
         }];
 
     in {
-      formatter = forAllSystems (pkgs: pkgs.nixfmt-classic);
+      formatter = forAllSystems (pkgs: pkgs.nixfmt);
 
       lib = { inherit mkHome; };
 
