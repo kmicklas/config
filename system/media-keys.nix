@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    light
+    brightnessctl
     kbdlight
   ];
 
@@ -14,7 +14,7 @@
         "key"
         "rep"
       ];
-      command = "${pkgs.light}/bin/light -U 4";
+      command = "${pkgs.brightnessctl}/bin/brightnessctl set 4%-";
     }
     {
       keys = [ 225 ];
@@ -22,7 +22,7 @@
         "key"
         "rep"
       ];
-      command = "${pkgs.light}/bin/light -A 4";
+      command = "${pkgs.brightnessctl}/bin/brightnessctl set +4%";
     }
     {
       keys = [ 229 ];
