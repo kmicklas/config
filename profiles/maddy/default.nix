@@ -19,7 +19,7 @@
   };
 
   home.packages = with pkgs; [
-    (hunspellWithDicts [ hunspellDicts.en-us-large ])
+    (hunspell.withDicts (dicts: [ dicts.en-us-large ]))
 
     gplates
 
