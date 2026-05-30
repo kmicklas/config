@@ -31,15 +31,47 @@
   programs.jjui.settings = {
     preview.show_at_start = true;
 
-    keys = {
-      cancel = [ "esc" "ctrl+c" ];
-      quit = [ "q" "ctrl+c" ];
-    };
-
-    custom_commands."git.push_allow_empty_description" = {
-      key = [ "G" ];
-      args = [ "git" "push" "--allow-empty-description" ];
-      desc = "push allowing empty description";
-    };
+    actions = [
+      {
+        name = "git.push_allow_empty_description";
+        lua = ''
+          jj_async("git", "push", "--allow-empty-description")
+          revisions.refresh()
+        '';
+        key = "G";
+        scope = "revisions";
+        desc = "push allowing empty description";
+      }
+    ];
   };
+
+  programs.jjui.configLua = /* lua */ ''
+    function setup(config)
+      local escape_bindings = {}
+
+      for _, binding in ipairs(config.bindings) do
+        for _, key in ipairs(binding.key or {}) do
+          if key == "esc" then
+            table.insert(escape_bindings, {
+              action = binding.action,
+              desc = binding.desc,
+              key = "ctrl+c",
+              scope = binding.scope,
+            })
+            break
+          end
+        end
+      end
+
+      for _, binding in ipairs(escape_bindings) do
+        config.bind(binding)
+      end
+
+      config.bind({
+        action = "ui.quit",
+        key = "ctrl+c",
+        scope = "revisions",
+      })
+    end
+  '';
 }
