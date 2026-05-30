@@ -29,6 +29,9 @@
   fileSystems."/home".options = [ "noatime" ];
   fileSystems."/boot".options = [ "noatime" ];
 
+  # TODO(26.11): remove this when it becomes default
+  boot.zfs.forceImportRoot = false;
+
   networking.hostId = "3d3f0c83";
 
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];

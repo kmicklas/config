@@ -25,6 +25,9 @@
   fileSystems."/home".options = [ "noatime" ];
   fileSystems."/boot".options = [ "noatime" ];
 
+  # TODO(26.11): remove this when it becomes default
+  boot.zfs.forceImportRoot = false;
+
   networking.hostId = "96a6ca18";
 
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
