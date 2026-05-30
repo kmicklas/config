@@ -9,6 +9,7 @@
     ../../system/graphical.nix
     ../../system/kmicklas.nix
     ../../system/libinput.nix
+    ./mdns.nix
   ];
 
   # Attempt to work around unsuspend screen issues:
@@ -36,6 +37,13 @@
 
   virtualisation.libvirtd.enable = true;
   virtualisation.libvirtd.qemu.package = pkgs.qemu_kvm;
+
+  services.nix-serve.enable = true;
+  services.nix-serve.bindAddress = ""; # needed for IPv6
+  services.nix-serve.openFirewall = true;
+  services.nix-serve.secretKeyFile = "/etc/nix/cache-private-key.pem";
+
+  services.resolved.settings.Resolve.MulticastDNS = true;
 
   nix.nixPath = [ ("nixos-config=" + builtins.toPath ./default.nix) ];
 

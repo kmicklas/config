@@ -10,6 +10,7 @@
     ../../system/kmicklas.nix
     ../../system/libinput.nix
     ../../system/media-keys.nix
+    ../pej/cache-client.nix
   ];
 
   boot.initrd.luks.devices = {

@@ -8,6 +8,7 @@
     ../../system/common
     ../../system/efi-boot.nix
     ../../system/graphical.nix
+    ../pej/cache-client.nix
   ];
 
   users.extraUsers.maddy = let
