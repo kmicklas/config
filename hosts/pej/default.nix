@@ -11,6 +11,11 @@
     ../../system/libinput.nix
   ];
 
+  # Attempt to work around unsuspend screen issues:
+  # https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux/+/d5bdf88d1f9d1e4808177f03d89de3d0ba6c6e84
+  # TODO(26.11): remove
+  boot.kernelPackages = pkgs.linuxPackages_7_0;
+
   boot.initrd.luks.devices = {
     root = {
       device = "/dev/disk/by-uuid/b05d8c49-05f8-4428-bfa5-8243b8a4792c";
