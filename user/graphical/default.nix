@@ -53,6 +53,8 @@
   };
 
   programs.firefox.enable = true;
+  # TOOD: migrate to modern XDG location
+  programs.firefox.configPath = ".mozilla/firefox";
 
   home.pointerCursor.x11.enable = true;
   home.pointerCursor.name = "Vanilla-DMZ";
