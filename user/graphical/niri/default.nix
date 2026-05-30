@@ -2,7 +2,6 @@
   config,
   inputs,
   pkgs,
-  pkgs-unstable,
   ...
 }:
 
@@ -62,7 +61,7 @@
     pkgs.wl-clipboard-rs
     pkgs.wlr-randr
     pkgs.xwayland-satellite
-    pkgs-unstable.noctalia-shell # TODO(NixOS 26.05): get from stable
+    pkgs.noctalia-shell
     pkgs.quickshell
   ];
 }
