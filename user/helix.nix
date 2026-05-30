@@ -8,7 +8,7 @@ let
   prettierLang = lang: parser: {
     name = lang;
     formatter = {
-      command = "${pkgs.nodePackages.prettier}/bin/prettier";
+      command = "${pkgs.prettier}/bin/prettier";
       args = [
         "--parser"
         parser

@@ -74,8 +74,6 @@
     DefaultTimeoutStopSec = "20s";
   };
 
-  programs.adb.enable = true;
-
   programs.steam.enable = true;
   programs.steam.remotePlay.openFirewall = true;
   programs.steam.dedicatedServer.openFirewall = true;

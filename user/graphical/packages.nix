@@ -31,6 +31,7 @@ pkgs: with pkgs; [
   libnotify # notify-send
 
   # Not actually graphical but mainly of use on laptop/desktop:
+  android-tools
   lm_sensors
   usbutils
 ]
