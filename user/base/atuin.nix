@@ -10,5 +10,6 @@
     inline_height = 0;
     update_check = false;
     daemon.enabled = true;
+    ai.enabled = true;
   };
 }
