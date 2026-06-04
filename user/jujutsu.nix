@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   programs.jujutsu.enable = true;
@@ -7,6 +7,13 @@
 
     ui.default-command = "log";
     ui.conflict-marker-style = "git";
+
+    "--scope" = [
+      {
+        "--when".environments = [ "JJUI" ];
+        ui.diff-formatter = "${config.programs.delta.package}/bin/delta";
+      }
+    ];
 
     aliases.add = [
       "--config" "snapshot.max-new-file-size=1GB" "file" "track"
