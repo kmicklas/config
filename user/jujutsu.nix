@@ -33,6 +33,7 @@
   };
 
   programs.delta.enableJujutsuIntegration = true;
+  programs.mergiraf.enableJujutsuIntegration = true;
 
   programs.jjui.enable = true;
   programs.jjui.settings = {
