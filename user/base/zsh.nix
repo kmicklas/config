@@ -86,7 +86,7 @@
           exec tmux attach-session -t "=$dir"
         fi
 
-        tmux new-session -d -s "$dir" -c "$dir"
+        tmux new-session -d -s "$dir" -c "$dir" hx
         local tmux_status=$?
         if [[ "$tmux_status" -ne 0 ]]; then
           return "$tmux_status"
