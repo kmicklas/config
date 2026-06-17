@@ -74,6 +74,16 @@ window-rule {
     // block-out-from "screencast"
 }
 
+// Disable Alt+Tab for passthrough to RDP
+recent-windows {
+    binds {
+        Mod+Tab         { next-window; }
+        Mod+Shift+Tab   { previous-window; }
+        Mod+grave       { next-window     filter="app-id"; }
+        Mod+Shift+grave { previous-window filter="app-id"; }
+    }
+}
+
 binds {
     // shows a list of important hotkeys.
     Mod+Slash { show-hotkey-overlay; }
