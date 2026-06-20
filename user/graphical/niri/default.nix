@@ -22,12 +22,9 @@
   };
 
   services.swayidle.enable = true;
-  services.swayidle.events = [
-    {
-      event = "before-sleep";
-      command = "${config.programs.swaylock.package}/bin/swaylock --daemonize";
-    }
-  ];
+  services.swayidle.events = {
+    "before-sleep" = "${config.programs.swaylock.package}/bin/swaylock --daemonize";
+  };
   services.swayidle.timeouts = [
     {
       timeout = 60 * 60;
