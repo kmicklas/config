@@ -13,7 +13,10 @@
       url = "github:kmicklas/helix/personal-fork";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-hardware.url = "github:NixOS/nixos-hardware";
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Non-flakes
     git-global-status = {
