@@ -4,7 +4,6 @@ pkgs: with pkgs; [
   file
   htop
   iotop
-  neovim
   psmisc # killall
   python3
   wget
