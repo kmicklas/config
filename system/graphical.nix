@@ -38,16 +38,6 @@
 
   services.printing.enable = true;
 
-  services.xserver.enable = true;
-  services.xserver.xkb.layout = "us";
-  services.xserver.enableCtrlAltBackspace = true;
-  # Needed for .xsession on NixOS 20.03.
-  services.xserver.desktopManager.xterm.enable = true;
-
-  services.xserver.autoRepeatDelay = 200;
-  # Unlike `xset r rate`, this is milliseconds not Hz.
-  services.xserver.autoRepeatInterval = builtins.floor (1000 / 50);
-
   programs.niri.enable = true;
   security.pam.services.swaylock = { };
 
