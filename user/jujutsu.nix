@@ -38,6 +38,7 @@
   programs.jjui.enable = true;
   programs.jjui.settings = {
     preview.show_at_start = true;
+    revisions.revset = "present(@) | ancestors(immutable_heads().., 2) | ancestors(trunk(), 100)";
 
     actions = [
       {
