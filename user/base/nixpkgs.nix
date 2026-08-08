@@ -10,7 +10,6 @@
   services.lorri.enable = true;
 
   home.packages = with pkgs; [
-    cachix
     niv
     nixfmt
     nix-tree
