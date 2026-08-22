@@ -16,6 +16,9 @@
   programs.tmux.extraConfig = ''
     set -g allow-passthrough on # Allow Emacs clipetty to work
     set -g focus-events on
+    set -g extended-keys always
+    set -g extended-keys-format csi-u
+    set -as terminal-features ',xterm-ghostty:extkeys'
     set -g renumber-windows on
     set -ga terminal-overrides ",xterm-256color:RGB"
 
