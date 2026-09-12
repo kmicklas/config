@@ -15,7 +15,6 @@ pkgs: with pkgs; [
   signal-desktop
   calibre
   yt-dlp
-  # freerdp
 
   blueman
   gedit
