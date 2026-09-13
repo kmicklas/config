@@ -19,6 +19,10 @@
       "--config" "snapshot.max-new-file-size=1GB" "file" "track"
     ];
 
+    templates.show = ''
+      builtin_log_detailed ++ diff.stat()
+    '';
+
     templates.draft_commit_description = ''
       concat(
         description,
@@ -38,6 +42,10 @@
   programs.jjui.enable = true;
   programs.jjui.settings = {
     preview.show_at_start = true;
+    preview.file_command = [
+      "diff" "--stat" "--tool" "${config.programs.delta.package}/bin/delta"
+      "--color" "always" "-r" "$change_id" "$file"
+    ];
     revisions.revset = "present(@) | ancestors(immutable_heads().., 2) | ancestors(trunk(), 100)";
 
     actions = [
