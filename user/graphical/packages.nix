@@ -31,6 +31,7 @@ pkgs: with pkgs; [
 
   # Not actually graphical but mainly of use on laptop/desktop:
   android-tools
+  imagemagick
   lm_sensors
   qpdf
   usbutils
