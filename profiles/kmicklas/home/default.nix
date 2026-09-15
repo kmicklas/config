@@ -5,6 +5,7 @@
     ../../../user/base
     ../../../user/graphical
 
+    ../../../user/codex.nix
     ../../../user/dropbox.nix
     ../../../user/git.nix
     ../../../user/go.nix
