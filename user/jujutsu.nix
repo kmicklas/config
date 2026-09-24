@@ -50,6 +50,13 @@
 
     actions = [
       {
+        name = "revisions.split";
+        lua = ''
+          jj_interactive("split", "-r", context.change_id(), "-m", "")
+          revisions.refresh()
+        '';
+      }
+      {
         name = "git.push_allow_empty_description";
         lua = ''
           jj_async("git", "push", "--allow-empty-description")
