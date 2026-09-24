@@ -86,6 +86,12 @@ let
     );
 in
 {
+  home.file.".codex/AGENTS.md".text = ''
+    Always use the native edit tool (such as apply_patch) for basic file edits whenever
+    possible. Do not use Python or other shell commands to make these edits when the
+    native edit tool can perform them.
+  '';
+
   # TODO: use regular symlink when https://github.com/openai/codex/issues/32658 is fixed
   home.activation.codexRules = lib.hm.dag.entryAfter [ "linkGeneration" ] ''
     run ${pkgs.coreutils}/bin/install -Dm644 \
