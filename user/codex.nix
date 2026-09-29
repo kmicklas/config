@@ -90,6 +90,9 @@ in
     Always use the native edit tool (such as apply_patch) for basic file edits whenever
     possible. Do not use Python or other shell commands to make these edits when the
     native edit tool can perform them.
+
+    Never search `/nix/store` to find a package you are looking for; it must always be
+    derived from the local source context or installed profile.
   '';
 
   # TODO: use regular symlink when https://github.com/openai/codex/issues/32658 is fixed
