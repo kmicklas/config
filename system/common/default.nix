@@ -17,6 +17,9 @@
 
   time.timeZone = lib.mkDefault "Europe/London";
 
+  nix.daemonCPUSchedPolicy = "idle";
+  nix.daemonIOSchedClass = "idle";
+
   nix.settings.auto-optimise-store = true;
   nix.settings.download-buffer-size = 1024 * 1024 * 1024;
 
