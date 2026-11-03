@@ -27,7 +27,7 @@
       flake = false;
     };
     mud = {
-      url = "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg";
+      url = "https://www.dropbox.com/s/2669wx4az2jt62t/Mud.jpg?dl=1";
       flake = false;
     };
   };
