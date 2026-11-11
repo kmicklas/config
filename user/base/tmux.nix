@@ -16,7 +16,8 @@
   programs.tmux.extraConfig = ''
     set -g allow-passthrough on # Allow Emacs clipetty to work
     set -g focus-events on
-    set -g extended-keys always
+    # Let applications request extended keys; forcing them breaks zsh input.
+    set -g extended-keys on
     set -g extended-keys-format csi-u
     set -as terminal-features ',xterm-ghostty:extkeys'
     set -g renumber-windows on
