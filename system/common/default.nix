@@ -20,6 +20,15 @@
   nix.daemonCPUSchedPolicy = "idle";
   nix.daemonIOSchedClass = "idle";
 
+  # TODO: find a way to limit builders specifically
+  systemd.services.nix-daemon.serviceConfig = {
+    CPUWeight = 1;
+    IOWeight = 1;
+    OOMScoreAdjust = 1000;
+    MemoryHigh = "60%";
+    MemoryMax = "80%";
+  };
+
   zramSwap.enable = true;
   zramSwap.memoryPercent = 25;
 
