@@ -20,6 +20,9 @@
   nix.daemonCPUSchedPolicy = "idle";
   nix.daemonIOSchedClass = "idle";
 
+  zramSwap.enable = true;
+  zramSwap.memoryPercent = 25;
+
   nix.settings.auto-optimise-store = true;
 
   nix.nixPath = [
