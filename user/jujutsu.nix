@@ -50,15 +50,34 @@
 
     actions = [
       {
+        name = "copy_file_path";
+        lua = /* lua */ ''
+          local file = context.file()
+          if not file then return end
+          local quote = string.char(39)
+          local quoted = quote .. file:gsub(quote, quote .. "\\" .. quote .. quote) .. quote
+          -- Keep the Wayland clipboard owner alive after the tmux window closes.
+          local status = os.execute("setsid --fork --wait wl-copy -- " .. quoted)
+          if status == 0 or status == true then
+            flash("Copied: " .. file)
+          else
+            flash({ text = "Failed to copy file path", error = true })
+          end
+        '';
+        key = "c";
+        scope = "revisions.details";
+        desc = "copy file path";
+      }
+      {
         name = "revisions.split";
-        lua = ''
+        lua = /* lua */ ''
           jj_interactive("split", "-r", context.change_id(), "-m", "")
           revisions.refresh()
         '';
       }
       {
         name = "git.push_allow_empty_description";
-        lua = ''
+        lua = /* lua */ ''
           jj_async("git", "push", "--allow-empty-description")
           revisions.refresh()
         '';
